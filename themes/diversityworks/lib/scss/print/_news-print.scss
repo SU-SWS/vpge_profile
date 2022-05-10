@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+//Removing unnecessary content
+.more-link,
+#main-content,
+h2.stanford-news__title,
+h2.block__title,
+.stanford-news--cards {
+  display: none;
+}
+
+.soe-printable__page {
+  margin: 32px;
+}
+
+
+// Wrapping all styles in this class for added insurance against these being fired on other pages.
+// Not that this css file should be available anywhere else.
+.node--layout-printable {
+
+  //Typography
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 20px;
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Roboto Slab", serif;
+  }
+
+  h1 {
+    font-size: 55px;
+    margin: 55px 0 24px 0;
+  }
+
+  //Header styles
+  .section-header {
+    margin-bottom: 20px;
+  }
+
+  .su-news-dek {
+    width: 554px;
+    margin-bottom: 12px;
+  }
+
+  .stanford-news.datetime {
+    &:after {
+      content: "\00a0\00a0";
+    }
+  }
+
+  .byline-social-media-wrapper {
+    margin: 0 0 12px;
+
+    .news-date-pipe-byline {
+      font-size: 18px;
+      display: flex;
+    }
+
+    .su-news-byline.node.stanford-news.string.label-hidden {
+      &:before {
+        content: '\00a0\00a0';
+      }
+    }
+  }
+
+  // Image and body styles
+  .su-news-banner-media-caption{
+    font-size: 16px;
+    color: #53565a;
+  }
+
+  .su-wysiwyg-text {
+    margin-top: 82px;
+  }
+}
