@@ -1,5 +1,58 @@
 # VPGE Profile
 
+8.x-4.4
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-12_
+
+- Disable course department importer.
+
+8.x-4.3
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-11_
+
+- Fixup for "Results For" on people list pages.
+
+8.x-4.2
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-10_
+
+- Enabled aggregation for duplicates in course view
+
+8.x-4.1
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-10_
+
+- D8CORE-2331: Updated help on media caption field text (#542)
+- Allow admins to change the home page via site settings (#540)
+- D8CORE-5833: Fix for courses view to respect chosen limit in card grid list paragraph (#539)
+
+8.x-4.0
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-02_
+
+- Added twitter card metadata for person content
+- Several tweaks to the taxonomy display and fields. (#532)
+- Update block.block.minimally_branded_subtheme_pagetitle.yml (#535)
+- D8CORE-5772: Added custom block and edit link on `/courses` page (#534)
+- D8CORE-5748: Adding a listy style to the taxonomy terms (#533)
+- D8CORE-5778: adding the grid col 3 for three across (#530)
+- D8CORE-5627: added <object> and <param> to allowed tags in embeddables (#529)
+- D8CORE-5729 People term pages: display only child terms groupings (#526)
+- D8CORE-5187 Courses and Importer(#500)
+- D8CORE-5611 Allow multiple basic page types and change widget
+- D8CORE-5696 Only display location address once (#520)
+- D8CORE-5629 Adjust profile link url for stanford only profiles (#521)
+- D8CORE-4118 Remove layout builder settings on other display modes (#519)
+- D8CORE-4128 Change views to HTML lists (#518)
+- Enabled transliterate_filenames from stanford_media
+- D8CORE-3975 Created shared tags vocabulary and fields (#511)
+- D8CORE-5666 Enabled and configured responsive_tables_filter module (#515)
+- Dont trim the url on even cards
+- Updated link_title_formatter module
+- Updated domain_301_redirect version
+- D8CORE-5172: Updated references to localist and events-legacy urls
+- DO not require lockup option select, prevent requiring lockup fields
+
 
 
 
