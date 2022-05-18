@@ -109,7 +109,7 @@
         "drupal/feeds_ex": "^1.0@beta",
         "drupal/feeds_tamper": "^2.0@beta",
         "su-sws/stanford_actions": "^8.2",
-        "su-sws/stanford_profile": "^8.3.2"
+        "su-sws/stanford_profile": "^8.4.4"
     },
     "config": {
         "sort-packages": true
