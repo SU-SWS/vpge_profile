@@ -1,0 +1,114 @@
+uuid: 50d4f670-8914-4cc8-95da-2cbb0ae47d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.stanford_card
+    - field.field.node.resource.body
+    - field.field.node.resource.feeds_item
+    - field.field.node.resource.su_vpge_audience
+    - field.field.node.resource.su_vpge_external_url
+    - field.field.node.resource.su_vpge_image
+    - field.field.node.resource.su_vpge_resource_type
+    - node.type.resource
+  module:
+    - ds
+    - element_class_formatter
+    - field_formatter_class
+    - layout_builder
+    - stanford_media
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  ds:
+    layout:
+      id: pattern_news-vertical-teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      news_vertical_teaser_image:
+        - su_vpge_image
+      news_vertical_teaser_headline:
+        - node_title
+      news_topics:
+        - su_vpge_audience
+        - su_vpge_resource_type
+      news_url:
+        - su_vpge_external_url
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.resource.stanford_card
+targetEntityType: node
+bundle: resource
+mode: stanford_card
+content:
+  su_vpge_audience:
+    type: entity_reference_list_label_class
+    label: above
+    settings:
+      link: true
+      class: ''
+      list_type: ul
+    third_party_settings: {  }
+    weight: 2
+    region: news_topics
+  su_vpge_external_url:
+    type: link_list_class
+    label: hidden
+    settings:
+      class: ''
+      list_type: ul
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 4
+    region: news_url
+  su_vpge_image:
+    type: media_multimedia_formatter
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+      image:
+        image_formatter: image_style
+        image_formatter_image_style: large
+        image_formatter_responsive_image_style: full_responsive
+        image_formatter_view_mode: default
+      video:
+        video_formatter: entity
+        video_formatter_view_mode: default
+      other:
+        view_mode: default
+    third_party_settings: {  }
+    weight: 0
+    region: news_vertical_teaser_image
+  su_vpge_resource_type:
+    type: entity_reference_list_label_class
+    label: above
+    settings:
+      link: true
+      class: ''
+      list_type: ul
+    third_party_settings: {  }
+    weight: 3
+    region: news_topics
+hidden:
+  body: true
+  feeds_item: true
+  links: true
+  search_api_excerpt: true

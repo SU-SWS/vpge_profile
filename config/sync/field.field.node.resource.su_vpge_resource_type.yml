@@ -1,0 +1,29 @@
+uuid: 643c1553-57c9-453b-a7fa-37eed807c0ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_resource_type
+    - node.type.resource
+    - taxonomy.vocabulary.vpge_resource_type
+id: node.resource.su_vpge_resource_type
+field_name: su_vpge_resource_type
+entity_type: node
+bundle: resource
+label: 'Resource Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vpge_resource_type: vpge_resource_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
