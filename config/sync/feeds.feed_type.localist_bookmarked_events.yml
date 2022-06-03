@@ -1,0 +1,151 @@
+uuid: e7c0e522-4615-41e5-bef9-f9b51fbecded
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.stanford_event.title
+    - field.field.node.stanford_event.body
+    - field.field.node.stanford_event.su_event_date_time
+    - field.field.node.stanford_event.su_event_source
+    - field.field.node.stanford_event.su_event_type
+    - node.type.stanford_event
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - node
+    - smart_date
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      bde484a6-84f8-42e3-891e-49684e5b240c:
+        uuid: bde484a6-84f8-42e3-891e-49684e5b240c
+        plugin: strtotime
+        source: event_event_instances_0_event_instance_start
+        weight: 0
+        label: 'String to Unix Timestamp'
+      02b767e1-399e-42d8-8e80-311516dcbb3c:
+        uuid: 02b767e1-399e-42d8-8e80-311516dcbb3c
+        plugin: strtotime
+        source: event_event_instances_0_event_instance_end
+        weight: 0
+        label: 'String to Unix Timestamp'
+label: 'Localist Bookmarked Events'
+id: localist_bookmarked_events
+description: 'Import bookmarked events events.stanford.edu'
+help: 'Reach out to UComm to request bookmarking feature on your account with url https://events-legacy.stanford.edu/bookmark/feed.php?slug=izaks-test. '
+import_period: 43200
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '$.events.*'
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: stanford_event
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  event_title:
+    value: event.title
+    label: event.title
+    machine_name: event_title
+    type: json
+  event_id:
+    value: event.id
+    label: event.id
+    machine_name: event_id
+    type: json
+  event_localist_url:
+    value: event.localist_url
+    label: event.localist_url
+    machine_name: event_localist_url
+    type: json
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: json
+  event_description:
+    value: event.description
+    label: event.description
+    machine_name: event_description
+    type: json
+  event_event_instances_0_event_instance_start:
+    value: 'event.event_instances[0].event_instance.start'
+    label: 'event.event_instances[0].event_instance.start'
+    machine_name: event_event_instances_0_event_instance_start
+    type: json
+  event_event_instances_0_event_instance_end:
+    value: 'event.event_instances[0].event_instance.end'
+    label: 'event.event_instances[0].event_instance.end'
+    machine_name: event_event_instances_0_event_instance_end
+    type: json
+  event_filters_event_types_0_name:
+    value: 'event.filters.event_types[0].name'
+    label: 'event.filters.event_types[0].name'
+    machine_name: event_filters_event_types_0_name
+    type: json
+mappings:
+  -
+    target: title
+    map:
+      value: event_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: feeds_item
+    map:
+      url: ''
+      guid: event_id
+    settings: {  }
+    unique:
+      guid: '1'
+  -
+    target: su_event_source
+    map:
+      uri: event_localist_url
+      title: ''
+    settings:
+      language: null
+  -
+    target: body
+    map:
+      value: event_description
+      summary: ''
+    settings:
+      language: ''
+      format: stanford_html
+  -
+    target: su_event_type
+    map:
+      target_id: event_filters_event_types_0_name
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: su_event_date_time
+    map:
+      value: event_event_instances_0_event_instance_start
+      end_value: event_event_instances_0_event_instance_end
+    settings:
+      language: null
