@@ -4,11 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.resource.body
-    - field.field.node.resource.su_page_components
+    - field.field.node.resource.su_vpge_audience
+    - field.field.node.resource.su_vpge_external_url
+    - field.field.node.resource.su_vpge_image
+    - field.field.node.resource.su_vpge_resource_type
     - node.type.resource
   module:
+    - link
+    - media_library
     - path
-    - react_paragraphs
     - scheduler
     - text
 id: node.resource.default
@@ -18,7 +22,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 11
+    weight: 14
     region: content
     settings:
       rows: 9
@@ -65,13 +69,40 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  su_page_components:
-    type: react_paragraphs
+  su_vpge_audience:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_external_url:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  su_vpge_image:
+    type: media_library_widget
     weight: 10
     region: content
     settings:
-      resizable: false
-      sizes: {  }
+      media_types: {  }
+    third_party_settings: {  }
+  su_vpge_resource_type:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -102,4 +133,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_selection: true

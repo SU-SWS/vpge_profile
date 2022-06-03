@@ -5,7 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.resource.body
-    - field.field.node.resource.su_page_components
+    - field.field.node.resource.feeds_item
+    - field.field.node.resource.su_vpge_audience
+    - field.field.node.resource.su_vpge_external_url
+    - field.field.node.resource.su_vpge_image
+    - field.field.node.resource.su_vpge_resource_type
     - node.type.resource
   module:
     - text
@@ -29,5 +33,9 @@ content:
     weight: 100
     region: content
 hidden:
+  feeds_item: true
   search_api_excerpt: true
-  su_page_components: true
+  su_vpge_audience: true
+  su_vpge_external_url: true
+  su_vpge_image: true
+  su_vpge_resource_type: true
