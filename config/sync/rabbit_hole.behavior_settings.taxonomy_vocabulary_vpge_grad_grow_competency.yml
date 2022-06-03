@@ -1,0 +1,14 @@
+uuid: 8e519891-e563-4fd1-a87d-47953320cc81
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.vpge_grad_grow_competency
+id: taxonomy_vocabulary_vpge_grad_grow_competency
+entity_type_id: taxonomy_vocabulary
+entity_id: vpge_grad_grow_competency
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

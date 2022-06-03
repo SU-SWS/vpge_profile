@@ -1,0 +1,14 @@
+uuid: 2c15f04e-bdce-493f-a69f-e19ecc8451b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.vpge_resource_type
+id: taxonomy_vocabulary_vpge_resource_type
+entity_type_id: taxonomy_vocabulary
+entity_id: vpge_resource_type
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
