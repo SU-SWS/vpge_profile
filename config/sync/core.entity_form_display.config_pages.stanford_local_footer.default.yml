@@ -356,3 +356,4 @@ content:
     third_party_settings: {  }
 hidden:
   label: true
+  su_local_foot_help: true

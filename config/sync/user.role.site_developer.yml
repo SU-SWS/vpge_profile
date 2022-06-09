@@ -78,7 +78,6 @@ dependencies:
     - ui_patterns_library
     - view_unpublished
     - views_bulk_edit
-    - views_ui
     - vpge_profile
     - xmlsitemap
 id: site_developer
@@ -171,7 +170,6 @@ permissions:
   - 'administer user fields'
   - 'administer user form display'
   - 'administer users'
-  - 'administer views'
   - 'administer xmlsitemap'
   - 'assign contributor role'
   - 'assign layout_builder_user role'

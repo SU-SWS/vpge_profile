@@ -255,5 +255,6 @@ hidden:
   su_local_foot_loc_img: true
   su_local_foot_loc_link: true
   su_local_foot_loc_op: true
+  su_local_foot_tr2_co: true
   su_local_foot_use_loc: true
   su_local_foot_use_logo: true
