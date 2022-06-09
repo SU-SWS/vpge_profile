@@ -6,6 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.resource.body
     - field.field.node.resource.su_page_components
+    - field.field.node.resource.su_vpge_resource_audience
+    - field.field.node.resource.su_vpge_resource_category
+    - field.field.node.resource.su_vpge_resource_external_link
+    - field.field.node.resource.su_vpge_resource_image
     - node.type.resource
   module:
     - text
@@ -31,3 +35,7 @@ content:
 hidden:
   search_api_excerpt: true
   su_page_components: true
+  su_vpge_resource_audience: true
+  su_vpge_resource_category: true
+  su_vpge_resource_external_link: true
+  su_vpge_resource_image: true

@@ -1,0 +1,29 @@
+uuid: a1719c4c-a846-432b-81a0-c9705a989c68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_resource_audience
+    - node.type.resource
+    - taxonomy.vocabulary.vpge_audience
+id: node.resource.su_vpge_resource_audience
+field_name: su_vpge_resource_audience
+entity_type: node
+bundle: resource
+label: 'Resource Audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vpge_audience: vpge_audience
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
