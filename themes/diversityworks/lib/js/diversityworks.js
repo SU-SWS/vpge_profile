@@ -1,5 +1,5 @@
 // Main Webpack entry file.
-import "./vpge.behavior.js";
+import "./diversityworks.behavior.js";
 
 
 // Your code goes below.

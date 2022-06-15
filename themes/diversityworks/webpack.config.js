@@ -49,14 +49,16 @@ var webpackConfig = {
   //  poll: 1000,
   //  ignored: /node_modules/,
   //},
+
+
   // What am i?
-  name: 'vpge',
+  name: 'diversityworks',
   // Allows for map files.
   devtool: 'source-map',
   // What build?
   entry: {
-    "vpge.script": path.resolve(srcJS, "vpge.js"),
-    "vpge.styles": path.resolve(srcSass, "vpge.scss")
+    "diversityworks.script": path.resolve(srcJS, "diversityworks.js"),
+    "diversityworks.styles": path.resolve(srcSass, "diversityworks.scss")
   },
   // Where put build?
   output: {

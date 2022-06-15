@@ -4,7 +4,7 @@ diversityworks-styling:
     theme:
       dist/css/diversityworks.styles.css : {weight: 100}
   js:
-    dist/js/vpge.script.js : {
+    dist/js/diversityworks.script.js : {
       scope: footer,
       attributes: { type: module }
     }
