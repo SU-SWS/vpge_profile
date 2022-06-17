@@ -2,6 +2,8 @@
 
 @import "./config";
 
+
+/* masthead colors  */
 .su-masthead--dark {
     background-color: #2e2d29;
 }
@@ -10,7 +12,7 @@
     color: #fff;
 }
 
-/* drop down select on resource page */
+/* align drop down select on resource page */
 
 select#edit-su-vpge-resource-category-target-id,
 select#edit-su-vpge-resource-audience-target-id {
@@ -18,9 +20,35 @@ select#edit-su-vpge-resource-audience-target-id {
 }
 
 @media (min-width: 992px) {
+
     .js-form-item-su-vpge-resource-category-target-id,
     .js-form-item-su-vpge-resource-audience-target-id {
         width: 50%;
         float: left;
     }
+}
+
+/* re-style cards on spotlights page */
+.page-people-spotlights.section-people-spotlights article.su-card {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ds-entity--stanford-page .su-card .su-card__contents {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.ds-entity--stanford-page .su-card .su-card__contents h2 {
+    font-size: 2.6rem;
+}
+
+.ds-entity--stanford-page .su-card .su-card__contents a {
+    color: #b1040e;
+}
+
+.ds-entity--stanford-page .su-card .su-card__contents a:after {
+    display: none;
 }
