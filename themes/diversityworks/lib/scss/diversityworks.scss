@@ -12,22 +12,6 @@
     color: #fff;
 }
 
-/* align drop down select on resource page */
-
-select#edit-su-vpge-resource-category-target-id,
-select#edit-su-vpge-resource-audience-target-id {
-    min-height: 12rem;
-}
-
-@media (min-width: 992px) {
-
-    .js-form-item-su-vpge-resource-category-target-id,
-    .js-form-item-su-vpge-resource-audience-target-id {
-        width: 50%;
-        float: left;
-    }
-}
-
 /* re-style cards on spotlights page */
 .page-people-spotlights.section-people-spotlights article.su-card {
     border: none;
@@ -51,4 +35,20 @@ select#edit-su-vpge-resource-audience-target-id {
 
 .ds-entity--stanford-page .su-card .su-card__contents a:after {
     display: none;
+}
+
+/* align drop down select on resource page */
+
+select#edit-su-vpge-resource-category-target-id,
+select#edit-su-vpge-resource-audience-target-id {
+    min-height: 12rem;
+}
+
+@media (min-width: 992px) {
+
+    .js-form-item-su-vpge-resource-category-target-id,
+    .js-form-item-su-vpge-resource-audience-target-id {
+        width: 50%;
+        float: left;
+    }
 }
