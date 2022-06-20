@@ -28,7 +28,8 @@ ckeditor_stylesheets:
   - dist/css/ckeditor.css
 
 libraries:
-  - vpge/isotope
+  - diversityworks/isotope
+  - diversityworks/diversityworks-styling
 
 libraries-override:
   jumpstart_ui/base: false
