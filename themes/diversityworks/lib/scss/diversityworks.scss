@@ -4,13 +4,20 @@
 
 
 /* masthead colors  */
-.su-masthead {
+header .su-masthead {
     background-color: #2e2d29;
 }
 
+header .su-lockup__wordmark,
+header .su-lockup__line1, header .su-lockup__line2, header .su-lockup__line3, header .su-lockup__line4, header .su-lockup__line5,
 .su-multi-menu>.su-multi-menu__menu.su-multi-menu__menu-lv1>.su-multi-menu__item>.su-multi-menu__link {
     color: #fff;
 }
+
+header .su-lockup__cell2 {
+    border-left: 1px solid white;
+}
+
 
 /* re-style cards on spotlights page */
 .page-people-spotlights.section-people-spotlights article.su-card {
