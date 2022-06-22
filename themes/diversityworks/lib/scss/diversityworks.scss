@@ -2,24 +2,38 @@
 
 @import "./config";
 
-
-/* masthead colors  */
+/* ------ masthead colors  */
 header.su-masthead {
     background-color: #2e2d29;
 }
 
-header .su-lockup__wordmark,
-header .su-lockup__line1, header .su-lockup__line2, header .su-lockup__line3, header .su-lockup__line4, header .su-lockup__line5,
+header.su-lockup__wordmark,
+header.su-lockup__line1, header.su-lockup__line2, header.su-lockup__line3, header.su-lockup__line4, header.su-lockup__line5,
 .su-multi-menu>.su-multi-menu__menu.su-multi-menu__menu-lv1>.su-multi-menu__item>.su-multi-menu__link {
     color: #fff;
 }
 
-header .su-lockup__cell2 {
+header.su-lockup__cell2 {
     border-left: 1px solid white;
 }
 
+@media (max-width: 991px) {
+.su-multi-menu .su-multi-menu__nav-toggle,
+.su-multi-menu .su-multi-menu__nav-toggle:active, .su-multi-menu .su-multi-menu__nav-toggle:focus, .su-multi-menu .su-multi-menu__nav-toggle:hover {
+    color: white;
+    }
 
-/* re-style cards on spotlights page */
+.su-multi-menu .su-multi-menu__nav-toggle:after {
+    background: url(../assets/svg/hamburger-white.svg) no-repeat 3px 0;
+    }
+
+.su-multi-menu .su-multi-menu__nav-toggle[aria-expanded=true]:after {
+    background: url(../assets/svg/close-black.svg) no-repeat 3px 0;
+    }
+}
+
+
+/* ------ re-style cards on spotlights page */
 .page-people-spotlights.section-people-spotlights article.su-card {
     border: none;
     -webkit-box-shadow: none;
@@ -44,18 +58,10 @@ header .su-lockup__cell2 {
     display: none;
 }
 
-/* align drop down select on resource page */
+/* ------   select on resource page  */
 
 select#edit-su-vpge-resource-category-target-id,
 select#edit-su-vpge-resource-audience-target-id {
     min-height: 12rem;
 }
 
-@media (min-width: 992px) {
-
-    .js-form-item-su-vpge-resource-category-target-id,
-    .js-form-item-su-vpge-resource-audience-target-id {
-        width: 50%;
-        float: left;
-    }
-}
