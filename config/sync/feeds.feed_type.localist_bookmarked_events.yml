@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.base_field_override.node.stanford_event.title
     - field.field.node.stanford_event.body
-    - field.field.node.stanford_event.su_event_date_time
+    - field.field.node.stanford_event.feeds_item
     - field.field.node.stanford_event.su_event_source
     - field.field.node.stanford_event.su_event_type
     - node.type.stanford_event
@@ -13,22 +13,9 @@ dependencies:
     - feeds_ex
     - feeds_tamper
     - node
-    - smart_date
 third_party_settings:
   feeds_tamper:
-    tampers:
-      bde484a6-84f8-42e3-891e-49684e5b240c:
-        uuid: bde484a6-84f8-42e3-891e-49684e5b240c
-        plugin: strtotime
-        source: event_event_instances_0_event_instance_start
-        weight: 0
-        label: 'String to Unix Timestamp'
-      02b767e1-399e-42d8-8e80-311516dcbb3c:
-        uuid: 02b767e1-399e-42d8-8e80-311516dcbb3c
-        plugin: strtotime
-        source: event_event_instances_0_event_instance_end
-        weight: 0
-        label: 'String to Unix Timestamp'
+    tampers: {  }
 label: 'Localist Bookmarked Events'
 id: localist_bookmarked_events
 description: 'Import bookmarked events events.stanford.edu'
@@ -142,10 +129,3 @@ mappings:
       language: ''
       reference_by: name
       autocreate: '1'
-  -
-    target: su_event_date_time
-    map:
-      value: event_event_instances_0_event_instance_start
-      end_value: event_event_instances_0_event_instance_end
-    settings:
-      language: null
