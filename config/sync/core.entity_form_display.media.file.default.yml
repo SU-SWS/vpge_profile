@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.media.file.field_media_file
+    - field.field.media.file.su_media_category
     - media.type.file
   module:
     - file
+    - shs
 _core:
   default_config_hash: IZZZH3ZmZ5xpeUW2scF9RPSnKb3qnEKu-cBMQQOuHQk
 id: media.file.default

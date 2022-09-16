@@ -40,21 +40,20 @@ class PersonCest {
    */
   public function testVocabularyTermsExists(AcceptanceTester $I) {
     $I->logInWithRole('administrator');
-    $I->amOnPage("/admin/structure/taxonomy/manage/stanford_person_types/overview");
-    $I->canSeeNumberOfElements(".term-id", 14);
+    $I->amOnPage('/admin/structure/taxonomy/manage/stanford_person_types/overview');
+    $I->canSeeNumberOfElements('.term-id', 14);
   }
 
   /**
    * Test that the view pages exist.
    */
   public function testViewPagesExist(AcceptanceTester $I) {
-    $I->amOnPage("/people");
-    $I->see("Sorry, no results found");
+    $I->amOnPage('/people');
     $I->seeLink('Student');
-    $I->click("a[href='/people/staff']");
+    $I->seeLink('Staff');
+    $I->click('Staff');
     $I->canSeeResponseCodeIs(200);
-    $I->see("Sorry, no results found");
-    $I->see("Person Type");
+    $I->see('Person Type');
   }
 
   /**
@@ -64,8 +63,8 @@ class PersonCest {
   public function testCreatePerson(AcceptanceTester $I) {
     $I->createEntity([
       'type' => 'stanford_person',
-      'su_person_first_name' => "John",
-      'su_person_last_name' => "Wick",
+      'su_person_first_name' => $first_name,
+      'su_person_last_name' => $last_name,
     ]);
     $I->amOnPage("/person/john-wick");
     $I->see("John Wick");
@@ -82,22 +81,18 @@ class PersonCest {
 
     // Revision Delete is enabled.
     $I->amOnPage('/admin/structure/types/manage/stanford_person');
-    $I->seeCheckboxIsChecked("#edit-node-revision-delete-track");
-    $I->seeCheckboxIsChecked("#edit-options-revision");
-    $I->seeInField("#edit-minimum-revisions-to-keep", 5);
+    $I->seeCheckboxIsChecked('#edit-node-revision-delete-track');
+    $I->seeCheckboxIsChecked('#edit-options-revision');
+    $I->seeInField('#edit-minimum-revisions-to-keep', 5);
 
     // XML Sitemap.
-    $I->amOnPage("/admin/config/search/xmlsitemap/settings");
-    $I->see("Person");
-    $I->amOnPage("/admin/config/search/xmlsitemap/settings/node/stanford_person");
-    $I->selectOption("#edit-xmlsitemap-status", 1);
+    $I->amOnPage('/admin/config/search/xmlsitemap/settings');
+    $I->see('Person');
+    $I->amOnPage('/admin/config/search/xmlsitemap/settings/node/stanford_person');
+    $I->selectOption('#edit-xmlsitemap-status', 1);
 
     // Metatags.
-    $I->amOnPage("/admin/config/search/metatag/page_variant__people-layout_builder-0");
-    $I->canSeeResponseCodeIs(200);
-    $I->amOnPage("/admin/config/search/metatag/page_variant__stanford_person_list-layout_builder-1");
-    $I->canSeeResponseCodeIs(200);
-    $I->amOnPage("/admin/config/search/metatag/node__stanford_person");
+    $I->amOnPage('/admin/config/search/metatag/node__stanford_person');
     $I->canSeeResponseCodeIs(200);
   }
 
@@ -122,14 +117,17 @@ class PersonCest {
    * Special characters should stay.
    */
   public function testSpecialCharacters(AcceptanceTester $I) {
-    $faker = Factory::create();
+    $first_name = $this->faker->firstName;
+    $middle_name = $this->faker->firstName;
+    $last_name = $this->faker->lastName;
+
     $I->logInWithRole('contributor');
     $I->amOnPage('/node/add/stanford_person');
-    $I->fillField('First Name', 'Foo');
-    $I->fillField('Last Name', 'Bar-Baz & Foo');
-    $I->fillField('Short Title', $faker->text);
+    $I->fillField('First Name', $first_name);
+    $I->fillField('Last Name', "$middle_name & $last_name");
+    $I->fillField('Short Title', $this->faker->text);
     $I->click('Save');
-    $I->canSee('Foo Bar-Baz & Foo', 'h1');
+    $I->canSee("$first_name $middle_name & $last_name", 'h1');
   }
 
   /**
@@ -139,20 +137,23 @@ class PersonCest {
     $I->logInWithRole('site_manager');
 
     $term1 = $I->createEntity([
-      'name' => $this->faker->words(2),
+      'name' => $this->faker->words(2, TRUE),
       'vid' => 'stanford_person_types',
     ], 'taxonomy_term');
     $term2 = $I->createEntity([
-      'name' => $this->faker->words(2),
+      'name' => $this->faker->words(2, TRUE),
       'vid' => 'stanford_person_types',
     ], 'taxonomy_term');
     $term3 = $I->createEntity([
-      'name' => $this->faker->words(2),
+      'name' => $this->faker->words(2, TRUE),
       'vid' => 'stanford_person_types',
       'parent' => ['target_id' => $term1->id()],
     ], 'taxonomy_term');
+    $I->amOnPage($term3->toUrl('edit-form')->toString());
+    $I->click('Save');
+    $I->canSee('Updated term');
 
-    $I->amOnPage('/people');
+    $I->amOnPage($term3->toUrl()->toString());
     $I->canSeeLink($term1->label());
     $I->canSeeLink($term2->label());
     $I->cantSeeLink($term3->label());
@@ -179,7 +180,7 @@ class PersonCest {
     $I->logInWithRole('site_manager');
     $term = $I->createEntity([
       'vid' => 'stanford_person_types',
-      'name' => 'Foo',
+      'name' => $this->faker->word,
     ], 'taxonomy_term');
     $I->amOnPage($term->toUrl('edit-form')->toString());
     $I->cantSee('Published');
@@ -215,6 +216,64 @@ class PersonCest {
     drupal_flush_all_caches();
     $I->amOnPage('/people/foo');
     $I->cantSee($node->label());
+  }
+
+  /**
+   * Validate metadata information.
+   *
+   * @group metadata
+   */
+  public function testMetaData(AcceptanceTester $I) {
+    $values = [
+      'image_alt' => $this->faker->words(3, TRUE),
+      'body' => $this->faker->paragraph,
+      'first_name' => $this->faker->firstName,
+      'last_name' => $this->faker->lastName,
+      'profile_link' => $this->faker->url,
+    ];
+
+    /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+    $file_system = \Drupal::service('file_system');
+    $image_path = $file_system->copy(__DIR__ . '/../assets/logo.jpg', 'public://' . $this->faker->word . '.jpg');
+
+    $file = $I->createEntity(['uri' => $image_path], 'file');
+    $media = $I->createEntity([
+      'bundle' => 'image',
+      'field_media_image' => [
+        'target_id' => $file->id(),
+        'alt' => $values['image_alt'],
+      ],
+    ], 'media');
+
+    /** @var \Drupal\node\NodeInterface $node */
+    $node = $I->createEntity([
+      'title' => $this->faker->words(3, TRUE),
+      'su_person_first_name' => $values['first_name'],
+      'su_person_last_name' => $values['last_name'],
+      'su_person_photo' => $media->id(),
+      'type' => 'stanford_person',
+      'body' => $values['body'],
+      'su_person_profile_link' => [
+        'uri' => $values['profile_link'],
+        'title' => $this->faker->words(3, TRUE),
+      ],
+    ]);
+    $I->amOnPage($node->toUrl()->toString());
+    $I->canSee($node->label(), 'h1');
+
+    $I->assertEquals($node->label(), $I->grabAttributeFrom('meta[property="og:title"]', 'content'), 'Metadata "og:title" should match.');
+    $I->assertEquals($node->label(), $I->grabAttributeFrom('meta[name="twitter:title"]', 'content'), 'Metadata "twitter:title" should match.');
+    $I->assertEquals($values['body'], $I->grabAttributeFrom('meta[name="description"]', 'content'), 'Metadata "description" should match.');
+    $I->assertEquals('profile', $I->grabAttributeFrom('meta[property="og:type"]', 'content'), 'Metadata "og:type" should match.');
+    $I->assertStringContainsString(basename($image_path), $I->grabAttributeFrom('meta[property="og:image"]', 'content'), 'Metadata "og:image" should match.');
+    $I->assertStringContainsString(basename($image_path), $I->grabAttributeFrom('meta[property="og:image:url"]', 'content'), 'Metadata "og:image:url" should match.');
+    $I->assertStringContainsString($values['first_name'], $I->grabAttributeFrom('meta[property="profile:first_name"]', 'content'), 'Metadata "profile:first_name" should match.');
+    $I->assertStringContainsString($values['last_name'], $I->grabAttributeFrom('meta[property="profile:last_name"]', 'content'), 'Metadata "profile:last_name" should match.');
+    $I->assertStringContainsString(basename($image_path), $I->grabAttributeFrom('meta[name="twitter:image"]', 'content'), 'Metadata "twitter:image" should match.');
+    $I->assertEquals($values['image_alt'], $I->grabAttributeFrom('meta[property="og:image:alt"]', 'content'), 'Metadata "og:image:alt" should match.');
+    $I->assertEquals($values['image_alt'], $I->grabAttributeFrom('meta[name="twitter:image:alt"]', 'content'), 'Metadata "twitter:image:alt" should match.');
+    $I->assertEquals($values['body'], $I->grabAttributeFrom('meta[name="twitter:description"]', 'content'), 'Metadata "twitter:description" should match.');
+    $I->assertEquals($values['profile_link'], $I->grabAttributeFrom('link[rel="canonical"]', 'href'), 'Metadata "canonical" should match.');
   }
 
 }
