@@ -25,6 +25,7 @@ dependencies:
     - field.field.node.stanford_event.su_event_subject
     - field.field.node.stanford_event.su_event_telephone
     - field.field.node.stanford_event.su_event_type
+    - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
     - field.field.node.stanford_event.su_vpge_area_of_focus
     - node.type.stanford_event
@@ -32,6 +33,7 @@ dependencies:
     - address
     - field_group
     - link
+    - metatag
     - paragraphs
     - readonly_field_widget
     - scheduler
@@ -301,7 +303,9 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      change_labels:
+        add_another: 'Add another sponsor'
   su_event_subheadline:
     type: string_textfield
     weight: 4
@@ -336,6 +340,14 @@ content:
       create_new_items: false
       create_new_levels: false
       force_deepest: false
+    third_party_settings: {  }
+  su_metatags:
+    type: metatag_firehose
+    weight: 30
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   su_shared_tags:
     type: options_shs

@@ -187,5 +187,6 @@ hidden:
   su_event_sponsor: true
   su_event_subject: true
   su_event_telephone: true
+  su_metatags: true
   su_shared_tags: true
   su_vpge_area_of_focus: true

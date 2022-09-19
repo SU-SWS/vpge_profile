@@ -126,6 +126,7 @@ hidden:
   links: true
   search_api_excerpt: true
   stanford_intranet__access: true
+  su_metatags: true
   su_shared_tags: true
   su_vpge_area_of_focus: true
   su_vpge_related_fellowship: true
