@@ -1,0 +1,31 @@
+uuid: 9de21b6e-3bc4-4f1b-845b-28810bf9703f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_page_components
+    - node.type.resource
+    - react_paragraphs.paragraphs_row_type.node_stanford_page_row
+  module:
+    - entity_reference_revisions
+id: node.resource.su_page_components
+field_name: su_page_components
+entity_type: node
+bundle: resource
+label: Paragraphs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph_row'
+  handler_settings:
+    target_bundles:
+      node_stanford_page_row: node_stanford_page_row
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

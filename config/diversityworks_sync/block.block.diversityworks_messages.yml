@@ -1,0 +1,20 @@
+uuid: 2c7e7bfe-8ff2-4eb6-8054-a79786d5d9a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - diversityworks
+id: diversityworks_messages
+theme: diversityworks
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: e682a899-7f19-4681-91bc-530d651f425f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - diversityworks
+id: diversityworks_local_tasks
+theme: diversityworks
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

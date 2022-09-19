@@ -1,0 +1,20 @@
+uuid: 66cd0e0a-cb14-47c5-a5c1-ca6024587765
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - minimally_branded_subtheme
+id: minimally_branded_subtheme_help
+theme: minimally_branded_subtheme
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
