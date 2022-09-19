@@ -412,6 +412,7 @@ third_party_settings:
         - jumpstart_ui_three_column
         - stanford_news_byline
         - ds_reset
+      restricted_categories: {  }
       blacklisted_blocks: {  }
       whitelisted_blocks:
         'Chaos Tools': {  }
@@ -424,7 +425,6 @@ third_party_settings:
           - system_messages_block
         core:
           - page_title_block
-      restricted_categories: {  }
   layout_library:
     enable: false
 id: node.stanford_news.default
