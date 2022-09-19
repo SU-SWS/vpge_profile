@@ -1,0 +1,31 @@
+uuid: 06802f09-3807-45f4-a1c4-c34e6d5782c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fellowship_funding.body
+    - node.type.fellowship_funding
+  module:
+    - text
+    - user
+id: node.fellowship_funding.teaser
+targetEntityType: node
+bundle: fellowship_funding
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

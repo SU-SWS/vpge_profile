@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.stanford_person.body
+    - field.field.node.stanford_person.feeds_item
     - field.field.node.stanford_person.layout_builder__layout
     - field.field.node.stanford_person.stanford_intranet__access
     - field.field.node.stanford_person.su_person_academic_appt
@@ -32,6 +33,7 @@ dependencies:
     - field.field.node.stanford_person.su_person_telephone
     - field.field.node.stanford_person.su_person_type_group
     - field.field.node.stanford_person.su_shared_tags
+    - field.field.node.stanford_person.su_vpge_area_of_focus
     - node.type.stanford_person
   module:
     - text
@@ -55,10 +57,10 @@ content:
     weight: 100
     region: content
 hidden:
+  feeds_item: true
   layout_builder__layout: true
   search_api_excerpt: true
   stanford_intranet__access: true
-  su_metatags: true
   su_person_academic_appt: true
   su_person_admin_appts: true
   su_person_affiliations: true
@@ -84,3 +86,4 @@ hidden:
   su_person_telephone: true
   su_person_type_group: true
   su_shared_tags: true
+  su_vpge_area_of_focus: true

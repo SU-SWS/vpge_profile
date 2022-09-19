@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.stanford_person.body
+    - field.field.node.stanford_person.feeds_item
     - field.field.node.stanford_person.layout_builder__layout
     - field.field.node.stanford_person.stanford_intranet__access
-    - field.field.node.stanford_person.su_metatags
     - field.field.node.stanford_person.su_person_academic_appt
     - field.field.node.stanford_person.su_person_admin_appts
     - field.field.node.stanford_person.su_person_affiliations
@@ -32,14 +32,15 @@ dependencies:
     - field.field.node.stanford_person.su_person_telephone
     - field.field.node.stanford_person.su_person_type_group
     - field.field.node.stanford_person.su_shared_tags
+    - field.field.node.stanford_person.su_vpge_area_of_focus
     - node.type.stanford_person
   module:
     - allowed_formats
     - field_group
     - link
     - media_library
-    - metatag
     - paragraphs
+    - scheduler
     - shs
     - stanford_intranet
     - text
@@ -47,9 +48,9 @@ third_party_settings:
   field_group:
     group_name_titles:
       children:
+        - title
         - su_person_first_name
         - su_person_last_name
-        - title
         - su_person_short_title
         - su_person_full_title
       label: 'Name & Titles'
@@ -168,14 +169,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  su_metatags:
-    type: metatag_firehose
-    weight: 32
-    region: content
-    settings:
-      sidebar: true
-      use_details: true
-    third_party_settings: {  }
   su_person_affiliations:
     type: link_default
     weight: 9
@@ -230,7 +223,7 @@ content:
     third_party_settings: {  }
   su_person_full_title:
     type: string_textarea
-    weight: 6
+    weight: 5
     region: content
     settings:
       rows: 5
@@ -317,7 +310,7 @@ content:
     third_party_settings: {  }
   su_person_short_title:
     type: string_textfield
-    weight: 5
+    weight: 4
     region: content
     settings:
       size: 60
@@ -351,9 +344,19 @@ content:
       create_new_levels: false
       force_deepest: false
     third_party_settings: {  }
+  su_vpge_area_of_focus:
+    type: entity_reference_autocomplete
+    weight: 32
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 4
+    weight: 1
     region: content
     settings:
       size: 60
@@ -367,6 +370,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  feeds_item: true
   layout_builder__layout: true
   path: true
   promote: true

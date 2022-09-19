@@ -1,0 +1,9 @@
+uuid: eb9d80b2-c0d1-4531-a7c9-4f8e7aa3f1dc
+langcode: en
+status: true
+dependencies: {  }
+id: custm_diversityworks_site_manager
+label: 'Diversityworks Site Manager'
+weight: 2
+is_admin: false
+permissions: {  }

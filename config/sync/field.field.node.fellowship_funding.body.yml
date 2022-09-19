@@ -1,0 +1,23 @@
+uuid: 1c9ad28c-6358-4240-aa90-d8c255946049
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fellowship_funding
+  module:
+    - text
+id: node.fellowship_funding.body
+field_name: body
+entity_type: node
+bundle: fellowship_funding
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

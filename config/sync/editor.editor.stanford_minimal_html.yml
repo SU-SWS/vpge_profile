@@ -33,9 +33,8 @@ settings:
       linkit_profile: default
     stylescombo:
       styles: "a.su-button|Button\r\na.su-button--big|Big Button\r\na.su-button--secondary|Secondary Button\r\na.su-link--action|Action Link"
-    blockimagepaste:
-      block_image_paste_enabled: true
-      show_alert: false
+    language:
+      language_list: un
 image_upload:
   status: false
   scheme: public

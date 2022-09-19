@@ -1,0 +1,87 @@
+uuid: ce5c7c8d-230c-47fb-9396-b73ef45b9f46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.partner.body
+    - field.field.node.partner.su_vpge_area_of_focus
+    - field.field.node.partner.su_vpge_grad_grow_competency
+    - field.field.node.partner.su_vpge_partner_image
+    - field.field.node.partner.su_vpge_partner_link
+    - field.field.node.partner.su_vpge_time_commitment
+    - node.type.partner
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.partner.default
+targetEntityType: node
+bundle: partner
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  su_vpge_area_of_focus:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+      ds:
+        ds_limit: ''
+    weight: 104
+    region: content
+  su_vpge_grad_grow_competency:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  su_vpge_partner_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  su_vpge_partner_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  su_vpge_time_commitment:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+hidden:
+  search_api_excerpt: true

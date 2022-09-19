@@ -1,0 +1,21 @@
+uuid: 40c6d458-dd6b-4284-8538-151abcb014dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_area_of_focus
+    - node.type.stanford_event
+id: node.stanford_event.su_vpge_area_of_focus
+field_name: su_vpge_area_of_focus
+entity_type: node
+bundle: stanford_event
+label: 'Area of Focus'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

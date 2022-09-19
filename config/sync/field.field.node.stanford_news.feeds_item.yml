@@ -1,0 +1,23 @@
+uuid: cc6b6f83-3bf8-4750-bc65-84ac13ac4222
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.stanford_news
+  module:
+    - feeds
+id: node.stanford_news.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: stanford_news
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

@@ -71,12 +71,7 @@ source:
 process:
   status: constants/status
   type: constants/type
-  title:
-    plugin: str_replace
-    source: title
-    search: '/^(.*) \([A-Z].*$/'
-    replace: $1
-    regex: true
+  title: title
   body/value: description
   body/format: constants/stanford_html
   su_course_code: code
@@ -107,15 +102,12 @@ process:
         - code
     -
       plugin: urlencode
-  su_course_link/uri:
+  su_course_link:
     -
       plugin: concat
       source:
         - constants/link
         - '@link_query'
-  su_course_link/title:
-    plugin: default_value
-    default_value: ''
   su_course_quarters:
     -
       plugin: explore_courses_quarters

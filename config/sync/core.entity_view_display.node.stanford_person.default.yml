@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.base_field_override.node.stanford_person.title
     - field.field.node.stanford_person.body
+    - field.field.node.stanford_person.feeds_item
     - field.field.node.stanford_person.layout_builder__layout
     - field.field.node.stanford_person.stanford_intranet__access
     - field.field.node.stanford_person.su_person_academic_appt
@@ -32,8 +33,8 @@ dependencies:
     - field.field.node.stanford_person.su_person_telephone
     - field.field.node.stanford_person.su_person_type_group
     - field.field.node.stanford_person.su_shared_tags
+    - field.field.node.stanford_person.su_vpge_area_of_focus
     - node.type.stanford_person
-    - views.view.stanford_publications
   module:
     - entity_reference_revisions
     - jumpstart_ui
@@ -44,7 +45,6 @@ dependencies:
     - stanford_person
     - text
     - user
-    - views
 third_party_settings:
   layout_builder:
     enabled: true
@@ -223,6 +223,22 @@ third_party_settings:
                 third_party_settings:
                   field_formatter_class:
                     class: su-person-photo
+            weight: 0
+            additional: {  }
+          558fbe79-1adf-4657-8b22-956245c3fb9c:
+            uuid: 558fbe79-1adf-4657-8b22-956245c3fb9c
+            region: content
+            configuration:
+              id: 'field_block:node:stanford_person:su_vpge_area_of_focus'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
             weight: 0
             additional: {  }
         third_party_settings: {  }
@@ -571,29 +587,6 @@ third_party_settings:
             weight: 11
             additional: {  }
         third_party_settings: {  }
-      -
-        layout_id: jumpstart_ui_one_column
-        layout_settings:
-          label: ''
-          context_mapping: {  }
-          extra_classes: ''
-          centered: centered-container
-          columns: default
-        components:
-          500a8acd-f0fc-4021-81f8-61e665df0d70:
-            uuid: 500a8acd-f0fc-4021-81f8-61e665df0d70
-            region: main
-            configuration:
-              id: 'views_block:stanford_publications-author_list'
-              label: Publications
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: Publications
-              items_per_page: none
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
@@ -800,11 +793,19 @@ content:
     third_party_settings: {  }
     weight: 126
     region: content
+  su_vpge_area_of_focus:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 128
+    region: content
 hidden:
+  feeds_item: true
   layout_builder__layout: true
   search_api_excerpt: true
   stanford_intranet__access: true
-  su_metatags: true
   su_person_academic_appt: true
   su_person_admin_appts: true
   su_person_research_interests: true

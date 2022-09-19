@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.resource.body
+    - field.field.node.resource.feeds_item
     - field.field.node.resource.su_page_components
+    - field.field.node.resource.su_vpge_grad_grow_competency
     - field.field.node.resource.su_vpge_resource_audience
     - field.field.node.resource.su_vpge_resource_category
     - field.field.node.resource.su_vpge_resource_external_link
     - field.field.node.resource.su_vpge_resource_image
+    - field.field.node.resource.su_vpge_time_commitment
     - node.type.resource
   module:
     - link
@@ -79,6 +82,16 @@ content:
       resizable: false
       sizes: {  }
     third_party_settings: {  }
+  su_vpge_grad_grow_competency:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   su_vpge_resource_audience:
     type: options_buttons
     weight: 5
@@ -105,6 +118,16 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  su_vpge_time_commitment:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -135,4 +158,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

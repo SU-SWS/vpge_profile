@@ -581,6 +581,7 @@ display:
         title: Resources
         description: ''
         weight: -45
+        enabled: false
         expanded: false
         menu_name: main
         parent: ''

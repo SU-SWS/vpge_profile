@@ -1,0 +1,14 @@
+uuid: 76d65bb4-d63c-4b12-8de0-0aa34aeccd71
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.vpge_fellowship_eligibility
+id: taxonomy_vocabulary_vpge_fellowship_eligibility
+entity_type_id: taxonomy_vocabulary
+entity_id: vpge_fellowship_eligibility
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

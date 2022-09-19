@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.resource.body
+    - field.field.node.resource.feeds_item
     - field.field.node.resource.su_page_components
+    - field.field.node.resource.su_vpge_grad_grow_competency
     - field.field.node.resource.su_vpge_resource_audience
     - field.field.node.resource.su_vpge_resource_category
     - field.field.node.resource.su_vpge_resource_external_link
     - field.field.node.resource.su_vpge_resource_image
+    - field.field.node.resource.su_vpge_time_commitment
     - node.type.resource
   module:
     - ds
@@ -53,6 +56,14 @@ content:
     third_party_settings: {  }
     weight: 2
     region: main
+  su_vpge_grad_grow_competency:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
   su_vpge_resource_external_link:
     type: link_class
     label: hidden
@@ -77,7 +88,16 @@ content:
         class: ''
     weight: 0
     region: left
+  su_vpge_time_commitment:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
 hidden:
+  feeds_item: true
   links: true
   search_api_excerpt: true
   su_page_components: true

@@ -1,0 +1,141 @@
+uuid: b9a03267-23d4-4c9b-a9b3-025a49686bd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.stanford_news.title
+    - field.field.node.stanford_news.su_news_dek
+    - field.field.node.stanford_news.su_news_publishing_date
+    - field.field.node.stanford_news.su_news_source
+    - field.field.node.stanford_news.su_news_topics
+    - node.type.stanford_news
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      3598fada-08a3-45cd-ae1b-381ec0cecc2b:
+        separator: ','
+        limit: null
+        uuid: 3598fada-08a3-45cd-ae1b-381ec0cecc2b
+        plugin: explode
+        source: categories
+        weight: 0
+        label: Explode
+label: News
+id: news
+description: ''
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: xml
+parser_configuration:
+  context:
+    value: //nodes/node
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: stanford_news
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    label: title
+    machine_name: title
+    value: title
+    raw: false
+    inner: false
+    type: xml
+  source:
+    label: source
+    machine_name: source
+    value: source
+    raw: false
+    inner: false
+    type: xml
+  date:
+    label: date
+    machine_name: date
+    value: date
+    raw: false
+    inner: false
+    type: xml
+  source_title:
+    label: source-title
+    machine_name: source_title
+    value: source-title
+    raw: false
+    inner: false
+    type: xml
+  dek:
+    label: dek
+    machine_name: dek
+    value: dek
+    raw: false
+    inner: false
+    type: xml
+  categories:
+    label: Categories
+    machine_name: categories
+    value: Categories
+    raw: false
+    inner: false
+    type: xml
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique:
+      value: '1'
+  -
+    target: su_news_source
+    map:
+      uri: source
+      title: source_title
+    settings:
+      language: null
+  -
+    target: su_news_publishing_date
+    map:
+      value: date
+    settings:
+      language: ''
+      timezone: America/Los_Angeles
+  -
+    target: su_news_dek
+    map:
+      value: dek
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: su_news_topics
+    map:
+      target_id: categories
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false

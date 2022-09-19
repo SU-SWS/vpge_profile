@@ -18,7 +18,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'VPGE Resource Category'
+name: 'VPGE - Resource Category'
 vid: vpge_resource_category
 description: ''
 weight: 0
