@@ -1,0 +1,19 @@
+uuid: 81d0358f-324d-4627-92d0-ac1f73c028d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.su_vpge_pro
+field_name: su_vpge_pro
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

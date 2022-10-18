@@ -1,0 +1,343 @@
+uuid: d9efb71b-5a38-463b-a024-46312b3953f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.body
+    - field.field.node.program.feeds_item
+    - field.field.node.program.su_vpge_area_of_focus
+    - field.field.node.program.su_vpge_grad_grow_competency
+    - field.field.node.program.su_vpge_partner
+    - field.field.node.program.su_vpge_quarter
+    - field.field.node.program.su_vpge_registration_process
+    - field.field.node.program.su_vpge_related_person
+    - field.field.node.program.su_vpge_resource
+    - field.field.node.program.su_vpge_teaser
+    - field.field.node.program.su_vpge_time_commitment
+    - node.type.program
+    - views.view.vpge_events
+  module:
+    - element_class_formatter
+    - feeds
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - layout_library
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          4033d8d2-e021-4549-8205-cd27b217d324:
+            uuid: 4033d8d2-e021-4549-8205-cd27b217d324
+            region: content
+            configuration:
+              id: 'field_block:node:program:feeds_item'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: feeds_item_guid
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          72b9f11c-1ba3-4c7a-b0cf-85721b3c7032:
+            uuid: 72b9f11c-1ba3-4c7a-b0cf-85721b3c7032
+            region: content
+            configuration:
+              id: 'extra_field_block:node:program:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          015dbf84-a3b7-4364-a4b9-306ca52d13eb:
+            uuid: 015dbf84-a3b7-4364-a4b9-306ca52d13eb
+            region: content
+            configuration:
+              id: 'field_block:node:program:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          65d245d2-49a8-46ac-915c-71cb5a5696f6:
+            uuid: 65d245d2-49a8-46ac-915c-71cb5a5696f6
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_area_of_focus'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label_class
+                label: above
+                settings:
+                  link: true
+                  class: ''
+                  tag: ''
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          5979f3da-193d-4232-b7ac-8a05f2d6bd45:
+            uuid: 5979f3da-193d-4232-b7ac-8a05f2d6bd45
+            region: content
+            configuration:
+              id: 'views_block:vpge_events-list_page'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: '10'
+            weight: 5
+            additional: {  }
+          764f2263-5619-42f0-89cb-0a62afb10f53:
+            uuid: 764f2263-5619-42f0-89cb-0a62afb10f53
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_time_commitment'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          b20d8af9-f099-4938-8151-a21a7ef3d90c:
+            uuid: b20d8af9-f099-4938-8151-a21a7ef3d90c
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_grad_grow_competency'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          107185af-8f7c-4fe2-b2dc-ebed5943a325:
+            uuid: 107185af-8f7c-4fe2-b2dc-ebed5943a325
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_partner'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          27723153-6379-4d5c-a844-a88df9fc503f:
+            uuid: 27723153-6379-4d5c-a844-a88df9fc503f
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_related_person'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+          a2c1d5e3-4cda-4153-a7a6-349fd0babf87:
+            uuid: a2c1d5e3-4cda-4153-a7a6-349fd0babf87
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_resource'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
+          b84ab69c-32b3-4248-b6b0-de4140279fbf:
+            uuid: b84ab69c-32b3-4248-b6b0-de4140279fbf
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_teaser'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+          69d7065c-dfd1-4b57-ba3b-52e59f33b0ca:
+            uuid: 69d7065c-dfd1-4b57-ba3b-52e59f33b0ca
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_registration_process'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 12
+            additional: {  }
+          40963357-734d-436b-8d02-b0e76815fcaa:
+            uuid: 40963357-734d-436b-8d02-b0e76815fcaa
+            region: content
+            configuration:
+              id: 'field_block:node:program:su_vpge_quarter'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 14
+            additional: {  }
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  feeds_item:
+    type: feeds_item_guid
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  su_vpge_area_of_focus:
+    type: entity_reference_label_class
+    label: above
+    settings:
+      link: true
+      class: ''
+      tag: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  su_vpge_grad_grow_competency:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  su_vpge_partner:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  su_vpge_quarter:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  su_vpge_registration_process:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  su_vpge_related_person:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  su_vpge_resource:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  su_vpge_teaser:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  su_vpge_time_commitment:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

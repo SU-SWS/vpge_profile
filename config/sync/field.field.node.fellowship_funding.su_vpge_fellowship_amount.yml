@@ -1,0 +1,19 @@
+uuid: 6332152d-88ea-451a-b598-814f38884bdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_fellowship_amount
+    - node.type.fellowship_funding
+id: node.fellowship_funding.su_vpge_fellowship_amount
+field_name: su_vpge_fellowship_amount
+entity_type: node
+bundle: fellowship_funding
+label: 'Amount Awarded'
+description: 'Dollar amount, range or upper limit.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: be41c32b-03ee-4d9a-a576-fc9423b7d70e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_pro
+    - node.type.program
+    - node.type.stanford_person
+id: node.stanford_person.su_vpge_pro
+field_name: su_vpge_pro
+entity_type: node
+bundle: stanford_person
+label: 'VPGE Program'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

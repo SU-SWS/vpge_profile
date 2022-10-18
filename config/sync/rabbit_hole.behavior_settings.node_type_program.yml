@@ -1,0 +1,14 @@
+uuid: 359ae40d-4987-41d8-aafe-6dd0873f412d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.program
+id: node_type_program
+entity_type_id: node_type
+entity_id: program
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

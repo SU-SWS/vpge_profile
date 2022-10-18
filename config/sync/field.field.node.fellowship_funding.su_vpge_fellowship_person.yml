@@ -1,0 +1,29 @@
+uuid: 094e939e-2528-4d03-a0e0-b52208d30167
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_fellowship_person
+    - node.type.fellowship_funding
+    - node.type.stanford_person
+id: node.fellowship_funding.su_vpge_fellowship_person
+field_name: su_vpge_fellowship_person
+entity_type: node
+bundle: fellowship_funding
+label: 'Contact Person'
+description: 'Start typing the associated contact person then select from the auto-complete list.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      stanford_person: stanford_person
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

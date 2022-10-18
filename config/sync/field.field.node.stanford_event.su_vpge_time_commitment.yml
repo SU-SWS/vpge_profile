@@ -1,0 +1,29 @@
+uuid: 054ce633-8e56-42c4-a669-62069592569b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_time_commitment
+    - node.type.stanford_event
+    - taxonomy.vocabulary.vpge_time_commitment
+id: node.stanford_event.su_vpge_time_commitment
+field_name: su_vpge_time_commitment
+entity_type: node
+bundle: stanford_event
+label: 'Time Commitment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vpge_time_commitment: vpge_time_commitment
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 6eb7f521-d292-4d63-aec3-31411effddb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_last_updated
+    - node.type.resource
+  module:
+    - datetime
+id: node.resource.su_vpge_last_updated
+field_name: su_vpge_last_updated
+entity_type: node
+bundle: resource
+label: 'Last Modified Date'
+description: 'Use this Last Modified Date field to indicate the date when a resource has been updated.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
