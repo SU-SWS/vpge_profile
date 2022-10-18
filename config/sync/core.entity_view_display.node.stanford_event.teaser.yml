@@ -201,3 +201,11 @@ hidden:
   su_metatags: true
   su_shared_tags: true
   su_vpge_area_of_focus: true
+  su_vpge_fellowship_audience: true
+  su_vpge_fellowship_funding: true
+  su_vpge_grad_grow_competency: true
+  su_vpge_partner: true
+  su_vpge_person: true
+  su_vpge_program: true
+  su_vpge_resource: true
+  su_vpge_time_commitment: true

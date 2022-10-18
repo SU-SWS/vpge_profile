@@ -400,5 +400,13 @@ hidden:
   path: true
   promote: true
   sticky: true
+  su_vpge_fellowship_audience: true
+  su_vpge_fellowship_funding: true
+  su_vpge_grad_grow_competency: true
+  su_vpge_partner: true
+  su_vpge_person: true
+  su_vpge_program: true
+  su_vpge_resource: true
+  su_vpge_time_commitment: true
   uid: true
   url_redirects: true

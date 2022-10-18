@@ -92,4 +92,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true
+  su_vpge_area_of_focus: true
+  su_vpge_fellowship_amount: true
+  su_vpge_fellowship_app_period: true
+  su_vpge_fellowship_app_type: true
+  su_vpge_fellowship_apply_now: true
+  su_vpge_fellowship_contact: true
+  su_vpge_fellowship_duration: true
+  su_vpge_fellowship_eligibility: true
+  su_vpge_fellowship_how_apply: true
+  su_vpge_fellowship_image: true
+  su_vpge_fellowship_number: true
+  su_vpge_fellowship_partner: true
+  su_vpge_fellowship_person: true
+  su_vpge_fellowship_resource: true
+  su_vpge_fellowship_short_title: true
+  su_vpge_fellowship_tag_line: true
+  su_vpge_fellowship_type: true
+  su_vpge_grad_grow_competency: true
+  su_vpge_time_commitment: true

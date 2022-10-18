@@ -271,3 +271,8 @@ hidden:
   su_person_pronouns: true
   su_shared_tags: true
   su_vpge_area_of_focus: true
+  su_vpge_cohort: true
+  su_vpge_current_degree_dept: true
+  su_vpge_fellowship_funding: true
+  su_vpge_named_fellowship: true
+  su_vpge_pro: true

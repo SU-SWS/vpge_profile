@@ -399,5 +399,10 @@ hidden:
   su_person_admin_appts: true
   su_person_research_interests: true
   su_person_scholarly_interests: true
+  su_vpge_cohort: true
+  su_vpge_current_degree_dept: true
+  su_vpge_fellowship_funding: true
+  su_vpge_named_fellowship: true
+  su_vpge_pro: true
   uid: true
   url_redirects: true

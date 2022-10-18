@@ -160,3 +160,5 @@ content:
     third_party_settings: {  }
 hidden:
   feeds_item: true
+  su_vpge_last_updated: true
+  su_vpge_partner: true

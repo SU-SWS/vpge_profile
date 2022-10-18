@@ -101,5 +101,7 @@ hidden:
   links: true
   search_api_excerpt: true
   su_page_components: true
+  su_vpge_last_updated: true
+  su_vpge_partner: true
   su_vpge_resource_audience: true
   su_vpge_resource_category: true
