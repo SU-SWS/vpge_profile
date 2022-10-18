@@ -74,6 +74,7 @@ dependencies:
     - seckit
     - shortcut
     - stanford_media
+    - stanford_profile
     - stanford_publication
     - system
     - taxonomy
@@ -81,7 +82,7 @@ dependencies:
     - ui_patterns_library
     - view_unpublished
     - views_bulk_edit
-    - vpge_profile
+    - views_ui
     - xmlsitemap
 id: site_developer
 label: 'Site Developer'
@@ -175,6 +176,7 @@ permissions:
   - 'administer user fields'
   - 'administer user form display'
   - 'administer users'
+  - 'administer views'
   - 'administer xmlsitemap'
   - 'assign contributor role'
   - 'assign layout_builder_user role'

@@ -19,17 +19,11 @@ mode: media_library
 content:
   name:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
-    region: content
-    settings: {  }
     third_party_settings: {  }
   su_gallery_caption:
     type: string_textfield
@@ -49,15 +43,20 @@ content:
       preview_link: true
       offsets: '50,50'
     third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 30
+  su_media_category:
+    type: options_shs
+    weight: 3
     region: content
-    settings: {  }
+    settings:
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
     third_party_settings: {  }
 hidden:
   created: true
   path: true
+  publish_on: true
   status: true
-  su_media_category: true
   uid: true
+  unpublish_on: true

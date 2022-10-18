@@ -62,6 +62,8 @@ module:
   entity_usage: 0
   environment_indicator: 0
   fakeobjects: 0
+  fast404: 0
+  fast_404_generator: 0
   feeds: 0
   feeds_ex: 0
   feeds_tamper: 0

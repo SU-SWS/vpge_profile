@@ -63,6 +63,7 @@ dependencies:
     - scheduler
     - shortcut
     - stanford_media
+    - stanford_profile
     - stanford_publication
     - system
     - taxonomy
@@ -70,7 +71,7 @@ dependencies:
     - ui_patterns_library
     - view_unpublished
     - views_bulk_edit
-    - vpge_profile
+    - views_ui
 id: site_builder
 label: 'Site Builder'
 weight: -1
@@ -138,6 +139,7 @@ permissions:
   - 'administer user fields'
   - 'administer user form display'
   - 'administer users'
+  - 'administer views'
   - 'assign contributor role'
   - 'assign layout_builder_user role'
   - 'assign site_builder role'
