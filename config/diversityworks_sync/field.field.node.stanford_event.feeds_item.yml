@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - feeds.feed_type.localist_bookmarked_events
     - field.storage.node.feeds_item
     - node.type.stanford_event
   module:
@@ -20,12 +19,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:feeds_feed'
-  handler_settings:
-    target_bundles:
-      localist_bookmarked_events: localist_bookmarked_events
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
+  handler_settings: {  }
 field_type: feeds_item

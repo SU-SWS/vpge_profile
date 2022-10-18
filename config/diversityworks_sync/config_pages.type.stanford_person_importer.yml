@@ -24,7 +24,7 @@ third_party_settings:
       suffix: ''
 id: stanford_person_importer
 label: 'Person Importer'
-token: false
+token: null
 context:
   show_warning: true
   group:
