@@ -21,6 +21,7 @@ dependencies:
     - node.type.stanford_news
     - node.type.stanford_page
     - node.type.stanford_person
+    - node.type.stanford_policy
     - node.type.stanford_publication
     - taxonomy.vocabulary.basic_page_types
     - taxonomy.vocabulary.event_audience
@@ -34,6 +35,7 @@ dependencies:
     - block
     - block_content
     - block_content_permissions
+    - book
     - config_pages
     - content_lock
     - contextual
@@ -41,6 +43,7 @@ dependencies:
     - domain_301_redirect
     - dropzonejs
     - ds
+    - eck
     - editoria11y
     - entity_reference_revisions
     - entity_usage
@@ -100,6 +103,7 @@ permissions:
   - 'access toolbar'
   - 'access user profiles'
   - 'add citation entities'
+  - 'add content to books'
   - 'admin classes'
   - 'admin display suite'
   - 'admin fields'
@@ -109,6 +113,7 @@ permissions:
   - 'administer block_content fields'
   - 'administer block_content form display'
   - 'administer blocks'
+  - 'administer book outlines'
   - 'administer citation display'
   - 'administer citation entities'
   - 'administer citation fields'
@@ -202,7 +207,9 @@ permissions:
   - 'create file media'
   - 'create google_form media'
   - 'create image media'
+  - 'create log entities'
   - 'create media'
+  - 'create new books'
   - 'create stanford_course content'
   - 'create stanford_event content'
   - 'create stanford_event_series content'
@@ -210,6 +217,7 @@ permissions:
   - 'create stanford_news content'
   - 'create stanford_page content'
   - 'create stanford_person content'
+  - 'create stanford_policy content'
   - 'create stanford_publication content'
   - 'create terms in basic_page_types'
   - 'create terms in event_audience'
@@ -226,6 +234,7 @@ permissions:
   - 'delete any file media'
   - 'delete any google_form media'
   - 'delete any image media'
+  - 'delete any log entities'
   - 'delete any media'
   - 'delete any stanford_course content'
   - 'delete any stanford_event content'
@@ -234,6 +243,7 @@ permissions:
   - 'delete any stanford_news content'
   - 'delete any stanford_page content'
   - 'delete any stanford_person content'
+  - 'delete any stanford_policy content'
   - 'delete any stanford_publication content'
   - 'delete any video media'
   - 'delete citation entities'
@@ -244,6 +254,7 @@ permissions:
   - 'delete own file media'
   - 'delete own google_form media'
   - 'delete own image media'
+  - 'delete own log entities'
   - 'delete own stanford_course content'
   - 'delete own stanford_event content'
   - 'delete own stanford_event_series content'
@@ -251,6 +262,7 @@ permissions:
   - 'delete own stanford_news content'
   - 'delete own stanford_page content'
   - 'delete own stanford_person content'
+  - 'delete own stanford_policy content'
   - 'delete own stanford_publication content'
   - 'delete own video media'
   - 'delete stanford_course revisions'
@@ -259,6 +271,7 @@ permissions:
   - 'delete stanford_news revisions'
   - 'delete stanford_page revisions'
   - 'delete stanford_person revisions'
+  - 'delete stanford_policy revisions'
   - 'delete stanford_publication revisions'
   - 'delete terms in basic_page_types'
   - 'delete terms in event_audience'
@@ -272,6 +285,7 @@ permissions:
   - 'edit any file media'
   - 'edit any google_form media'
   - 'edit any image media'
+  - 'edit any log entities'
   - 'edit any stanford_course content'
   - 'edit any stanford_event content'
   - 'edit any stanford_event_series content'
@@ -279,6 +293,7 @@ permissions:
   - 'edit any stanford_news content'
   - 'edit any stanford_page content'
   - 'edit any stanford_person content'
+  - 'edit any stanford_policy content'
   - 'edit any stanford_publication content'
   - 'edit any video media'
   - 'edit behavior plugin settings'
@@ -292,6 +307,7 @@ permissions:
   - 'edit own file media'
   - 'edit own google_form media'
   - 'edit own image media'
+  - 'edit own log entities'
   - 'edit own stanford_course content'
   - 'edit own stanford_event content'
   - 'edit own stanford_event_series content'
@@ -299,6 +315,7 @@ permissions:
   - 'edit own stanford_news content'
   - 'edit own stanford_page content'
   - 'edit own stanford_person content'
+  - 'edit own stanford_policy content'
   - 'edit own stanford_publication content'
   - 'edit own video media'
   - 'edit stanford_basic_site_settings config page entity'
@@ -327,6 +344,7 @@ permissions:
   - 'revert stanford_news revisions'
   - 'revert stanford_page revisions'
   - 'revert stanford_person revisions'
+  - 'revert stanford_policy revisions'
   - 'revert stanford_publication revisions'
   - 'schedule publishing of nodes'
   - 'select account cancellation method'
@@ -337,6 +355,7 @@ permissions:
   - 'use views bulk edit'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any log entities'
   - 'view any unpublished content'
   - 'view any unpublished stanford_course content'
   - 'view any unpublished stanford_event content'
@@ -349,6 +368,7 @@ permissions:
   - 'view editoria11y checker'
   - 'view field_media_embeddable_code'
   - 'view own field_media_embeddable_code'
+  - 'view own log entities'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view scheduled content'
@@ -358,6 +378,7 @@ permissions:
   - 'view stanford_news revisions'
   - 'view stanford_page revisions'
   - 'view stanford_person revisions'
+  - 'view stanford_policy revisions'
   - 'view stanford_publication revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'

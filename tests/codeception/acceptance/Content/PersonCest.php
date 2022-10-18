@@ -65,6 +65,7 @@ class PersonCest {
       'type' => 'stanford_person',
       'su_person_first_name' => $first_name,
       'su_person_last_name' => $last_name,
+      'su_person_type_group' => $term,
     ]);
     $I->amOnPage("/person/john-wick");
     $I->see("John Wick");

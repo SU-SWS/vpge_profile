@@ -13,6 +13,7 @@ module:
   block: 0
   block_content: 0
   block_content_permissions: 0
+  book: 0
   breakpoint: 0
   change_labels: 0
   chosen: 0
@@ -52,6 +53,7 @@ module:
   dropzonejs: 0
   ds_extras: 0
   dynamic_page_cache: 0
+  eck: 0
   editor: 0
   editoria11y: 0
   element_class_formatter: 0
@@ -192,6 +194,7 @@ module:
   stanford_paragraph_card: 0
   stanford_person: 0
   stanford_person_importer: 0
+  stanford_policy: 0
   stanford_profile_admin: 0
   stanford_profile_drush: 0
   stanford_profile_styles: 0
