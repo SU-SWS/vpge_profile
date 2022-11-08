@@ -155,8 +155,6 @@ third_party_settings:
       - 'Content fields'
       - 'Custom block types'
       - 'Custom blocks'
-      - Devel
-      - 'Devel PHP'
       - 'Events Lists (Views)'
       - Forms
       - Help
@@ -167,13 +165,19 @@ third_party_settings:
       - 'News Lists (Views)'
       - 'PDB React'
       - 'People Lists (Views)'
+      - 'Policy (Views)'
       - Printable
       - 'Publication (Views)'
       - React
+      - 'SimpleSAMLphp Authentication'
       - 'Stanford News'
       - 'Stanford Profile Helper'
+      - 'Stanford SimpleSAML PHP'
       - System
       - 'Taxonomy Terms (Views)'
+      - VPGE
+      - 'VPGE '
+      - 'VPGE views'
       - Views
       - core
     entity_view_mode_restriction:
@@ -233,6 +237,8 @@ third_party_settings:
         Menus:
           - 'menu_block:stanford-event-types'
           - 'system_menu_block:stanford-event-types'
+          - 'menu_block:fellowships-funding'
+          - 'system_menu_block:fellowships-funding'
           - 'menu_block:main'
           - 'system_menu_block:main'
           - 'menu_block:stanford-person-type'
@@ -252,10 +258,15 @@ third_party_settings:
         - Forms
         - Help
         - 'Lists (Views)'
+        - 'Policy (Views)'
         - Printable
         - React
+        - 'SimpleSAMLphp Authentication'
         - 'Stanford Profile Helper'
+        - 'Stanford SimpleSAML PHP'
         - 'Taxonomy Terms (Views)'
+        - VPGE
+        - 'VPGE '
         - Views
 id: node.stanford_page.default
 targetEntityType: node

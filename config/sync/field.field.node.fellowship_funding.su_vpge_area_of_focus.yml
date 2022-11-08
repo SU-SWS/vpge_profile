@@ -10,9 +10,9 @@ id: node.fellowship_funding.su_vpge_area_of_focus
 field_name: su_vpge_area_of_focus
 entity_type: node
 bundle: fellowship_funding
-label: 'Area of Focus'
+label: 'VPGE Area of Focus'
 description: 'Choose the appropriate areas of focus.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

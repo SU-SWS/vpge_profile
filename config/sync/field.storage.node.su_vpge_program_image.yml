@@ -1,15 +1,16 @@
-uuid: 94eb9544-1ba0-481b-a9ab-455f300c814e
+uuid: 546c56d0-0d95-4bb9-a4d0-1b79946a6c8f
 langcode: en
 status: true
 dependencies:
   module:
+    - media
     - node
-id: node.su_vpge_fellowship_person
-field_name: su_vpge_fellowship_person
+id: node.su_vpge_program_image
+field_name: su_vpge_program_image
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: media
 module: core
 locked: false
 cardinality: 1

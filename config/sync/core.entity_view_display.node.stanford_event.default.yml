@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.base_field_override.node.stanford_event.title
     - field.field.node.stanford_event.body
-    - field.field.node.stanford_event.feeds_item
     - field.field.node.stanford_event.layout_builder__layout
     - field.field.node.stanford_event.stanford_intranet__access
     - field.field.node.stanford_event.su_event_alt_loc
@@ -30,6 +29,15 @@ dependencies:
     - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
     - field.field.node.stanford_event.su_vpge_area_of_focus
+    - field.field.node.stanford_event.su_vpge_featured_event
+    - field.field.node.stanford_event.su_vpge_fellowship_audience
+    - field.field.node.stanford_event.su_vpge_fellowship_funding
+    - field.field.node.stanford_event.su_vpge_grad_grow_competency
+    - field.field.node.stanford_event.su_vpge_partner
+    - field.field.node.stanford_event.su_vpge_person
+    - field.field.node.stanford_event.su_vpge_program
+    - field.field.node.stanford_event.su_vpge_resource
+    - field.field.node.stanford_event.su_vpge_time_commitment
     - node.type.stanford_event
     - views.view.stanford_events
   module:
@@ -176,22 +184,6 @@ third_party_settings:
                   field_formatter_class:
                     class: su-event-type
             weight: -9
-            additional: {  }
-          265ff32e-2a0c-4c3b-995d-8c7583efef80:
-            uuid: 265ff32e-2a0c-4c3b-995d-8c7583efef80
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_event:su_vpge_area_of_focus'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: -4
             additional: {  }
         third_party_settings: {  }
       -
@@ -459,6 +451,26 @@ third_party_settings:
           centered: centered-container
           columns: flex-8-of-12
         components:
+          7a80c779-6c87-49fd-94e0-68ae37fa1cd4:
+            uuid: 7a80c779-6c87-49fd-94e0-68ae37fa1cd4
+            region: main
+            configuration:
+              id: 'field_block:node:stanford_event:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: su-event-body
+            weight: 1
+            additional: {  }
           11df73c4-8beb-43be-b1d2-4ddc537f90b1:
             uuid: 11df73c4-8beb-43be-b1d2-4ddc537f90b1
             region: main
@@ -480,27 +492,7 @@ third_party_settings:
                     class: su-event-components
                   ds:
                     ds_limit: ''
-            weight: 1
-            additional: {  }
-          7a80c779-6c87-49fd-94e0-68ae37fa1cd4:
-            uuid: 7a80c779-6c87-49fd-94e0-68ae37fa1cd4
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_event:body'
-              label: Body
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings:
-                  field_formatter_class:
-                    class: su-event-body
-            weight: 0
+            weight: 4
             additional: {  }
         third_party_settings: {  }
       -
@@ -835,8 +827,17 @@ content:
     third_party_settings: {  }
     weight: 119
     region: main
+  su_vpge_featured_event:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 120
+    region: main
 hidden:
-  feeds_item: true
   layout_builder__layout: true
   search_api_excerpt: true
   stanford_intranet__access: true

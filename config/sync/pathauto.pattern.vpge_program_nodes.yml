@@ -1,22 +1,22 @@
-uuid: 40b742c5-6048-44e2-97a2-3912a0cedea4
+uuid: daafe3b8-06aa-4b89-90d4-96b97f3a097e
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: partner_nodes
-label: 'Partner Nodes'
+id: vpge_program_nodes
+label: 'VPGE Program Nodes'
 type: 'canonical_entities:node'
-pattern: 'partners/[node:title]'
+pattern: 'program/[node:title]'
 selection_criteria:
-  9e2f29fb-6031-4a2d-8029-402ade8e14dc:
+  2bac50b4-ee6d-40b4-ad95-b767695c6b24:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 9e2f29fb-6031-4a2d-8029-402ade8e14dc
+    uuid: 2bac50b4-ee6d-40b4-ad95-b767695c6b24
     context_mapping:
       node: node
     bundles:
-      partner: partner
+      program: program
 selection_logic: and
 weight: -5
 relationships: {  }

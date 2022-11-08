@@ -23,7 +23,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: Partner
+name: 'VPGE Partner'
 type: partner
 description: 'Use Partner to display information about related partners including a link to the partner website.'
 help: ''

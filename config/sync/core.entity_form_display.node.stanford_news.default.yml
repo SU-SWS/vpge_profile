@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.stanford_news.feeds_item
+    - field.field.node.stanford_news.body
     - field.field.node.stanford_news.layout_builder__layout
     - field.field.node.stanford_news.stanford_intranet__access
     - field.field.node.stanford_news.su_metatags
@@ -32,6 +32,7 @@ dependencies:
     - scheduler
     - shs
     - stanford_intranet
+    - text
 third_party_settings:
   field_group:
     group_media:
@@ -88,7 +89,7 @@ third_party_settings:
       label: 'Categories and Relationships'
       region: content
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: fieldset
       format_settings:
         classes: ''
@@ -101,6 +102,16 @@ targetEntityType: node
 bundle: stanford_news
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 5
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
     weight: 9
@@ -127,7 +138,7 @@ content:
     third_party_settings: {  }
   su_metatags:
     type: metatag_firehose
-    weight: 32
+    weight: 12
     region: content
     settings:
       sidebar: true
@@ -158,7 +169,7 @@ content:
     third_party_settings: {  }
   su_news_components:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -273,7 +284,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  feeds_item: true
   layout_builder__layout: true
   layout_selection: true
   path: true

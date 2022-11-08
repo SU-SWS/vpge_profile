@@ -1,26 +1,26 @@
-uuid: be41c32b-03ee-4d9a-a576-fc9423b7d70e
+uuid: 37095152-ec3c-4c5d-a162-9ee24be0a415
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.su_vpge_pro
+    - field.storage.node.su_vpge_program_image
+    - media.type.image
     - node.type.program
-    - node.type.stanford_person
-id: node.stanford_person.su_vpge_pro
-field_name: su_vpge_pro
+id: node.program.su_vpge_program_image
+field_name: su_vpge_program_image
 entity_type: node
-bundle: stanford_person
-label: 'VPGE Program'
+bundle: program
+label: 'VPGE Program Image'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:media'
   handler_settings:
     target_bundles:
-      program: program
+      image: image
     sort:
       field: _none
       direction: ASC

@@ -8,8 +8,8 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
-    parent: 'main:'
+      - fellowships-funding
+    parent: 'fellowships-funding:'
   scheduler:
     expand_fieldset: when_required
     fields_display_mode: vertical_tab
@@ -23,10 +23,10 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: Fellowship/Funding
+name: 'VPGE Fellowship/Funding'
 type: fellowship_funding
 description: 'Use Fellowship/Funding for fellowships administered by the Office of the VPGE.'
 help: ''
 new_revision: true
-preview_mode: 1
+preview_mode: 0
 display_submitted: false

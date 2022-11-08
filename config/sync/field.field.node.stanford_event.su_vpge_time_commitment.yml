@@ -10,7 +10,7 @@ id: node.stanford_event.su_vpge_time_commitment
 field_name: su_vpge_time_commitment
 entity_type: node
 bundle: stanford_event
-label: 'Time Commitment'
+label: 'VPGE Grad Grow Time Commitment'
 description: ''
 required: false
 translatable: true

@@ -4,46 +4,177 @@ status: true
 dependencies:
   config:
     - field.field.node.resource.body
-    - field.field.node.resource.feeds_item
-    - field.field.node.resource.su_page_components
+    - field.field.node.resource.layout_builder__layout
     - field.field.node.resource.su_vpge_grad_grow_competency
+    - field.field.node.resource.su_vpge_last_updated
+    - field.field.node.resource.su_vpge_partner
     - field.field.node.resource.su_vpge_resource_audience
     - field.field.node.resource.su_vpge_resource_category
     - field.field.node.resource.su_vpge_resource_external_link
     - field.field.node.resource.su_vpge_resource_image
     - field.field.node.resource.su_vpge_time_commitment
     - node.type.resource
+    - views.view.grad_grow_competency_navigation_block
+    - views.view.grad_grow_competency_on_a_node
+    - views.view.vpge_content_fields_on_a_node
+  content:
+    - 'block_content:stanford_component_block:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
   module:
-    - ds
+    - block_content
     - element_class_formatter
     - field_formatter_class
+    - jumpstart_ui
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
     - text
     - user
+    - views
 third_party_settings:
-  ds:
-    layout:
-      id: jumpstart_ui_two_column
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        extra_classes: ''
-        centered: centered-container
-        orientation: right
-    regions:
-      left:
-        - su_vpge_resource_image
-      main:
-        - node_title
-        - body
-        - su_vpge_resource_external_link
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 1
-        label: hidden
-        formatter: default
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: defaults
+        layout_settings:
+          label: 'Title and placeholder'
+          context_mapping: {  }
+          extra_classes: ''
+          centered: centered-container
+          columns: default
+        components:
+          95f2aaeb-c744-4eaa-ac05-793628f9d086:
+            uuid: 95f2aaeb-c744-4eaa-ac05-793628f9d086
+            region: main
+            configuration:
+              id: 'field_block:node:resource:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_title_heading
+                label: hidden
+                settings:
+                  tag: h1
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional: {  }
+          7c0ab341-0a7e-4f89-a49f-11c19b38ab64:
+            uuid: 7c0ab341-0a7e-4f89-a49f-11c19b38ab64
+            region: main
+            configuration:
+              id: 'block_content:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
+              label: Placeholder
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: jumpstart_ui_two_column
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          extra_classes: ''
+          centered: centered-container
+          orientation: right
+        components:
+          fadfcc0b-54e2-48ec-8068-e74f42d33659:
+            uuid: fadfcc0b-54e2-48ec-8068-e74f42d33659
+            region: main
+            configuration:
+              id: 'views_block:vpge_content_fields_on_a_node-block_3'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional: {  }
+          f7b29935-8e71-47b8-9bb0-8acd3b94ff79:
+            uuid: f7b29935-8e71-47b8-9bb0-8acd3b94ff79
+            region: main
+            configuration:
+              id: 'views_block:grad_grow_competency_on_a_node-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional: {  }
+          859daabb-7fef-474e-8eda-1c6276bd10c5:
+            uuid: 859daabb-7fef-474e-8eda-1c6276bd10c5
+            region: left
+            configuration:
+              id: 'views_block:vpge_content_fields_on_a_node-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional: {  }
+          71b20d51-e655-44a6-be0c-dddc17b883fc:
+            uuid: 71b20d51-e655-44a6-be0c-dddc17b883fc
+            region: left
+            configuration:
+              id: 'views_block:grad_grow_competency_navigation_block-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: defaults
+        layout_settings:
+          label: placeholder
+          context_mapping: {  }
+          extra_classes: ''
+          centered: centered-container
+          columns: default
+        components:
+          a4ecfa27-3249-49c4-a7f0-fb0edd60c5fa:
+            uuid: a4ecfa27-3249-49c4-a7f0-fb0edd60c5fa
+            region: main
+            configuration:
+              id: 'block_content:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
+              label: 'Placeholder to keep title top margin on VPGE content types'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.resource.default
 targetEntityType: node
 bundle: resource
@@ -97,7 +228,7 @@ content:
     weight: 5
     region: content
 hidden:
-  feeds_item: true
+  layout_builder__layout: true
   links: true
   search_api_excerpt: true
   su_page_components: true

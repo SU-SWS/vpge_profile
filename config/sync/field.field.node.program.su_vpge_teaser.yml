@@ -5,22 +5,15 @@ dependencies:
   config:
     - field.storage.node.su_vpge_teaser
     - node.type.program
-  module:
-    - allowed_formats
-    - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats:
-      - plain_text
 id: node.program.su_vpge_teaser
 field_name: su_vpge_teaser
 entity_type: node
 bundle: program
-label: 'VPGE Teaser'
+label: Teaser
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: string_long

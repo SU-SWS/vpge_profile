@@ -5,9 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.stanford_person.body
-    - field.field.node.stanford_person.feeds_item
     - field.field.node.stanford_person.layout_builder__layout
     - field.field.node.stanford_person.stanford_intranet__access
+    - field.field.node.stanford_person.su_metatags
     - field.field.node.stanford_person.su_person_academic_appt
     - field.field.node.stanford_person.su_person_admin_appts
     - field.field.node.stanford_person.su_person_affiliations
@@ -26,6 +26,7 @@ dependencies:
     - field.field.node.stanford_person.su_person_mobile_phone
     - field.field.node.stanford_person.su_person_photo
     - field.field.node.stanford_person.su_person_profile_link
+    - field.field.node.stanford_person.su_person_pronouns
     - field.field.node.stanford_person.su_person_research
     - field.field.node.stanford_person.su_person_research_interests
     - field.field.node.stanford_person.su_person_scholarly_interests
@@ -34,6 +35,11 @@ dependencies:
     - field.field.node.stanford_person.su_person_type_group
     - field.field.node.stanford_person.su_shared_tags
     - field.field.node.stanford_person.su_vpge_area_of_focus
+    - field.field.node.stanford_person.su_vpge_cohort
+    - field.field.node.stanford_person.su_vpge_current_degree_dept
+    - field.field.node.stanford_person.su_vpge_fellowship_funding
+    - field.field.node.stanford_person.su_vpge_named_fellowship
+    - field.field.node.stanford_person.su_vpge_program
     - node.type.stanford_person
   module:
     - text
@@ -57,7 +63,6 @@ content:
     weight: 100
     region: content
 hidden:
-  feeds_item: true
   layout_builder__layout: true
   search_api_excerpt: true
   stanford_intranet__access: true
@@ -94,3 +99,4 @@ hidden:
   su_vpge_fellowship_funding: true
   su_vpge_named_fellowship: true
   su_vpge_pro: true
+  su_vpge_program: true

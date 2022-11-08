@@ -22,7 +22,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: Program
+name: 'VPGE Events Program'
 type: program
 description: 'A program to which individual events can belong.'
 help: ''

@@ -23,7 +23,7 @@ dependencies:
     - views_infinite_scroll
     - views_taxonomy_term_name_depth
 id: vpge_events
-label: 'VPGE Events on a program page'
+label: 'VPGE Events: Program page'
 module: views
 description: 'VPGE block that shows events related to a program'
 tag: ''
@@ -36,7 +36,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Events
+      title: 'Events in this Program'
       fields:
         su_event_date_time:
           id: su_event_date_time

@@ -10,7 +10,7 @@ id: node.program.su_vpge_quarter
 field_name: su_vpge_quarter
 entity_type: node
 bundle: program
-label: 'VPGE Quarter'
+label: Quarter
 description: ''
 required: false
 translatable: false

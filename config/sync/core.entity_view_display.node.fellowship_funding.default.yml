@@ -4,10 +4,224 @@ status: true
 dependencies:
   config:
     - field.field.node.fellowship_funding.body
+    - field.field.node.fellowship_funding.su_vpge_area_of_focus
+    - field.field.node.fellowship_funding.su_vpge_fellowship_amount
+    - field.field.node.fellowship_funding.su_vpge_fellowship_app_period
+    - field.field.node.fellowship_funding.su_vpge_fellowship_app_type
+    - field.field.node.fellowship_funding.su_vpge_fellowship_apply_now
+    - field.field.node.fellowship_funding.su_vpge_fellowship_contact
+    - field.field.node.fellowship_funding.su_vpge_fellowship_duration
+    - field.field.node.fellowship_funding.su_vpge_fellowship_eligibility
+    - field.field.node.fellowship_funding.su_vpge_fellowship_how_apply
+    - field.field.node.fellowship_funding.su_vpge_fellowship_image
+    - field.field.node.fellowship_funding.su_vpge_fellowship_number
+    - field.field.node.fellowship_funding.su_vpge_fellowship_partner
+    - field.field.node.fellowship_funding.su_vpge_fellowship_resource
+    - field.field.node.fellowship_funding.su_vpge_fellowship_short_title
+    - field.field.node.fellowship_funding.su_vpge_fellowship_tag_line
+    - field.field.node.fellowship_funding.su_vpge_fellowship_type
+    - field.field.node.fellowship_funding.su_vpge_grad_grow_competency
+    - field.field.node.fellowship_funding.su_vpge_time_commitment
     - node.type.fellowship_funding
+    - system.menu.fellowships-funding
+    - views.view.vpge_content_fields_on_a_node
+    - views.view.vpge_events_fellowship_page
+    - views.view.vpge_fellowship_display_views
+  content:
+    - 'block_content:stanford_component_block:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
   module:
+    - block_content
+    - jumpstart_ui
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - layout_library
+    - menu_block
+    - system
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: defaults
+        layout_settings:
+          label: 'Page title, placeholder, and breadcrumbs'
+          context_mapping: {  }
+          extra_classes: ''
+          centered: centered-container
+          columns: default
+        components:
+          c69c2ce6-a8b0-4d1b-95e4-134e949f5b2b:
+            uuid: c69c2ce6-a8b0-4d1b-95e4-134e949f5b2b
+            region: main
+            configuration:
+              id: 'field_block:node:fellowship_funding:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_title_heading
+                label: hidden
+                settings:
+                  tag: h1
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional: {  }
+          20aa8daa-4a31-4eda-9d56-a24fae3c3a1e:
+            uuid: 20aa8daa-4a31-4eda-9d56-a24fae3c3a1e
+            region: main
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 1
+            additional: {  }
+          1675e3cd-c988-4ad4-9078-da087819749a:
+            uuid: 1675e3cd-c988-4ad4-9078-da087819749a
+            region: main
+            configuration:
+              id: 'block_content:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
+              label: Placeholder
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: jumpstart_ui_three_column
+        layout_settings:
+          label: 'Main Fellowship'
+          context_mapping: {  }
+          extra_classes: ''
+          centered: centered-container
+        components:
+          f3bb6cbc-af8e-4f54-bd1f-798eeb0d1610:
+            uuid: f3bb6cbc-af8e-4f54-bd1f-798eeb0d1610
+            region: left
+            configuration:
+              id: 'menu_block:fellowships-funding'
+              label: 'Fellowships & Funding'
+              label_display: '0'
+              provider: menu_block
+              context_mapping: {  }
+              follow: false
+              follow_parent: child
+              label_link: false
+              label_type: block
+              level: 2
+              depth: 0
+              expand_all_items: false
+              parent: 'fellowships-funding:'
+              suggestion: secondary_nav
+            weight: 4
+            additional: {  }
+          70ecee64-d0c2-4507-861b-979ae94f6e0f:
+            uuid: 70ecee64-d0c2-4507-861b-979ae94f6e0f
+            region: left
+            configuration:
+              id: 'views_block:vpge_fellowship_display_views-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 3
+            additional: {  }
+          6925834d-5aef-49b5-a2ea-936495bc686c:
+            uuid: 6925834d-5aef-49b5-a2ea-936495bc686c
+            region: main
+            configuration:
+              id: 'views_block:vpge_content_fields_on_a_node-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          2e4876b0-91a7-44c7-9cb8-2bb23f60a074:
+            uuid: 2e4876b0-91a7-44c7-9cb8-2bb23f60a074
+            region: main
+            configuration:
+              id: 'views_block:vpge_events_fellowship_page-list_page'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional: {  }
+          b838d9ae-5d84-4f16-8813-627f79f505ca:
+            uuid: b838d9ae-5d84-4f16-8813-627f79f505ca
+            region: right
+            configuration:
+              id: 'views_block:vpge_content_fields_on_a_node-block_5'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b6649dba-a722-409e-ae2c-af475fb516a4:
+            uuid: b6649dba-a722-409e-ae2c-af475fb516a4
+            region: content
+            configuration:
+              id: 'extra_field_block:node:fellowship_funding:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          89976e71-ddf1-4bce-b962-6bed547e7836:
+            uuid: 89976e71-ddf1-4bce-b962-6bed547e7836
+            region: content
+            configuration:
+              id: 'block_content:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
+              label: 'Placeholder to keep title top margin on VPGE content types'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.fellowship_funding.default
 targetEntityType: node
 bundle: fellowship_funding
@@ -26,7 +240,6 @@ content:
     weight: 100
     region: content
 hidden:
-  feeds_item: true
   search_api_excerpt: true
   su_vpge_area_of_focus: true
   su_vpge_fellowship_amount: true

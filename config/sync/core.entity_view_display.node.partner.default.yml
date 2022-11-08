@@ -10,11 +10,211 @@ dependencies:
     - field.field.node.partner.su_vpge_partner_link
     - field.field.node.partner.su_vpge_time_commitment
     - node.type.partner
+    - views.view.grad_grow_competency_navigation_block
+    - views.view.grad_grow_competency_on_a_node
+    - views.view.vpge_content_fields_on_a_node
+  content:
+    - 'block_content:stanford_component_block:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
   module:
-    - image
+    - block_content
+    - jumpstart_ui
+    - layout_builder
+    - layout_library
     - link
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: defaults
+        layout_settings:
+          label: 'Title and placeholder'
+          context_mapping: {  }
+          extra_classes: ''
+          centered: centered-container
+          columns: default
+        components:
+          8e20a89e-7c6a-41ff-b61a-62046cdedf0b:
+            uuid: 8e20a89e-7c6a-41ff-b61a-62046cdedf0b
+            region: main
+            configuration:
+              id: 'field_block:node:partner:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_title_heading
+                label: hidden
+                settings:
+                  tag: h1
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 2
+            additional: {  }
+          f3d20274-1d47-4daf-a811-f470cae8bfe9:
+            uuid: f3d20274-1d47-4daf-a811-f470cae8bfe9
+            region: main
+            configuration:
+              id: 'block_content:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
+              label: Placeholder
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: jumpstart_ui_two_column
+        layout_settings:
+          label: 'Partner body'
+          context_mapping: {  }
+          extra_classes: ''
+          centered: centered-container
+          orientation: right
+        components:
+          cf0ece8d-4c8d-405a-8d23-6d67f0ed0c43:
+            uuid: cf0ece8d-4c8d-405a-8d23-6d67f0ed0c43
+            region: main
+            configuration:
+              id: 'field_block:node:partner:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional: {  }
+          3e318348-9dc8-4847-8d46-ab096e5e1ee5:
+            uuid: 3e318348-9dc8-4847-8d46-ab096e5e1ee5
+            region: main
+            configuration:
+              id: 'field_block:node:partner:su_vpge_partner_link'
+              label: 'Partner Link'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings:
+                  field_formatter_class:
+                    class: su-button--secondary
+            weight: 2
+            additional: {  }
+          9e9f62fb-2c03-43d2-87c1-c87fcdbaa52c:
+            uuid: 9e9f62fb-2c03-43d2-87c1-c87fcdbaa52c
+            region: main
+            configuration:
+              id: 'field_block:node:partner:su_vpge_time_commitment'
+              label: 'Time Commitment'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 5
+            additional: {  }
+          0871c3c8-b7f6-4719-a19e-c935b4a20563:
+            uuid: 0871c3c8-b7f6-4719-a19e-c935b4a20563
+            region: main
+            configuration:
+              id: 'views_block:grad_grow_competency_on_a_node-block_1'
+              label: 'Grad Grow Competencies'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Grad Grow Competencies'
+              items_per_page: none
+            weight: 7
+            additional: {  }
+          ac24d9de-4486-40d1-ac70-bc699282517e:
+            uuid: ac24d9de-4486-40d1-ac70-bc699282517e
+            region: left
+            configuration:
+              id: 'views_block:grad_grow_competency_navigation_block-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 4
+            additional: {  }
+          d7b61942-d6fd-4a37-b508-a294f7d21b5b:
+            uuid: d7b61942-d6fd-4a37-b508-a294f7d21b5b
+            region: left
+            configuration:
+              id: 'views_block:vpge_content_fields_on_a_node-block_4'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: defaults
+        layout_settings:
+          label: placeholder
+          context_mapping: {  }
+          extra_classes: ''
+          centered: centered-container
+          columns: default
+        components:
+          8f9384ea-d7f7-4e0c-8ba0-4717636252da:
+            uuid: 8f9384ea-d7f7-4e0c-8ba0-4717636252da
+            region: main
+            configuration:
+              id: 'block_content:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
+              label: 'Placeholder to keep title top margin on VPGE content types'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_library:
+    enable: false
 id: node.partner.default
 targetEntityType: node
 bundle: partner
@@ -53,15 +253,13 @@ content:
     weight: 106
     region: content
   su_vpge_partner_image:
-    type: image
-    label: hidden
+    type: entity_reference_entity_view
+    label: above
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    weight: 103
+    weight: 107
     region: content
   su_vpge_partner_link:
     type: link

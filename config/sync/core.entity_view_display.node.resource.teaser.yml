@@ -5,9 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.resource.body
-    - field.field.node.resource.feeds_item
-    - field.field.node.resource.su_page_components
+    - field.field.node.resource.layout_builder__layout
     - field.field.node.resource.su_vpge_grad_grow_competency
+    - field.field.node.resource.su_vpge_last_updated
+    - field.field.node.resource.su_vpge_partner
     - field.field.node.resource.su_vpge_resource_audience
     - field.field.node.resource.su_vpge_resource_category
     - field.field.node.resource.su_vpge_resource_external_link
@@ -36,9 +37,8 @@ content:
     weight: 100
     region: content
 hidden:
-  feeds_item: true
+  layout_builder__layout: true
   search_api_excerpt: true
-  su_page_components: true
   su_vpge_grad_grow_competency: true
   su_vpge_last_updated: true
   su_vpge_partner: true

@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - core.base_field_override.node.stanford_news.title
-    - field.field.node.stanford_news.feeds_item
+    - field.field.node.stanford_news.body
     - field.field.node.stanford_news.layout_builder__layout
     - field.field.node.stanford_news.stanford_intranet__access
+    - field.field.node.stanford_news.su_metatags
     - field.field.node.stanford_news.su_news_banner
     - field.field.node.stanford_news.su_news_banner_media_caption
     - field.field.node.stanford_news.su_news_byline
@@ -113,70 +114,6 @@ third_party_settings:
                   field_formatter_class:
                     class: su-news-title
             weight: 4
-            additional: {  }
-          74e3c975-a588-4532-9565-f3ab757f69d8:
-            uuid: 74e3c975-a588-4532-9565-f3ab757f69d8
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_news:su_vpge_related_person'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 6
-            additional: {  }
-          64cafc78-2177-425b-92b9-5a55d0632997:
-            uuid: 64cafc78-2177-425b-92b9-5a55d0632997
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_news:su_vpge_related_fellowship'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 7
-            additional: {  }
-          a8f92058-6668-407a-9f90-4dfb43a910fa:
-            uuid: a8f92058-6668-407a-9f90-4dfb43a910fa
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_news:su_vpge_related_resource'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 8
-            additional: {  }
-          727d91d6-6b2e-48a9-bb02-be1bb46d350e:
-            uuid: 727d91d6-6b2e-48a9-bb02-be1bb46d350e
-            region: main
-            configuration:
-              id: 'field_block:node:stanford_news:su_vpge_area_of_focus'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 9
             additional: {  }
         third_party_settings: {  }
       -
@@ -324,6 +261,26 @@ third_party_settings:
                     ds_limit: ''
             weight: 0
             additional: {  }
+          1ccb4ee4-9a56-4ae4-ac92-1343889f1a94:
+            uuid: 1ccb4ee4-9a56-4ae4-ac92-1343889f1a94
+            region: main
+            configuration:
+              id: 'field_block:node:stanford_news:body'
+              label: 'VPGE News body'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            weight: 1
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: jumpstart_ui_one_column
@@ -344,7 +301,7 @@ third_party_settings:
               provider: stanford_news
               context_mapping: {  }
               form_action: ''
-            weight: 0
+            weight: 1
             additional: {  }
         third_party_settings: {  }
       -
@@ -619,7 +576,7 @@ content:
     weight: 11
     region: main
 hidden:
-  feeds_item: true
+  body: true
   layout_builder__layout: true
   layout_selection: true
   links: true

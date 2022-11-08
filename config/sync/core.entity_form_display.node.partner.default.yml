@@ -9,13 +9,13 @@ dependencies:
     - field.field.node.partner.su_vpge_partner_image
     - field.field.node.partner.su_vpge_partner_link
     - field.field.node.partner.su_vpge_time_commitment
-    - image.style.thumbnail
     - node.type.partner
   module:
-    - image
     - link
+    - media_library
     - path
     - scheduler
+    - shs
     - text
 id: node.partner.default
 targetEntityType: node
@@ -73,23 +73,26 @@ content:
     third_party_settings: {  }
   su_vpge_area_of_focus:
     type: options_buttons
-    weight: 14
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  su_vpge_grad_grow_competency:
-    type: options_buttons
     weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
+  su_vpge_grad_grow_competency:
+    type: options_shs
+    weight: 14
+    region: content
+    settings:
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
+    third_party_settings: {  }
   su_vpge_partner_image:
-    type: image_image
+    type: media_library_widget
     weight: 12
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   su_vpge_partner_link:
     type: link_default

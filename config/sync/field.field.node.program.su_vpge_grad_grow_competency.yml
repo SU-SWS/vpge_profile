@@ -10,7 +10,7 @@ id: node.program.su_vpge_grad_grow_competency
 field_name: su_vpge_grad_grow_competency
 entity_type: node
 bundle: program
-label: 'VPGE Grad Grow Competency'
+label: 'Grad Grow Competency'
 description: ''
 required: false
 translatable: true

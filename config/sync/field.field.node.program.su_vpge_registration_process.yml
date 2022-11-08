@@ -15,7 +15,7 @@ id: node.program.su_vpge_registration_process
 field_name: su_vpge_registration_process
 entity_type: node
 bundle: program
-label: 'VPGE Registration Process'
+label: 'Registration Process'
 description: ''
 required: false
 translatable: false
