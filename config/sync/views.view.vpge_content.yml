@@ -15,6 +15,7 @@ dependencies:
     - field.storage.node.su_vpge_area_of_focus
     - field.storage.node.su_vpge_cohort
     - field.storage.node.su_vpge_current_degree_dept
+    - field.storage.node.su_vpge_featured_event
     - field.storage.node.su_vpge_fellowship_eligibility
     - field.storage.node.su_vpge_fellowship_funding
     - field.storage.node.su_vpge_grad_grow_competency
@@ -1040,17 +1041,20 @@ display:
           columns:
             counter: counter
             views_bulk_operations_bulk_form: views_bulk_operations_bulk_form
+            su_vpge_featured_event: su_vpge_featured_event
             title: title
             name: name
             status: status
             changed: changed
             operations: operations
+            su_event_date_time: su_event_date_time
+            su_event_source: su_event_source
             su_vpge_grad_grow_competency: su_vpge_grad_grow_competency
-            su_vpge_resource_audience: su_vpge_resource_audience
-            su_vpge_resource_category: su_vpge_resource_category
-            su_vpge_resource_external_link: su_vpge_resource_external_link
-            su_vpge_resource_image: su_vpge_resource_image
-            su_vpge_partner: su_vpge_partner
+            su_vpge_program: su_vpge_program
+            su_vpge_area_of_focus: su_vpge_area_of_focus
+            su_vpge_fellowship_funding: su_vpge_fellowship_funding
+            su_vpge_related_person: su_vpge_related_person
+            su_vpge_related_resource: su_vpge_related_resource
           default: changed
           info:
             counter:
@@ -1061,6 +1065,13 @@ display:
               empty_column: false
               responsive: ''
             views_bulk_operations_bulk_form:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            su_vpge_featured_event:
+              sortable: true
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
@@ -1098,34 +1109,46 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            su_vpge_grad_grow_competency:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            su_vpge_resource_audience:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            su_vpge_resource_category:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            su_vpge_resource_external_link:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            su_vpge_resource_image:
+            su_event_date_time:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            su_vpge_partner:
+            su_event_source:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            su_vpge_grad_grow_competency:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            su_vpge_program:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            su_vpge_area_of_focus:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            su_vpge_fellowship_funding:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            su_vpge_related_person:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            su_vpge_related_resource:
               align: ''
               separator: ''
               empty_column: false
@@ -5745,6 +5768,71 @@ display:
               preconfiguration:
                 add_confirmation: false
                 label_override: Publish
+        su_vpge_featured_event:
+          id: su_vpge_featured_event
+          table: node__su_vpge_featured_event
+          field: su_vpge_featured_event
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Featured Event'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: custom
+            format_custom_false: ''
+            format_custom_true: Featured
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -6749,6 +6837,7 @@ display:
         - 'config:field.storage.node.su_event_date_time'
         - 'config:field.storage.node.su_event_source'
         - 'config:field.storage.node.su_vpge_area_of_focus'
+        - 'config:field.storage.node.su_vpge_featured_event'
         - 'config:field.storage.node.su_vpge_fellowship_funding'
         - 'config:field.storage.node.su_vpge_grad_grow_competency'
         - 'config:field.storage.node.su_vpge_program'

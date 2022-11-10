@@ -144,11 +144,11 @@ definitions:
     expanded: false
     enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__4226':
-    weight: -46
+    enabled: false
     menu_name: stanford-event-types
     parent: ''
     expanded: false
-    enabled: true
+    weight: -46
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__11':
     weight: -45
     menu_name: stanford-event-types
@@ -168,17 +168,17 @@ definitions:
     expanded: false
     enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__186':
+    enabled: false
+    menu_name: stanford-event-types
+    parent: ''
     weight: -42
-    menu_name: stanford-event-types
-    parent: ''
     expanded: false
-    enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__181':
-    weight: -41
+    enabled: false
     menu_name: stanford-event-types
     parent: ''
+    weight: -41
     expanded: false
-    enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__36':
     weight: -40
     menu_name: stanford-event-types
@@ -198,11 +198,11 @@ definitions:
     expanded: false
     enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__166':
-    weight: -37
+    enabled: false
     menu_name: stanford-event-types
     parent: ''
+    weight: -37
     expanded: false
-    enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__161':
     weight: -36
     menu_name: stanford-event-types
@@ -216,11 +216,11 @@ definitions:
     expanded: false
     enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__151':
-    weight: -34
+    enabled: false
     menu_name: stanford-event-types
     parent: ''
+    weight: -34
     expanded: false
-    enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__146':
     weight: -33
     menu_name: stanford-event-types

@@ -2875,70 +2875,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        su_vpge_grad_grow_competency_target_id:
-          id: su_vpge_grad_grow_competency_target_id
-          table: node__su_vpge_grad_grow_competency
-          field: su_vpge_grad_grow_competency_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            1111: '1111'
-            1186: '1186'
-            1081: '1081'
-            1256: '1256'
-            1271: '1271'
-            1196: '1196'
-          group: 1
-          exposed: true
-          expose:
-            operator_id: su_vpge_grad_grow_competency_target_id_op
-            label: 'Grad Grow Competency'
-            description: ''
-            use_operator: 0
-            operator: su_vpge_grad_grow_competency_target_id_op
-            operator_limit_selection: 0
-            operator_list: {  }
-            identifier: competency
-            required: 0
-            remember: 0
-            multiple: 0
-            remember_roles:
-              authenticated: authenticated
-              administrator: 0
-              anonymous: 0
-              stanford_faculty: 0
-              stanford_staff: 0
-              stanford_student: 0
-              contributor: 0
-              site_manager: 0
-              site_editor: 0
-              site_builder: 0
-              site_developer: 0
-              layout_builder_user: 0
-              decoupled_site_users: 0
-              custm_vpge_site_manager: 0
-            reduce: 1
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: 0
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: 0
-          type: select
-          limit: true
-          vid: vpge_grad_grow_competency
-          hierarchy: 1
-          error_message: 1
-          plugin_id: taxonomy_index_tid
         su_event_date_time_value:
           id: su_event_date_time_value
           table: node__su_event_date_time
@@ -3049,7 +2985,7 @@ display:
           expose:
             operator_id: type_1_op
             label: 'Select Type of Grad Grow Learning Opportunities '
-            description: ''
+            description: 'You can filter by Competencies using icons in the left sidebar'
             use_operator: 0
             operator: type_1_op
             operator_limit_selection: 0
@@ -3102,7 +3038,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

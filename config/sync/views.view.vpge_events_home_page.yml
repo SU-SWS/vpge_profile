@@ -929,8 +929,8 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 3
-          offset: 0
+          items_per_page: '1'
+          offset: '0'
       filters:
         status:
           id: status
