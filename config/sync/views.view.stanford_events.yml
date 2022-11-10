@@ -1802,9 +1802,6 @@ display:
         style: false
         row: false
         arguments: false
-        use_more: false
-        use_more_always: false
-        use_more_text: false
       style:
         type: html_list
         options:
@@ -2066,9 +2063,6 @@ display:
           use_taxonomy_term_path: false
           entity_type: node
           plugin_id: taxonomy_index_name_depth
-      use_more: 0
-      use_more_always: 1
-      use_more_text: more
     cache_metadata:
       max-age: -1
       contexts:
