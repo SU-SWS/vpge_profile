@@ -1,0 +1,2631 @@
+uuid: 7aeabcaa-103f-4a0c-aa03-f4e2d59a7479
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_news_dek
+    - field.storage.node.su_news_featured_media
+    - field.storage.node.su_news_publishing_date
+    - field.storage.node.su_news_source
+    - field.storage.node.su_news_topics
+    - node.type.stanford_news
+  module:
+    - datetime
+    - link
+    - node
+    - stanford_fields
+    - stanford_media
+    - ui_patterns_views
+    - user
+id: vpge_news_on_fellowship_page
+label: 'VPGE News: Fellowship Pages'
+module: views
+description: 'News related to fellowships on basic pages with Related fellowship as filter'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 0
+    display_options:
+      title: News
+      fields:
+        su_news_publishing_date:
+          id: su_news_publishing_date
+          table: node__su_news_publishing_date
+          field: su_news_publishing_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'F d, Y'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        su_news_featured_media:
+          id: su_news_featured_media
+          table: node__su_news_featured_media
+          field: su_news_featured_media
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: media_multimedia_formatter
+          settings:
+            image:
+              image_formatter: image_style
+              image_formatter_image_style: su_news_list
+              image_formatter_responsive_image_style: full_responsive
+              image_formatter_view_mode: default
+            video:
+              video_formatter: entity
+              video_formatter_view_mode: default
+            other:
+              view_mode: default
+            vt_settings:
+              options__settings__vt_settings__active_tab: edit-image
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        su_news_dek:
+          id: su_news_dek
+          table: node__su_news_dek
+          field: su_news_dek
+          plugin_id: field
+        su_news_topics:
+          id: su_news_topics
+          table: node__su_news_topics
+          field: su_news_topics
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: '/news/{{ su_news_topics }}'
+            absolute: false
+            external: false
+            replace_spaces: true
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 3
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: ul
+          separator: ', '
+          field_api_classes: false
+        su_news_source:
+          id: su_news_source
+          table: node__su_news_source
+          field: su_news_source
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: null
+            url_only: true
+            url_plain: true
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: true
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: true
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: true
+          absolute: false
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link_edit
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: div
+          element_class: su-news-edit-article
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'edit this news item'
+          output_url_as_text: false
+          absolute: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 20
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        su_news_publishing_date_value:
+          id: su_news_publishing_date_value
+          table: node__su_news_publishing_date
+          field: su_news_publishing_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: su_news_publishing_date_value
+          exposed: false
+          granularity: second
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-vertical-teaser
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:su_news_featured_media':
+              destination: news_vertical_teaser_image
+              weight: 0
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_topics':
+              destination: news_topics
+              weight: 1
+              plugin: views_row
+              source: su_news_topics
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_tags: {  }
+          contextual_filters_or: false
+      relationships: {  }
+      css_class: 'stanford-news--list stanford-news--list-filtered'
+      use_ajax: true
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'
+  block_1:
+    id: block_1
+    display_title: DARE
+    display_plugin: viewfield_block
+    position: 3
+    display_options:
+      display_extenders: {  }
+      exposed_block: false
+      use_ajax: true
+      defaults:
+        use_ajax: false
+        exposed_form: false
+        arguments: true
+        filters: false
+        filter_groups: false
+        relationships: false
+        empty: false
+        style: false
+        row: false
+        css_class: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      display_description: 'List of all content'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        su_vpge_related_fellowship_target_id:
+          id: su_vpge_related_fellowship_target_id
+          table: node__su_vpge_related_fellowship
+          field: su_vpge_related_fellowship_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '27606'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>No results found</h2>\r\n<p>Please try another option from the filter list.</p>"
+            format: stanford_html
+          plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: su-news-list
+          default_row_class: 1
+          type: ul
+          wrapper_class: ''
+          class: su-list-unstyled
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-list
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:view_node':
+              destination: news_url
+              weight: 0
+              plugin: views_row
+              source: view_node
+            'views_row:su_news_publishing_date':
+              destination: news_list_publishing_date
+              weight: 1
+              plugin: views_row
+              source: su_news_publishing_date
+            'views_row:su_news_source':
+              destination: news_source
+              weight: 2
+              plugin: views_row
+              source: su_news_source
+            'views_row:su_news_featured_media':
+              destination: news_list_image
+              weight: 3
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_dek':
+              destination: news_list_dek
+              weight: 4
+              plugin: views_row
+              source: su_news_dek
+            'views_row:title':
+              destination: news_list_headline
+              weight: 5
+              plugin: views_row
+              source: title
+            'views_row:su_news_topics':
+              destination: news_list_topics
+              weight: 6
+              plugin: views_row
+              source: su_news_topics
+            'views_row:edit_node':
+              destination: news_list_footer
+              weight: 7
+              plugin: views_row
+              source: edit_node
+      block_category: 'News Lists (Views)'
+      block_description: ''
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'
+  viewfield_block_1:
+    id: viewfield_block_1
+    display_title: 'ARCS '
+    display_plugin: viewfield_block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      exposed_block: false
+      use_ajax: true
+      defaults:
+        use_ajax: false
+        exposed_form: false
+        arguments: true
+        filters: false
+        filter_groups: false
+        relationships: false
+        empty: false
+        style: false
+        row: false
+        css_class: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      display_description: 'List of all content'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        su_vpge_related_fellowship_target_id:
+          id: su_vpge_related_fellowship_target_id
+          table: node__su_vpge_related_fellowship
+          field: su_vpge_related_fellowship_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '27596'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>No results found</h2>\r\n<p>Please try another option from the filter list.</p>"
+            format: stanford_html
+          plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: su-news-list
+          default_row_class: 1
+          type: ul
+          wrapper_class: ''
+          class: su-list-unstyled
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-list
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:view_node':
+              destination: news_url
+              weight: 0
+              plugin: views_row
+              source: view_node
+            'views_row:su_news_publishing_date':
+              destination: news_list_publishing_date
+              weight: 1
+              plugin: views_row
+              source: su_news_publishing_date
+            'views_row:su_news_source':
+              destination: news_source
+              weight: 2
+              plugin: views_row
+              source: su_news_source
+            'views_row:su_news_featured_media':
+              destination: news_list_image
+              weight: 3
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_dek':
+              destination: news_list_dek
+              weight: 4
+              plugin: views_row
+              source: su_news_dek
+            'views_row:title':
+              destination: news_list_headline
+              weight: 5
+              plugin: views_row
+              source: title
+            'views_row:su_news_topics':
+              destination: news_list_topics
+              weight: 6
+              plugin: views_row
+              source: su_news_topics
+            'views_row:edit_node':
+              destination: news_list_footer
+              weight: 7
+              plugin: views_row
+              source: edit_node
+      block_category: 'News Lists (Views)'
+      block_description: ''
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'
+  viewfield_block_2:
+    id: viewfield_block_2
+    display_title: SGF
+    display_plugin: viewfield_block
+    position: 7
+    display_options:
+      display_extenders: {  }
+      exposed_block: false
+      use_ajax: true
+      defaults:
+        use_ajax: false
+        exposed_form: false
+        arguments: true
+        filters: false
+        filter_groups: false
+        relationships: false
+        empty: false
+        style: false
+        row: false
+        css_class: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      display_description: 'List of all content'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        su_vpge_related_fellowship_target_id:
+          id: su_vpge_related_fellowship_target_id
+          table: node__su_vpge_related_fellowship
+          field: su_vpge_related_fellowship_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '27646'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>No results found</h2>\r\n<p>Please try another option from the filter list.</p>"
+            format: stanford_html
+          plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: su-news-list
+          default_row_class: 1
+          type: ul
+          wrapper_class: ''
+          class: su-list-unstyled
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-list
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:view_node':
+              destination: news_url
+              weight: 0
+              plugin: views_row
+              source: view_node
+            'views_row:su_news_publishing_date':
+              destination: news_list_publishing_date
+              weight: 1
+              plugin: views_row
+              source: su_news_publishing_date
+            'views_row:su_news_source':
+              destination: news_source
+              weight: 2
+              plugin: views_row
+              source: su_news_source
+            'views_row:su_news_featured_media':
+              destination: news_list_image
+              weight: 3
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_dek':
+              destination: news_list_dek
+              weight: 4
+              plugin: views_row
+              source: su_news_dek
+            'views_row:title':
+              destination: news_list_headline
+              weight: 5
+              plugin: views_row
+              source: title
+            'views_row:su_news_topics':
+              destination: news_list_topics
+              weight: 6
+              plugin: views_row
+              source: su_news_topics
+            'views_row:edit_node':
+              destination: news_list_footer
+              weight: 7
+              plugin: views_row
+              source: edit_node
+      block_category: 'News Lists (Views)'
+      block_description: ''
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'
+  viewfield_block_3:
+    id: viewfield_block_3
+    display_title: RAISE
+    display_plugin: viewfield_block
+    position: 5
+    display_options:
+      display_extenders: {  }
+      exposed_block: false
+      use_ajax: true
+      defaults:
+        use_ajax: false
+        exposed_form: false
+        arguments: true
+        filters: false
+        filter_groups: false
+        relationships: false
+        empty: false
+        style: false
+        row: false
+        css_class: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      display_description: 'List of all content'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        su_vpge_related_fellowship_target_id:
+          id: su_vpge_related_fellowship_target_id
+          table: node__su_vpge_related_fellowship
+          field: su_vpge_related_fellowship_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '27631'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>No results found</h2>\r\n<p>Please try another option from the filter list.</p>"
+            format: stanford_html
+          plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: su-news-list
+          default_row_class: 1
+          type: ul
+          wrapper_class: ''
+          class: su-list-unstyled
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-list
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:view_node':
+              destination: news_url
+              weight: 0
+              plugin: views_row
+              source: view_node
+            'views_row:su_news_publishing_date':
+              destination: news_list_publishing_date
+              weight: 1
+              plugin: views_row
+              source: su_news_publishing_date
+            'views_row:su_news_source':
+              destination: news_source
+              weight: 2
+              plugin: views_row
+              source: su_news_source
+            'views_row:su_news_featured_media':
+              destination: news_list_image
+              weight: 3
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_dek':
+              destination: news_list_dek
+              weight: 4
+              plugin: views_row
+              source: su_news_dek
+            'views_row:title':
+              destination: news_list_headline
+              weight: 5
+              plugin: views_row
+              source: title
+            'views_row:su_news_topics':
+              destination: news_list_topics
+              weight: 6
+              plugin: views_row
+              source: su_news_topics
+            'views_row:edit_node':
+              destination: news_list_footer
+              weight: 7
+              plugin: views_row
+              source: edit_node
+      block_category: 'News Lists (Views)'
+      block_description: ''
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'
+  viewfield_block_4:
+    id: viewfield_block_4
+    display_title: Lieberman
+    display_plugin: viewfield_block
+    position: 4
+    display_options:
+      display_extenders: {  }
+      exposed_block: false
+      use_ajax: true
+      defaults:
+        use_ajax: false
+        exposed_form: false
+        arguments: true
+        filters: false
+        filter_groups: false
+        relationships: false
+        empty: false
+        style: false
+        row: false
+        css_class: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      display_description: 'List of all content'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        su_vpge_related_fellowship_target_id:
+          id: su_vpge_related_fellowship_target_id
+          table: node__su_vpge_related_fellowship
+          field: su_vpge_related_fellowship_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '27626'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>No results found</h2>\r\n<p>Please try another option from the filter list.</p>"
+            format: stanford_html
+          plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: su-news-list
+          default_row_class: 1
+          type: ul
+          wrapper_class: ''
+          class: su-list-unstyled
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-list
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:view_node':
+              destination: news_url
+              weight: 0
+              plugin: views_row
+              source: view_node
+            'views_row:su_news_publishing_date':
+              destination: news_list_publishing_date
+              weight: 1
+              plugin: views_row
+              source: su_news_publishing_date
+            'views_row:su_news_source':
+              destination: news_source
+              weight: 2
+              plugin: views_row
+              source: su_news_source
+            'views_row:su_news_featured_media':
+              destination: news_list_image
+              weight: 3
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_dek':
+              destination: news_list_dek
+              weight: 4
+              plugin: views_row
+              source: su_news_dek
+            'views_row:title':
+              destination: news_list_headline
+              weight: 5
+              plugin: views_row
+              source: title
+            'views_row:su_news_topics':
+              destination: news_list_topics
+              weight: 6
+              plugin: views_row
+              source: su_news_topics
+            'views_row:edit_node':
+              destination: news_list_footer
+              weight: 7
+              plugin: views_row
+              source: edit_node
+      block_category: 'News Lists (Views)'
+      block_description: ''
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'
+  viewfield_block_5:
+    id: viewfield_block_5
+    display_title: CCSRE-GF
+    display_plugin: viewfield_block
+    position: 2
+    display_options:
+      display_extenders: {  }
+      exposed_block: false
+      use_ajax: true
+      defaults:
+        use_ajax: false
+        exposed_form: false
+        arguments: true
+        filters: false
+        filter_groups: false
+        relationships: false
+        empty: false
+        style: false
+        row: false
+        css_class: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      display_description: 'List of all content'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        su_vpge_related_fellowship_target_id:
+          id: su_vpge_related_fellowship_target_id
+          table: node__su_vpge_related_fellowship
+          field: su_vpge_related_fellowship_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '27601'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>No results found</h2>\r\n<p>Please try another option from the filter list.</p>"
+            format: stanford_html
+          plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: su-news-list
+          default_row_class: 1
+          type: ul
+          wrapper_class: ''
+          class: su-list-unstyled
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-list
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:view_node':
+              destination: news_url
+              weight: 0
+              plugin: views_row
+              source: view_node
+            'views_row:su_news_publishing_date':
+              destination: news_list_publishing_date
+              weight: 1
+              plugin: views_row
+              source: su_news_publishing_date
+            'views_row:su_news_source':
+              destination: news_source
+              weight: 2
+              plugin: views_row
+              source: su_news_source
+            'views_row:su_news_featured_media':
+              destination: news_list_image
+              weight: 3
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_dek':
+              destination: news_list_dek
+              weight: 4
+              plugin: views_row
+              source: su_news_dek
+            'views_row:title':
+              destination: news_list_headline
+              weight: 5
+              plugin: views_row
+              source: title
+            'views_row:su_news_topics':
+              destination: news_list_topics
+              weight: 6
+              plugin: views_row
+              source: su_news_topics
+            'views_row:edit_node':
+              destination: news_list_footer
+              weight: 7
+              plugin: views_row
+              source: edit_node
+      block_category: 'News Lists (Views)'
+      block_description: ''
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'
+  viewfield_block_6:
+    id: viewfield_block_6
+    display_title: SIGF
+    display_plugin: viewfield_block
+    position: 6
+    display_options:
+      display_extenders: {  }
+      exposed_block: false
+      use_ajax: true
+      defaults:
+        use_ajax: false
+        exposed_form: false
+        arguments: true
+        filters: false
+        filter_groups: false
+        relationships: false
+        empty: false
+        style: false
+        row: false
+        css_class: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      display_description: 'List of all content'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        su_vpge_related_fellowship_target_id:
+          id: su_vpge_related_fellowship_target_id
+          table: node__su_vpge_related_fellowship
+          field: su_vpge_related_fellowship_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '27576'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>No results found</h2>\r\n<p>Please try another option from the filter list.</p>"
+            format: stanford_html
+          plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: su-news-list
+          default_row_class: 1
+          type: ul
+          wrapper_class: ''
+          class: su-list-unstyled
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-list
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:view_node':
+              destination: news_url
+              weight: 0
+              plugin: views_row
+              source: view_node
+            'views_row:su_news_publishing_date':
+              destination: news_list_publishing_date
+              weight: 1
+              plugin: views_row
+              source: su_news_publishing_date
+            'views_row:su_news_source':
+              destination: news_source
+              weight: 2
+              plugin: views_row
+              source: su_news_source
+            'views_row:su_news_featured_media':
+              destination: news_list_image
+              weight: 3
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_dek':
+              destination: news_list_dek
+              weight: 4
+              plugin: views_row
+              source: su_news_dek
+            'views_row:title':
+              destination: news_list_headline
+              weight: 5
+              plugin: views_row
+              source: title
+            'views_row:su_news_topics':
+              destination: news_list_topics
+              weight: 6
+              plugin: views_row
+              source: su_news_topics
+            'views_row:edit_node':
+              destination: news_list_footer
+              weight: 7
+              plugin: views_row
+              source: edit_node
+      block_category: 'News Lists (Views)'
+      block_description: ''
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'
+  viewfield_block_7:
+    id: viewfield_block_7
+    display_title: EDGE
+    display_plugin: viewfield_block
+    position: 6
+    display_options:
+      display_extenders: {  }
+      exposed_block: false
+      use_ajax: true
+      defaults:
+        use_ajax: false
+        exposed_form: false
+        arguments: true
+        filters: false
+        filter_groups: false
+        relationships: false
+        empty: false
+        style: false
+        row: false
+        css_class: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      display_description: 'List of all content'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_news: stanford_news
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        su_vpge_related_fellowship_target_id:
+          id: su_vpge_related_fellowship_target_id
+          table: node__su_vpge_related_fellowship
+          field: su_vpge_related_fellowship_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '27621'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h2>No results found</h2>\r\n<p>Please try another option from the filter list.</p>"
+            format: stanford_html
+          plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: su-news-list
+          default_row_class: 1
+          type: ul
+          wrapper_class: ''
+          class: su-list-unstyled
+      row:
+        type: ui_patterns
+        options:
+          default_field_elements: 0
+          inline:
+            su_news_publishing_date: 0
+            su_news_featured_media: 0
+            title: 0
+            su_news_dek: 0
+            su_news_topics: 0
+            su_news_source: 0
+            view_node: 0
+            edit_node: 0
+          separator: ''
+          hide_empty: 0
+          pattern: news-list
+          variants:
+            alert: default
+            brandbar: default
+            button: default
+            card: default
+            cta: default
+            date-stacked: default
+            hero: default
+            link: default
+            lockup: a
+            media: default
+          pattern_mapping:
+            'views_row:view_node':
+              destination: news_url
+              weight: 0
+              plugin: views_row
+              source: view_node
+            'views_row:su_news_publishing_date':
+              destination: news_list_publishing_date
+              weight: 1
+              plugin: views_row
+              source: su_news_publishing_date
+            'views_row:su_news_source':
+              destination: news_source
+              weight: 2
+              plugin: views_row
+              source: su_news_source
+            'views_row:su_news_featured_media':
+              destination: news_list_image
+              weight: 3
+              plugin: views_row
+              source: su_news_featured_media
+            'views_row:su_news_dek':
+              destination: news_list_dek
+              weight: 4
+              plugin: views_row
+              source: su_news_dek
+            'views_row:title':
+              destination: news_list_headline
+              weight: 5
+              plugin: views_row
+              source: title
+            'views_row:su_news_topics':
+              destination: news_list_topics
+              weight: 6
+              plugin: views_row
+              source: su_news_topics
+            'views_row:edit_node':
+              destination: news_list_footer
+              weight: 7
+              plugin: views_row
+              source: edit_node
+      block_category: 'News Lists (Views)'
+      block_description: ''
+      css_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_news_dek'
+        - 'config:field.storage.node.su_news_featured_media'
+        - 'config:field.storage.node.su_news_publishing_date'
+        - 'config:field.storage.node.su_news_source'
+        - 'config:field.storage.node.su_news_topics'

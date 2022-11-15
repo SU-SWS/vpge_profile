@@ -1,2 +1,2 @@
 permission_callbacks:
-  - Drupal\stanford_profile\VpgeProfilePermissions::permissions
+  - Drupal\vpge_profile\VpgeProfilePermissions::permissions

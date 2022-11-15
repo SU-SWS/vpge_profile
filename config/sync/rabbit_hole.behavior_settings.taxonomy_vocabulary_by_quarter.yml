@@ -1,0 +1,14 @@
+uuid: 150895e5-a910-4bc1-b417-e89ed00e3516
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.by_quarter
+id: taxonomy_vocabulary_by_quarter
+entity_type_id: taxonomy_vocabulary
+entity_id: by_quarter
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,29 @@
+uuid: 41feb30e-71ab-47e2-be5d-8f52dc11c5a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_fellowship_funding
+    - node.type.fellowship_funding
+    - node.type.stanford_event
+id: node.stanford_event.su_vpge_fellowship_funding
+field_name: su_vpge_fellowship_funding
+entity_type: node
+bundle: stanford_event
+label: 'VPGE Fellowship/Funding'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fellowship_funding: fellowship_funding
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

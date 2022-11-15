@@ -1,0 +1,19 @@
+uuid: a5da5745-042d-4411-9bd0-ebd8680a9e80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_fellowship_tag_line
+    - node.type.fellowship_funding
+id: node.fellowship_funding.su_vpge_fellowship_tag_line
+field_name: su_vpge_fellowship_tag_line
+entity_type: node
+bundle: fellowship_funding
+label: 'Tag Line'
+description: 'Enter a short tag line for this fellowship/funding content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

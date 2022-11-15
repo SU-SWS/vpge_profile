@@ -1,0 +1,28 @@
+uuid: 4f19587d-c570-4f58-8968-af81571d15f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - system
+    - views
+  theme:
+    - minimally_branded_subtheme
+id: minimally_branded_subtheme_search_form
+theme: minimally_branded_subtheme
+region: content
+weight: -2
+provider: null
+plugin: 'views_exposed_filter_block:search-results'
+settings:
+  id: 'views_exposed_filter_block:search-results'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

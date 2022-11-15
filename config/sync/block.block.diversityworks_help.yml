@@ -1,0 +1,20 @@
+uuid: 9b54d44b-1759-4d38-9b27-414ee9267546
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - diversityworks
+id: diversityworks_help
+theme: diversityworks
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

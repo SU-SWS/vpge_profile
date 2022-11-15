@@ -1,0 +1,14 @@
+uuid: 75860940-0f76-4c5f-a9fa-cb06aae96502
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fellowship_funding
+id: node_type_fellowship_funding
+entity_type_id: node_type
+entity_id: fellowship_funding
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

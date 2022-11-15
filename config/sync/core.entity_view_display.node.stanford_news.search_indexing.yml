@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_indexing
+    - field.field.node.stanford_news.body
     - field.field.node.stanford_news.layout_builder__layout
     - field.field.node.stanford_news.stanford_intranet__access
+    - field.field.node.stanford_news.su_metatags
     - field.field.node.stanford_news.su_news_banner
     - field.field.node.stanford_news.su_news_banner_media_caption
     - field.field.node.stanford_news.su_news_byline
@@ -15,45 +17,19 @@ dependencies:
     - field.field.node.stanford_news.su_news_publishing_date
     - field.field.node.stanford_news.su_news_source
     - field.field.node.stanford_news.su_news_topics
+    - field.field.node.stanford_news.su_shared_tags
+    - field.field.node.stanford_news.su_vpge_area_of_focus
+    - field.field.node.stanford_news.su_vpge_related_fellowship
+    - field.field.node.stanford_news.su_vpge_related_person
+    - field.field.node.stanford_news.su_vpge_related_resource
     - node.type.stanford_news
   module:
     - datetime
     - entity_reference_revisions
     - field_formatter_class
-    - layout_builder
-    - layout_builder_restrictions
-    - layout_library
     - link
     - stanford_media
     - user
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
-  layout_builder_restrictions:
-    allowed_block_categories: {  }
-    entity_view_mode_restriction:
-      allowed_layouts:
-        - jumpstart_ui_one_column
-        - jumpstart_ui_two_column
-        - jumpstart_ui_three_column
-        - stanford_news_byline
-        - ds_reset
-      blacklisted_blocks: {  }
-      whitelisted_blocks:
-        'Chaos Tools': {  }
-        'Config Pages': {  }
-        Menus:
-          - 'menu_block:main'
-          - 'menu_block:news-topics'
-        'SimpleSAMLphp Authentication': {  }
-        System:
-          - system_messages_block
-        core:
-          - page_title_block
-      restricted_categories: {  }
-  layout_library:
-    enable: false
 id: node.stanford_news.search_indexing
 targetEntityType: node
 bundle: stanford_news
@@ -145,8 +121,15 @@ content:
     weight: 0
     region: content
 hidden:
+  body: true
   layout_builder__layout: true
   layout_selection: true
   links: true
   search_api_excerpt: true
   stanford_intranet__access: true
+  su_metatags: true
+  su_shared_tags: true
+  su_vpge_area_of_focus: true
+  su_vpge_related_fellowship: true
+  su_vpge_related_person: true
+  su_vpge_related_resource: true

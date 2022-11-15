@@ -115,3 +115,4 @@ npm-debug.log
 
 # Deprecation detector rules
 .rules
+vpge_profile.code-workspace

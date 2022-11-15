@@ -44,25 +44,25 @@ definitions:
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__person_type_menu__18':
     menu_name: stanford-person-type
     parent: ''
-    weight: 9
+    weight: 13
     expanded: false
     enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__person_type_menu__19':
     menu_name: stanford-person-type
     parent: ''
-    weight: 10
+    weight: 12
     expanded: false
     enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__person_type_menu__15':
     menu_name: stanford-person-type
     parent: ''
-    weight: 12
+    weight: 9
     expanded: false
     enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__person_type_menu__16':
     menu_name: stanford-person-type
     parent: ''
-    weight: 13
+    weight: 10
     expanded: false
     enabled: true
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__topics_taxonomy_menu__14':
@@ -99,5 +99,131 @@ definitions:
     menu_name: news-topics
     parent: ''
     weight: 0
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__courses_subjects__30':
+    menu_name: courses-menu
+    parent: ''
+    weight: -49
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__courses_quarters__35':
+    menu_name: courses-menu
+    parent: ''
+    weight: -48
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__courses_quarters__39':
+    menu_name: courses-menu
+    parent: ''
+    weight: -47
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__courses_quarters__40':
+    menu_name: courses-menu
+    parent: ''
+    weight: -46
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__courses_quarters__31':
+    menu_name: courses-menu
+    parent: ''
+    weight: -45
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__196':
+    weight: -48
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__4181':
+    weight: -47
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__4226':
+    enabled: false
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    weight: -46
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__11':
+    weight: -45
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__16':
+    weight: -44
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__191':
+    weight: -43
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__186':
+    enabled: false
+    menu_name: stanford-event-types
+    parent: ''
+    weight: -42
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__181':
+    enabled: false
+    menu_name: stanford-event-types
+    parent: ''
+    weight: -41
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__36':
+    weight: -40
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__176':
+    weight: -39
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__171':
+    weight: -38
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__166':
+    enabled: false
+    menu_name: stanford-event-types
+    parent: ''
+    weight: -37
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__161':
+    weight: -36
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__156':
+    weight: -35
+    menu_name: stanford-event-types
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__151':
+    enabled: false
+    menu_name: stanford-event-types
+    parent: ''
+    weight: -34
+    expanded: false
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__event_types_menu__146':
+    weight: -33
+    menu_name: stanford-event-types
+    parent: ''
     expanded: false
     enabled: true

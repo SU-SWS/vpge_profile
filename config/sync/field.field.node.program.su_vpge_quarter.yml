@@ -1,0 +1,29 @@
+uuid: 99a312e4-d05b-411d-ad9d-b7d4ab0d816d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_quarter
+    - node.type.program
+    - taxonomy.vocabulary.by_quarter
+id: node.program.su_vpge_quarter
+field_name: su_vpge_quarter
+entity_type: node
+bundle: program
+label: Quarter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      by_quarter: by_quarter
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: 3623b7f1-f24a-4ec6-a2ca-a52e950c57c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.vpge_resource_category
+id: taxonomy_vocabulary_vpge_resource_category
+entity_type_id: taxonomy_vocabulary
+entity_id: vpge_resource_category
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

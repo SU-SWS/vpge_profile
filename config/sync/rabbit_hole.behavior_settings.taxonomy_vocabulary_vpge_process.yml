@@ -1,0 +1,14 @@
+uuid: 1ad9c978-dae7-479e-94a2-f5b7cc47aa3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.vpge_process
+id: taxonomy_vocabulary_vpge_process
+entity_type_id: taxonomy_vocabulary
+entity_id: vpge_process
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains vpge_profile_helper.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function vpge_profile_helper_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the vpge_profile_helper module.
+    case 'help.page.vpge_profile_helper':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('VPGE Profile Helper module') . '</p>';
+      $output .= '<p>' . t('This module holds helper code specifically for the vpge_profile.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * implements hook_update_n
+ */
+function vpge_profile_helper_update_8201(&$sandbox) {
+  $modules = ['fontawesome'];
+  \Drupal::database()->delete('key_value')
+    ->condition('collection', 'system.schema')
+    ->condition('name', $modules, 'IN')
+    ->execute();
+}

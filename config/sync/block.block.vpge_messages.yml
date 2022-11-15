@@ -1,0 +1,20 @@
+uuid: f91c144c-db91-40f5-bbc6-be0f0847c116
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vpge
+id: vpge_messages
+theme: vpge
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

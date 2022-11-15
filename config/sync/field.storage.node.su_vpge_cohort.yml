@@ -1,0 +1,20 @@
+uuid: ed091f2b-80d3-47e2-9ba8-53a3bbb9e78a
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.su_vpge_cohort
+field_name: su_vpge_cohort
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
