@@ -14,3 +14,12 @@ function vpge_profile_update_8002() {
   $state->set('stanford_profile.404_page', '/node/2');
   $state->set('stanford_profile.front_page', '/node/1');
 }
+
+ /**
+  * Implements hook_install()
+  */
+function vpge_profile_install() {
+  // Set the custom subtheme as the default theme.
+  $config = \Drupal::configFactory()->getEditable('system.theme');
+  $config->set('default', 'vpge')->save();
+}
