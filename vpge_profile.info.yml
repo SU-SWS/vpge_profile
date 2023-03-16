@@ -135,6 +135,7 @@ themes:
     - seven
     - stanford_basic
     - vpge
+    - diversityworks
 default_content:
   block_content:
     - 2f343c04-f892-49bb-8d28-2c3f4653b02a
