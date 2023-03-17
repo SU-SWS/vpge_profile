@@ -110,6 +110,7 @@
         "drupal/allowed_formats": "^1.1",
         "drupal/anchor_link": "^2.5",
         "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/autoservices": "^1.0",
         "drupal/block_content_permissions": "^1.8",
         "drupal/change_labels": "^1.0",
         "drupal/chosen": "^3.0",
