@@ -217,7 +217,7 @@
         "onlyextart/colorbox": "dev-master#e58476becbc89dc671093d1bcd9f99b2167fa8f7",
         "sainsburys/guzzle-oauth2-plugin": "^3.0",
         "seboettg/citeproc-php": "2.4.1",
-        "su-sws/drupal-patches": "^8.1",
+        "su-sws/drupal-patches": "8.1.16",
         "su-sws/nobots": "^8.2",
         "su-sws/react_paragraphs": "^8.2",
         "su-sws/stanford_actions": "^8.2",
@@ -257,7 +257,7 @@
             "drupal/ckeditor_blockimagepaste": {
                 "https://www.drupal.org/project/ckeditor_blockimagepaste/issues/3272772": "https://www.drupal.org/files/issues/2022-04-14/prevent_js_alert_and_block_ms_word_paste-v2.patch"
             },
-            "drupal/default_content":{
+            "drupal/default_content": {
                 "https://www.drupal.org/project/default_content/issues/3160146": "https://git.drupalcode.org/project/default_content/-/merge_requests/15.patch"
             },
             "drupal/jsonapi_extras": {
@@ -269,18 +269,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
