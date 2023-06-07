@@ -1327,8 +1327,8 @@ display:
           label: 'Resource Type'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{{ su_vpge_resource_category }}  &nbsp; <br />&nbsp; \r\n "
             make_link: false
             path: ''
             absolute: false
@@ -1353,7 +1353,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: span
           element_class: ''
           element_label_type: strong
           element_label_class: ''
@@ -1416,7 +1416,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: span
           element_class: ''
           element_label_type: strong
           element_label_class: ''
@@ -1454,7 +1454,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<strong>Time Commitment:</strong>  {{ su_vpge_time_commitment }}\r\n<p> &nbsp; </p>"
+            text: "&nbsp;  <br />\r\n<strong>Time Commitment:</strong>  {{ su_vpge_time_commitment }}\r\n<p> &nbsp; </p>"
             make_link: false
             path: ''
             absolute: false
