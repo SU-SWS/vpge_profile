@@ -169,7 +169,7 @@
         "drupal/link_attributes": "^1.11",
         "drupal/link_title_formatter": "^2.0",
         "drupal/linkit": "^6.0",
-        "drupal/markup": "^1.0",
+        "drupal/markup": "^2.0",
         "drupal/mathjax": "^4.0",
         "drupal/menu_admin_per_menu": "^1.0",
         "drupal/menu_block": "dev-1.x#567becffbb0589e824fb053f15fb38a5846e7276",
