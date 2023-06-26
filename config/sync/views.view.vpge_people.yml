@@ -2657,7 +2657,7 @@ display:
           plugin_id: datetime_year
       defaults:
         arguments: false
-        relationships: true
+        relationships: false
         fields: false
         filters: false
         filter_groups: false
@@ -3066,6 +3066,7 @@ display:
         groups:
           1: AND
       title: PFP
+      relationships: {  }
     cache_metadata:
       max-age: -1
       contexts:
