@@ -10,7 +10,7 @@ id: node.stanford_person.su_vpge_area_of_focus
 field_name: su_vpge_area_of_focus
 entity_type: node
 bundle: stanford_person
-label: 'Area of Focus'
+label: 'VPGE Area of Focus'
 description: ''
 required: false
 translatable: true

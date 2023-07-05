@@ -5,12 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_indexing
     - field.field.node.stanford_event.body
-    - field.field.node.stanford_event.feeds_item
     - field.field.node.stanford_event.layout_builder__layout
     - field.field.node.stanford_event.stanford_intranet__access
     - field.field.node.stanford_event.su_event_alt_loc
     - field.field.node.stanford_event.su_event_audience
     - field.field.node.stanford_event.su_event_components
+    - field.field.node.stanford_event.su_event_contact_info
     - field.field.node.stanford_event.su_event_cta
     - field.field.node.stanford_event.su_event_date_time
     - field.field.node.stanford_event.su_event_dek
@@ -26,8 +26,18 @@ dependencies:
     - field.field.node.stanford_event.su_event_subject
     - field.field.node.stanford_event.su_event_telephone
     - field.field.node.stanford_event.su_event_type
+    - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
     - field.field.node.stanford_event.su_vpge_area_of_focus
+    - field.field.node.stanford_event.su_vpge_featured_event
+    - field.field.node.stanford_event.su_vpge_fellowship_audience
+    - field.field.node.stanford_event.su_vpge_fellowship_funding
+    - field.field.node.stanford_event.su_vpge_grad_grow_competency
+    - field.field.node.stanford_event.su_vpge_partner
+    - field.field.node.stanford_event.su_vpge_person
+    - field.field.node.stanford_event.su_vpge_program
+    - field.field.node.stanford_event.su_vpge_resource
+    - field.field.node.stanford_event.su_vpge_time_commitment
     - node.type.stanford_event
   module:
     - address
@@ -55,7 +65,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   su_event_audience:
     type: entity_reference_label
@@ -67,7 +77,7 @@ content:
         class: ''
       ds:
         ds_limit: ''
-    weight: 10
+    weight: 11
     region: content
   su_event_components:
     type: entity_reference_revisions_entity_view
@@ -77,6 +87,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 5
+    region: content
+  su_event_contact_info:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
     region: content
   su_event_cta:
     type: link
@@ -88,7 +106,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   su_event_date_time:
     type: smartdate_default
@@ -98,8 +116,10 @@ content:
       format_type: medium
       format: default
       force_chronological: false
+      add_classes: false
+      time_wrapper: true
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   su_event_dek:
     type: string
@@ -133,7 +153,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   su_event_schedule:
     type: entity_reference_revisions_entity_view
@@ -142,7 +162,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   su_event_source:
     type: link
@@ -154,7 +174,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   su_event_sponsor:
     type: string
@@ -191,7 +211,6 @@ content:
     weight: 1
     region: content
 hidden:
-  feeds_item: true
   layout_builder__layout: true
   links: true
   search_api_excerpt: true
@@ -202,3 +221,12 @@ hidden:
   su_metatags: true
   su_shared_tags: true
   su_vpge_area_of_focus: true
+  su_vpge_featured_event: true
+  su_vpge_fellowship_audience: true
+  su_vpge_fellowship_funding: true
+  su_vpge_grad_grow_competency: true
+  su_vpge_partner: true
+  su_vpge_person: true
+  su_vpge_program: true
+  su_vpge_resource: true
+  su_vpge_time_commitment: true

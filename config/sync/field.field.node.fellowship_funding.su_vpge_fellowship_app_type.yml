@@ -1,0 +1,29 @@
+uuid: 1a67d78b-8b69-4edf-b4c9-2c18f47d92db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_fellowship_app_type
+    - node.type.fellowship_funding
+    - taxonomy.vocabulary.vpge_process
+id: node.fellowship_funding.su_vpge_fellowship_app_type
+field_name: su_vpge_fellowship_app_type
+entity_type: node
+bundle: fellowship_funding
+label: 'Application Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vpge_process: vpge_process
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

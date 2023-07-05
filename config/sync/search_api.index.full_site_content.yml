@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - search_api.server.database_search
+    - core.entity_view_mode.node.full
     - core.entity_view_mode.node.search_indexing
   module:
     - node
@@ -13,6 +14,14 @@ name: 'Full Site Content'
 description: ''
 read_only: false
 field_settings:
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -27,14 +36,20 @@ field_settings:
     configuration:
       roles:
         - anonymous
+        - authenticated
       view_mode:
         'entity:node':
+          fellowship_funding: full
+          partner: full
+          program: full
+          resource: full
           stanford_course: search_indexing
           stanford_event: search_indexing
           stanford_event_series: search_indexing
           stanford_news: search_indexing
           stanford_page: search_indexing
           stanford_person: search_indexing
+          stanford_policy: search_indexing
           stanford_publication: search_indexing
   role_access:
     label: 'Role-based access information'
@@ -196,6 +211,8 @@ processor_settings:
       'entity:node':
         datasource_boost: !!float 1
         bundle_boosts:
+          fellowship_funding: !!float 3
+          program: !!float 5
           stanford_page: !!float 3
 tracker_settings:
   default:

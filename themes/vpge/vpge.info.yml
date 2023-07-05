@@ -29,6 +29,7 @@ ckeditor_stylesheets:
 
 libraries:
   - vpge/isotope
+  - vpge/vpge-styling
 
 libraries-override:
   jumpstart_ui/base: false

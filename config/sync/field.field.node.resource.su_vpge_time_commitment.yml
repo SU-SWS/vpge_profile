@@ -10,7 +10,7 @@ id: node.resource.su_vpge_time_commitment
 field_name: su_vpge_time_commitment
 entity_type: node
 bundle: resource
-label: 'Time Commitment'
+label: 'Grad Grow Time Commitment'
 description: ''
 required: false
 translatable: true

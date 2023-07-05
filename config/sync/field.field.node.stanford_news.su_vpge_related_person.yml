@@ -10,7 +10,7 @@ id: node.stanford_news.su_vpge_related_person
 field_name: su_vpge_related_person
 entity_type: node
 bundle: stanford_news
-label: 'Related Person'
+label: 'VPGE Related Person'
 description: ''
 required: false
 translatable: false

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.stanford_person.body
-    - field.field.node.stanford_person.feeds_item
     - field.field.node.stanford_person.layout_builder__layout
     - field.field.node.stanford_person.stanford_intranet__access
     - field.field.node.stanford_person.su_metatags
@@ -26,6 +25,7 @@ dependencies:
     - field.field.node.stanford_person.su_person_mobile_phone
     - field.field.node.stanford_person.su_person_photo
     - field.field.node.stanford_person.su_person_profile_link
+    - field.field.node.stanford_person.su_person_pronouns
     - field.field.node.stanford_person.su_person_research
     - field.field.node.stanford_person.su_person_research_interests
     - field.field.node.stanford_person.su_person_scholarly_interests
@@ -34,9 +34,15 @@ dependencies:
     - field.field.node.stanford_person.su_person_type_group
     - field.field.node.stanford_person.su_shared_tags
     - field.field.node.stanford_person.su_vpge_area_of_focus
+    - field.field.node.stanford_person.su_vpge_cohort
+    - field.field.node.stanford_person.su_vpge_current_degree_dept
+    - field.field.node.stanford_person.su_vpge_fellowship_funding
+    - field.field.node.stanford_person.su_vpge_named_fellowship
+    - field.field.node.stanford_person.su_vpge_program
     - node.type.stanford_person
   module:
     - allowed_formats
+    - datetime
     - field_group
     - link
     - media_library
@@ -53,6 +59,7 @@ third_party_settings:
         - su_person_first_name
         - su_person_last_name
         - title
+        - su_person_pronouns
         - su_person_short_title
         - su_person_full_title
       label: 'Name & Titles'
@@ -73,7 +80,7 @@ third_party_settings:
       label: 'Bio & Content'
       region: content
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       format_settings:
         classes: ''
@@ -93,7 +100,7 @@ third_party_settings:
       label: 'Contact & Location Information'
       region: content
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: fieldset
       format_settings:
         classes: ''
@@ -109,7 +116,7 @@ third_party_settings:
       label: 'Interests & Affiliations'
       region: content
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: fieldset
       format_settings:
         classes: ''
@@ -129,6 +136,25 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
+    group_vpge_categories:
+      children:
+        - su_vpge_area_of_focus
+        - su_vpge_program
+        - su_vpge_cohort
+        - su_vpge_fellowship_funding
+        - su_vpge_named_fellowship
+        - su_vpge_current_degree_dept
+      label: 'VPGE Categories'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.stanford_person.default
 targetEntityType: node
 bundle: stanford_person
@@ -136,7 +162,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 5
+    weight: 21
     region: content
     settings:
       rows: 9
@@ -149,31 +175,31 @@ content:
         hide_guidelines: '0'
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   stanford_intranet__access:
     type: entity_access
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   su_metatags:
     type: metatag_firehose
-    weight: 32
+    weight: 13
     region: content
     settings:
       sidebar: true
@@ -189,7 +215,7 @@ content:
     third_party_settings: {  }
   su_person_components:
     type: entity_reference_paragraphs
-    weight: 7
+    weight: 22
     region: content
     settings:
       title: Paragraph
@@ -233,7 +259,7 @@ content:
     third_party_settings: {  }
   su_person_full_title:
     type: string_textarea
-    weight: 6
+    weight: 7
     region: content
     settings:
       rows: 5
@@ -297,18 +323,26 @@ content:
     third_party_settings: {  }
   su_person_photo:
     type: media_library_widget
-    weight: 4
+    weight: 20
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   su_person_profile_link:
     type: link_default
-    weight: 6
+    weight: 7
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  su_person_pronouns:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   su_person_research:
     type: text_textfield
@@ -320,7 +354,7 @@ content:
     third_party_settings: {  }
   su_person_short_title:
     type: string_textfield
-    weight: 5
+    weight: 6
     region: content
     settings:
       size: 60
@@ -346,7 +380,7 @@ content:
     third_party_settings: {  }
   su_shared_tags:
     type: options_shs
-    weight: 31
+    weight: 12
     region: content
     settings:
       display_node_count: false
@@ -356,7 +390,49 @@ content:
     third_party_settings: {  }
   su_vpge_area_of_focus:
     type: entity_reference_autocomplete
-    weight: 32
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_cohort:
+    type: datetime_default
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  su_vpge_current_degree_dept:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_funding:
+    type: entity_reference_autocomplete
+    weight: 16
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_named_fellowship:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_program:
+    type: entity_reference_autocomplete
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -374,13 +450,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
-  feeds_item: true
   layout_builder__layout: true
   path: true
   promote: true
@@ -389,5 +464,6 @@ hidden:
   su_person_admin_appts: true
   su_person_research_interests: true
   su_person_scholarly_interests: true
+  su_vpge_pro: true
   uid: true
   url_redirects: true

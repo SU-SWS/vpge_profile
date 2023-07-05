@@ -4,22 +4,57 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.storage.node.su_vpge_area_of_focus
+    - field.storage.node.body
+    - field.storage.node.su_event_date_time
+    - field.storage.node.su_event_source
+    - field.storage.node.su_event_type
     - field.storage.node.su_vpge_grad_grow_competency
-    - field.storage.node.su_vpge_time_commitment
     - node.type.partner
+    - node.type.program
     - node.type.resource
     - node.type.stanford_event
     - node.type.stanford_event_series
     - taxonomy.vocabulary.vpge_grad_grow_competency
+  content:
+    - 'taxonomy_term:vpge_grad_grow_competency:1187fe3b-b0a6-4e5a-8bb7-5d7c44a02105'
+    - 'taxonomy_term:vpge_grad_grow_competency:18d2f61f-d490-47a5-ad0a-f4035534712f'
+    - 'taxonomy_term:vpge_grad_grow_competency:2bdbe3b1-e68a-4581-9468-823a2a56c48b'
+    - 'taxonomy_term:vpge_grad_grow_competency:3edf7acb-f089-444d-b20c-da8e9bf1347f'
+    - 'taxonomy_term:vpge_grad_grow_competency:403ec25a-28da-4add-b026-d8d00d1a7879'
+    - 'taxonomy_term:vpge_grad_grow_competency:4b3eb352-2241-49b0-9c80-94317ae1287e'
+    - 'taxonomy_term:vpge_grad_grow_competency:4ebdcbe0-11f8-49b0-ac7c-bcdfc826a4ae'
+    - 'taxonomy_term:vpge_grad_grow_competency:5bab2091-1b82-49aa-adf7-1880d656d374'
+    - 'taxonomy_term:vpge_grad_grow_competency:68bbc99b-79a3-4411-ae1a-450ca3001603'
+    - 'taxonomy_term:vpge_grad_grow_competency:6af0f296-4b1a-4e31-a4b2-fff59a66825f'
+    - 'taxonomy_term:vpge_grad_grow_competency:76ae6dc9-f9c0-4f81-9d4b-b98ba8eb752c'
+    - 'taxonomy_term:vpge_grad_grow_competency:806a3a61-9157-4123-b172-7669c397aaec'
+    - 'taxonomy_term:vpge_grad_grow_competency:8a027a95-64ec-4061-bdde-91a83d8d1df1'
+    - 'taxonomy_term:vpge_grad_grow_competency:8f7ff0c2-5d02-4566-a746-5c858d23873a'
+    - 'taxonomy_term:vpge_grad_grow_competency:9e158d0d-0926-4529-a3f0-5af4d8bbdea8'
+    - 'taxonomy_term:vpge_grad_grow_competency:aaa47902-4a86-4765-858a-86033ed15aaa'
+    - 'taxonomy_term:vpge_grad_grow_competency:ab29482d-884e-4cb9-bd31-5f7e2bcc5ae7'
+    - 'taxonomy_term:vpge_grad_grow_competency:ad52cc3c-202f-46e9-be23-bada83a4f553'
+    - 'taxonomy_term:vpge_grad_grow_competency:b482a944-49e8-42cb-8ca0-362c7e6f90fb'
+    - 'taxonomy_term:vpge_grad_grow_competency:c9efdefb-1d44-48f2-8865-fbf905eb5e1c'
+    - 'taxonomy_term:vpge_grad_grow_competency:e1df1f12-7cc3-471f-ba53-b484fab6cf78'
+    - 'taxonomy_term:vpge_grad_grow_competency:e4a2962f-7046-4998-a320-7c3488445847'
+    - 'taxonomy_term:vpge_grad_grow_competency:e7a54fb7-f9b1-4ee1-91e2-c47c457f6671'
+    - 'taxonomy_term:vpge_grad_grow_competency:eb11332b-7572-4264-8e98-3f8716d16d7c'
+    - 'taxonomy_term:vpge_grad_grow_competency:ed1cb734-590a-45cf-9351-4609192bae53'
+    - 'taxonomy_term:vpge_grad_grow_competency:edb5efde-8c05-4a92-8bb4-17bae39ef438'
   module:
+    - element_class_formatter
+    - link
     - node
+    - smart_date
+    - stanford_fields
     - taxonomy
+    - text
     - user
 id: grad_grow
-label: 'Grad Grow Learning Opportunities'
+label: 'VPGE Grad Grow: Main View'
 module: views
-description: 'Search for four content types: Partner, Program (Event Series), Event and  Resource for Grad Grow program'
+description: 'Table with four content types: Partner, Program (Event Series), Event and  Resource for Grad Grow program'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -30,244 +65,8 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Grad Grow Learning Opportunities'
+      title: ''
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            trim: false
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        su_vpge_area_of_focus:
-          id: su_vpge_area_of_focus
-          table: node__su_vpge_area_of_focus
-          field: su_vpge_area_of_focus
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Area of Focus'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        su_vpge_time_commitment:
-          id: su_vpge_time_commitment
-          table: node__su_vpge_time_commitment
-          field: su_vpge_time_commitment
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Time Commitment'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        su_vpge_grad_grow_competency:
-          id: su_vpge_grad_grow_competency
-          table: node__su_vpge_grad_grow_competency
-          field: su_vpge_grad_grow_competency
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Grad Grow Competency'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         edit_node:
           id: edit_node
           table: node
@@ -278,7 +77,7 @@ display:
           entity_type: node
           plugin_id: entity_link_edit
           label: 'Link to edit Content'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -321,6 +120,69 @@ display:
           text: edit
           output_url_as_text: false
           absolute: false
+        su_event_type:
+          id: su_event_type
+          table: node__su_event_type
+          field: su_event_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Event Types'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: p
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         type:
           id: type
           table: node_field_data
@@ -331,8 +193,199 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-          label: 'Content type'
+          label: ''
           exclude: false
+          alter:
+            alter_text: true
+            text: " <strong>{{ type }} </strong> \r\n<p><small>{{ su_event_type }}  </small></p>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h3
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: 'body with title'
+          plugin_id: field
+          label: Summary
+          exclude: false
+          alter:
+            alter_text: true
+            text: " {{ title }} \r\n \r\n{{ body }} "
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 200
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        su_vpge_grad_grow_competency:
+          id: su_vpge_grad_grow_competency
+          table: node__su_vpge_grad_grow_competency
+          field: su_vpge_grad_grow_competency
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Grad Grow Competency'
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -373,10 +426,146 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_label
+          type: entity_reference_label_class
           settings:
-            link: true
+            link: false
+            class: ''
+            tag: span
           group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        su_event_date_time:
+          id: su_event_date_time
+          table: node__su_event_date_time
+          field: su_event_date_time
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Date and Time'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: smartdate_default
+          settings:
+            timezone_override: ''
+            format: default
+            force_chronological: false
+            add_classes: false
+            time_wrapper: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        su_event_source:
+          id: su_event_source
+          table: node__su_event_source
+          field: su_event_source
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Save
+          exclude: false
+          alter:
+            alter_text: true
+            text: 'Save on Events Dashboard'
+            make_link: true
+            path: '{{ su_event_source__uri }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: '0'
+            target: '0'
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -390,7 +579,7 @@ display:
         type: full
         options:
           offset: 0
-          items_per_page: 50
+          items_per_page: 20
           total_pages: null
           id: 0
           tags:
@@ -399,9 +588,9 @@ display:
             first: '« First'
             last: 'Last »'
           expose:
-            items_per_page: true
+            items_per_page: false
             items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50, 100, 200, 500'
+            items_per_page_options: '5, 10, 20, 50, 100, 200'
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
             offset: false
@@ -410,11 +599,11 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
+          submit_button: Search
+          reset_button: true
+          reset_button_label: Clear
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
@@ -426,22 +615,50 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
+        type:
+          id: type
           table: node_field_data
-          field: created
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: created
-          plugin_id: date
+          entity_field: type
+          plugin_id: standard
           order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
           granularity: second
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       arguments: {  }
       filters:
         status:
@@ -470,7 +687,7 @@ display:
           operator: in
           value:
             stanford_event: stanford_event
-            stanford_event_series: stanford_event_series
+            program: program
             partner: partner
             resource: resource
           group: 1
@@ -502,27 +719,33 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        su_vpge_grad_grow_competency_target_id:
-          id: su_vpge_grad_grow_competency_target_id
-          table: node__su_vpge_grad_grow_competency
-          field: su_vpge_grad_grow_competency_target_id
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
           group: 1
           exposed: true
           expose:
-            operator_id: su_vpge_grad_grow_competency_target_id_op
-            label: 'Grad Grow Competency  '
+            operator_id: type_1_op
+            label: 'Select Type of Grad Grow Learning Opportunities '
             description: ''
             use_operator: false
-            operator: su_vpge_grad_grow_competency_target_id_op
+            operator: type_1_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: grad_grow
+            identifier: gradgrow_type
             required: false
             remember: false
             multiple: false
@@ -539,6 +762,139 @@ display:
               site_builder: '0'
               site_developer: '0'
               layout_builder_user: '0'
+              decoupled_site_users: '0'
+              custm_vpge_site_manager: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value_1:
+          id: su_event_date_time_value_1
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_vpge_grad_grow_competency_target_id:
+          id: su_vpge_grad_grow_competency_target_id
+          table: node__su_vpge_grad_grow_competency
+          field: su_vpge_grad_grow_competency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
             reduce: false
           is_grouped: false
           group_info:
@@ -558,6 +914,11 @@ display:
           hierarchy: true
           limit: true
           error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
       style:
         type: table
         options:
@@ -626,12 +987,22 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
           contextual_filters_or: false
       relationships: {  }
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total results'
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -645,17 +1016,289 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.su_vpge_area_of_focus'
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_event_date_time'
+        - 'config:field.storage.node.su_event_source'
+        - 'config:field.storage.node.su_event_type'
         - 'config:field.storage.node.su_vpge_grad_grow_competency'
-        - 'config:field.storage.node.su_vpge_time_commitment'
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
+  block_1:
+    id: block_1
+    display_title: 'Career '
+    display_plugin: block
+    position: 7
     display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Select Type of Grad Grow Learning Opportunities '
+            description: ''
+            use_operator: false
+            operator: type_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: gradgrow_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+              decoupled_site_users: '0'
+              custm_vpge_site_manager: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value_1:
+          id: su_event_date_time_value_1
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_vpge_grad_grow_competency_target_id:
+          id: su_vpge_grad_grow_competency_target_id
+          table: node__su_vpge_grad_grow_competency
+          field: su_vpge_grad_grow_competency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            1196: 1196
+            1226: 1226
+            1146: 1146
+            1151: 1151
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: vpge_grad_grow_competency
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      defaults:
+        use_ajax: false
+        filters: false
+        filter_groups: false
+      use_ajax: false
+      display_description: ''
       display_extenders: {  }
-      path: professional-development/search-grad-grow
+      block_description: ''
+      block_category: 'VPGE views'
     cache_metadata:
       max-age: -1
       contexts:
@@ -667,6 +1310,1739 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.su_vpge_area_of_focus'
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_event_date_time'
+        - 'config:field.storage.node.su_event_source'
+        - 'config:field.storage.node.su_event_type'
         - 'config:field.storage.node.su_vpge_grad_grow_competency'
-        - 'config:field.storage.node.su_vpge_time_commitment'
+  block_2:
+    id: block_2
+    display_title: 'Communication '
+    display_plugin: block
+    position: 2
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            stanford_event_series: stanford_event_series
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_vpge_grad_grow_competency_target_id:
+          id: su_vpge_grad_grow_competency_target_id
+          table: node__su_vpge_grad_grow_competency
+          field: su_vpge_grad_grow_competency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            1111: 1111
+            1116: 1116
+            1181: 1181
+            1236: 1236
+          group: 1
+          exposed: false
+          expose:
+            operator_id: su_vpge_grad_grow_competency_target_id_op
+            label: 'Grad Grow Competency  '
+            description: ''
+            use_operator: false
+            operator: su_vpge_grad_grow_competency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: grad_grow
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: vpge_grad_grow_competency
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+        su_event_date_time_value_1:
+          id: su_event_date_time_value_1
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Select Type of Grad Grow Learning Opportunities '
+            description: ''
+            use_operator: false
+            operator: type_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: gradgrow_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+              decoupled_site_users: '0'
+              custm_vpge_site_manager: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      defaults:
+        use_ajax: false
+        filters: false
+        filter_groups: false
+      use_ajax: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: ''
+      block_category: 'VPGE views'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_event_date_time'
+        - 'config:field.storage.node.su_event_source'
+        - 'config:field.storage.node.su_event_type'
+        - 'config:field.storage.node.su_vpge_grad_grow_competency'
+  block_3:
+    id: block_3
+    display_title: Teaching
+    display_plugin: block
+    position: 3
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Select Type of Grad Grow Learning Opportunities '
+            description: ''
+            use_operator: false
+            operator: type_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: gradgrow_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+              decoupled_site_users: '0'
+              custm_vpge_site_manager: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value_1:
+          id: su_event_date_time_value_1
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_vpge_grad_grow_competency_target_id:
+          id: su_vpge_grad_grow_competency_target_id
+          table: node__su_vpge_grad_grow_competency
+          field: su_vpge_grad_grow_competency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            1186: 1186
+            1246: 1246
+            1191: 1191
+            1051: 1051
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: vpge_grad_grow_competency
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      defaults:
+        use_ajax: false
+        filters: false
+        filter_groups: false
+      use_ajax: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: ''
+      block_category: 'VPGE views'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_event_date_time'
+        - 'config:field.storage.node.su_event_source'
+        - 'config:field.storage.node.su_event_type'
+        - 'config:field.storage.node.su_vpge_grad_grow_competency'
+  block_4:
+    id: block_4
+    display_title: Professionalism
+    display_plugin: block
+    position: 4
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Select Type of Grad Grow Learning Opportunities '
+            description: ''
+            use_operator: false
+            operator: type_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: gradgrow_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+              decoupled_site_users: '0'
+              custm_vpge_site_manager: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value_1:
+          id: su_event_date_time_value_1
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_vpge_grad_grow_competency_target_id:
+          id: su_vpge_grad_grow_competency_target_id
+          table: node__su_vpge_grad_grow_competency
+          field: su_vpge_grad_grow_competency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            1081: 1081
+            1121: 1121
+            1086: 1086
+            1126: 1126
+            1131: 1131
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: vpge_grad_grow_competency
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      defaults:
+        use_ajax: false
+        filters: false
+        filter_groups: false
+      use_ajax: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: ''
+      block_category: 'VPGE views'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_event_date_time'
+        - 'config:field.storage.node.su_event_source'
+        - 'config:field.storage.node.su_event_type'
+        - 'config:field.storage.node.su_vpge_grad_grow_competency'
+  block_5:
+    id: block_5
+    display_title: Diversity
+    display_plugin: block
+    position: 5
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Select Type of Grad Grow Learning Opportunities '
+            description: ''
+            use_operator: false
+            operator: type_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: gradgrow_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+              decoupled_site_users: '0'
+              custm_vpge_site_manager: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value_1:
+          id: su_event_date_time_value_1
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_vpge_grad_grow_competency_target_id:
+          id: su_vpge_grad_grow_competency_target_id
+          table: node__su_vpge_grad_grow_competency
+          field: su_vpge_grad_grow_competency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            1256: 1256
+            1216: 1216
+            1221: 1221
+            1301: 1301
+          group: 1
+          exposed: false
+          expose:
+            operator_id: su_vpge_grad_grow_competency_target_id_op
+            label: 'Grad Grow Competency (su_vpge_grad_grow_competency)'
+            description: null
+            use_operator: false
+            operator: su_vpge_grad_grow_competency_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: su_vpge_grad_grow_competency_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: vpge_grad_grow_competency
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      defaults:
+        use_ajax: false
+        filters: false
+        filter_groups: false
+      use_ajax: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: ''
+      block_category: 'VPGE views'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_event_date_time'
+        - 'config:field.storage.node.su_event_source'
+        - 'config:field.storage.node.su_event_type'
+        - 'config:field.storage.node.su_vpge_grad_grow_competency'
+  block_6:
+    id: block_6
+    display_title: Leadership
+    display_plugin: block
+    position: 6
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Select Type of Grad Grow Learning Opportunities '
+            description: ''
+            use_operator: false
+            operator: type_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: gradgrow_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+              decoupled_site_users: '0'
+              custm_vpge_site_manager: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value_1:
+          id: su_event_date_time_value_1
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_vpge_grad_grow_competency_target_id:
+          id: su_vpge_grad_grow_competency_target_id
+          table: node__su_vpge_grad_grow_competency
+          field: su_vpge_grad_grow_competency_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            1271: 1271
+            1071: 1071
+            1076: 1076
+            1096: 1096
+            1101: 1101
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: vpge_grad_grow_competency
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      defaults:
+        use_ajax: false
+        filters: false
+        filter_groups: false
+      use_ajax: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: ''
+      block_category: 'VPGE views'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_event_date_time'
+        - 'config:field.storage.node.su_event_source'
+        - 'config:field.storage.node.su_event_type'
+        - 'config:field.storage.node.su_vpge_grad_grow_competency'
+  viewfield_block_1:
+    id: viewfield_block_1
+    display_title: 'Main View'
+    display_plugin: viewfield_block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: ''
+      block_category: 'VPGE views'
+      use_ajax: false
+      defaults:
+        use_ajax: false
+        arguments: false
+        filters: false
+        filter_groups: false
+        title: false
+      arguments: {  }
+      display_description: ''
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: date
+        su_event_date_time_value_1:
+          id: su_event_date_time_value_1
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+            granularity: second
+          group: 2
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: date
+        type_1:
+          id: type_1
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            stanford_event: stanford_event
+            program: program
+            partner: partner
+            resource: resource
+          group: '1'
+          exposed: true
+          expose:
+            operator_id: type_1_op
+            label: 'Select Type of Grad Grow Learning Opportunities '
+            description: 'You can filter by Competencies using icons in the left sidebar'
+            use_operator: 0
+            operator: type_1_op
+            operator_limit_selection: 0
+            operator_list: {  }
+            identifier: gradgrow_type
+            required: 0
+            remember: 0
+            multiple: 0
+            remember_roles:
+              authenticated: authenticated
+              administrator: 0
+              anonymous: 0
+              stanford_faculty: 0
+              stanford_staff: 0
+              stanford_student: 0
+              contributor: 0
+              site_manager: 0
+              site_editor: 0
+              site_builder: 0
+              site_developer: 0
+              layout_builder_user: 0
+              decoupled_site_users: 0
+              custm_vpge_site_manager: 0
+            reduce: 1
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+          2: OR
+      title: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.su_event_date_time'
+        - 'config:field.storage.node.su_event_source'
+        - 'config:field.storage.node.su_event_type'
+        - 'config:field.storage.node.su_vpge_grad_grow_competency'

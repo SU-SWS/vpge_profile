@@ -3,41 +3,9 @@ _core:
 encryption_profile: stanford_real_aes
 make_entities_uncacheable: true
 default_properties:
-  address: {  }
-  address_country: {  }
-  address_zone: {  }
-  boolean: {  }
-  datetime: {  }
-  daterange: {  }
-  email:
+  string:
     - value
-  link:
-    - uri
-    - title
-  markup: {  }
-  metatag: {  }
-  name: {  }
-  smartdate: {  }
-  timestamp: {  }
-  fontawesome_icon: {  }
-  list_float: {  }
-  list_integer: {  }
-  decimal: {  }
-  float: {  }
-  integer: {  }
-  telephone:
-    - value
-  'field_ui:entity_reference:node': {  }
-  entity_reference: {  }
-  file: {  }
-  image: {  }
-  'field_ui:entity_reference:media': {  }
-  'field_ui:entity_reference:taxonomy_term': {  }
-  viewfield: {  }
-  'field_ui:entity_reference:user': {  }
-  entity_reference_revisions: {  }
-  'field_ui:entity_reference_revisions:paragraph': {  }
-  list_string:
+  string_long:
     - value
   text:
     - value
@@ -46,8 +14,13 @@ default_properties:
   text_with_summary:
     - value
     - summary
-  string:
+  list_string:
     - value
-  string_long:
+  email:
+    - value
+  link:
+    - uri
+    - title
+  telephone:
     - value
 batch_size: 5

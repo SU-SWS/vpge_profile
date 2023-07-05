@@ -1,0 +1,22 @@
+uuid: 381b0b80-e552-4ab4-8264-e78cf67ef9f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: vpge_resource_nodes
+label: 'VPGE Resource Nodes'
+type: 'canonical_entities:node'
+pattern: 'resources/[node:title]'
+selection_criteria:
+  72722b41-622f-48d0-b2de-63ecebaee548:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 72722b41-622f-48d0-b2de-63ecebaee548
+    context_mapping:
+      node: node
+    bundles:
+      resource: resource
+selection_logic: and
+weight: -5
+relationships: {  }

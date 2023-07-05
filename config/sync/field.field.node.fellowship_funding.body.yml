@@ -6,12 +6,16 @@ dependencies:
     - field.storage.node.body
     - node.type.fellowship_funding
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
 id: node.fellowship_funding.body
 field_name: body
 entity_type: node
 bundle: fellowship_funding
-label: Body
+label: About
 description: ''
 required: false
 translatable: true
