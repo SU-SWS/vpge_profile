@@ -1,0 +1,14 @@
+uuid: 451eed70-08e5-4c15-b102-ee121f8c6ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.skill_level
+id: taxonomy_vocabulary_skill_level
+entity_type_id: taxonomy_vocabulary
+entity_id: skill_level
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
