@@ -1,0 +1,14 @@
+uuid: eb419542-c8bb-4d2d-b539-3666c6453ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.su_skill_level
+id: taxonomy_vocabulary_su_skill_level
+entity_type_id: taxonomy_vocabulary
+entity_id: su_skill_level
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
