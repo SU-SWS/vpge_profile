@@ -1,0 +1,46 @@
+uuid: 352459fe-5f12-4827-b11c-96e4937fed63
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.su_grad_grow_competencies
+  module:
+    - path
+    - text
+id: taxonomy_term.su_grad_grow_competencies.default
+targetEntityType: taxonomy_term
+bundle: su_grad_grow_competencies
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

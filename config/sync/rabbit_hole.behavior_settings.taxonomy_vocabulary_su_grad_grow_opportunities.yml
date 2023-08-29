@@ -1,0 +1,14 @@
+uuid: ef109634-e3fe-489f-a9c7-9058fbcf3723
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.su_grad_grow_opportunities
+id: taxonomy_vocabulary_su_grad_grow_opportunities
+entity_type_id: taxonomy_vocabulary
+entity_id: su_grad_grow_opportunities
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
