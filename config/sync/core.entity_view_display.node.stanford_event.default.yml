@@ -26,9 +26,9 @@ dependencies:
     - field.field.node.stanford_event.su_event_subject
     - field.field.node.stanford_event.su_event_telephone
     - field.field.node.stanford_event.su_event_type
-    - field.field.node.stanford_event.su_learning_opportunity
     - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
+    - field.field.node.stanford_event.su_su_grad_grow_competencies
     - field.field.node.stanford_event.su_vpge_area_of_focus
     - field.field.node.stanford_event.su_vpge_featured_event
     - field.field.node.stanford_event.su_vpge_fellowship_audience
@@ -186,11 +186,11 @@ third_party_settings:
                     class: su-event-type
             weight: -9
             additional: {  }
-          8ca48ec8-9f53-4407-bd2c-4bd01c1ed59e:
-            uuid: 8ca48ec8-9f53-4407-bd2c-4bd01c1ed59e
+          6a486f82-1e97-465e-bac0-baaa948223a2:
+            uuid: 6a486f82-1e97-465e-bac0-baaa948223a2
             region: main
             configuration:
-              id: 'field_block:node:stanford_event:su_learning_opportunity'
+              id: 'field_block:node:stanford_event:su_su_grad_grow_competencies'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -836,7 +836,7 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
-  su_learning_opportunity:
+  su_su_grad_grow_competencies:
     type: entity_reference_label
     label: above
     settings:

@@ -25,9 +25,9 @@ dependencies:
     - field.field.node.stanford_event.su_event_subject
     - field.field.node.stanford_event.su_event_telephone
     - field.field.node.stanford_event.su_event_type
-    - field.field.node.stanford_event.su_learning_opportunity
     - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
+    - field.field.node.stanford_event.su_su_grad_grow_competencies
     - field.field.node.stanford_event.su_vpge_area_of_focus
     - field.field.node.stanford_event.su_vpge_featured_event
     - field.field.node.stanford_event.su_vpge_fellowship_audience
@@ -383,16 +383,6 @@ content:
       create_new_levels: false
       force_deepest: false
     third_party_settings: {  }
-  su_learning_opportunity:
-    type: entity_reference_autocomplete
-    weight: 41
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   su_metatags:
     type: metatag_firehose
     weight: 12
@@ -410,6 +400,16 @@ content:
       create_new_items: false
       create_new_levels: false
       force_deepest: false
+    third_party_settings: {  }
+  su_su_grad_grow_competencies:
+    type: entity_reference_autocomplete
+    weight: 41
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   su_vpge_area_of_focus:
     type: options_buttons
