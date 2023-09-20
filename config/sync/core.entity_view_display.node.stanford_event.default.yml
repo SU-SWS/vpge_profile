@@ -26,6 +26,7 @@ dependencies:
     - field.field.node.stanford_event.su_event_subject
     - field.field.node.stanford_event.su_event_telephone
     - field.field.node.stanford_event.su_event_type
+    - field.field.node.stanford_event.su_learning_opportunity
     - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
     - field.field.node.stanford_event.su_vpge_area_of_focus
@@ -184,6 +185,22 @@ third_party_settings:
                   field_formatter_class:
                     class: su-event-type
             weight: -9
+            additional: {  }
+          8ca48ec8-9f53-4407-bd2c-4bd01c1ed59e:
+            uuid: 8ca48ec8-9f53-4407-bd2c-4bd01c1ed59e
+            region: main
+            configuration:
+              id: 'field_block:node:stanford_event:su_learning_opportunity'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: -4
             additional: {  }
         third_party_settings: {  }
       -
@@ -819,6 +836,14 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
+  su_learning_opportunity:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 121
+    region: main
   su_vpge_area_of_focus:
     type: entity_reference_label
     label: above

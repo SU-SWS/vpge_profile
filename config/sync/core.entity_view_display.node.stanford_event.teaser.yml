@@ -26,6 +26,7 @@ dependencies:
     - field.field.node.stanford_event.su_event_subject
     - field.field.node.stanford_event.su_event_telephone
     - field.field.node.stanford_event.su_event_type
+    - field.field.node.stanford_event.su_learning_opportunity
     - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
     - field.field.node.stanford_event.su_vpge_area_of_focus
@@ -205,6 +206,7 @@ hidden:
   su_event_sponsor: true
   su_event_subject: true
   su_event_telephone: true
+  su_learning_opportunity: true
   su_metatags: true
   su_shared_tags: true
   su_vpge_area_of_focus: true

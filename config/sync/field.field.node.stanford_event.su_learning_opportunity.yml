@@ -1,0 +1,29 @@
+uuid: ec227bb0-ae46-478d-afd1-68e65fd46d60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_learning_opportunity
+    - node.type.stanford_event
+    - taxonomy.vocabulary.su_grad_grow_opportunities
+id: node.stanford_event.su_learning_opportunity
+field_name: su_learning_opportunity
+entity_type: node
+bundle: stanford_event
+label: 'Learning Opportunity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      su_grad_grow_opportunities: su_grad_grow_opportunities
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

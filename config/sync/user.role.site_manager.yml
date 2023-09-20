@@ -79,6 +79,8 @@ permissions:
   - 'assign custm_diversityworks_site_manager role'
   - 'assign custm_diversityworks_site_manager role'
   - 'assign custm_diversityworks_site_manager role'
+  - 'assign custm_diversityworks_site_manager role'
+  - 'assign custm_vpge_site_manager role'
   - 'assign custm_vpge_site_manager role'
   - 'assign custm_vpge_site_manager role'
   - 'assign custm_vpge_site_manager role'
