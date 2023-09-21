@@ -1,12 +1,12 @@
-uuid: ef109634-e3fe-489f-a9c7-9058fbcf3723
+uuid: d70ec269-2b0e-4ee4-b955-c3fe643f0d5a
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.su_grad_grow_opportunities
-id: taxonomy_vocabulary_su_grad_grow_opportunities
+    - taxonomy.vocabulary.su_learning_opportunity
+id: taxonomy_vocabulary_su_learning_opportunity
 entity_type_id: taxonomy_vocabulary
-entity_id: su_grad_grow_opportunities
+entity_id: su_learning_opportunity
 action: display_page
 allow_override: 1
 redirect: ''

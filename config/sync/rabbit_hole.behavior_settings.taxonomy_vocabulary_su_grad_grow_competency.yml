@@ -1,0 +1,14 @@
+uuid: e6d682c9-1bc4-48cd-8501-fd0d7e0f0cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.su_grad_grow_competency
+id: taxonomy_vocabulary_su_grad_grow_competency
+entity_type_id: taxonomy_vocabulary
+entity_id: su_grad_grow_competency
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

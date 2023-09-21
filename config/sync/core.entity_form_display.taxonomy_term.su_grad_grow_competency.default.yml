@@ -1,15 +1,15 @@
-uuid: 30383e48-7421-444c-9406-e1c7bad5de7d
+uuid: 57b4e2b5-b74c-46e8-a86c-aead015ef8ed
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.su_grad_grow_opportunities
+    - taxonomy.vocabulary.su_grad_grow_competency
   module:
     - path
     - text
-id: taxonomy_term.su_grad_grow_opportunities.default
+id: taxonomy_term.su_grad_grow_competency.default
 targetEntityType: taxonomy_term
-bundle: su_grad_grow_opportunities
+bundle: su_grad_grow_competency
 mode: default
 content:
   description:
