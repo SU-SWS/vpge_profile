@@ -1,17 +1,17 @@
 <?php
 
-namespace Drupal\vpge_profile\Plugin\InstallTask;
+namespace Drupal\diversityworks_profile\Plugin\InstallTask;
 
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\RouteBuilderInterface;
-use Drupal\vpge_profile\InstallTaskBase;
+use Drupal\diversityworks_profile\InstallTaskBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Rebuilds the routes.
  *
  * @InstallTask(
- *   id="vpge_profile_route_rebuilder"
+ *   id="diversityworks_profile_route_rebuilder"
  * )
  */
 class RouteRebuilder extends InstallTaskBase implements ContainerFactoryPluginInterface {

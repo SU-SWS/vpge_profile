@@ -22,7 +22,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'VPGE Resource'
+name: Resource
 type: resource
 description: 'Information about a program, website, pdf, doc or other resource, including policies.'
 help: ''

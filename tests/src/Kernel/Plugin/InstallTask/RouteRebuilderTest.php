@@ -1,15 +1,15 @@
 <?php
 
-namespace Drupal\Tests\vpge_profile\Kernel\Plugin\InstallTask;
+namespace Drupal\Tests\diversityworks_profile\Kernel\Plugin\InstallTask;
 
 use Drupal\Core\Routing\RouteBuilderInterface;
 use Drupal\KernelTests\KernelTestBase;
-use Drupal\vpge_profile\Plugin\InstallTask\RouteRebuilder;
+use Drupal\diversityworks_profile\Plugin\InstallTask\RouteRebuilder;
 
 /**
  * Class RouteRebuilderTest.
  *
- * @coversDefaultClass \Drupal\vpge_profile\Plugin\InstallTask\RouteRebuilder
+ * @coversDefaultClass \Drupal\diversityworks_profile\Plugin\InstallTask\RouteRebuilder
  */
 class RouteRebuilderTest extends KernelTestBase {
 
@@ -27,7 +27,7 @@ class RouteRebuilderTest extends KernelTestBase {
    */
   protected function setUp(): void {
     parent::setUp();
-    $this->setInstallProfile('vpge_profile');
+    $this->setInstallProfile('diversityworks_profile');
     $this->installEntitySchema('user');
     $this->installEntitySchema('node');
     $this->installSchema('node', 'node_access');

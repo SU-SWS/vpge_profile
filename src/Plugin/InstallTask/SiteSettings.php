@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\vpge_profile\Plugin\InstallTask;
+namespace Drupal\diversityworks_profile\Plugin\InstallTask;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -10,7 +10,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\State\StateInterface;
 use Drupal\externalauth\AuthmapInterface;
-use Drupal\vpge_profile\InstallTaskBase;
+use Drupal\diversityworks_profile\InstallTaskBase;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * SNOW site settings installation.
  *
  * @InstallTask(
- *   id="vpge_profile_site_settings"
+ *   id="diversityworks_profile_site_settings"
  * )
  */
 class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInterface {
@@ -96,7 +96,7 @@ class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInte
     $this->authmap = $authmap;
     $this->passwordGenerator = $password_generator;
     $this->state = $state;
-    $this->logger = $logger_factory->get('vpge_profile');
+    $this->logger = $logger_factory->get('diversityworks_profile');
   }
 
   /**
@@ -114,7 +114,7 @@ class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInte
     // @codeCoverageIgnoreStart
     foreach ($node_pages as $page => $uuid) {
       if ($node = $this->getNode($uuid)) {
-        $this->state->set("vpge_profile.$page", '/node/' . $node->id());
+        $this->state->set("diversityworks_profile.$page", '/node/' . $node->id());
       }
     }
 
@@ -192,13 +192,13 @@ class SiteSettings extends InstallTaskBase implements ContainerFactoryPluginInte
    *   Returned data if any exist.
    */
   protected function getSnowData($site_name) {
-    $api_url = Settings::get('vpge_profile_snow_api_url', self::SNOW_API);
+    $api_url = Settings::get('diversityworks_profile_snow_api_url', self::SNOW_API);
     try {
       $response = $this->client->request('GET', $api_url, [
         'query' => ['website_address' => $site_name],
         'auth' => [
-          Settings::get('vpge_profile_snow_api_user'),
-          Settings::get('vpge_profile_snow_api_pass'),
+          Settings::get('diversityworks_profile_snow_api_user'),
+          Settings::get('diversityworks_profile_snow_api_pass'),
         ],
       ]);
 

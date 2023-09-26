@@ -1,17 +1,17 @@
 <?php
 
-namespace Drupal\Tests\vpge_profile\Unit\Plugin\HelpSection;
+namespace Drupal\Tests\diversityworks_profile\Unit\Plugin\HelpSection;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Utility\LinkGeneratorInterface;
-use Drupal\vpge_profile\Plugin\HelpSection\ProfileConnectSection;
+use Drupal\diversityworks_profile\Plugin\HelpSection\ProfileConnectSection;
 use Drupal\Tests\UnitTestCase;
 
 /**
  * Class ProfileConnectSectionTest
  *
- * @group vpge_profile
- * @coversDefaultClass \Drupal\vpge_profile\Plugin\HelpSection\ProfileConnectSection
+ * @group diversityworks_profile
+ * @coversDefaultClass \Drupal\diversityworks_profile\Plugin\HelpSection\ProfileConnectSection
  */
 class ProfileConnectSectionTest extends UnitTestCase {
 
@@ -23,7 +23,8 @@ class ProfileConnectSectionTest extends UnitTestCase {
     $container = new ContainerBuilder();
     $container->set('string_translation', $this->getStringTranslationStub());
 
-    $container->set('link_generator', $this->createMock(LinkGeneratorInterface::class));;
+    $container->set('link_generator', $this->createMock(LinkGeneratorInterface::class));
+    ;
     \Drupal::setContainer($container);
   }
 

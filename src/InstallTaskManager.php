@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\vpge_profile;
+namespace Drupal\diversityworks_profile;
 
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
@@ -10,7 +10,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 /**
  * Install task plugin manager.
  *
- * @package Drupal\vpge_profile
+ * @package Drupal\diversityworks_profile
  * @codeCoverageIgnore
  *   We can't test a service in profile due to some limitations of the Kernel.
  */
@@ -41,8 +41,8 @@ class InstallTaskManager extends DefaultPluginManager {
       'Plugin/InstallTask',
       $namespaces,
       $module_handler,
-      'Drupal\vpge_profile\InstallTaskInterface',
-      'Drupal\vpge_profile\Annotation\InstallTask'
+      'Drupal\diversityworks_profile\InstallTaskInterface',
+      'Drupal\diversityworks_profile\Annotation\InstallTask'
     );
     $this->alterInfo('install_task_plugins');
     $this->setCacheBackend($cache_backend, 'install_task_plugins');
@@ -91,7 +91,7 @@ class InstallTaskManager extends DefaultPluginManager {
     }
 
     if (!in_array($task_definition['id'], $this->completedTasks)) {
-      /** @var \Drupal\vpge_profile\InstallTaskInterface $plugin */
+      /** @var \Drupal\diversityworks_profile\InstallTaskInterface $plugin */
       $plugin = $this->createInstance($task_definition['id']);
       $plugin->runTask($install_state);
       $this->completedTasks[] = $task_definition['id'];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\vpge_profile;
+namespace Drupal\diversityworks_profile;
 
 use Drupal\Core\Plugin\PluginBase;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
@@ -8,7 +8,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 /**
  * Base class for install task plugins.
  *
- * @package Drupal\vpge_profile
+ * @package Drupal\diversityworks_profile
  */
 abstract class InstallTaskBase extends PluginBase implements InstallTaskInterface {
 

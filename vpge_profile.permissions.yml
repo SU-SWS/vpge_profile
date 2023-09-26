@@ -1,2 +1,0 @@
-permission_callbacks:
-  - Drupal\vpge_profile\VpgeProfilePermissions::permissions

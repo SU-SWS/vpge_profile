@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\vpge_profile;
+namespace Drupal\diversityworks_profile;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Class VpgeProfilePermissions.
  *
- * @package Drupal\vpge_profile
+ * @package Drupal\diversityworks_profile
  */
 class VpgeProfilePermissions implements ContainerInjectionInterface {
 

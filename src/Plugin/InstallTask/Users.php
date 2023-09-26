@@ -1,17 +1,17 @@
 <?php
 
-namespace Drupal\vpge_profile\Plugin\InstallTask;
+namespace Drupal\diversityworks_profile\Plugin\InstallTask;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\vpge_profile\InstallTaskBase;
+use Drupal\diversityworks_profile\InstallTaskBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Install users task.
  *
  * @InstallTask(
- *   id="vpge_profile_users"
+ *   id="diversityworks_profile_users"
  * )
  */
 class Users extends InstallTaskBase implements ContainerFactoryPluginInterface {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\vpge_profile\EventSubscriber;
+namespace Drupal\diversityworks_profile\EventSubscriber;
 
 use Acquia\DrupalEnvironmentDetector\AcquiaDrupalEnvironmentDetector;
 use Drupal\Core\File\FileSystemInterface;
@@ -13,7 +13,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 /**
  * Class EventSubscriber.
  *
- * @package Drupal\vpge_profile\EventSubscriber
+ * @package Drupal\diversityworks_profile\EventSubscriber
  */
 class EventSubscriber implements EventSubscriberInterface {
 
@@ -61,7 +61,7 @@ class EventSubscriber implements EventSubscriberInterface {
    */
   public function __construct(FileSystemInterface $file_system, LoggerChannelFactoryInterface $logger_factory) {
     $this->fileSystem = $file_system;
-    $this->logger = $logger_factory->get('vpge_profile');
+    $this->logger = $logger_factory->get('diversityworks_profile');
   }
 
   /**

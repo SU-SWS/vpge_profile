@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Test that vpge_profile_xmlsitemap_link_alter is working.
+ * Test that diversityworks_profile_xmlsitemap_link_alter is working.
  */
 class XmlsitemapCest {
 

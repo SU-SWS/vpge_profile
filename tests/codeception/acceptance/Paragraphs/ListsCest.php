@@ -27,7 +27,7 @@ class ListsCest {
    * Shared tags on each content type are identical.
    */
   public function _before() {
-    \Drupal::state()->set('vpge_profile_allow_all_paragraphs', TRUE);
+    \Drupal::state()->set('diversityworks_profile_allow_all_paragraphs', TRUE);
   }
 
   /**

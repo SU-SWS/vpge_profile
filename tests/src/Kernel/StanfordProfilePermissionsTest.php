@@ -1,17 +1,17 @@
 <?php
 
-namespace Drupal\Tests\vpge_profile\Kernel;
+namespace Drupal\Tests\diversityworks_profile\Kernel;
 
 use Drupal\KernelTests\KernelTestBase;
 use Drupal\layout_builder\Entity\LayoutBuilderEntityViewDisplay;
 use Drupal\node\Entity\NodeType;
-use Drupal\vpge_profile\VpgeProfilePermissions;
+use Drupal\diversityworks_profile\VpgeProfilePermissions;
 
 /**
  * Class VpgeProfilePermissionsTest.
  *
- * @group vpge_profile
- * @coversDefaultClass \Drupal\vpge_profile\VpgeProfilePermissions
+ * @group diversityworks_profile
+ * @coversDefaultClass \Drupal\diversityworks_profile\VpgeProfilePermissions
  */
 class VpgeProfilePermissionsTest extends KernelTestBase {
 

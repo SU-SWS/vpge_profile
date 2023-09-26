@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\vpge_profile\Plugin\HelpSection;
+namespace Drupal\diversityworks_profile\Plugin\HelpSection;
 
 use Drupal\help\Plugin\HelpSection\HelpSectionPluginBase;
 

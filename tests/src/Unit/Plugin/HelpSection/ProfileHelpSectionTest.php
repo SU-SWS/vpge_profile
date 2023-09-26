@@ -1,18 +1,18 @@
 <?php
 
-namespace Drupal\Tests\vpge_profile\Unit\Plugin\HelpSection;
+namespace Drupal\Tests\diversityworks_profile\Unit\Plugin\HelpSection;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Utility\LinkGeneratorInterface;
-use Drupal\vpge_profile\Plugin\HelpSection\ProfileConnectSection;
-use Drupal\vpge_profile\Plugin\HelpSection\ProfileHelpSection;
+use Drupal\diversityworks_profile\Plugin\HelpSection\ProfileConnectSection;
+use Drupal\diversityworks_profile\Plugin\HelpSection\ProfileHelpSection;
 use Drupal\Tests\UnitTestCase;
 
 /**
  * Class ProfileConnectSectionTest
  *
- * @group vpge_profile
- * @coversDefaultClass \Drupal\vpge_profile\Plugin\HelpSection\ProfileHelpSection
+ * @group diversityworks_profile
+ * @coversDefaultClass \Drupal\diversityworks_profile\Plugin\HelpSection\ProfileHelpSection
  */
 class ProfileHelpSectionTest extends UnitTestCase {
 

@@ -1,24 +1,24 @@
 <?php
 
-namespace Drupal\Tests\vpge_profile\Unit\Config;
+namespace Drupal\Tests\diversityworks_profile\Unit\Config;
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Config\Config;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\State\StateInterface;
-use Drupal\vpge_profile\Config\ConfigOverrides;
+use Drupal\diversityworks_profile\Config\ConfigOverrides;
 use Drupal\Tests\UnitTestCase;
 
 /**
  * Class ConfigOverridesTest
  *
- * @group vpge_profile
- * @coversDefaultClass \Drupal\vpge_profile\Config\ConfigOverrides
+ * @group diversityworks_profile
+ * @coversDefaultClass \Drupal\diversityworks_profile\Config\ConfigOverrides
  */
 class ConfigOverridesTest extends UnitTestCase {
 
   /**
-   * @var \Drupal\vpge_profile\Config\ConfigOverrides
+   * @var \Drupal\diversityworks_profile\Config\ConfigOverrides
    */
   protected $overrideService;
 
@@ -82,13 +82,13 @@ class ConfigOverridesTest extends UnitTestCase {
    */
   public function getStateCallback($name) {
     switch ($name) {
-      case 'vpge_profile.403_page':
+      case 'diversityworks_profile.403_page':
         return '/node/403';
 
-      case 'vpge_profile.404_page':
+      case 'diversityworks_profile.404_page':
         return '/node/404';
 
-      case 'vpge_profile.front_page':
+      case 'diversityworks_profile.front_page':
         return '/node/99';
 
     }
@@ -110,7 +110,7 @@ class ConfigOverridesTest extends UnitTestCase {
   /**
    * During installation, the config ignore settings shouldn't contain anything.
    */
-  public function testConfigOverridesDuringInstall(){
+  public function testConfigOverridesDuringInstall() {
     $GLOBALS['install_state'] = true;
 
     $overrides = $this->overrideService->loadOverrides(['config_ignore.settings']);

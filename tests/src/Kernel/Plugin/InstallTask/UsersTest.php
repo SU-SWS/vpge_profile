@@ -1,16 +1,16 @@
 <?php
 
-namespace Drupal\Tests\vpge_profile\Kernel\Plugin\InstallTask;
+namespace Drupal\Tests\diversityworks_profile\Kernel\Plugin\InstallTask;
 
 use Drupal\KernelTests\KernelTestBase;
-use Drupal\vpge_profile\Plugin\InstallTask\Users;
+use Drupal\diversityworks_profile\Plugin\InstallTask\Users;
 use Drupal\user\Entity\Role;
 use Drupal\user\Entity\User;
 
 /**
  * Class UsersTest.
  *
- * @coversDefaultClass \Drupal\vpge_profile\Plugin\InstallTask\Users
+ * @coversDefaultClass \Drupal\diversityworks_profile\Plugin\InstallTask\Users
  */
 class UsersTest extends KernelTestBase {
 
@@ -27,7 +27,7 @@ class UsersTest extends KernelTestBase {
    */
   protected function setUp(): void {
     parent::setUp();
-    $this->setInstallProfile('vpge_profile');
+    $this->setInstallProfile('diversityworks_profile');
 
     $this->installEntitySchema('user');
     $this->installEntitySchema('user_role');

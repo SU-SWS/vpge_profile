@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\vpge_profile;
+namespace Drupal\diversityworks_profile;
 
 /**
  * Install task plugin interface.
  *
- * @package Drupal\vpge_profile
+ * @package Drupal\diversityworks_profile
  */
 interface InstallTaskInterface {
 

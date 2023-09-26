@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\vpge_profile\Annotation;
+namespace Drupal\diversityworks_profile\Annotation;
 
 use Drupal\Component\Annotation\Plugin;
 
