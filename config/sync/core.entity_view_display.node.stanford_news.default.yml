@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.stanford_news.su_news_components
     - field.field.node.stanford_news.su_news_dek
     - field.field.node.stanford_news.su_news_featured_media
+    - field.field.node.stanford_news.su_news_hide_social
     - field.field.node.stanford_news.su_news_publishing_date
     - field.field.node.stanford_news.su_news_source
     - field.field.node.stanford_news.su_news_topics
@@ -250,15 +251,13 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: entity_reference_revisions_entity_view
+                type: layout_paragraphs
                 label: hidden
                 settings:
                   view_mode: default
                 third_party_settings:
                   field_formatter_class:
                     class: su-news-components
-                  ds:
-                    ds_limit: ''
             weight: 0
             additional: {  }
           1ccb4ee4-9a56-4ae4-ac92-1343889f1a94:
@@ -583,5 +582,6 @@ hidden:
   search_api_excerpt: true
   stanford_intranet__access: true
   su_metatags: true
+  su_news_hide_social: true
   su_news_source: true
   su_shared_tags: true
