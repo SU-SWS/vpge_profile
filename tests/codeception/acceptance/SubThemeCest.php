@@ -29,7 +29,8 @@ class SubThemeCest {
    */
   public function __construct() {
     $this->themeName = Factory::create()->firstName;
-    $this->themePath = realpath(dirname(drupal_get_path('theme', 'stanford_basic'))) . '/' . strtolower($this->themeName);
+    $path = \Drupal::service('extension.list.theme')->getPath('stanford_basic');
+    $this->themePath = realpath(dirname($path)) . '/' . strtolower($this->themeName);
   }
 
   /**
@@ -91,18 +92,10 @@ class SubThemeCest {
    *   If config ignore module should be disabled first.
    */
   protected function runConfigImport(AcceptanceTester $I, $disable_config_ignore = FALSE) {
-    $drush_response = $I->runDrush('pm-list --filter=name=stanford_ssp --format=json');
-    $drush_response = json_decode($drush_response, TRUE);
-    $saml_enabled = $drush_response['stanford_ssp']['status'] == 'Enabled';
-
     if ($disable_config_ignore) {
       $I->runDrush('pmu config_ignore');
     }
-
     $I->runDrush('config-import -y');
-    if (!$saml_enabled) {
-      $I->runDrush('pm-uninstall simplesamlphp_auth -y');
-    }
   }
 
   /**
@@ -111,7 +104,7 @@ class SubThemeCest {
   protected function createTheme() {
     if (!file_exists("{$this->themePath}/{$this->themeName}.info.yml")) {
       mkdir($this->themePath, 0777, TRUE);
-      $info = file_get_contents(drupal_get_path('theme', 'stanford_basic') . '/stanford_basic.info.yml');
+      $info = file_get_contents(\Drupal::service('extension.list.theme')->getPath('stanford_basic') . '/stanford_basic.info.yml');
       $info = Yaml::decode($info);
       $info['name'] = $this->themeName;
       $info['base theme'] = 'stanford_basic';
