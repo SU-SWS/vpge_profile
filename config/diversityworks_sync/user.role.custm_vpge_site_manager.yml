@@ -1,9 +1,0 @@
-uuid: 2f84969c-7f28-48f6-93e0-8be27fdcc9b9
-langcode: en
-status: true
-dependencies: {  }
-id: custm_vpge_site_manager
-label: 'VPGE Site Manager'
-weight: 3
-is_admin: false
-permissions: {  }

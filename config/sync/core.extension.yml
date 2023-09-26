@@ -249,7 +249,10 @@ module:
   vpge_profile: 999
 theme:
   claro: 0
-  minimally_branded_subtheme: 0
-  vpge: 0
   diversityworks: 0
+  minimally_branded_subtheme: 0
+  stable9: 0
+  stanford_basic: 0
+  stanford_profile_admin: 0
+  vpge: 0
 profile: vpge_profile
