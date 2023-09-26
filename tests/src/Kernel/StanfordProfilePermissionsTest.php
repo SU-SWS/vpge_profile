@@ -13,7 +13,7 @@ use Drupal\vpge_profile\VpgeProfilePermissions;
  * @group vpge_profile
  * @coversDefaultClass \Drupal\vpge_profile\VpgeProfilePermissions
  */
-class VpgeProfilePermissionsTest extends KernelTestBase {
+class StanfordProfilePermissionsTest extends KernelTestBase {
 
   /**
    * {@inheritdoc}
