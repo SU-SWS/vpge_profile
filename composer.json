@@ -1,6 +1,6 @@
 {
   "name": "su-sws/diversityworks_profile",
-  "description": "Installation Profile for the Stanford VPGE.",
+  "description": "Installation Profile for the Stanford Diversityworks.",
   "type": "drupal-custom-profile",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
