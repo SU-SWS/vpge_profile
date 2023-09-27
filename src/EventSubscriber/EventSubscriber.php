@@ -6,8 +6,13 @@ use Acquia\DrupalEnvironmentDetector\AcquiaDrupalEnvironmentDetector;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
+use Drupal\core_event_dispatcher\EntityHookEvents;
+use Drupal\core_event_dispatcher\Event\Entity\EntityDeleteEvent;
+use Drupal\core_event_dispatcher\Event\Entity\EntityInsertEvent;
 use Drupal\default_content\Event\DefaultContentEvents;
 use Drupal\default_content\Event\ImportEvent;
+use Drupal\file\FileInterface;
+use Drupal\user\RoleInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -31,13 +36,6 @@ class EventSubscriber implements EventSubscriberInterface {
   const FETCH_DIR = '/sites/default/files/';
 
   /**
-   * File system service.
-   *
-   * @var \Drupal\Core\File\FileSystemInterface
-   */
-  protected $fileSystem;
-
-  /**
    * Logger channel service.
    *
    * @var \Drupal\Core\Logger\LoggerChannelInterface
@@ -48,13 +46,17 @@ class EventSubscriber implements EventSubscriberInterface {
    * {@inheritDoc}
    */
   public static function getSubscribedEvents() {
-    return [DefaultContentEvents::IMPORT => 'onContentImport'];
+    return [
+      DefaultContentEvents::IMPORT => 'onContentImport',
+      EntityHookEvents::ENTITY_INSERT => 'onEntityInsert',
+      EntityHookEvents::ENTITY_DELETE => 'onEntityDelete',
+    ];
   }
 
   /**
    * EventSubscriber constructor.
    *
-   * @param \Drupal\Core\File\FileSystemInterface $file_system
+   * @param \Drupal\Core\File\FileSystemInterface $fileSystem
    *   File system service.
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_factory
    *   Logger factory service.
@@ -62,6 +64,47 @@ class EventSubscriber implements EventSubscriberInterface {
   public function __construct(FileSystemInterface $file_system, LoggerChannelFactoryInterface $logger_factory) {
     $this->fileSystem = $file_system;
     $this->logger = $logger_factory->get('vpge_profile');
+  }
+
+  /**
+   * On entity insert event.
+   *
+   * @param \Drupal\core_event_dispatcher\Event\Entity\EntityInsertEvent $event
+   *   Triggered event.
+   */
+  public function onEntityInsert(EntityInsertEvent $event) {
+    if ($event->getEntity()->getEntityTypeId() == 'user_role') {
+      self::updateSamlauthRoles();
+    }
+  }
+
+  /**
+   * On entity delete event.
+   *
+   * @param \Drupal\core_event_dispatcher\Event\Entity\EntityDeleteEvent $event
+   *   Triggered event.
+   */
+  public function onEntityDelete(EntityDeleteEvent $event) {
+    if ($event->getEntity()->getEntityTypeId() == 'user_role') {
+      self::updateSamlauthRoles();
+    }
+  }
+
+  /**
+   * Update samlauth allowed roles settings.
+   */
+  protected static function updateSamlauthRoles() {
+    if (!\Drupal::moduleHandler()->moduleExists('samlauth')) {
+      return;
+    }
+
+    $role_ids = array_keys(user_role_names(TRUE));
+    $role_ids = array_combine($role_ids, $role_ids);
+    unset($role_ids[RoleInterface::AUTHENTICATED_ID]);
+    asort($role_ids);
+
+    $config = \Drupal::configFactory()->getEditable('samlauth.authentication');
+    $config->set('map_users_roles', $role_ids)->save();
   }
 
   /**
@@ -77,14 +120,27 @@ class EventSubscriber implements EventSubscriberInterface {
         $entity->set('secret', md5(random_int(0, 99999)));
         $entity->save();
       }
-      if ($entity->getEntityTypeId() != 'file') {
-        continue;
-      }
 
-      $file_uri = $entity->getFileUri();
+      if ($entity->getEntityTypeId() == 'media') {
+        foreach ($entity->getFieldDefinitions() as $field) {
+          if ($field->getType() == 'image') {
+            foreach ($entity->get($field->getName()) as $item) {
+              if (!$item->entity instanceof FileInterface) {
+                continue;
+              }
 
-      if (!file_exists($file_uri)) {
-        $this->getFile($file_uri);
+              $file_uri = $item->entity->getFileUri();
+
+              if (!file_exists($file_uri)) {
+                $this->getFile($file_uri);
+              }
+
+              [$width, $height] = @getimagesize($file_uri);
+              $item->set('width', (int) $width);
+              $item->set('height', (int) $height);
+            }
+          }
+        }
       }
     }
   }
