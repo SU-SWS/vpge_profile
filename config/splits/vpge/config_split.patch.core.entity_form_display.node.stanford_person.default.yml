@@ -1,0 +1,151 @@
+adding:
+  dependencies:
+    config:
+      - field.field.node.stanford_person.su_vpge_area_of_focus
+      - field.field.node.stanford_person.su_vpge_cohort
+      - field.field.node.stanford_person.su_vpge_current_degree_dept
+      - field.field.node.stanford_person.su_vpge_fellowship_funding
+      - field.field.node.stanford_person.su_vpge_named_fellowship
+      - field.field.node.stanford_person.su_vpge_program
+    module:
+      - datetime
+  third_party_settings:
+    field_group:
+      group_bio_content:
+        weight: 3
+      group_contact_location_informati:
+        weight: 4
+      group_interests_affiliations:
+        weight: 5
+      group_vpge_categories:
+        children:
+          - su_vpge_area_of_focus
+          - su_vpge_program
+          - su_vpge_cohort
+          - su_vpge_fellowship_funding
+          - su_vpge_named_fellowship
+          - su_vpge_current_degree_dept
+        label: 'VPGE Categories'
+        region: content
+        parent_name: ''
+        weight: 2
+        format_type: fieldset
+        format_settings:
+          classes: ''
+          show_empty_fields: false
+          id: ''
+          description: ''
+          required_fields: true
+  content:
+    body:
+      weight: 21
+    publish_on:
+      weight: 10
+    scheduler_settings:
+      weight: 9
+    stanford_intranet__access:
+      weight: 8
+    status:
+      weight: 6
+    su_metatags:
+      weight: 13
+    su_person_components:
+      weight: 22
+    su_person_photo:
+      weight: 20
+    su_person_profile_link:
+      weight: 7
+    su_shared_tags:
+      weight: 12
+    su_vpge_area_of_focus:
+      type: entity_reference_autocomplete
+      weight: 13
+      region: content
+      settings:
+        match_operator: CONTAINS
+        match_limit: 10
+        size: 60
+        placeholder: ''
+      third_party_settings: {  }
+    su_vpge_cohort:
+      type: datetime_default
+      weight: 15
+      region: content
+      settings: {  }
+      third_party_settings: {  }
+    su_vpge_current_degree_dept:
+      type: string_textfield
+      weight: 18
+      region: content
+      settings:
+        size: 60
+        placeholder: ''
+      third_party_settings: {  }
+    su_vpge_fellowship_funding:
+      type: entity_reference_autocomplete
+      weight: 16
+      region: content
+      settings:
+        match_operator: CONTAINS
+        match_limit: 10
+        size: 60
+        placeholder: ''
+      third_party_settings: {  }
+    su_vpge_named_fellowship:
+      type: string_textfield
+      weight: 17
+      region: content
+      settings:
+        size: 60
+        placeholder: ''
+      third_party_settings: {  }
+    su_vpge_program:
+      type: entity_reference_autocomplete
+      weight: 14
+      region: content
+      settings:
+        match_operator: CONTAINS
+        match_limit: 10
+        size: 60
+        placeholder: ''
+      third_party_settings: {  }
+    unpublish_on:
+      type: datetime_timestamp_no_default
+      weight: 11
+      region: content
+      settings: {  }
+      third_party_settings: {  }
+  hidden:
+    su_vpge_pro: true
+removing:
+  third_party_settings:
+    field_group:
+      group_bio_content:
+        weight: 2
+      group_contact_location_informati:
+        weight: 3
+      group_interests_affiliations:
+        weight: 4
+  content:
+    body:
+      weight: 5
+    publish_on:
+      weight: 30
+    scheduler_settings:
+      weight: 20
+    stanford_intranet__access:
+      weight: 7
+    status:
+      weight: 5
+    su_metatags:
+      weight: 32
+    su_person_components:
+      weight: 7
+    su_person_photo:
+      weight: 4
+    su_person_profile_link:
+      weight: 6
+    su_shared_tags:
+      weight: 31
+  hidden:
+    unpublish_on: true

@@ -1,0 +1,69 @@
+adding:
+  dependencies:
+    module:
+      - vpge_profile
+  permissions:
+    config_split_sequence_h5o9acb7ptmhhl: 'assign custm_diversityworks_site_manager role'
+    config_split_sequence_1_h5o9acb7ptmhhl: 'assign custm_diversityworks_site_manager role'
+    config_split_sequence_2_h5o9acb7ptmhhl: 'assign custm_diversityworks_site_manager role'
+    config_split_sequence_3_h5o9acb7ptmhhl: 'assign custm_diversityworks_site_manager role'
+    config_split_sequence_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_1_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_2_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_3_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_4_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_5_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_6_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_7_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_8_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_9_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_10_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_11_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_12_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_13_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_14_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_15_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_16_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_17_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_18_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_19_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_20_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_21_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_22_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_23_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_24_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_25_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_26_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_27_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_28_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_29_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_30_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_31_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_32_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_33_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+removing:
+  dependencies:
+    config:
+      - node.type.stanford_policy
+    module:
+      - book
+      - eck
+  permissions:
+    config_split_sequence_3qkl6t7flrba2f: 'add content to books'
+    config_split_sequence_cen16vrp49cvem92: 'administer book outlines'
+    config_split_sequence_gigkq0mkk48dpkiq: 'create log entities'
+    config_split_sequence_1fd1ch7k8rn92jt6: 'create new books'
+    config_split_sequence_9cafdhaalfdslbie: 'create stanford_policy content'
+    config_split_sequence_ci8fd20pk4hda7go: 'delete any log entities'
+    config_split_sequence_2o5pjimgtbh0knsn: 'delete any stanford_policy content'
+    config_split_sequence_48p0r644t5kggcfc: 'delete own log entities'
+    config_split_sequence_ioj5fhl8ub424qcr: 'delete own stanford_policy content'
+    config_split_sequence_vdihhd05ao83tth7: 'delete stanford_policy revisions'
+    config_split_sequence_hak0ft4imft8rh29: 'edit any log entities'
+    config_split_sequence_fmitnmaqvhc5ubvv: 'edit any stanford_policy content'
+    config_split_sequence_rhfd6u8kjptadbrn: 'edit own log entities'
+    config_split_sequence_sjjnadttb5ip9b: 'edit own stanford_policy content'
+    config_split_sequence_mm5pfrs5r8kvgvgs: 'revert stanford_policy revisions'
+    config_split_sequence_kk9hbo8339tcc8s: 'view any log entities'
+    config_split_sequence_4k4k42dra17dpeck: 'view own log entities'
+    config_split_sequence_hv4b8bcibn114g7r: 'view stanford_policy revisions'

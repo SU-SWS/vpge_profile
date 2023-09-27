@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - search_api.server.database_search
-    - core.entity_view_mode.node.full
     - core.entity_view_mode.node.search_indexing
   module:
     - node
@@ -36,13 +35,8 @@ field_settings:
     configuration:
       roles:
         - anonymous
-        - authenticated
       view_mode:
         'entity:node':
-          fellowship_funding: full
-          partner: full
-          program: full
-          resource: full
           stanford_course: search_indexing
           stanford_event: search_indexing
           stanford_event_series: search_indexing
@@ -211,8 +205,6 @@ processor_settings:
       'entity:node':
         datasource_boost: !!float 1
         bundle_boosts:
-          fellowship_funding: !!float 3
-          program: !!float 5
           stanford_page: !!float 3
 tracker_settings:
   default:

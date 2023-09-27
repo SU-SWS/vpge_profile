@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.stanford_news.body
     - field.field.node.stanford_news.layout_builder__layout
     - field.field.node.stanford_news.stanford_intranet__access
     - field.field.node.stanford_news.su_metatags
@@ -17,10 +16,6 @@ dependencies:
     - field.field.node.stanford_news.su_news_source
     - field.field.node.stanford_news.su_news_topics
     - field.field.node.stanford_news.su_shared_tags
-    - field.field.node.stanford_news.su_vpge_area_of_focus
-    - field.field.node.stanford_news.su_vpge_related_fellowship
-    - field.field.node.stanford_news.su_vpge_related_person
-    - field.field.node.stanford_news.su_vpge_related_resource
     - node.type.stanford_news
   module:
     - datetime
@@ -32,7 +27,6 @@ dependencies:
     - scheduler
     - shs
     - stanford_intranet
-    - text
 third_party_settings:
   field_group:
     group_media:
@@ -42,7 +36,7 @@ third_party_settings:
       label: Media
       region: content
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       format_settings:
         classes: ''
@@ -58,7 +52,7 @@ third_party_settings:
       label: 'Editorial Content'
       region: content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       format_settings:
         classes: ''
@@ -79,47 +73,19 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
-    group_categories_and_relationshi:
-      children:
-        - su_news_topics
-        - su_vpge_area_of_focus
-        - su_vpge_related_resource
-        - su_vpge_related_fellowship
-        - su_vpge_related_person
-      label: 'Categories and Relationships'
-      region: content
-      parent_name: ''
-      weight: 4
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: false
 id: node.stanford_news.default
 targetEntityType: node
 bundle: stanford_news
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 5
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 9
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 8
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -138,7 +104,7 @@ content:
     third_party_settings: {  }
   su_metatags:
     type: metatag_firehose
-    weight: 12
+    weight: 32
     region: content
     settings:
       sidebar: true
@@ -169,7 +135,7 @@ content:
     third_party_settings: {  }
   su_news_components:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 5
     region: content
     settings:
       title: Paragraph
@@ -210,7 +176,7 @@ content:
     third_party_settings: {  }
   su_news_topics:
     type: options_shs
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_node_count: false
@@ -220,53 +186,13 @@ content:
     third_party_settings: {  }
   su_shared_tags:
     type: options_shs
-    weight: 11
+    weight: 31
     region: content
     settings:
       display_node_count: false
       create_new_items: false
       create_new_levels: false
       force_deepest: false
-    third_party_settings: {  }
-  su_vpge_area_of_focus:
-    type: entity_reference_autocomplete
-    weight: 4
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  su_vpge_related_fellowship:
-    type: entity_reference_autocomplete
-    weight: 6
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  su_vpge_related_person:
-    type: entity_reference_autocomplete
-    weight: 7
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  su_vpge_related_resource:
-    type: entity_reference_autocomplete
-    weight: 5
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -276,12 +202,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   created: true
   layout_builder__layout: true
@@ -290,4 +210,5 @@ hidden:
   promote: true
   sticky: true
   uid: true
+  unpublish_on: true
   url_redirects: true

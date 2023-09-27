@@ -1,0 +1,50 @@
+uuid: 958932cb-bf22-446e-80ae-62a135935ab5
+langcode: en
+status: false
+dependencies: {  }
+id: default
+label: 'Default VPGE'
+description: ''
+weight: 10
+stackable: false
+storage: folder
+folder: profiles/custom/vpge_profile/config/splits/vpge
+module:
+  feeds: 0
+  feeds_ex: 0
+  feeds_tamper: 0
+  tamper: 0
+theme: {  }
+complete_list:
+  - core.base_field_override.node.fellowship_funding.promote
+  - core.base_field_override.node.partner.promote
+  - core.base_field_override.node.program.promote
+  - core.base_field_override.node.resource.promote
+  - core.entity_view_mode.taxonomy_term.grad_grow
+  - field.field.node.stanford_news.body
+  - field.storage.taxonomy_term.su_grad_grow_page_url
+  - field.storage.taxonomy_term.su_icon
+  - node.type.fellowship_funding
+  - node.type.partner
+  - node.type.program
+  - node.type.resource
+  - system.menu.fellowships-funding
+  - taxonomy.vocabulary.by_quarter
+  - views.view.fellowships_funding
+  - views.view.grad_grow
+  - views.view.grad_grow_competency_navigation_block
+  - views.view.grad_grow_competency_on_a_node
+  - '*feeds.*'
+  - '*vpge*'
+  - 'field.field.node.fellowship_funding.*'
+  - 'field.field.node.partner.*'
+  - 'field.field.node.program.*'
+  - 'field.field.node.resource.*'
+partial_list:
+  - 'page_manager.*'
+  - 'metatag.*'
+  - 'search_api.index.*'
+  - 'rabbit_hole.behavior_settings.*'
+  - 'user.role.*'
+  - 'core.entity_form_display.*'
+  - 'core.entity_view_display.*'

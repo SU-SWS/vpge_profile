@@ -1,0 +1,40 @@
+adding:
+  dependencies:
+    config:
+      - core.entity_view_display.node.stanford_event.default
+      - core.entity_view_display.node.stanford_news.default
+      - core.entity_view_display.node.stanford_person.default
+    module:
+      - vpge_profile
+  permissions:
+    - 'configure editable stanford_event node layout overrides'
+    - 'configure editable stanford_news node layout overrides'
+    - 'configure editable stanford_person node layout overrides'
+removing:
+  dependencies:
+    config:
+      - node.type.stanford_policy
+    module:
+      - book
+      - eck
+      - views_ui
+  permissions:
+    - 'add content to books'
+    - 'administer book outlines'
+    - 'administer views'
+    - 'create log entities'
+    - 'create new books'
+    - 'create stanford_policy content'
+    - 'delete any log entities'
+    - 'delete any stanford_policy content'
+    - 'delete own log entities'
+    - 'delete own stanford_policy content'
+    - 'delete stanford_policy revisions'
+    - 'edit any log entities'
+    - 'edit any stanford_policy content'
+    - 'edit own log entities'
+    - 'edit own stanford_policy content'
+    - 'revert stanford_policy revisions'
+    - 'view any log entities'
+    - 'view own log entities'
+    - 'view stanford_policy revisions'

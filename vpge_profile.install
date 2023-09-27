@@ -5,6 +5,9 @@
  * vpge_profile.install
  */
 
+use Drupal\config_split\Entity\ConfigSplitEntity;
+use Drupal\Core\Serialization\Yaml;
+
 /**
  * Save the system pages from the original config values into state.
  */
@@ -13,4 +16,16 @@ function vpge_profile_update_8002() {
   $state->set('stanford_profile.403_page', '/node/3');
   $state->set('stanford_profile.404_page', '/node/2');
   $state->set('stanford_profile.front_page', '/node/1');
+}
+
+/**
+ * Create new config split settings.
+ */
+function vpge_profile_update_8003() {
+  $config_path = DRUPAL_ROOT . '/' . \Drupal::service('extension.list.profile')
+      ->getPath('vpge_profile') . '/config/sync';
+  $diversity_works = Yaml::decode(file_get_contents("$config_path/config_split.config_split.diversityworks.yml"));
+  $vpge = Yaml::decode(file_get_contents("$config_path/config_split.config_split.default.yml"));
+  ConfigSplitEntity::create($diversity_works)->save();
+  ConfigSplitEntity::create($vpge)->save();
 }

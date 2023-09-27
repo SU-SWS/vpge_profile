@@ -1,0 +1,27 @@
+uuid: 0a9f10f4-312b-43e6-bc7e-71d9ec4aa52c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_grad_grow_competency
+    - node.type.fellowship_funding
+id: node.fellowship_funding.su_vpge_grad_grow_competency
+field_name: su_vpge_grad_grow_competency
+entity_type: node
+bundle: fellowship_funding
+label: 'Grad Grow Competency'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

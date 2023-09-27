@@ -1,0 +1,23 @@
+adding:
+  dependencies:
+    config:
+      - core.entity_view_mode.node.full
+  field_settings:
+    rendered_item:
+      configuration:
+        roles:
+          - authenticated
+        view_mode:
+          'entity:node':
+            fellowship_funding: full
+            partner: full
+            program: full
+            resource: full
+  processor_settings:
+    type_boost:
+      boosts:
+        'entity:node':
+          bundle_boosts:
+            fellowship_funding: !!float 3
+            program: !!float 5
+removing: {  }

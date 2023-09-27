@@ -1,0 +1,30 @@
+uuid: f03df556-365e-477c-a364-b234c0a4b521
+langcode: en
+status: false
+dependencies: {  }
+id: diversityworks
+label: 'Diversity Works'
+description: ''
+weight: 10
+stackable: false
+storage: folder
+folder: profiles/custom/vpge_profile/config/splits/diversityworks
+module:
+  feeds: 0
+  feeds_ex: 0
+  feeds_tamper: 0
+  tamper: 0
+theme: {  }
+complete_list:
+  - ultimate_cron.job.feeds_cron
+  - '*feeds.*'
+  - '*vpge*'
+  - 'core.entity_view_display.node.resource.*'
+  - 'core.entity_form_display.node.resource.*'
+  - 'field.field.node.resource.*'
+  - 'core.base_field_override.node.resource.*'
+  - rabbit_hole.behavior_settings.node_type_resource
+  - node.type.resource
+partial_list:
+  - 'page_manager.*'
+  - 'metatag.*'

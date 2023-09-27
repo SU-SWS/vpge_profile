@@ -1,0 +1,29 @@
+uuid: 36f69b09-5353-4ab9-b6c2-061d9d9d78b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+  theme:
+    - vpge
+id: vpge_config_pages_stanford_super_footer
+theme: vpge
+region: footer
+weight: -4
+provider: null
+plugin: config_pages_block
+settings:
+  id: config_pages_block
+  label: 'Super Footer'
+  label_display: '0'
+  provider: config_pages
+  config_page_type: stanford_super_footer
+  config_page_view_mode: full
+visibility:
+  config_pages_values_access:
+    id: config_pages_values_access
+    negate: false
+    context_mapping: {  }
+    config_page_field: stanford_super_footer|su_super_foot_enabled|boolean
+    operator: '=='
+    condition_value: '1'
