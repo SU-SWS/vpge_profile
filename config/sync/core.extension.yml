@@ -56,7 +56,6 @@ module:
   editor: 0
   editoria11y: 0
   element_class_formatter: 0
-  empty_fields: 0
   encrypt: 0
   entity_reference_revisions: 0
   entity_usage: 0
@@ -64,9 +63,6 @@ module:
   fakeobjects: 0
   fast404: 0
   fast_404_generator: 0
-  feeds: 0
-  feeds_ex: 0
-  feeds_tamper: 0
   field: 0
   field_encrypt: 0
   field_event_dispatcher: 0
@@ -140,7 +136,6 @@ module:
   page_manager: 0
   page_manager_ui: 0
   paragraphs_edit: 0
-  paranoia: 0
   path: 0
   path_alias: 0
   path_redirect_import: 0
@@ -201,7 +196,6 @@ module:
   subrequests: 0
   syslog: 0
   system: 0
-  tamper: 0
   taxonomy: 0
   taxonomy_entity_index: 0
   taxonomy_menu: 0
@@ -217,7 +211,6 @@ module:
   ui_patterns_library: 0
   ui_patterns_views: 0
   ultimate_cron: 0
-  update: 0
   user: 0
   user_event_dispatcher: 0
   view_unpublished: 0
@@ -245,13 +238,11 @@ module:
   menu_link_weight: 10
   stanford_profile_helper: 10
   paragraphs: 11
-  vpge_profile: 999
+  vpge_profile: 1000
 theme:
   stable: 0
   seven: 0
   stanford_basic: 0
   stable9: 0
   minimally_branded_subtheme: 0
-  vpge: 0
-  diversityworks: 0
 profile: vpge_profile

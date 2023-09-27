@@ -1,4 +1,4 @@
-uuid: a510f43a-491b-4155-9819-bec26050918a
+uuid: cefa00f2-f9dd-44ab-8aef-6c8e78f556ad
 langcode: en
 status: true
 dependencies:
@@ -13,12 +13,12 @@ weight: 0
 provider: null
 plugin: config_pages_block
 settings:
-  config_page_type: stanford_global_message
-  config_page_view_mode: full
   id: config_pages_block
   label: 'Global Messages'
-  label_display: 0
+  label_display: '0'
   provider: config_pages
+  config_page_type: stanford_global_message
+  config_page_view_mode: full
 visibility:
   config_pages_values_access:
     id: config_pages_values_access

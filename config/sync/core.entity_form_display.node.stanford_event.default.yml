@@ -27,16 +27,6 @@ dependencies:
     - field.field.node.stanford_event.su_event_type
     - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
-    - field.field.node.stanford_event.su_vpge_area_of_focus
-    - field.field.node.stanford_event.su_vpge_featured_event
-    - field.field.node.stanford_event.su_vpge_fellowship_audience
-    - field.field.node.stanford_event.su_vpge_fellowship_funding
-    - field.field.node.stanford_event.su_vpge_grad_grow_competency
-    - field.field.node.stanford_event.su_vpge_partner
-    - field.field.node.stanford_event.su_vpge_person
-    - field.field.node.stanford_event.su_vpge_program
-    - field.field.node.stanford_event.su_vpge_resource
-    - field.field.node.stanford_event.su_vpge_time_commitment
     - node.type.stanford_event
   module:
     - address
@@ -61,7 +51,7 @@ third_party_settings:
       label: 'Editorial Content'
       region: content
       parent_name: ''
-      weight: 3
+      weight: 2
       format_type: fieldset
       format_settings:
         classes: ''
@@ -75,7 +65,7 @@ third_party_settings:
       label: 'Body Content'
       region: content
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: fieldset
       format_settings:
         classes: ''
@@ -97,7 +87,7 @@ third_party_settings:
       label: 'Event Details'
       region: content
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: fieldset
       format_settings:
         classes: ''
@@ -110,7 +100,7 @@ third_party_settings:
       label: 'Schedule Details'
       region: content
       parent_name: ''
-      weight: 6
+      weight: 5
       format_type: fieldset
       format_settings:
         classes: ''
@@ -136,29 +126,6 @@ third_party_settings:
         open: false
         description: ''
         required_fields: false
-    group_vpge_categories:
-      children:
-        - su_vpge_featured_event
-        - su_vpge_area_of_focus
-        - su_vpge_fellowship_audience
-        - su_vpge_fellowship_funding
-        - su_vpge_grad_grow_competency
-        - su_vpge_partner
-        - su_vpge_person
-        - su_vpge_program
-        - su_vpge_resource
-        - su_vpge_time_commitment
-      label: 'VPGE Categories'
-      region: content
-      parent_name: ''
-      weight: 0
-      format_type: fieldset
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        description: ''
-        required_fields: true
 id: node.stanford_event.default
 targetEntityType: node
 bundle: stanford_event
@@ -193,7 +160,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 6
     region: content
     settings:
       display_label: true
@@ -374,7 +341,7 @@ content:
     third_party_settings: {  }
   su_event_type:
     type: options_shs
-    weight: 1
+    weight: 0
     region: content
     settings:
       display_node_count: false
@@ -400,104 +367,13 @@ content:
       create_new_levels: false
       force_deepest: false
     third_party_settings: {  }
-  su_vpge_area_of_focus:
-    type: options_buttons
-    weight: 32
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  su_vpge_featured_event:
-    type: boolean_checkbox
-    weight: 31
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  su_vpge_fellowship_audience:
-    type: options_buttons
-    weight: 33
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  su_vpge_fellowship_funding:
-    type: entity_reference_autocomplete
-    weight: 34
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  su_vpge_grad_grow_competency:
-    type: options_shs
-    weight: 35
-    region: content
-    settings:
-      display_node_count: false
-      create_new_items: false
-      create_new_levels: false
-      force_deepest: false
-    third_party_settings: {  }
-  su_vpge_partner:
-    type: entity_reference_autocomplete
-    weight: 36
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  su_vpge_person:
-    type: entity_reference_autocomplete
-    weight: 37
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  su_vpge_program:
-    type: entity_reference_autocomplete
-    weight: 38
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  su_vpge_resource:
-    type: entity_reference_autocomplete
-    weight: 39
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  su_vpge_time_commitment:
-    type: options_buttons
-    weight: 40
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 2
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 13
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
@@ -506,4 +382,5 @@ hidden:
   promote: true
   sticky: true
   uid: true
+  unpublish_on: true
   url_redirects: true
