@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.su_vpge_fellowship_type
     - node.type.fellowship_funding
+    - taxonomy.vocabulary.vpge_funding_type
 id: node.fellowship_funding.su_vpge_fellowship_type
 field_name: su_vpge_fellowship_type
 entity_type: node
@@ -18,7 +19,8 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      vpge_funding_type: vpge_funding_type
     sort:
       field: name
       direction: asc
