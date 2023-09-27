@@ -172,12 +172,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Drupal\\stanford_profile\\": "src/"
+            "Drupal\\vpge_profile\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Drupal\\Tests\\stanford_profile\\": "tests/src"
+            "Drupal\\Tests\\vpge_profile\\": "tests/src"
         }
     },
     "extra": {
