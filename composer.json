@@ -195,7 +195,7 @@
         "https://www.drupal.org/project/default_content/issues/3160146": "https://git.drupalcode.org/project/default_content/-/merge_requests/15.patch"
       },
       "drupal/jsonapi_extras": {
-        "https://www.drupal.org/project/jsonapi_extras/issues/3232279": "https://www.drupal.org/files/issues/2021-09-10/fix-output-schema-3232279-3.patch"
+        "https://www.drupal.org/project/jsonapi_extras/issues/3232279": "https://www.drupal.org/files/issues/2023-05-08/3232279-jsonapi-extras-url-5link-enhancer-with-attributes-16.patch"
       },
       "drupal/subrequests": {
         "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
