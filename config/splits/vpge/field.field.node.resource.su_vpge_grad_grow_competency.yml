@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.su_vpge_grad_grow_competency
     - node.type.resource
+    - taxonomy.vocabulary.vpge_grad_grow_competency
 id: node.resource.su_vpge_grad_grow_competency
 field_name: su_vpge_grad_grow_competency
 entity_type: node
@@ -18,7 +19,8 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      vpge_grad_grow_competency: vpge_grad_grow_competency
     sort:
       field: name
       direction: asc

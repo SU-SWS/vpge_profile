@@ -1,0 +1,77 @@
+uuid: 23daba87-f317-4eeb-9ef6-d8be5b9057e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.vpge_grad_grow_competency.su_grad_grow_page_url
+    - field.field.taxonomy_term.vpge_grad_grow_competency.su_icon
+    - image.style.thumbnail
+    - taxonomy.vocabulary.vpge_grad_grow_competency
+  module:
+    - image
+    - path
+    - scheduler
+    - text
+id: taxonomy_term.vpge_grad_grow_competency.default
+targetEntityType: taxonomy_term
+bundle: vpge_grad_grow_competency
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  su_grad_grow_page_url:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_icon:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

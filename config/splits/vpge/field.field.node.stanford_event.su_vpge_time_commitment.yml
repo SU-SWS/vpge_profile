@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.su_vpge_time_commitment
     - node.type.stanford_event
+    - taxonomy.vocabulary.vpge_time_commitment
 id: node.stanford_event.su_vpge_time_commitment
 field_name: su_vpge_time_commitment
 entity_type: node
@@ -18,7 +19,8 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      vpge_time_commitment: vpge_time_commitment
     sort:
       field: name
       direction: asc
