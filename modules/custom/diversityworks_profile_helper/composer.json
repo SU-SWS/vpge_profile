@@ -1,7 +1,7 @@
 {
   "name": "su-sws/diversityworks_profile_helper",
   "type": "drupal-module",
-  "description": "VPGE Profile Helper module",
+  "description": "Diversityworks Profile Helper module",
   "keywords": [],
   "minimum-stability": "dev"
 }
