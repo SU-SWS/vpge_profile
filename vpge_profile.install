@@ -16,9 +16,9 @@ use Drupal\field\Entity\FieldConfig;
  */
 function vpge_profile_update_8002() {
   $state = \Drupal::state();
-  $state->set('stanford_profile.403_page', '/node/3');
-  $state->set('stanford_profile.404_page', '/node/2');
-  $state->set('stanford_profile.front_page', '/node/1');
+  $state->set('vpge_profile.f403_page', '/node/3');
+  $state->set('vpge_profile.f404_page', '/node/2');
+  $state->set('vpge_profile.front_page', '/node/1');
 }
 
 /**

@@ -111,8 +111,9 @@ class BasicPageCest {
    * Regression test for D8CORE-1547.
    */
   public function testRevisionPage(AcceptanceTester $I) {
+    $title = $this->faker->words(3, TRUE);
     $I->logInWithRole('site_manager');
-    $node = $I->createEntity(['title' => 'Foo Bar', 'type' => 'stanford_page']);
+    $node = $I->createEntity(['title' => $title, 'type' => 'stanford_page']);
     $I->amOnPage($node->toUrl()->toString());
     $I->click('Version History');
     $I->canSeeResponseCodeIs(200);
