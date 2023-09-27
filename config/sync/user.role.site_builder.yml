@@ -8,7 +8,10 @@ dependencies:
     - core.entity_view_display.node.stanford_news.default
     - core.entity_view_display.node.stanford_page.default
     - core.entity_view_display.node.stanford_person.default
+    - core.entity_view_display.node.stanford_policy.default
     - core.entity_view_display.node.stanford_publication.default
+    - filter.format.stanford_html
+    - filter.format.stanford_minimal_html
     - media.type.embeddable
     - media.type.file
     - media.type.google_form
@@ -24,6 +27,7 @@ dependencies:
     - node.type.stanford_publication
     - taxonomy.vocabulary.basic_page_types
     - taxonomy.vocabulary.event_audience
+    - taxonomy.vocabulary.media_tags
     - taxonomy.vocabulary.stanford_event_types
     - taxonomy.vocabulary.stanford_news_topics
     - taxonomy.vocabulary.stanford_person_types
@@ -44,6 +48,7 @@ dependencies:
     - field_permissions
     - field_ui
     - file
+    - filter
     - image
     - layout_builder
     - media
@@ -53,6 +58,7 @@ dependencies:
     - page_manager
     - paragraphs
     - path
+    - pathauto
     - rabbit_hole
     - redirect
     - responsive_image
