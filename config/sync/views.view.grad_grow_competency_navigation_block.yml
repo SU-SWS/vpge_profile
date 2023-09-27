@@ -212,9 +212,9 @@ display:
           settings:
             image_link: ''
             image_style: stanford_circle
-            class: ''
             image_loading:
               attribute: lazy
+            class: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -579,9 +579,9 @@ display:
           settings:
             image_link: ''
             image_style: large
-            class: ''
             image_loading:
               attribute: lazy
+            class: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -800,9 +800,9 @@ display:
           settings:
             image_link: ''
             image_style: medium
-            class: ''
             image_loading:
               attribute: lazy
+            class: ''
           group_column: ''
           group_columns: {  }
           group_rows: true

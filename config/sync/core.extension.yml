@@ -246,7 +246,7 @@ module:
   menu_link_weight: 10
   stanford_profile_helper: 10
   paragraphs: 11
-  vpge_profile: 999
+  vpge_profile: 1000
 theme:
   claro: 0
   diversityworks: 0
