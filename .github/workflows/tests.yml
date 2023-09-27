@@ -1,5 +1,8 @@
 name: PHPUnit and Acceptance Tests
 on: [push]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   phpunit:
     name: PHPUnit Coverage Tests
@@ -60,8 +63,10 @@ jobs:
         with:
           path: project
       - name: Run tests
+        env:
+          STANFORD_ENCRYPT: ${{ secrets.STANFORD_ENCRYPT }}
         run: |
-          composer global require su-sws/stanford-caravan:dev-8.x-2.x
+          composer global require su-sws/stanford-caravan:dev-8.x-3.x
           ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=$GITHUB_WORKSPACE/project --suites=acceptance
       - name: Save Test Results
         uses: actions/upload-artifact@v3
@@ -99,8 +104,10 @@ jobs:
         with:
           path: project
       - name: Run tests
+        env:
+          STANFORD_ENCRYPT: ${{ secrets.STANFORD_ENCRYPT }}=
         run: |
-          composer global require su-sws/stanford-caravan:dev-8.x-2.x
+          composer global require su-sws/stanford-caravan:dev-8.x-3.x
           ~/.composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=$GITHUB_WORKSPACE/project --suites=functional
       - name: Save Test Results
         uses: actions/upload-artifact@v3
