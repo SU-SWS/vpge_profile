@@ -191,80 +191,11 @@
       "drupal/menu_block": {
         "https://www.drupal.org/project/menu_block/issues/3271218": "https://www.drupal.org/files/issues/2022-04-29/menu_block_rendered_empty-3271218-17.patch"
       },
-      "drupal/default_content": {
-        "https://www.drupal.org/project/default_content/issues/3160146": "https://git.drupalcode.org/project/default_content/-/merge_requests/15.patch"
-      },
-      "drupal/jsonapi_extras": {
-        "https://www.drupal.org/project/jsonapi_extras/issues/3232279": "https://www.drupal.org/files/issues/2023-05-08/3232279-jsonapi-extras-url-5link-enhancer-with-attributes-16.patch"
-      },
-      "drupal/subrequests": {
-        "Get same results on different request": "https://www.drupal.org/files/issues/2019-07-18/change_request_type-63049395-09.patch"
-      },
-      "drupal/anchor_link": {
-        "https://www.drupal.org/project/anchor_link/issues/2958532": "https://www.drupal.org/files/issues/2019-01-11/anchor_link-linkit-support_2958532.patch"
-      },
-      "drupal/colorbox": {
-        "https://www.drupal.org/project/colorbox/issues/3278470": "https://git.drupalcode.org/project/colorbox/-/merge_requests/14.patch"
-      },
-      "drupal/config_ignore": {
-        "https://www.drupal.org/project/config_ignore/issues/3160360": "https://www.drupal.org/files/issues/2022-08-22/config_ignore-3160360-3.x.patch"
-      },
-      "drupal/config_readonly": {
-        "https://www.drupal.org/project/config_readonly/issues/2892631": "https://www.drupal.org/files/issues/2018-04-01/config-readonly-2892631-18.patch"
-      },
-      "drupal/content_lock": {
-        "https://www.drupal.org/project/content_lock/issues/3307402": "https://git.drupalcode.org/project/content_lock/-/merge_requests/11.patch"
-      },
-      "drupal/core": {
-        "https://www.drupal.org/project/drupal/issues/2807629": "https://www.drupal.org/files/issues/2021-07-09/2807629-45.patch",
-        "https://www.drupal.org/project/drupal/issues/3039185": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch",
-        "https://www.drupal.org/project/drupal/issues/3106718": "https://www.drupal.org/files/issues/2020-01-16/3106718-image-hal-3.patch",
-        "https://www.drupal.org/project/drupal/issues/2577923": "https://www.drupal.org/files/issues/2020-06-11/2577923-128.patch",
-        "https://www.drupal.org/project/drupal/issues/2353611": "https://www.drupal.org/files/issues/2019-10-15/drupal-link_uuid-2353611-262.patch",
-        "https://www.drupal.org/project/drupal/issues/3195543": "https://git.drupalcode.org/project/drupal/-/merge_requests/278.patch",
-        "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch",
-        "https://www.drupal.org/project/drupal/issues/3266341": "https://www.drupal.org/files/issues/2022-09-23/3266341-26.patch"
-      },
-      "drupal/decoupled_router": {
-        "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2022-11-30/decouple_router-3111456-resolve-language-issue-58.patch"
-      },
-      "drupal/diff": {
-        "https://www.drupal.org/project/diff/issues/2882334#comment-13913401": "https://www.drupal.org/files/issues/2020-09-11/2882334-diff-missing_some_revisions-11.patch"
-      },
-      "drupal/fakeobjects": {
-        "https://www.drupal.org/project/fakeobjects/issues/3002953": "https://www.drupal.org/files/issues/2020-06-22/fakeobjects-missing_plugin-3002953-5.patch"
-      },
-      "drupal/field_encrypt": {
-        "https://www.drupal.org/project/field_encrypt/issues/3299175": "https://git.drupalcode.org/project/field_encrypt/-/merge_requests/31.patch"
-      },
-      "drupal/jsonapi_views": {
-        "https://www.drupal.org/project/jsonapi_views/issues/3213575": "https://www.drupal.org/files/issues/2022-05-30/pagination_number_offset_limit_support.patch"
+      "drupal/menu_link": {
+        "https://www.drupal.org/project/menu_link/issues/3358081": "https://git.drupalcode.org/project/menu_link/-/merge_requests/9.patch"
       },
       "drupal/menu_link_weight": {
-        "https://www.drupal.org/project/menu_link_weight/issues/3099139": "https://www.drupal.org/files/issues/2019-12-05/menu_link_weight-target_blank-3099139.patch"
-      },
-      "drupal/page_cache_query_ignore": {
-        "https://www.drupal.org/project/page_cache_query_ignore/issues/3336993": "https://www.drupal.org/files/issues/2023-01-27/3336993-get_config.patch"
-      },
-      "drupal/paragraphs": {
-        "https://www.drupal.org/project/paragraphs/issues/2901390": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
-      },
-      "drupal/redirect": {
-        "https://www.drupal.org/project/redirect/issues/3057250": "https://www.drupal.org/files/issues/2020-12-14/validation-issue-3057250-29.patch",
-        "https://www.drupal.org/project/redirect/issues/3018897": "https://www.drupal.org/files/issues/2022-10-20/redirect-n3018897-21.patch"
-      },
-      "drupal/shs": {
-        "https://www.drupal.org/project/shs/issues/3047595": "https://www.drupal.org/files/issues/2022-01-06/3047595-5.patch"
-      },
-      "drupal/simplesamlphp_auth": {
-        "https://www.drupal.org/project/simplesamlphp_auth/issues/2936889": "https://www.drupal.org/files/issues/2020-07-31/simplesamlphp_auth-avoid_unexpected_redirect-2936889-12-d8.patch"
-      },
-      "drupal/views_infinite_scroll": {
-        "https://www.drupal.org/project/views_infinite_scroll/issues/3094488": "https://www.drupal.org/files/issues/2020-04-14/3094488-2.patch",
-        "D8CORE-2949: https://www.drupal.org/project/views_infinite_scroll/issues/3173923": "https://www.drupal.org/files/issues/2021-06-30/views_infinite_scroll-3173923-4.patch"
-      },
-      "drupal/views_taxonomy_term_name_depth": {
-        "https://www.drupal.org/project/views_taxonomy_term_name_depth/issues/2877249": "https://git.drupalcode.org/project/views_taxonomy_term_name_depth/-/merge_requests/2.diff"
+        "https://www.drupal.org/project/menu_link_weight/issues/2875984": "https://git.drupalcode.org/project/menu_link_weight/-/merge_requests/2.diff"
       }
     }
   }
