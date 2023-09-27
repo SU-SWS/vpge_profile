@@ -1,0 +1,29 @@
+uuid: 92bbfa43-7e8b-4052-9bb8-2622d8ca92f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+  theme:
+    - vpge
+id: vpge_config_pages
+theme: vpge
+region: footer
+weight: 0
+provider: null
+plugin: config_pages_block
+settings:
+  config_page_type: stanford_local_footer
+  config_page_view_mode: full
+  id: config_pages_block
+  label: 'Local Footer'
+  label_display: '0'
+  provider: config_pages
+visibility:
+  config_pages_values_access:
+    id: config_pages_values_access
+    negate: false
+    context_mapping: {  }
+    config_page_field: stanford_local_footer|su_footer_enabled|boolean
+    operator: '=='
+    condition_value: '1'

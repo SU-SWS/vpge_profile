@@ -1,0 +1,27 @@
+uuid: a254211b-022f-4bf1-8aae-92d607d57186
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_grad_grow_competency
+    - node.type.program
+id: node.program.su_vpge_grad_grow_competency
+field_name: su_vpge_grad_grow_competency
+entity_type: node
+bundle: program
+label: 'Grad Grow Competency'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

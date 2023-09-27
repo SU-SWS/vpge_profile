@@ -1,0 +1,29 @@
+uuid: 330ecb1c-da8a-44cc-bcef-f7553e978017
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_area_of_focus
+    - node.type.stanford_person
+    - taxonomy.vocabulary.vpge_areas_of_focus
+id: node.stanford_person.su_vpge_area_of_focus
+field_name: su_vpge_area_of_focus
+entity_type: node
+bundle: stanford_person
+label: 'VPGE Area of Focus'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vpge_areas_of_focus: vpge_areas_of_focus
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

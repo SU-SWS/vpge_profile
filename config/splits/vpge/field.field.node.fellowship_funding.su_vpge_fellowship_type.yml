@@ -1,0 +1,27 @@
+uuid: ef75f4a7-639d-4166-8e69-240d58c65599
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_fellowship_type
+    - node.type.fellowship_funding
+id: node.fellowship_funding.su_vpge_fellowship_type
+field_name: su_vpge_fellowship_type
+entity_type: node
+bundle: fellowship_funding
+label: 'Type of Funding'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

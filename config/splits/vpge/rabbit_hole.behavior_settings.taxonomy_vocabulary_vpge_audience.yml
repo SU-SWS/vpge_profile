@@ -1,0 +1,14 @@
+uuid: e74809cc-9142-479f-8479-c4ff37ea80fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.vpge_audience
+id: taxonomy_vocabulary_vpge_audience
+entity_type_id: taxonomy_vocabulary
+entity_id: vpge_audience
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

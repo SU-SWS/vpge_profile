@@ -1,0 +1,314 @@
+uuid: 2be3a2fd-c593-4d36-816b-55579ff8a573
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fellowship_funding.body
+    - field.field.node.fellowship_funding.su_vpge_area_of_focus
+    - field.field.node.fellowship_funding.su_vpge_fellowship_amount
+    - field.field.node.fellowship_funding.su_vpge_fellowship_app_period
+    - field.field.node.fellowship_funding.su_vpge_fellowship_app_type
+    - field.field.node.fellowship_funding.su_vpge_fellowship_apply_now
+    - field.field.node.fellowship_funding.su_vpge_fellowship_contact
+    - field.field.node.fellowship_funding.su_vpge_fellowship_duration
+    - field.field.node.fellowship_funding.su_vpge_fellowship_eligibility
+    - field.field.node.fellowship_funding.su_vpge_fellowship_how_apply
+    - field.field.node.fellowship_funding.su_vpge_fellowship_image
+    - field.field.node.fellowship_funding.su_vpge_fellowship_number
+    - field.field.node.fellowship_funding.su_vpge_fellowship_partner
+    - field.field.node.fellowship_funding.su_vpge_fellowship_resource
+    - field.field.node.fellowship_funding.su_vpge_fellowship_short_title
+    - field.field.node.fellowship_funding.su_vpge_fellowship_tag_line
+    - field.field.node.fellowship_funding.su_vpge_fellowship_type
+    - field.field.node.fellowship_funding.su_vpge_grad_grow_competency
+    - field.field.node.fellowship_funding.su_vpge_time_commitment
+    - node.type.fellowship_funding
+  module:
+    - field_group
+    - media_library
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_grad_grow:
+      children:
+        - su_vpge_area_of_focus
+        - su_vpge_grad_grow_competency
+        - su_vpge_fellowship_type
+        - su_vpge_time_commitment
+      label: 'Additional Information'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_details:
+      children:
+        - su_vpge_fellowship_app_type
+        - su_vpge_fellowship_eligibility
+        - su_vpge_fellowship_app_period
+        - su_vpge_fellowship_number
+        - su_vpge_fellowship_duration
+        - su_vpge_fellowship_amount
+        - body
+        - su_vpge_fellowship_how_apply
+        - su_vpge_fellowship_person
+        - su_vpge_fellowship_contact
+        - su_vpge_fellowship_resource
+        - su_vpge_fellowship_partner
+      label: 'Details Page'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_all_pages:
+      children:
+        - su_vpge_fellowship_short_title
+        - su_vpge_fellowship_tag_line
+        - su_vpge_fellowship_image
+        - su_vpge_fellowship_apply_now
+      label: 'All Pages'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+id: node.fellowship_funding.default
+targetEntityType: node
+bundle: fellowship_funding
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 24
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  su_vpge_area_of_focus:
+    type: options_buttons
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  su_vpge_fellowship_amount:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_app_period:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_app_type:
+    type: options_buttons
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  su_vpge_fellowship_apply_now:
+    type: text_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_contact:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_duration:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_eligibility:
+    type: options_buttons
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  su_vpge_fellowship_how_apply:
+    type: text_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_image:
+    type: media_library_widget
+    weight: 21
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  su_vpge_fellowship_number:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_partner:
+    type: entity_reference_autocomplete
+    weight: 29
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_resource:
+    type: entity_reference_autocomplete
+    weight: 28
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_short_title:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_tag_line:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  su_vpge_fellowship_type:
+    type: options_buttons
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  su_vpge_grad_grow_competency:
+    type: options_buttons
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  su_vpge_time_commitment:
+    type: options_buttons
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

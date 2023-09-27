@@ -1,0 +1,29 @@
+uuid: ba303dd9-456f-485e-bbf6-b30069738003
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_program
+    - node.type.program
+    - node.type.stanford_event
+id: node.stanford_event.su_vpge_program
+field_name: su_vpge_program
+entity_type: node
+bundle: stanford_event
+label: 'VPGE Program'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 30cd8590-28af-4e1b-bf56-b551f926aff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.stanford_news
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - stanford_html
+      - stanford_minimal_html
+id: node.stanford_news.body
+field_name: body
+entity_type: node
+bundle: stanford_news
+label: 'VPGE News body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

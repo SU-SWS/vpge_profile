@@ -1,0 +1,155 @@
+adding:
+  dependencies:
+    config:
+      - field.field.node.stanford_person.su_vpge_area_of_focus
+      - field.field.node.stanford_person.su_vpge_cohort
+      - field.field.node.stanford_person.su_vpge_current_degree_dept
+      - field.field.node.stanford_person.su_vpge_fellowship_funding
+      - field.field.node.stanford_person.su_vpge_named_fellowship
+      - field.field.node.stanford_person.su_vpge_program
+      - views.view.vpge_news_on_person_page
+    content:
+      - 'block_content:stanford_component_block:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
+    module:
+      - block_content
+  third_party_settings:
+    layout_builder:
+      sections:
+        -
+          components:
+            66271642-34e0-4683-8b92-6c98e45a4339:
+              uuid: 66271642-34e0-4683-8b92-6c98e45a4339
+              region: right
+              configuration:
+                id: 'field_block:node:stanford_person:su_vpge_current_degree_dept'
+                label: 'Degree Program'
+                label_display: visible
+                provider: layout_builder
+                context_mapping:
+                  entity: layout_builder.entity
+                  view_mode: view_mode
+                formatter:
+                  type: string
+                  label: hidden
+                  settings:
+                    link_to_entity: false
+                  third_party_settings:
+                    field_formatter_class:
+                      class: ''
+              weight: 12
+              additional: {  }
+            c49cc7cd-649e-442c-aed9-a433d511930d:
+              uuid: c49cc7cd-649e-442c-aed9-a433d511930d
+              region: right
+              configuration:
+                id: 'field_block:node:stanford_person:su_vpge_fellowship_funding'
+                label: Fellowship/Funding
+                label_display: visible
+                provider: layout_builder
+                context_mapping:
+                  entity: layout_builder.entity
+                  view_mode: view_mode
+                formatter:
+                  type: entity_reference_label
+                  label: hidden
+                  settings:
+                    link: true
+                  third_party_settings:
+                    field_formatter_class:
+                      class: ''
+              weight: 14
+              additional: {  }
+            a65a44c6-b3ad-40db-9baa-60889ae50ced:
+              uuid: a65a44c6-b3ad-40db-9baa-60889ae50ced
+              region: right
+              configuration:
+                id: 'field_block:node:stanford_person:su_vpge_program'
+                label: 'VPGE Events Program'
+                label_display: visible
+                provider: layout_builder
+                context_mapping:
+                  entity: layout_builder.entity
+                  view_mode: view_mode
+                formatter:
+                  type: entity_reference_label
+                  label: hidden
+                  settings:
+                    link: true
+                  third_party_settings:
+                    field_formatter_class:
+                      class: ''
+              weight: 15
+              additional: {  }
+            578680a4-be01-49c5-bdef-0091c6c90f83:
+              uuid: 578680a4-be01-49c5-bdef-0091c6c90f83
+              region: right
+              configuration:
+                id: 'block_content:2ef389b9-1507-4ab8-adb1-e8ce711b9f9f'
+                label: 'Vertical Spacer for top/bottom margins'
+                label_display: '0'
+                provider: block_content
+                status: true
+                info: ''
+                view_mode: full
+                context_mapping: {  }
+              weight: 13
+              additional: {  }
+        -
+          components:
+            6d67d7e2-929b-4d5e-9744-3470b71b0d45:
+              uuid: 6d67d7e2-929b-4d5e-9744-3470b71b0d45
+              region: main
+              configuration:
+                id: 'views_block:vpge_news_on_person_page-block_1'
+                label: 'Related News'
+                label_display: visible
+                provider: views
+                context_mapping: {  }
+                views_label: 'Related News'
+                items_per_page: none
+              weight: 0
+              additional: {  }
+    layout_builder_restrictions:
+      allowed_block_categories:
+        - Book
+        - 'Changelog (Views)'
+        - 'Policy (Views)'
+        - Printable
+        - 'Taxonomy Terms (Views)'
+        - VPGE
+        - 'VPGE '
+        - 'VPGE views'
+      entity_view_mode_restriction:
+        restricted_categories:
+          - Book
+          - 'Changelog (Views)'
+          - 'Policy (Views)'
+          - Printable
+          - 'Taxonomy Terms (Views)'
+          - VPGE
+          - 'VPGE '
+          - 'VPGE views'
+  content:
+    su_vpge_area_of_focus:
+      type: entity_reference_label
+      label: above
+      settings:
+        link: true
+      third_party_settings: {  }
+      weight: 128
+      region: content
+    su_vpge_program:
+      type: entity_reference_label
+      label: above
+      settings:
+        link: true
+      third_party_settings: {  }
+      weight: 129
+      region: content
+  hidden:
+    su_vpge_cohort: true
+    su_vpge_current_degree_dept: true
+    su_vpge_fellowship_funding: true
+    su_vpge_named_fellowship: true
+    su_vpge_pro: true
+removing: {}

@@ -1,0 +1,8 @@
+uuid: 4a8ff113-d111-461e-921f-408147de9078
+langcode: en
+status: true
+dependencies: {  }
+id: fellowships-funding
+label: 'VPGE Fellowships and Funding and PFP'
+description: 'A sub navigation architecture for creating sidebar navigation menus in the fellowships and funding section.'
+locked: false

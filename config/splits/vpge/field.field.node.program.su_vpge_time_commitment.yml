@@ -1,0 +1,27 @@
+uuid: b9601989-7651-47d0-aa16-65a4e28d9a25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_time_commitment
+    - node.type.program
+id: node.program.su_vpge_time_commitment
+field_name: su_vpge_time_commitment
+entity_type: node
+bundle: program
+label: 'Grad Grow Time Commitment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

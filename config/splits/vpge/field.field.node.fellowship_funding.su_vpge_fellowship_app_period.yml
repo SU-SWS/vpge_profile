@@ -1,0 +1,19 @@
+uuid: 14307b15-34b0-47c5-8935-950924005984
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.su_vpge_fellowship_app_period
+    - node.type.fellowship_funding
+id: node.fellowship_funding.su_vpge_fellowship_app_period
+field_name: su_vpge_fellowship_app_period
+entity_type: node
+bundle: fellowship_funding
+label: 'Application Period'
+description: 'Enter in the date(s) for this fellowship/funding opportunity (e.g., Feb/March or Feb 28).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
