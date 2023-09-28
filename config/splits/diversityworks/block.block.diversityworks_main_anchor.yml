@@ -1,0 +1,25 @@
+uuid: dd2019af-5de6-4d96-8e6e-0f1ab735c2bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - jumpstart_ui
+    - system
+  theme:
+    - diversityworks
+id: diversityworks_main_anchor
+theme: diversityworks
+region: content
+weight: -3
+provider: null
+plugin: jumpstart_ui_skipnav_main_anchor
+settings:
+  id: jumpstart_ui_skipnav_main_anchor
+  label: 'Main content anchor target'
+  label_display: '0'
+  provider: jumpstart_ui
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

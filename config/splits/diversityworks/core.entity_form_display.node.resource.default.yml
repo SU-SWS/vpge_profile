@@ -12,10 +12,11 @@ dependencies:
     - field.field.node.resource.su_vpge_resource_image
     - node.type.resource
   module:
+    - change_labels
+    - layout_paragraphs
     - link
     - media_library
     - path
-    - react_paragraphs
     - scheduler
     - text
 id: node.resource.default
@@ -73,13 +74,20 @@ content:
       display_label: true
     third_party_settings: {  }
   su_page_components:
-    type: react_paragraphs
+    type: layout_paragraphs
     weight: 15
     region: content
     settings:
-      resizable: false
-      sizes: {  }
-    third_party_settings: {  }
+      preview_view_mode: default
+      nesting_depth: 0
+      require_layouts: 1
+      empty_message: ''
+    third_party_settings:
+      change_labels:
+        add_another: ''
+        field_label_overwrite: ''
+        hide_add_another: 0
+        force_single_cardinality: 0
   su_vpge_resource_audience:
     type: options_buttons
     weight: 5

@@ -1,0 +1,25 @@
+uuid: 20ffb628-3075-46a9-992e-f83f1a65ea12
+langcode: en
+status: true
+dependencies:
+  module:
+    - jumpstart_ui
+    - system
+  theme:
+    - vpge
+id: vpge_main_anchor
+theme: vpge
+region: content
+weight: -3
+provider: null
+plugin: jumpstart_ui_skipnav_main_anchor
+settings:
+  id: jumpstart_ui_skipnav_main_anchor
+  label: 'Main content anchor target'
+  label_display: '0'
+  provider: jumpstart_ui
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

@@ -1,0 +1,25 @@
+uuid: f18159af-5773-4f42-8d9b-639a0257e3c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - diversityworks
+id: diversityworks_main_navigation
+theme: diversityworks
+region: menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

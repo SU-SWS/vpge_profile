@@ -7,6 +7,8 @@ ignored_config_entities:
   - '~block.block.stanford_profile_admin_*'
   - '~block.block.stanford_basic_*'
   - '~block.block.minimally_branded_subtheme_*'
+  - '~block.block.vpge_*'
+  - '~block.block.diversityworks_*'
   - 'block.block.*'
   - 'google_tag.container.*'
   - 'user.role.custm_*'

@@ -48,6 +48,7 @@ dependencies:
     - role_delegation
     - scheduler
     - stanford_migrate
+    - stanford_policy
     - stanford_publication
     - system
     - taxonomy
@@ -55,6 +56,7 @@ dependencies:
     - ui_patterns_library
     - view_unpublished
     - views_bulk_edit
+    - vpge_profile
 id: site_manager
 label: 'Site Manager'
 weight: -3

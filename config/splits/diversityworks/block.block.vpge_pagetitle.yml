@@ -1,4 +1,4 @@
-uuid: 68f82385-afe2-4adf-acd6-324f554d4f97
+uuid: 481823b5-a20b-402e-8faf-2a2de2d0fb75
 langcode: en
 status: true
 dependencies:
@@ -23,7 +23,7 @@ visibility:
     id: request_path
     negate: true
     context_mapping: {  }
-    pages: "/node/*\r\n/news*\r\n/people*\r\n/events*\r\n/event-series*\r\n/publications*"
+    pages: "/node/*\r\n/news*\r\n/people*\r\n/events*\r\n/event-series*\r\n/publications*\r\n/courses*"
   response_code:
     id: response_code
     negate: true

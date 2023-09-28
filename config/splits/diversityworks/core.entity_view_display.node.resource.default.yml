@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.resource.body
+    - field.field.node.resource.feeds_item
     - field.field.node.resource.su_page_components
     - field.field.node.resource.su_vpge_resource_audience
     - field.field.node.resource.su_vpge_resource_category
@@ -78,6 +79,7 @@ content:
     weight: 0
     region: left
 hidden:
+  feeds_item: true
   links: true
   search_api_excerpt: true
   su_page_components: true

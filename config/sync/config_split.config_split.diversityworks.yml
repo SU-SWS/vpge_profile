@@ -16,6 +16,8 @@ module:
   tamper: 0
 theme: {  }
 complete_list:
+  - node.type.resource
+  - rabbit_hole.behavior_settings.node_type_resource
   - ultimate_cron.job.feeds_cron
   - '*feeds.*'
   - '*vpge*'
@@ -23,8 +25,7 @@ complete_list:
   - 'core.entity_form_display.node.resource.*'
   - 'field.field.node.resource.*'
   - 'core.base_field_override.node.resource.*'
-  - rabbit_hole.behavior_settings.node_type_resource
-  - node.type.resource
+  - 'block.block.diversityworks_*'
 partial_list:
   - 'page_manager.*'
   - 'metatag.*'

@@ -1,0 +1,29 @@
+uuid: 64006017-a7fd-4d4e-94e3-c8dde1d34774
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+  theme:
+    - diversityworks
+id: diversityworks_config_pages
+theme: diversityworks
+region: footer
+weight: 0
+provider: null
+plugin: config_pages_block
+settings:
+  id: config_pages_block
+  label: 'Local Footer'
+  label_display: '0'
+  provider: config_pages
+  config_page_type: stanford_local_footer
+  config_page_view_mode: full
+visibility:
+  config_pages_values_access:
+    id: config_pages_values_access
+    negate: false
+    context_mapping: {  }
+    config_page_field: stanford_local_footer|su_footer_enabled|boolean
+    operator: '=='
+    condition_value: '1'

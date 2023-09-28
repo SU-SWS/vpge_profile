@@ -1,0 +1,31 @@
+uuid: 6ad4d68b-8e26-412c-801c-7a9151726c2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - response_code_condition
+    - system
+  theme:
+    - diversityworks
+id: diversityworks_pagetitle
+theme: diversityworks
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "/node/*\r\n/news*\r\n/people*\r\n/events*\r\n/event-series*\r\n/publications*\r\n/courses*"
+  response_code:
+    id: response_code
+    negate: true
+    context_mapping: {  }
+    response_codes: "404\r\n403"

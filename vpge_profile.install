@@ -128,7 +128,7 @@ function vpge_profile_update_9005(&$sandbox) {
   if (!isset($sandbox['count'])) {
     $nids = $node_storage->getQuery()
       ->accessCheck(FALSE)
-      ->condition('type', 'stanford_page')
+      ->condition('type', ['stanford_page', 'resource'], 'IN')
       ->sort('created')
       ->execute();
     $sandbox['nids'] = $nids;
@@ -325,7 +325,6 @@ function vpge_profile_update_9007(&$sandbox) {
   /** @var \Drupal\node\NodeInterface[] $nodes */
   $nodes = $node_storage->loadMultiple($node_ids);
 
-  $database = \Drupal::database();
   $convert_fields = [
     'field_block:node:stanford_event:su_event_components',
     'field_block:node:stanford_event_series:su_event_series_components',
@@ -333,6 +332,7 @@ function vpge_profile_update_9007(&$sandbox) {
     'field_block:node:stanford_page:su_page_components',
     'field_block:node:stanford_person:su_person_components',
     'field_block:node:stanford_person:su_person_components',
+    'field_block:node:resource:su_person_components',
     'field_block:node:stanford_publication:su_publication_components',
   ];
   foreach ($nodes as $node) {

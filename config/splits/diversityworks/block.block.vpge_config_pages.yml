@@ -1,4 +1,4 @@
-uuid: 92bbfa43-7e8b-4052-9bb8-2622d8ca92f6
+uuid: 059e60f4-1d71-42b9-b29c-1ef203ab4f28
 langcode: en
 status: true
 dependencies:
@@ -13,12 +13,12 @@ weight: 0
 provider: null
 plugin: config_pages_block
 settings:
-  config_page_type: stanford_local_footer
-  config_page_view_mode: full
   id: config_pages_block
   label: 'Local Footer'
   label_display: '0'
   provider: config_pages
+  config_page_type: stanford_local_footer
+  config_page_view_mode: full
 visibility:
   config_pages_values_access:
     id: config_pages_values_access
