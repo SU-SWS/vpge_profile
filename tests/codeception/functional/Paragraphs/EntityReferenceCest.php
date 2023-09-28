@@ -8,10 +8,24 @@ use Faker\Factory;
 class EntityReferenceCest {
 
   /**
-   * Allow all paragraph types by using state.
+   * Faker service.
+   *
+   * @var \Faker\Generator
    */
-  public function _before() {
-    \Drupal::state()->set('vpge_profile_allow_all_paragraphs', TRUE);
+  protected $faker;
+
+  /**
+   * Keyed array of field values.
+   *
+   * @var array
+   */
+  protected $fieldValues = [];
+
+  /**
+   * Test constructor.
+   */
+  public function __construct() {
+    $this->faker = Factory::create();
   }
 
   /**

@@ -28,13 +28,12 @@ class PersonCest {
    */
   public function testDefaultContentExists(AcceptanceTester $I) {
     $I->logInWithRole('administrator');
-    $I->amOnPage("/admin/content");
-    $I->see("Haley Jackson");
-    $I->amOnPage("/person/haley-jackson");
-    $I->see("This page is currently unpublished and not visible to the public.");
-    $I->see("Haley Jackson");
-    $I->see("People", ".su-multi-menu");
-
+    $I->amOnPage('/admin/content');
+    $I->see('Haley Jackson');
+    $I->amOnPage('/people/haley-jackson');
+    $I->see('This page is currently unpublished and not visible to the public.');
+    $I->see('Haley Jackson');
+    $I->see('People', '.su-multi-menu');
   }
 
   /**
@@ -63,17 +62,30 @@ class PersonCest {
    * up in the all view.
    */
   public function testCreatePerson(AcceptanceTester $I) {
-    $I->createEntity([
+    $term = $I->createEntity([
+      'vid' => 'stanford_person_types',
+      'name' => $this->faker->word,
+    ], 'taxonomy_term');
+
+    // Use 1s in the name to be at the top of the lists.
+    $first_name = '111' . $this->faker->firstName;
+    $last_name = '111' . $this->faker->lastName;
+    $node = $I->createEntity([
       'type' => 'stanford_person',
       'su_person_first_name' => $first_name,
       'su_person_last_name' => $last_name,
       'su_person_type_group' => $term,
     ]);
-    $I->amOnPage("/person/john-wick");
-    $I->see("John Wick");
-    $I->runDrush('cr');
-    $I->amOnPage("/people");
-    $I->see("John Wick");
+    $I->amOnPage($node->toUrl()->toString());
+    $I->see("$first_name $last_name", 'h1');
+    $I->amOnPage('/people');
+    $I->see("$first_name $last_name", 'h2');
+    $I->seeLink("$first_name $last_name");
+
+    $I->amOnPage($term->toUrl()->toString());
+    $I->canSee($term->label(), 'h1');
+    $I->see("$first_name $last_name", 'h3');
+    $I->seeLink("$first_name $last_name");
   }
 
   /**
@@ -135,6 +147,8 @@ class PersonCest {
 
   /**
    * D8CORE-2613: Taxonomy menu items don't respect the UI.
+   *
+   * @group 4704
    */
   public function testD8Core2613Terms(AcceptanceTester $I) {
     $I->logInWithRole('site_manager');
@@ -173,7 +187,58 @@ class PersonCest {
     $I->click('Save');
 
     $I->amOnPage('/people');
-    $I->cantSeeLink('Baz');
+    $I->cantSeeLink($term3->label());
+
+    $faker = Factory::create();
+    $parent = $I->createEntity([
+      'name' => 'Parent: ' . $faker->text(10),
+      'vid' => 'stanford_person_types',
+    ], 'taxonomy_term');
+    $child = $I->createEntity([
+      'name' => 'Child: ' . $faker->text(10),
+      'vid' => 'stanford_person_types',
+      'parent' => $parent->id(),
+    ], 'taxonomy_term');
+    $grandchild = $I->createEntity([
+      'name' => 'GrandChild: ' . $faker->text(10),
+      'vid' => 'stanford_person_types',
+      'parent' => $child->id(),
+    ], 'taxonomy_term');
+    $great_grandchild = $I->createEntity([
+      'name' => 'Great GrandChild: ' . $faker->text(10),
+      'vid' => 'stanford_person_types',
+      'parent' => $grandchild->id(),
+    ], 'taxonomy_term');
+
+    $another_parent = $I->createEntity([
+      'name' => 'Parent: ' . $faker->words(2, TRUE),
+      'vid' => 'stanford_person_types',
+    ], 'taxonomy_term');
+    $another_child = $I->createEntity([
+      'name' => 'Child: ' . $faker->words(2, TRUE),
+      'vid' => 'stanford_person_types',
+      'parent' => $another_parent->id(),
+    ], 'taxonomy_term');
+
+    $node = $I->createEntity([
+      'type' => 'stanford_person',
+      'su_person_first_name' => $faker->firstName,
+      'su_person_last_name' => $faker->lastName,
+      'su_person_type_group' => [
+        ['target_id' => $great_grandchild->id()],
+        ['target_id' => $another_child->id()],
+      ],
+    ]);
+
+    $I->amOnPage($great_grandchild->toUrl()->toString());
+    $I->canSee($node->label());
+    $I->amOnPage($grandchild->toUrl()->toString());
+    $I->canSee($node->label());
+    $I->amOnPage($child->toUrl()->toString());
+    $I->canSee($node->label());
+    $I->amOnPage($parent->toUrl()->toString());
+    $I->canSee($node->label());
+    $I->cantSee($another_child->label());
   }
 
   /**
@@ -206,16 +271,15 @@ class PersonCest {
       'su_person_type_group' => $term->id(),
     ]);
     $I->logInWithRole('administrator');
-    drupal_flush_all_caches();
-    $I->amOnPage('/people/foo');
+
+    $I->amOnPage($term->toUrl()->toString());
     $I->canSee($node->label());
     $I->amOnPage($node->toUrl('edit-form')->toString());
     $I->uncheckOption('Published');
     $I->click('Save');
     $I->canSee('page is currently unpublished');
 
-    drupal_flush_all_caches();
-    $I->amOnPage('/people/foo');
+    $I->amOnPage($term->toUrl()->toString());
     $I->cantSee($node->label());
   }
 

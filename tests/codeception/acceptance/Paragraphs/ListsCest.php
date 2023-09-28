@@ -26,8 +26,91 @@ class ListsCest {
   /**
    * Shared tags on each content type are identical.
    */
-  public function _before() {
-    \Drupal::state()->set('vpge_profile_allow_all_paragraphs', TRUE);
+  public function testSharedTags(AcceptanceTester $I) {
+    $shared_tag = $I->createEntity([
+      'name' => $this->faker->jobTitle,
+      'vid' => 'su_shared_tags',
+    ], 'taxonomy_term');
+    $basic_page = $I->createEntity([
+      'title' => $this->faker->text(20),
+      'type' => 'stanford_page',
+      'su_shared_tags' => $shared_tag->id(),
+    ]);
+    $news = $I->createEntity([
+      'title' => $this->faker->text(20),
+      'type' => 'stanford_news',
+      'su_shared_tags' => $shared_tag->id(),
+    ]);
+    $event = $I->createEntity([
+      'title' => $this->faker->text(20),
+      'type' => 'stanford_event',
+      'su_shared_tags' => $shared_tag->id(),
+    ]);
+    $person = $I->createEntity([
+      'su_person_first_name' => $this->faker->firstName,
+      'su_person_last_name' => $this->faker->lastName,
+      'type' => 'stanford_person',
+      'su_shared_tags' => $shared_tag->id(),
+    ]);
+    $publication = $I->createEntity([
+      'title' => $this->faker->text(20),
+      'type' => 'stanford_publication',
+      'su_shared_tags' => $shared_tag->id(),
+    ]);
+
+    // List with all content types.
+    $node_list = $this->getNodeWithList($I, [
+      'target_id' => 'stanford_shared_tags',
+      'display_id' => 'card_grid',
+      'items_to_display' => 100,
+      'arguments' => $shared_tag->label(),
+    ]);
+    $I->amOnPage($node_list->toUrl()->toString());
+    $I->canSee($basic_page->label());
+    $I->canSee($news->label());
+    $I->canSee($event->label());
+    $I->canSee($person->label());
+    $I->canSee($publication->label());
+
+    // List with only events and news.
+    $node_list = $this->getNodeWithList($I, [
+      'target_id' => 'stanford_shared_tags',
+      'display_id' => 'card_grid',
+      'items_to_display' => 100,
+      'arguments' => $shared_tag->label() . '/stanford_event+stanford_news',
+    ]);
+    $I->amOnPage($node_list->toUrl()->toString());
+    $I->cantSee($basic_page->label());
+    $I->canSee($news->label());
+    $I->canSee($event->label());
+    $I->cantSee($person->label());
+    $I->cantSee($publication->label());
+
+    // List with only people.
+    $node_list = $this->getNodeWithList($I, [
+      'target_id' => 'stanford_shared_tags',
+      'display_id' => 'card_grid',
+      'items_to_display' => 100,
+      'arguments' => $shared_tag->label() . '/stanford_person',
+    ]);
+    $I->amOnPage($node_list->toUrl()->toString());
+    $I->cantSee($basic_page->label());
+    $I->cantSee($news->label());
+    $I->cantSee($event->label());
+    $I->canSee($person->label());
+    $I->cantSee($publication->label());
+
+    $I->logInWithRole('contributor');
+    $I->amOnPage($basic_page->toUrl('edit-form')->toString());
+    $I->canSeeInField('Shared Tags', $shared_tag->id());
+    $I->amOnPage($news->toUrl('edit-form')->toString());
+    $I->canSeeInField('Shared Tags', $shared_tag->id());
+    $I->amOnPage($event->toUrl('edit-form')->toString());
+    $I->canSeeInField('Shared Tags', $shared_tag->id());
+    $I->amOnPage($person->toUrl('edit-form')->toString());
+    $I->canSeeInField('Shared Tags', $shared_tag->id());
+    $I->amOnPage($publication->toUrl('edit-form')->toString());
+    $I->canSeeInField('Shared Tags', $shared_tag->id());
   }
 
   /**
