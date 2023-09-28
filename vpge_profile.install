@@ -143,6 +143,10 @@ function vpge_profile_update_9005(&$sandbox) {
   $nodes = $node_storage->loadMultiple($node_ids);
   $delete_entities = [];
   foreach ($nodes as $node) {
+    if (!$node->hasField('su_page_components')) {
+      continue;
+    }
+
     $changed_time = $node->getChangedTime();
     $new_components = [];
     /** @var \Drupal\Core\Field\EntityReferenceFieldItemListInterface $row */
