@@ -2,14 +2,8 @@ vpge-styling:
   version: 1.0
   css:
     theme:
-      dist/css/vpge.styles.css : {weight: 100}
-  js:
-    dist/js/vpge.script.js : {
-      scope: footer,
-      attributes: { type: module }
-    }
-  dependencies:
-    - core/jquery
+      dist/css/vpge.styles.css : {}
+
 isotope:
   remote: http://isotope.metafizzy.co
   version: 3.0.5

@@ -3,13 +3,6 @@ diversityworks-styling:
   css:
     theme:
       dist/css/diversityworks.styles.css : {weight: 100}
-  js:
-    dist/js/diversityworks.script.js : {
-      scope: footer,
-      attributes: { type: module }
-    }
-  dependencies:
-    - core/jquery
 isotope:
   remote: http://isotope.metafizzy.co
   version: 3.0.5
