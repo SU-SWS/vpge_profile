@@ -130,9 +130,9 @@ removing:
     body:
       weight: 5
     publish_on:
-      weight: 30
+      weight: 52
     scheduler_settings:
-      weight: 20
+      weight: 50
     stanford_intranet__access:
       weight: 7
     status:

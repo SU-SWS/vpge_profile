@@ -10,10 +10,6 @@ adding:
       - text
   third_party_settings:
     field_group:
-      group_media:
-        weight: 2
-      group_editorial_content:
-        weight: 1
       group_categories_and_relationshi:
         children:
           - su_news_topics
@@ -50,8 +46,6 @@ adding:
     su_metatags:
       weight: 12
     su_news_components:
-      weight: 3
-    su_news_topics:
       weight: 3
     su_shared_tags:
       weight: 11
@@ -102,24 +96,16 @@ adding:
       settings: {  }
       third_party_settings: {  }
 removing:
-  third_party_settings:
-    field_group:
-      group_media:
-        weight: 3
-      group_editorial_content:
-        weight: 2
   content:
     publish_on:
-      weight: 30
+      weight: 52
     scheduler_settings:
-      weight: 20
+      weight: 50
     su_metatags:
-      weight: 32
+      weight: 10
     su_news_components:
-      weight: 5
-    su_news_topics:
       weight: 4
     su_shared_tags:
-      weight: 31
+      weight: 9
   hidden:
     unpublish_on: true
