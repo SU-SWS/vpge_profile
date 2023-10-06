@@ -13,4 +13,7 @@ adding:
     su_vpge_related_fellowship: true
     su_vpge_related_person: true
     su_vpge_related_resource: true
-removing: {  }
+removing:
+  dependencies:
+    config:
+      - field.field.node.stanford_news.su_news_hide_social
