@@ -2,7 +2,7 @@
 
 /* remove underline in footer  */
 .su-local-footer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* change spacing in person right sidebar */
@@ -10,14 +10,18 @@
 .content .right-region .node-stanford-person-su-person-links .block__title,
 .content .right-region .node-stanford-person-su-person-location-name .block__title,
 .content .right-region .node-stanford-person-su-person-telephone .block__title {
-    margin-top: 2rem;
-    margin-bottom: 0;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 /* change spacing on fellowship node fields in view */
 .vpge-content-fields-on-a-node .views-field {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
+// Import Decanter Library:
+@import 'decanter/core/src/scss/decanter-no-markup';
+
+// Imports
 @import "./components";
 @import "./config";
