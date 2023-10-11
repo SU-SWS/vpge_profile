@@ -256,7 +256,7 @@ display:
       tags: {  }
   attachment_1:
     id: attachment_1
-    display_title: Attachment
+    display_title: 'Resources - Attachment'
     display_plugin: attachment
     position: 3
     display_options:
