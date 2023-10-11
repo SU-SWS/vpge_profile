@@ -2,7 +2,7 @@ vpge-styling:
   version: 1.0
   css:
     theme:
-      dist/css/vpge.styles.css : {}
+      dist/vpge.styles.css : {}
 
 isotope:
   remote: http://isotope.metafizzy.co
