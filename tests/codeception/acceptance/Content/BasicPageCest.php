@@ -136,7 +136,7 @@ class BasicPageCest {
     $I->see('Basic Page Type');
     $I->fillField('Title', $title);
     $I->fillField('Page Description', $description);
-    $I->fillField('Basic Page Type', $type_term->id());
+    $I->selectOption('Basic Page Type (value 1)', $type_term->id());
     $I->click('Save');
     $I->seeInSource('<meta name="description" content="' . $description . '" />');
   }
@@ -211,7 +211,7 @@ class BasicPageCest {
     $I->checkOption('tr:contains("' . $title . '") input[name^="views_bulk_operations_bulk_form"]');
     $I->selectOption('Action', 'Clone selected content');
     $I->click('Apply to selected items');
-    $I->selectOption('Clone how many times', 2);
+    $I->selectOption('Clone how many times', '2');
     $I->click('Apply');
     $links = $I->grabMultiple('a:contains("' . $title . '")');
     $I->assertCount(3, $links);

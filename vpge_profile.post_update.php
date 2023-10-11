@@ -7,6 +7,7 @@
 
 use Drupal\block_content\Entity\BlockContent;
 use Drupal\block\Entity\Block;
+use Drupal\Core\Serialization\Yaml;
 
 /**
  * Disable the core search module.

@@ -36,6 +36,7 @@ dependencies:
     - dropzonejs
     - editoria11y
     - field_permissions
+    - file
     - filter
     - media
     - menu_admin_per_menu
@@ -112,6 +113,7 @@ permissions:
   - 'create terms in basic_page_types'
   - 'create terms in event_audience'
   - 'create terms in media_tags'
+  - 'create terms in media_tags'
   - 'create terms in stanford_event_types'
   - 'create terms in stanford_news_topics'
   - 'create terms in stanford_person_types'
@@ -138,6 +140,7 @@ permissions:
   - 'delete media'
   - 'delete own embeddable media'
   - 'delete own file media'
+  - 'delete own files'
   - 'delete own google_form media'
   - 'delete own image media'
   - 'delete own stanford_course content'
@@ -161,6 +164,7 @@ permissions:
   - 'delete stanford_publication revisions'
   - 'delete terms in basic_page_types'
   - 'delete terms in event_audience'
+  - 'delete terms in media_tags'
   - 'delete terms in media_tags'
   - 'delete terms in stanford_event_types'
   - 'delete terms in stanford_news_topics'
@@ -212,6 +216,7 @@ permissions:
   - 'edit stanford_super_footer config page entity'
   - 'edit terms in basic_page_types'
   - 'edit terms in event_audience'
+  - 'edit terms in media_tags'
   - 'edit terms in media_tags'
   - 'edit terms in stanford_event_types'
   - 'edit terms in stanford_news_topics'
