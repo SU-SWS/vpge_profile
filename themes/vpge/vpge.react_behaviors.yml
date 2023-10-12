@@ -10,7 +10,7 @@ banner_variant_info:  # part of the key after the :
       type: select
       title: 'Banner style'
       description: Select the variant for displaying this banner.
-#      default_value: irsr-wrapper--banner-default
+#      default_value: vpge-wrapper--banner-default
       options:
         vpge-wrapper--banner-default: Default variant
         vpge-wrapper--banner-centered-overlapping: Centered variant that overlaps with content below
