@@ -3,6 +3,7 @@
 // Centered overlapping banner variant styles for grad grow landing page
 .vpge-wrapper--banner-centered-overlapping {
   @include grid-media-min('lg') {
+    position: relative;
     margin-bottom: -15rem;
     width: 107%;
     right: 34px;
@@ -32,4 +33,9 @@
       }
     }
   }
+}
+
+// Position required for overlapping effect
+.ptype-stanford-layout.paragraph {
+  position: relative;
 }
