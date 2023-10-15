@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.grad_grow_card
     - node.type.resource
     - node.type.stanford_event
     - taxonomy.vocabulary.vpge_grad_grow_competency
@@ -75,10 +76,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: infinite_scroll
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 6
           total_pages: null
           id: 0
           tags:
@@ -92,6 +93,10 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: false
+            initially_load_all_pages: false
       exposed_form:
         type: basic
         options:
@@ -223,12 +228,10 @@ display:
           default_row_class: true
           uses_fields: false
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          relationship: none
+          view_mode: grad_grow_card
       query:
         type: views_query
         options:
@@ -256,7 +259,7 @@ display:
       tags: {  }
   attachment_1:
     id: attachment_1
-    display_title: 'Resources - Attachment'
+    display_title: 'Events - Attachment'
     display_plugin: attachment
     position: 3
     display_options:
@@ -347,7 +350,22 @@ display:
         title: false
         filters: false
         filter_groups: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>Events</h2>'
+            format: stanford_html
+          tokenize: false
       display_extenders: {  }
       displays:
         block_1: block_1
@@ -445,7 +463,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: Works
+            value: '<h2>Resources</h2>'
             format: stanford_html
           tokenize: false
       display_extenders: {  }
@@ -472,26 +490,29 @@ display:
     display_options:
       title: Filters
       pager:
-        type: mini
+        type: some
         options:
           offset: 0
-          items_per_page: 10
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
+          items_per_page: 1
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       defaults:
         title: false
         pager: false
+        style: false
+        row: false
         header: false
       display_description: ''
       header:
@@ -514,7 +535,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -590,53 +610,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        term_node_tid_depth:
-          id: term_node_tid_depth
-          table: node_field_data
-          field: term_node_tid_depth
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: taxonomy_index_tid_depth
-          operator: or
-          value: {  }
-          group: 1
-          exposed: false
-          expose:
-            operator_id: term_node_tid_depth_op
-            label: 'Has taxonomy terms (with depth)'
-            description: null
-            use_operator: false
-            operator: term_node_tid_depth_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: term_node_tid_depth
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: vpge_grad_grow_competency
-          type: textfield
-          hierarchy: false
-          limit: true
-          error_message: true
-          depth: 0
       filter_groups:
         operator: AND
         groups:
@@ -645,7 +618,22 @@ display:
         arguments: false
         filters: false
         filter_groups: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>resources</h2>'
+            format: stanford_html
+          tokenize: false
       display_extenders: {  }
       block_description: 'VPGE Grad Grow - Display'
       block_category: 'VPGE views'
@@ -656,7 +644,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -731,7 +718,22 @@ display:
         title: false
         filters: false
         filter_groups: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>Events</h2>'
+            format: stanford_html
+          tokenize: false
       display_extenders: {  }
       block_description: 'Grad Grow Events'
       block_category: 'VPGE views'

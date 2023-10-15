@@ -1,0 +1,10 @@
+uuid: 1946af4e-21c0-497b-9312-35d16733a9e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.grad_grow_card
+label: 'Grad Grow Card Block'
+targetEntityType: block_content
+cache: true

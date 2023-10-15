@@ -54,3 +54,7 @@ function vpge_preprocess_banner(&$variables) {
 function form_views_exposed_form_alter(&$form, FormStateInterface $form_state){
   $form["actions"]["submit"]["#value"] = "Apply";
 }
+
+function vpge_preprocess_views_view(&$variables){
+  echo 'works';
+}
