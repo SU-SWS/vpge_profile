@@ -1,0 +1,10 @@
+uuid: f7941d6d-d873-439a-b9b9-e7cae90091a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.grad_grow_card
+label: 'Grad Grow Card'
+targetEntityType: node
+cache: true
