@@ -12,6 +12,11 @@ use Drupal\KernelTests\KernelTestBase;
 use Drupal\media\Entity\Media;
 use Drupal\media\Entity\MediaType;
 use Drupal\vpge_profile\EventSubscriber\EventSubscriber as StanfordEventSubscriber;
+use Drupal\user\Entity\Role;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
+use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
  * Class EventSubscriberTest.
