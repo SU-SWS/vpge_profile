@@ -48,7 +48,7 @@ function vpge_preprocess_banner(&$variables) {
   $paragraph = $variables['content']['#paragraph'];
 
   // Add banner variant style class to card wrapper.
-  $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:banner_variant_info', 'banner_style', 'vpge-wrapper--banner-default');
+  $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:banner_variant_info', 'banner_style');
 }
 
 function form_views_exposed_form_alter(&$form, FormStateInterface $form_state){

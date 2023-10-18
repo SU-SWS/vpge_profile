@@ -9,8 +9,7 @@ banner_variant_info:  # part of the key after the :
     banner_style:
       type: select
       title: 'Banner style'
-      description: Select the variant for displaying this banner.
-#      default_value: vpge-wrapper--banner-default
+      description: Select the styles for displaying this banner.
       empty_option: Default
       options:
-        vpge-wrapper--banner-centered-overlapping: Centered variant that overlaps with content below
+        vpge-wrapper--banner-centered-overlapping: Centered card that overlaps with content below
