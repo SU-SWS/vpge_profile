@@ -2,7 +2,7 @@ name: VPGE
 type: theme
 description: 'VPGE theme based on Stanford Basic.'
 package: Engineer
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 
 base theme: stanford_basic
 
