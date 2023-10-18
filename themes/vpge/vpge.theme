@@ -33,3 +33,7 @@ function theme_suggestions_views_view_alter(array &$suggestions, array $variable
 function form_views_exposed_form_alter(&$form, FormStateInterface $form_state){
   $form["actions"]["submit"]["#value"] = "Apply";
 }
+
+function vpge_preprocess_views_view(&$variables){
+  echo 'works';
+}
