@@ -40,12 +40,9 @@ dependencies:
     - field.field.node.stanford_event.su_vpge_time_commitment
     - node.type.stanford_event
   module:
-    - address
-    - element_class_formatter
     - layout_builder
     - layout_builder_restrictions
     - layout_library
-    - link
     - user
 third_party_settings:
   layout_builder:
@@ -173,49 +170,13 @@ targetEntityType: node
 bundle: stanford_event
 mode: grad_grow_card
 content:
-  su_event_cta:
-    type: link
-    label: hidden
+  su_vpge_grad_grow_competency:
+    type: entity_reference_label
+    label: above
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  su_event_location:
-    type: address_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  su_event_sponsor:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  su_event_subheadline:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
     weight: 0
-    region: content
-  su_event_telephone:
-    type: telephone_link_class
-    label: hidden
-    settings:
-      title: ''
-      class: ''
-    third_party_settings: {  }
-    weight: 3
     region: content
 hidden:
   body: true
@@ -228,15 +189,20 @@ hidden:
   su_event_audience: true
   su_event_components: true
   su_event_contact_info: true
+  su_event_cta: true
   su_event_date_time: true
   su_event_dek: true
   su_event_email: true
   su_event_groups: true
   su_event_keywords: true
+  su_event_location: true
   su_event_map_link: true
   su_event_schedule: true
   su_event_source: true
+  su_event_sponsor: true
+  su_event_subheadline: true
   su_event_subject: true
+  su_event_telephone: true
   su_event_type: true
   su_metatags: true
   su_shared_tags: true
@@ -244,7 +210,6 @@ hidden:
   su_vpge_featured_event: true
   su_vpge_fellowship_audience: true
   su_vpge_fellowship_funding: true
-  su_vpge_grad_grow_competency: true
   su_vpge_partner: true
   su_vpge_person: true
   su_vpge_program: true
