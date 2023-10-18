@@ -2,15 +2,17 @@
 
 // Centered overlapping banner variant styles for grad grow landing page
 @include grid-media-min('md') {
-  .su-hero {
-    min-height: 500px;
-    justify-content: center;
-
-    .su-hero__card {
-      margin: 0 auto;
-      right: 0;
-      left: 0;
-      max-width: 550px;
+  .vpge-wrapper--banner-centered-overlapping {
+    .su-hero {
+      min-height: 500px;
+      justify-content: center;
+  
+      .su-hero__card {
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        max-width: 550px;
+      }
     }
   }
 }
@@ -28,6 +30,7 @@
       
       .su-hero__card {
         margin-top: 7rem;
+        margin-bottom: 13rem;
         bottom: 0;
     
         .su-card__contents {
