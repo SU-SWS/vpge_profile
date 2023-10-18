@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+// Grad grow landing page card wysiwyg
+.grad-grow--card {
+  h3 {
+    margin-bottom: 2rem;
+
+    a {
+      font-size: 1.8rem;
+      color: $su-color-black;
+
+      @include grid-media-min('lg') {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @include grid-media-min('xl') {
+        font-size: 2rem;
+      }
+
+      &::after {
+        background-color: $su-color-black;
+        flex-shrink: 0;
+        height: 12px;
+      }
+    }
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin-bottom: 0.2em;
+
+      a {
+        color: $su-color-black-80;
+        text-decoration: none;
+        @include grid-media-min('2xl') {
+          font-size: 1.8rem;
+        }
+
+        @include grid-media-min('xl') {
+          font-size: 1.7rem;
+        }
+  
+        &:hover,
+        &:focus,
+        &:active {
+          color: $su-color-digital-blue;
+          text-decoration: underline;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+
+// Centered overlapping banner variant styles for grad grow landing page
+@include grid-media-min('md') {
+  .vpge-wrapper--banner-centered-overlapping {
+    .su-hero {
+      min-height: 500px;
+      justify-content: center;
+  
+      .su-hero__card {
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        max-width: 550px;
+      }
+    }
+  }
+}
+
+@include grid-media-min('lg') {
+  .vpge-wrapper--banner-centered-overlapping {
+    position: relative;
+    margin-bottom: -15rem;
+    width: 107%;
+    right: 34px;
+  
+    .su-hero {
+      justify-content: start;
+      min-height: 590px;
+      
+      .su-hero__card {
+        margin-top: 7rem;
+        margin-bottom: 13rem;
+        bottom: 0;
+    
+        .su-card__contents {
+          p {
+            @include type-d;
+          }
+    
+          .su-card__button {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  // Position required for overlapping effect
+  .ptype-stanford-layout.paragraph {
+    position: relative;
+  }
+}
