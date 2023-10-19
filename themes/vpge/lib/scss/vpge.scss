@@ -4,11 +4,6 @@
 @import "./config";
 @import "./components";
 
-/* remove underline in footer  */
-.su-local-footer a {
-  text-decoration: none;
-}
-
 /* change spacing in person right sidebar */
 .content .right-region .node-stanford-person-su-person-contact .block__title,
 .content .right-region .node-stanford-person-su-person-links .block__title,
