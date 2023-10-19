@@ -40,7 +40,6 @@ dependencies:
     - field.field.node.stanford_event.su_vpge_time_commitment
     - node.type.stanford_event
   module:
-    - address
     - layout_builder
     - layout_builder_restrictions
     - layout_library
@@ -171,18 +170,11 @@ targetEntityType: node
 bundle: stanford_event
 mode: grad_grow_card
 content:
-  su_event_location:
-    type: address_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  su_event_subheadline:
-    type: string
-    label: hidden
+  su_vpge_grad_grow_competency:
+    type: entity_reference_label
+    label: above
     settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
     weight: 0
     region: content
@@ -203,10 +195,12 @@ hidden:
   su_event_email: true
   su_event_groups: true
   su_event_keywords: true
+  su_event_location: true
   su_event_map_link: true
   su_event_schedule: true
   su_event_source: true
   su_event_sponsor: true
+  su_event_subheadline: true
   su_event_subject: true
   su_event_telephone: true
   su_event_type: true
@@ -216,7 +210,6 @@ hidden:
   su_vpge_featured_event: true
   su_vpge_fellowship_audience: true
   su_vpge_fellowship_funding: true
-  su_vpge_grad_grow_competency: true
   su_vpge_partner: true
   su_vpge_person: true
   su_vpge_program: true
