@@ -1,27 +1,22 @@
 # VPGE Profile
 
-8.x-4.4
---------------------------------------------------------------------------------
-_Release Date: 2022-05-12_
-
-- Disable course department importer.
-
-11.0.2
--------------------------------------------------------------------------------
-- Fix acceptance tests.
-
-11.0.1
--------------------------------------------------------------------------------
-- Fix site setting redirect logic
-
 11.0.0
 -------------------------------------------------------------------------------
+- Fix site setting redirect logic
 - Use h2 heading for global message
 - D8CORE-6976: updated to newest decanter (#730)
 - Update config ignore settings for latest module (#729)
 - Update local footer config userguide links (#727)
+- Removed unwanted css style
+- Compiled css with autoprefixer
 - Added and configured autoprefixer for css compiler
 - Updated search api config
+- VGGD-16 Add centered overlapping banner variant (#56)
+- fixed event subscriber inheritance
+- Remove unused permissions
+- D10 for the themes
+- Updated css compilers
+- Disable page_cache_query_ignore (#59)
 - Fixed related policies to avoid self referencing
 - SDSS-1007: Add support for global footer variant. (#724)
 - Added su-masthead-inner class to masthead <section>. (#725)
@@ -29,15 +24,151 @@ _Release Date: 2022-05-12_
 - D8CORE-6951  D10 Clean up admin toolbar (#723)
 - D8CORE-6952: changed to list style none (#719)
 - D8CORE-6953: Additional edits to the editing buttons (#722)
+- FIXUP - update path on library file for css. (#57)
 - Display field copy released a D10 version
 - Lifecycle management contact fields
 - D8CORE-6953: fixes to local task tabs (#720)
 - D8CORE-6977 Switch to use CSHS instead of simple heiracry select (#721)
 - D8CORE-6984 include policy content in sitemap
+- Updated editiorially configs
+- Update vpge.theme
 - D8CORE-3718 Minor a11y issues for decoupled main menu
 - Updated user mail attribute value for samlauth
+- updated webpack and scss compilers
+- Check for field in update hook
+- update gitpod
+- fix missing block configs and resource paragraph config
+- added theme enabling
+- Fix Unit and acceptance tests (#54)
+- Fixed missing vpge config split
+- Fix profile with config splits (#53)
 - Drupal 10 Config & test updates (#705)
 - D10 Install
+
+- Update samlauth settings when a role is created or deleted (#713)
+- Use components field instead of layout builder for list pages (#709)
+- D8CORE-4551: updated permissions for contributors and site editors (#690)
+- D8CORE-6843: Update bad user guide links in help text (#694)
+- update composer dependencies
+- Fixed styles for login page when on intranets
+- D8CORE-6896: changed the non discrimination link (#707)
+- D8CORE-6842 Added and configured stanford_samlauth (#701)
+- D8CORE-6844 | Fixup mobile menu at medium breakpoint (#703)
+- Update localist importer to use the localist json data parser
+- fixed test for lazy loading oembed
+- D8CORE-6786: Updating to the new font through a Decanter update (#695)
+- Add scroll to step to prevent admin toolbar conflict (#698)
+- Added and configured Oembed lazyload for video media
+- Add safety catch for automated tests with system status check
+- D8CORE-4495 | Update past events text on node view
+- Lock pdb at 2.0.0
+- D8CORE-6832 Additional test for status report page (#697)
+- Updated publication importer for layout paragraphs instead of react paragraphs
+- Add system check test (#691)
+- Update decoupled menu to recognize "Expanded" menu setting
+- Tweak to the update hook for inheritance
+- D8CORE-6816 Restored permissions to run importers for site managers
+- Adjust test to run a little faster (#688)
+- Add missing chosen library
+- Updated google tag settings
+- Update menu block when moving menu link
+- Update menu block when moving menu link
+- Removed unused modules
+- updated flat taxonomy module
+- add ptype classes just in case
+- Remove unwanted paragraph types on publication field
+- Add new layout paragraphs styles class (#684)
+- Updating to new decanter version (#682)
+- CAP-67 Import profile phone number to the non-mobile phone field
+- D8CORE-4539 Removed "Role" attribute on figure element
+- D8CORE-6760 | Update ckeditor5 styles (#679)
+- D8CORE-6629 use list elements on search result page
+- D8CORE-6628 Hide `li` element for mobile search field when on desktop
+- D8CORE-6368 Use list elements for related policy display
+- D8CORE-5950 Fixed aspect ratio of youtube videos on event pages
+- D8CORE-6633 Add skip link anchor to the search page (#681)
+- D8CORE-6339 Added main content anchor link destination
+- Update banner aspect ratio for small breakpoint (#680)
+- D8CORE-6695, 6694 Updated spacer paragraph with optional sizes (#677)
+- Fixed typo in "Experimental"
+- D8CORE-6770 Change lables from "Components" to "Paragraphs"
+- Added "Admin notes" to the site settings config page
+- Update metatag module and config (#678)
+- D8CORE-6457 D8CORE-6476 D8CORE-6477 Tweaks to policy content fields
+- Dont override existing attributes on link items
+- Re-run card paragraph upgrade hook
+- Dont override existing attributes on link items
+- Account for 4 item rows
+- Added undo and redo buttons to ckeditor
+- Added update hook to correct bad path aliases
+- Move help section to be below brand bar in header (#674)
+- Move help section to be below brand bar in header (#674)
+- Revert "D8CORE-4495: changing past events text (#669)" (#673)
+- D8CORE-4495: changing past events text (#669)
+- D8CORE-5407 | @jdwjdwjdw | A11y: Update lockup cell2 max-width, line3 line-height (#672)
+- Fix for mobile menu width
+- Exported configs after db updates
+- Add "parent" to taxonomy json api
+- Provide a new replacement menu with a decoupled main menu (#663)
+- Fix node changed value during update
+- D8CORE-6416 Update google analytics tracking for stanford_basic theme
+- D8CORE-6416 Update google analytics tracking for stanford_basic theme
+- Retain "Changed" value on nodes during the update process
+- Exported configs after smart_trim update hook
+- Added better tag and release action
+- Added better tag and release action
+- try catch the theme uninstall
+- Fix policy typo (#662)
+- Fix policy typo (#662)
+- D8CORE-2622, D8CORE-4494 | Move brand bar and skip-links into header landmark banner (#665)
+- D8CORE-2622, D8CORE-4494 | Move brand bar and skip-links into header landmark banner (#665)
+- D8CORE-6654 | Update stanford_basic package-lock (#667)
+- D8CORE-6654 | Update stanford_basic package-lock (#667)
+- Restored jsonapi path data to correct typescript issues
+- adjusted jsonapi for config pages
+- Updated page cache query ignore settings for jsonapi views
+- Enabled view jsonapi endpoint
+- Added tiny base64 blur image to json api data
+- Updated json api extras config
+- D8CORE-6336: changing hover on print icon for policy CT (#661)
+- D8CORE-6336: changing hover on print icon for policy CT (#661)
+- Fixed JsonAPI endpoints for stanford page
+- Updated jsonapi endpoints (#664)
+- Fixed bug in menu update hook for duplicate links
+- Removed path alias changes
+- Added path process manager in update hook
+- Removed unused ckeditor libraries/modules
+- Simplified and correct menu link upgrade path
+- Fix tests (#660)
+- Added patch for menu_link to add expanded option
+- Migrate everything to layout paragraphs and upgrade all modules/themes (#654)
+- Updated permissions to allow site managers create media taxonomy
+- Replace log entity type and remove ECK (#656)
+- Enabled empty_fields module
+- DEVOPS-000: SMRT quotes R dumb (#655)
+- added codeCoverageIgnoreEnd
+- Exported configs after db updates
+- Fixed related policies display
+- Added missing drupal/jsonapi_hypermedia module
+- hotfix-12-03-2022 (#651)
+- excise memcache (#650)
+- Removed patches that were moved to drupal-patches
+- Updated configs after scheduler module update
+- update editoria11y and smart_trim modules (#648)
+- D8CORE-6370: Moved the authority field. (#647)
+- Improved tests for configuration ignore
+- Fix preprocess_breadcrumbs to prevent failure with drush
+- Add and enable memcache for dev, stage, and prod (#645)
+- D8CORE-2932 and D8CORE-6357: Fixed extra spacing on people list items. (#641)
+- D8CORE-6348: adding summary into the related policy cards (#640)
+- D8CORE-6345: Display policy change log title in the lists (#642)
+- Fixed the path to the masking image for circle image style
+- Added and configured "Page Cache Query Ignore" module
+- D8CORE-6347 Show body summary and add help text
+- D8CORE-6346 Reorder form fields and add help text
+- Added and adjusted printable view mode for policies
+- Prepend "Canceled" to canceled events
+
 
 10.1.1
 -------------------------------------------------------------------------------
