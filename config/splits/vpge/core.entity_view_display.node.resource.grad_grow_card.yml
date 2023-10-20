@@ -46,6 +46,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  su_vpge_time_commitment:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   layout_builder__layout: true
@@ -58,4 +66,3 @@ hidden:
   su_vpge_resource_category: true
   su_vpge_resource_external_link: true
   su_vpge_resource_image: true
-  su_vpge_time_commitment: true
