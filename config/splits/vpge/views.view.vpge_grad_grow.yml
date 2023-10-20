@@ -7,8 +7,7 @@ dependencies:
     - node.type.resource
     - node.type.stanford_event
     - taxonomy.vocabulary.vpge_grad_grow_competency
-  content:
-    - 'taxonomy_term:vpge_grad_grow_competency:b482a944-49e8-42cb-8ca0-362c7e6f90fb'
+    - taxonomy.vocabulary.vpge_time_commitment
   module:
     - node
     - taxonomy
@@ -159,13 +158,12 @@ display:
           entity_type: node
           plugin_id: taxonomy_index_tid_depth
           operator: or
-          value:
-            1071: 1071
+          value: {  }
           group: 1
           exposed: true
           expose:
             operator_id: term_node_tid_depth_op
-            label: 'Has taxonomy terms (with depth)'
+            label: 'Filter by competency'
             description: ''
             use_operator: false
             operator: term_node_tid_depth_op
@@ -207,6 +205,67 @@ display:
           reduce_duplicates: false
           vid: vpge_grad_grow_competency
           type: shs
+          hierarchy: false
+          limit: true
+          error_message: true
+          depth: 0
+        term_node_tid_depth_1:
+          id: term_node_tid_depth_1
+          table: node_field_data
+          field: term_node_tid_depth
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: taxonomy_index_tid_depth
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: term_node_tid_depth_1_op
+            label: 'Filter by Time Commitment'
+            description: ''
+            use_operator: false
+            operator: term_node_tid_depth_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: term_node_tid_depth_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              anonymous: '0'
+              stanford_faculty: '0'
+              stanford_staff: '0'
+              stanford_student: '0'
+              contributor: '0'
+              site_manager: '0'
+              site_editor: '0'
+              site_builder: '0'
+              site_developer: '0'
+              layout_builder_user: '0'
+              su_site_embedder: '0'
+              decoupled_site_users: '0'
+              custm_vpge_site_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: vpge_time_commitment
+          type: select
           hierarchy: false
           limit: true
           error_message: true
@@ -474,25 +533,11 @@ display:
         options:
           offset: 0
           items_per_page: 1
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          uses_fields: false
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       defaults:
         title: false
         pager: false
-        style: false
-        row: false
+        style: true
+        row: true
         header: false
       display_description: ''
       header:

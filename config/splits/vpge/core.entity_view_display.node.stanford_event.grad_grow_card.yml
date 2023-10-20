@@ -40,9 +40,12 @@ dependencies:
     - field.field.node.stanford_event.su_vpge_time_commitment
     - node.type.stanford_event
   module:
+    - empty_fields
+    - field_formatter_class
     - layout_builder
     - layout_builder_restrictions
     - layout_library
+    - smart_date
     - user
 third_party_settings:
   layout_builder:
@@ -170,13 +173,56 @@ targetEntityType: node
 bundle: stanford_event
 mode: grad_grow_card
 content:
-  su_vpge_grad_grow_competency:
+  su_event_date_time:
+    type: smartdate_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: default
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      localize: false
+      parts:
+        start: start
+        end: end
+        duration: '0'
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  su_event_type:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 3
+    region: content
+  su_vpge_grad_grow_competency:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  su_vpge_time_commitment:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   body: true
@@ -190,7 +236,6 @@ hidden:
   su_event_components: true
   su_event_contact_info: true
   su_event_cta: true
-  su_event_date_time: true
   su_event_dek: true
   su_event_email: true
   su_event_groups: true
@@ -203,7 +248,6 @@ hidden:
   su_event_subheadline: true
   su_event_subject: true
   su_event_telephone: true
-  su_event_type: true
   su_metatags: true
   su_shared_tags: true
   su_vpge_area_of_focus: true
@@ -214,4 +258,3 @@ hidden:
   su_vpge_person: true
   su_vpge_program: true
   su_vpge_resource: true
-  su_vpge_time_commitment: true
