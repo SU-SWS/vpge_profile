@@ -21,20 +21,24 @@ Install this installation profile like any other profile. [See Drupal Documentat
 Configuration
 ---
 
-Nothing special needed.
+There are config split configuration settings for their respective sites. Their configs exist in [config/splits](./config/splits)
+directory. These splits get enabled through settings.php files on their respective sites.
+
+When creating any new custom configs (fields, views, content types, etc), prefix them with `vpge`. This will allow the
+config splits to export the configuration into the proper directory.
 
 Upstream updates
 ---
 
-To pull in upstream updates, you can create a new branch and run `git pull https://github.com/SU-SWS/stanford_profile.git tags/8.x.x -X ours --no-edit`
+Pull from [stanford_profile](https://github.com/SU-SWS/stanford_profile.git) by running the command `git pull https://github.com/SU-SWS/stanford_profile.git 11.x -X ours --no-edit`.
 
-Replace the `tags/8.x.x` with the newest release tag.  See https://github.com/SU-SWS/stanford_profile for the latest release tag.
+There is possibly going to be some conflicts. Clear up those conflicts and commit the changes.
 
 Releases
 ---
 
 Steps to build a new release:
-- Checkout the latest commit from the `8.x-2.x` branch.
+- Checkout the latest commit from the `11.x` branch.
 - Create a new branch for the release.
 - Commit any necessary changes to the release branch.
   -  These may include, but are not necessarily limited to:
