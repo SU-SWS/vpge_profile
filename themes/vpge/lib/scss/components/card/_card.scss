@@ -36,7 +36,6 @@
 
       a {
         color: $su-color-black-80;
-        text-decoration: none;
         @include grid-media-min('2xl') {
           font-size: 1.8rem;
         }
@@ -49,7 +48,7 @@
         &:focus,
         &:active {
           color: $su-color-digital-blue;
-          text-decoration: underline;
+          text-decoration: none;
         }
       }
     }
