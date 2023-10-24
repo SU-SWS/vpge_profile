@@ -41,6 +41,8 @@
 
         {# Title Prefix #}
         {{ title_prefix }}
+        <p>{{ content.su_event_date_time[0]['#value']|date('M') }}</p>
+        <p>{{ content.su_event_date_time[0]['#value']|date('d') }}</p>
 
         {%- if not page and label -%}
           <h2{{ title_attributes.addClass(title_classes) }}>
@@ -61,6 +63,8 @@
         {%- endif -%}
       </header>
     {%- endif -%}
+
+    {{ dump(content) }}
 
     {# Main content container. #}
     <div{{ content_attributes.addClass('content') }}>
