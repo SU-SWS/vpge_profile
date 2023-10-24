@@ -1,5 +1,10 @@
 # VPGE Profile
 
+11.0.1
+-------------------------------------------------------------------------------
+- Next site settings and config ignores (#735)
+- D8CORE-7040 Fix source ending tags
+
 11.0.0
 -------------------------------------------------------------------------------
 - Fix site setting redirect logic
