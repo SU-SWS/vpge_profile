@@ -128,7 +128,7 @@ display:
                 advanced:
                   sort_options: false
                   rewrite:
-                    filter_rewrite_values: ''
+                    filter_rewrite_values: Any|All
                   collapsible: false
                   is_secondary: false
               term_node_tid_depth_1:

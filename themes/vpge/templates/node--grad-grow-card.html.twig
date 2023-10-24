@@ -36,13 +36,14 @@
   {% else %}
   <article{{ attributes }}>
     {% endif %}
-    {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
+    {% if title_prefix or title_suffix or display_dsubmitted or unpublished or page is empty and label %}
       <header>
 
         {# Title Prefix #}
         {{ title_prefix }}
         <p>{{ content.su_event_date_time[0]['#value']|date('M') }}</p>
         <p>{{ content.su_event_date_time[0]['#value']|date('d') }}</p>
+        <p>{{ content.su_event_type }}</p>
 
         {%- if not page and label -%}
           <h2{{ title_attributes.addClass(title_classes) }}>
@@ -64,11 +65,9 @@
       </header>
     {%- endif -%}
 
-    {{ dump(content) }}
-
     {# Main content container. #}
     <div{{ content_attributes.addClass('content') }}>
-      {{ content|without('links') }}
+      {{ content|without('links', 'su_event_type') }}
     </div><!-- /.content -->
 
     {%- if content.links -%}
