@@ -44,104 +44,13 @@ dependencies:
     - field_formatter_class
     - layout_builder
     - layout_builder_restrictions
-    - layout_discovery
     - layout_library
     - smart_date
     - user
 third_party_settings:
   layout_builder:
-    enabled: true
+    enabled: false
     allow_custom: false
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          a2774f4f-0b9d-45e7-9a7b-3a0415fce60a:
-            uuid: a2774f4f-0b9d-45e7-9a7b-3a0415fce60a
-            region: content
-            configuration:
-              id: 'field_block:node:stanford_event:su_event_date_time'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: smartdate_default
-                label: hidden
-                settings:
-                  timezone_override: ''
-                  format_type: medium
-                  format: default
-                  force_chronological: false
-                  add_classes: false
-                  time_wrapper: true
-                  localize: false
-                  parts:
-                    start: start
-                    end: end
-                    duration: '0'
-                  duration:
-                    separator: ' | '
-                    unit: ''
-                    decimals: 2
-                    suffix: h
-                third_party_settings:
-                  empty_fields:
-                    handler: ''
-                  field_formatter_class:
-                    class: ''
-            weight: 0
-            additional: {  }
-          cc5b150a-dee9-478f-8810-9164f7971b7e:
-            uuid: cc5b150a-dee9-478f-8810-9164f7971b7e
-            region: content
-            configuration:
-              id: 'field_block:node:stanford_event:su_vpge_grad_grow_competency'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          e4a73722-c845-44ca-a85d-b20dd780b886:
-            uuid: e4a73722-c845-44ca-a85d-b20dd780b886
-            region: content
-            configuration:
-              id: 'field_block:node:stanford_event:su_vpge_time_commitment'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          845ab803-041e-4de1-a8a1-0fcf4e069fe8:
-            uuid: 845ab803-041e-4de1-a8a1-0fcf4e069fe8
-            region: content
-            configuration:
-              id: 'field_block:node:stanford_event:su_event_type'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
-        third_party_settings: {  }
   layout_library:
     enable: false
   layout_builder_restrictions:
@@ -265,25 +174,20 @@ bundle: stanford_event
 mode: grad_grow_card
 content:
   su_event_date_time:
-    type: smartdate_default
+    type: smartdate_custom
     label: hidden
     settings:
-      timezone_override: ''
-      format_type: medium
-      format: default
-      force_chronological: false
-      add_classes: false
-      time_wrapper: true
-      localize: false
-      parts:
-        start: start
-        end: end
-        duration: '0'
-      duration:
-        separator: ' | '
-        unit: ''
-        decimals: 2
-        suffix: h
+      separator: ' - '
+      join: ', '
+      time_format: 'g:ia'
+      time_hour_format: ga
+      date_format: 'D, M j Y'
+      allday_label: 'All day'
+      date_first: '1'
+      ampm_reduce: '1'
+      site_time_toggle: '1'
+      custom_date_format: ''
+      timezone: ''
     third_party_settings:
       empty_fields:
         handler: ''
