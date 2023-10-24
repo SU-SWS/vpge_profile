@@ -37,6 +37,8 @@ class PolicyCest {
 
   /**
    * Test field access.
+   *
+   * @group foobar
    */
   public function testPolicyAccess(AcceptanceTester $I) {
     $I->logInWithRole('contributor');
