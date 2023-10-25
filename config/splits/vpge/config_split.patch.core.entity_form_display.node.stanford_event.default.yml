@@ -3,6 +3,7 @@ adding:
     config:
       - field.field.node.stanford_event.su_vpge_area_of_focus
       - field.field.node.stanford_event.su_vpge_featured_event
+      - field.field.node.stanford_event.su_vpge_featured_image
       - field.field.node.stanford_event.su_vpge_fellowship_audience
       - field.field.node.stanford_event.su_vpge_fellowship_funding
       - field.field.node.stanford_event.su_vpge_grad_grow_competency
@@ -11,6 +12,8 @@ adding:
       - field.field.node.stanford_event.su_vpge_program
       - field.field.node.stanford_event.su_vpge_resource
       - field.field.node.stanford_event.su_vpge_time_commitment
+    module:
+      - media_library
   third_party_settings:
     field_group:
       group_editorial_content:
@@ -61,6 +64,13 @@ adding:
       region: content
       settings:
         display_label: true
+      third_party_settings: {  }
+    su_vpge_featured_image:
+      type: media_library_widget
+      weight: 53
+      region: content
+      settings:
+        media_types: {  }
       third_party_settings: {  }
     su_vpge_fellowship_audience:
       type: options_buttons

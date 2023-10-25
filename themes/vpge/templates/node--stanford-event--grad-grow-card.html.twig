@@ -39,22 +39,21 @@
     {% if title_prefix or title_suffix or display_dsubmitted or unpublished or page is empty and label %}
       <header>
 
-        {# Title Prefix #}
-        {{ title_prefix }}
-        <p>{{ content.su_event_date_time[0]['#value']|date('M') }}</p>
-        <p>{{ content.su_event_date_time[0]['#value']|date('d') }}</p>
-        <p>{{ content.su_event_type }}</p>
-
-        {%- if not page and label -%}
-          <h2{{ title_attributes.addClass(title_classes) }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-          </h2>
-        {%- endif -%}
       </header>
     {%- endif -%}
 
     {# Main content container. #}
     <div{{ content_attributes.addClass('content') }}>
+      <p>{{ content.su_vpge_featured_image }}</p>
+      <p>{{ content.su_event_date_time[0]['#value']|date('M') }}</p>
+      <p>{{ content.su_event_date_time[0]['#value']|date('d') }}</p>
+      <p>{{ content.su_event_type }}</p>
+
+      {%- if not page and label -%}
+        <h2{{ title_attributes.addClass(title_classes) }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {%- endif -%}
       {{ content|without('links', 'su_event_type') }}
     </div><!-- /.content -->
 

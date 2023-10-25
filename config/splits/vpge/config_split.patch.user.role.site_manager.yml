@@ -38,6 +38,7 @@ adding:
     config_split_sequence_31_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
     config_split_sequence_32_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
     config_split_sequence_33_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_34_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
 removing:
   dependencies:
     config:
