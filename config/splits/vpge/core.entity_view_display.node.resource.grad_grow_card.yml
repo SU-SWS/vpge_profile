@@ -40,7 +40,7 @@ mode: grad_grow_card
 content:
   su_vpge_grad_grow_competency:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -48,7 +48,7 @@ content:
     region: content
   su_vpge_time_commitment:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

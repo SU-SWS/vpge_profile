@@ -61,11 +61,7 @@ function form_views_exposed_form_alter(&$form, FormStateInterface $form_state) {
 function vpge_preprocess_views_view(&$variables) {
   $view = $variables['view'];
   if ($view->storage->id() == "vpge_grad_grow" && $view->current_display == "block_1") {
-    // Reword header display message.
-    $headerMarkup = $variables["header"]["result"]["#markup"];
-    $variables["header"]["result"]["#markup"] =  '<strong>Results</strong> <span>' . substr_replace($headerMarkup, '', 0, 21) . " Events and Resources</span>";
-
-    // Empty output for the first block.
+    // Empty output for the filter block.
     $variables['rows'] = " ";
   }
 }
@@ -74,12 +70,9 @@ function vpge_preprocess_views_view(&$variables) {
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function vpge_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
-  // Get the view object.
   $view = $variables['view'];
 
-  // Check if this is the specific view you want to add a suggestion for.
   if ($view->id() == 'vpge_grad_grow' && $view->current_display == "block_1") {
-    // Add a template suggestion based on the view ID.
     $suggestions[] = 'views_view__' . $view->id();
   }
 }

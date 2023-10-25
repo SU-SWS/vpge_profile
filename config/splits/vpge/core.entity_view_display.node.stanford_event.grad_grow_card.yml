@@ -30,6 +30,7 @@ dependencies:
     - field.field.node.stanford_event.su_shared_tags
     - field.field.node.stanford_event.su_vpge_area_of_focus
     - field.field.node.stanford_event.su_vpge_featured_event
+    - field.field.node.stanford_event.su_vpge_featured_image
     - field.field.node.stanford_event.su_vpge_fellowship_audience
     - field.field.node.stanford_event.su_vpge_fellowship_funding
     - field.field.node.stanford_event.su_vpge_grad_grow_competency
@@ -193,7 +194,7 @@ content:
         handler: ''
       field_formatter_class:
         class: ''
-    weight: 0
+    weight: 1
     region: content
   su_event_type:
     type: entity_reference_label
@@ -201,7 +202,15 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
+    region: content
+  su_vpge_featured_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
     region: content
   su_vpge_grad_grow_competency:
     type: entity_reference_label
@@ -209,7 +218,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   su_vpge_time_commitment:
     type: entity_reference_label
@@ -217,7 +226,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   body: true

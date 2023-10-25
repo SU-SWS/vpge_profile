@@ -3,6 +3,7 @@ adding:
     config:
       - field.field.node.stanford_event.su_vpge_area_of_focus
       - field.field.node.stanford_event.su_vpge_featured_event
+      - field.field.node.stanford_event.su_vpge_featured_image
       - field.field.node.stanford_event.su_vpge_fellowship_audience
       - field.field.node.stanford_event.su_vpge_fellowship_funding
       - field.field.node.stanford_event.su_vpge_grad_grow_competency
@@ -14,6 +15,7 @@ adding:
   hidden:
     su_vpge_area_of_focus: true
     su_vpge_featured_event: true
+    su_vpge_featured_image: true
     su_vpge_fellowship_audience: true
     su_vpge_fellowship_funding: true
     su_vpge_grad_grow_competency: true
