@@ -51,10 +51,6 @@ function vpge_preprocess_banner(&$variables) {
   $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:banner_variant_info', 'banner_style');
 }
 
-function form_views_exposed_form_alter(&$form, FormStateInterface $form_state) {
-  $form["actions"]["submit"]["#value"] = "Apply";
-}
-
 /**
  * Implements hook_preprocess_views_view().
  */

@@ -29,6 +29,7 @@ complete_list:
   - system.menu.fellowships-funding
   - taxonomy.vocabulary.by_quarter
   - views.view.fellowships_funding
+  - 'block.block.diversityworks*'
   - '*vpge*'
   - '*grad_grow*'
   - '*feeds*'
