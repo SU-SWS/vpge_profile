@@ -3,6 +3,7 @@ adding:
     config:
       - field.field.node.stanford_event.su_vpge_area_of_focus
       - field.field.node.stanford_event.su_vpge_featured_event
+      - field.field.node.stanford_event.su_vpge_featured_image
       - field.field.node.stanford_event.su_vpge_fellowship_audience
       - field.field.node.stanford_event.su_vpge_fellowship_funding
       - field.field.node.stanford_event.su_vpge_grad_grow_competency
@@ -11,6 +12,48 @@ adding:
       - field.field.node.stanford_event.su_vpge_program
       - field.field.node.stanford_event.su_vpge_resource
       - field.field.node.stanford_event.su_vpge_time_commitment
+  third_party_settings:
+    layout_builder:
+      sections:
+        -
+          components:
+            77f7acb1-2483-4236-8840-b512a2ed412e:
+              uuid: 77f7acb1-2483-4236-8840-b512a2ed412e
+              region: main
+              configuration:
+                id: 'field_block:node:stanford_event:su_vpge_featured_image'
+                label_display: '0'
+                context_mapping:
+                  entity: layout_builder.entity
+                formatter:
+                  type: entity_reference_entity_view
+                  label: above
+                  settings:
+                    view_mode: default
+                    link: false
+                  third_party_settings: {  }
+              weight: -4
+              additional: {  }
+    layout_builder_restrictions:
+      allowed_block_categories:
+        - Book
+        - 'Changelog (Views)'
+        - 'Policy (Views)'
+        - Printable
+        - 'Stanford SAML Authentication'
+        - 'Taxonomy Terms (Views)'
+        - User
+        - 'VPGE views'
+      entity_view_mode_restriction:
+        restricted_categories:
+          - Book
+          - 'Changelog (Views)'
+          - 'Policy (Views)'
+          - Printable
+          - 'Stanford SAML Authentication'
+          - 'Taxonomy Terms (Views)'
+          - User
+          - 'VPGE views'
   content:
     su_vpge_area_of_focus:
       type: entity_reference_label
@@ -30,6 +73,15 @@ adding:
       third_party_settings: {  }
       weight: 120
       region: main
+    su_vpge_featured_image:
+      type: entity_reference_entity_view
+      label: above
+      settings:
+        view_mode: default
+        link: false
+      third_party_settings: {  }
+      weight: 121
+      region: main
   hidden:
     su_vpge_fellowship_audience: true
     su_vpge_fellowship_funding: true
@@ -39,4 +91,13 @@ adding:
     su_vpge_program: true
     su_vpge_resource: true
     su_vpge_time_commitment: true
-removing: {  }
+removing:
+  third_party_settings:
+    layout_builder_restrictions:
+      allowed_block_categories:
+        - 'SimpleSAMLphp Authentication'
+        - 'Stanford SimpleSAML PHP'
+      entity_view_mode_restriction:
+        restricted_categories:
+          - 'SimpleSAMLphp Authentication'
+          - 'Stanford SimpleSAML PHP'

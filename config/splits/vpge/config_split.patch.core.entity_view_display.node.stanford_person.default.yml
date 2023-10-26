@@ -152,4 +152,7 @@ adding:
     su_vpge_fellowship_funding: true
     su_vpge_named_fellowship: true
     su_vpge_pro: true
-removing: {  }
+removing:
+  dependencies:
+    config:
+      - field.field.node.stanford_person.field_menulink

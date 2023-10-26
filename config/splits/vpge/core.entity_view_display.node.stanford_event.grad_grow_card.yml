@@ -1,0 +1,347 @@
+uuid: eb6d33db-7bdb-454e-bc6f-b284b61d56b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grad_grow_card
+    - field.field.node.stanford_event.body
+    - field.field.node.stanford_event.layout_builder__layout
+    - field.field.node.stanford_event.stanford_intranet__access
+    - field.field.node.stanford_event.su_event_alt_loc
+    - field.field.node.stanford_event.su_event_audience
+    - field.field.node.stanford_event.su_event_components
+    - field.field.node.stanford_event.su_event_contact_info
+    - field.field.node.stanford_event.su_event_cta
+    - field.field.node.stanford_event.su_event_date_time
+    - field.field.node.stanford_event.su_event_dek
+    - field.field.node.stanford_event.su_event_email
+    - field.field.node.stanford_event.su_event_groups
+    - field.field.node.stanford_event.su_event_keywords
+    - field.field.node.stanford_event.su_event_location
+    - field.field.node.stanford_event.su_event_map_link
+    - field.field.node.stanford_event.su_event_schedule
+    - field.field.node.stanford_event.su_event_source
+    - field.field.node.stanford_event.su_event_sponsor
+    - field.field.node.stanford_event.su_event_subheadline
+    - field.field.node.stanford_event.su_event_subject
+    - field.field.node.stanford_event.su_event_telephone
+    - field.field.node.stanford_event.su_event_type
+    - field.field.node.stanford_event.su_metatags
+    - field.field.node.stanford_event.su_shared_tags
+    - field.field.node.stanford_event.su_vpge_area_of_focus
+    - field.field.node.stanford_event.su_vpge_featured_event
+    - field.field.node.stanford_event.su_vpge_featured_image
+    - field.field.node.stanford_event.su_vpge_fellowship_audience
+    - field.field.node.stanford_event.su_vpge_fellowship_funding
+    - field.field.node.stanford_event.su_vpge_grad_grow_competency
+    - field.field.node.stanford_event.su_vpge_partner
+    - field.field.node.stanford_event.su_vpge_person
+    - field.field.node.stanford_event.su_vpge_program
+    - field.field.node.stanford_event.su_vpge_resource
+    - field.field.node.stanford_event.su_vpge_time_commitment
+    - node.type.stanford_event
+  module:
+    - ds
+    - empty_fields
+    - field_formatter_class
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
+    - smart_date
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories:
+      - 'Basic Page Type Lists (Views)'
+      - Book
+      - 'Changelog (Views)'
+      - 'Chaos Tools'
+      - 'Config Pages'
+      - 'Content fields'
+      - 'Custom block types'
+      - 'Custom blocks'
+      - 'Events Lists (Views)'
+      - Forms
+      - Help
+      - 'Inline blocks'
+      - 'Jumpstart UI'
+      - 'Lists (Views)'
+      - Menus
+      - 'News Lists (Views)'
+      - 'PDB React'
+      - 'People Lists (Views)'
+      - 'Policy (Views)'
+      - Printable
+      - 'Publication (Views)'
+      - React
+      - 'Stanford News'
+      - 'Stanford Profile Helper'
+      - 'Stanford SAML Authentication'
+      - System
+      - 'Taxonomy Terms (Views)'
+      - User
+      - 'VPGE views'
+      - Views
+      - core
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - jumpstart_ui_one_column
+        - jumpstart_ui_two_column
+        - jumpstart_ui_three_column
+      denylisted_blocks:
+        'Content fields':
+          - 'field_block:node:stanford_event:uid'
+          - 'field_block:node:stanford_event:created'
+          - 'field_block:node:stanford_event:type'
+          - 'field_block:node:stanford_event:revision_default'
+          - 'field_block:node:stanford_event:default_langcode'
+          - 'field_block:node:stanford_event:nid'
+          - 'field_block:node:stanford_event:langcode'
+          - 'extra_field_block:node:stanford_event:links'
+          - 'field_block:node:stanford_event:menu_link'
+          - 'field_block:node:stanford_event:promote'
+          - 'field_block:node:stanford_event:status'
+          - 'field_block:node:stanford_event:rh_action'
+          - 'field_block:node:stanford_event:rh_redirect_fallback_action'
+          - 'field_block:node:stanford_event:rh_redirect'
+          - 'field_block:node:stanford_event:rh_redirect_response'
+          - 'field_block:node:stanford_event:revision_timestamp'
+          - 'field_block:node:stanford_event:vid'
+          - 'field_block:node:stanford_event:revision_log'
+          - 'field_block:node:stanford_event:revision_translation_affected'
+          - 'field_block:node:stanford_event:revision_uid'
+          - 'extra_field_block:node:stanford_event:search_api_excerpt'
+          - 'field_block:node:stanford_event:sticky'
+          - 'field_block:node:stanford_event:unpublish_on'
+          - 'field_block:user:user:changed'
+          - 'field_block:user:user:created'
+          - 'field_block:user:user:default_langcode'
+          - 'field_block:user:user:su_display_name'
+          - 'field_block:user:user:mail'
+          - 'field_block:user:user:init'
+          - 'field_block:user:user:langcode'
+          - 'field_block:user:user:access'
+          - 'field_block:user:user:login'
+          - 'extra_field_block:user:user:member_for'
+          - 'field_block:user:user:name'
+          - 'field_block:user:user:preferred_admin_langcode'
+          - 'field_block:user:user:preferred_langcode'
+          - 'field_block:user:user:roles'
+          - 'field_block:user:user:role_change'
+          - 'extra_field_block:user:user:search_api_excerpt'
+          - 'field_block:user:user:timezone'
+          - 'field_block:user:user:uid'
+          - 'field_block:user:user:status'
+      allowlisted_blocks:
+        Menus:
+          - 'menu_block:stanford-event-types'
+          - 'system_menu_block:stanford-event-types'
+          - 'menu_block:main'
+          - 'system_menu_block:main'
+          - 'menu_block:stanford-person-type'
+          - 'system_menu_block:stanford-person-type'
+          - 'menu_block:stanford-publication-topics'
+          - 'system_menu_block:stanford-publication-topics'
+          - 'menu_block:news-topics'
+          - 'system_menu_block:news-topics'
+        System:
+          - system_breadcrumb_block
+        core:
+          - page_title_block
+      restricted_categories:
+        - Book
+        - 'Changelog (Views)'
+        - 'Chaos Tools'
+        - 'Config Pages'
+        - Forms
+        - Help
+        - 'Lists (Views)'
+        - 'Policy (Views)'
+        - Printable
+        - React
+        - 'Stanford Profile Helper'
+        - 'Stanford SAML Authentication'
+        - 'Taxonomy Terms (Views)'
+        - User
+        - 'VPGE views'
+        - Views
+  ds:
+    layout:
+      id: pattern_events_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          start_month: div
+          start_date: div
+          end_month: div
+          end_date: div
+          event_type: div
+          headline: div
+          subheadline: div
+          url: div
+          date_time: div
+          location: div
+          address: div
+          location_organization: div
+          location_address_line1: div
+          location_address_line2: div
+          location_locality: div
+          location_administrative_area: div
+          location_dependent_locality: div
+          location_country_code: div
+          location_postal_code: div
+          location_sorting_code: div
+          edit: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      start_month:
+        - su_vpge_featured_image
+        - body
+        - su_event_alt_loc
+        - su_event_audience
+        - su_event_components
+        - su_event_contact_info
+        - su_event_cta
+        - su_event_dek
+        - su_event_email
+        - su_event_groups
+        - su_event_keywords
+        - su_event_location
+        - su_event_map_link
+        - su_event_schedule
+        - su_event_source
+        - su_event_sponsor
+        - su_event_subheadline
+        - su_event_subject
+        - su_event_telephone
+        - su_metatags
+        - su_shared_tags
+        - su_vpge_area_of_focus
+        - su_vpge_featured_event
+        - su_vpge_fellowship_audience
+        - su_vpge_fellowship_funding
+        - su_vpge_partner
+        - su_vpge_person
+        - su_vpge_program
+        - su_vpge_resource
+        - su_event_date_time
+        - su_vpge_grad_grow_competency
+        - su_vpge_time_commitment
+        - su_event_type
+id: node.stanford_event.grad_grow_card
+targetEntityType: node
+bundle: stanford_event
+mode: grad_grow_card
+content:
+  su_event_date_time:
+    type: smartdate_custom
+    label: hidden
+    settings:
+      separator: ' - '
+      join: ', '
+      time_format: 'g:ia'
+      time_hour_format: ga
+      date_format: 'D, M j Y'
+      allday_label: 'All day'
+      date_first: '1'
+      ampm_reduce: '1'
+      site_time_toggle: '1'
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+    weight: 1
+    region: content
+  su_event_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  su_vpge_featured_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+    weight: 0
+    region: content
+  su_vpge_grad_grow_competency:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  su_vpge_time_commitment:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  body: true
+  feeds_item: true
+  layout_builder__layout: true
+  links: true
+  search_api_excerpt: true
+  stanford_intranet__access: true
+  su_event_alt_loc: true
+  su_event_audience: true
+  su_event_components: true
+  su_event_contact_info: true
+  su_event_cta: true
+  su_event_dek: true
+  su_event_email: true
+  su_event_groups: true
+  su_event_keywords: true
+  su_event_location: true
+  su_event_map_link: true
+  su_event_schedule: true
+  su_event_source: true
+  su_event_sponsor: true
+  su_event_subheadline: true
+  su_event_subject: true
+  su_event_telephone: true
+  su_metatags: true
+  su_shared_tags: true
+  su_vpge_area_of_focus: true
+  su_vpge_featured_event: true
+  su_vpge_fellowship_audience: true
+  su_vpge_fellowship_funding: true
+  su_vpge_partner: true
+  su_vpge_person: true
+  su_vpge_program: true
+  su_vpge_resource: true

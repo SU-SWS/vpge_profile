@@ -2,7 +2,6 @@ adding:
   dependencies:
     config:
       - field.field.node.stanford_news.body
-      - field.field.node.stanford_news.su_metatags
       - field.field.node.stanford_news.su_vpge_area_of_focus
       - field.field.node.stanford_news.su_vpge_related_fellowship
       - field.field.node.stanford_news.su_vpge_related_person
@@ -13,4 +12,7 @@ adding:
     su_vpge_related_fellowship: true
     su_vpge_related_person: true
     su_vpge_related_resource: true
-removing: {  }
+removing:
+  dependencies:
+    config:
+      - field.field.node.stanford_news.su_news_hide_social

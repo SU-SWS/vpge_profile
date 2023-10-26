@@ -1,0 +1,68 @@
+uuid: 40f7189b-4e81-4708-ac4a-e6ceb9cc3b67
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.grad_grow_card
+    - field.field.node.resource.body
+    - field.field.node.resource.layout_builder__layout
+    - field.field.node.resource.su_vpge_grad_grow_competency
+    - field.field.node.resource.su_vpge_last_updated
+    - field.field.node.resource.su_vpge_partner
+    - field.field.node.resource.su_vpge_resource_audience
+    - field.field.node.resource.su_vpge_resource_category
+    - field.field.node.resource.su_vpge_resource_external_link
+    - field.field.node.resource.su_vpge_resource_image
+    - field.field.node.resource.su_vpge_time_commitment
+    - node.type.resource
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.resource.grad_grow_card
+targetEntityType: node
+bundle: resource
+mode: grad_grow_card
+content:
+  su_vpge_grad_grow_competency:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  su_vpge_time_commitment:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  layout_builder__layout: true
+  links: true
+  search_api_excerpt: true
+  su_page_components: true
+  su_vpge_last_updated: true
+  su_vpge_partner: true
+  su_vpge_resource_audience: true
+  su_vpge_resource_category: true
+  su_vpge_resource_external_link: true
+  su_vpge_resource_image: true
