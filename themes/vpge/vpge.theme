@@ -60,7 +60,7 @@ function form_views_exposed_form_alter(&$form, FormStateInterface $form_state) {
  */
 function vpge_preprocess_views_view(&$variables) {
   $view = $variables['view'];
-  if ($view->storage->id() == "vpge_grad_grow" && $view->current_display == "block_1") {
+  if ($view->storage->id() == "vpge_grad_grow" && $view->current_display == "filters_block") {
     // Empty output for the filter block.
     $variables['rows'] = " ";
   }
@@ -72,7 +72,7 @@ function vpge_preprocess_views_view(&$variables) {
 function vpge_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
   $view = $variables['view'];
 
-  if ($view->id() == 'vpge_grad_grow' && $view->current_display == "block_1") {
+  if ($view->id() == 'vpge_grad_grow' && $view->current_display == "filters_block") {
     $suggestions[] = 'views_view__' . $view->id();
   }
 }

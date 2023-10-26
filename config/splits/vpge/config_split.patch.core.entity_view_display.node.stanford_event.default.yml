@@ -95,8 +95,6 @@ removing:
   third_party_settings:
     layout_builder_restrictions:
       allowed_block_categories:
-        - Devel
-        - 'Devel PHP'
         - 'SimpleSAMLphp Authentication'
         - 'Stanford SimpleSAML PHP'
       entity_view_mode_restriction:

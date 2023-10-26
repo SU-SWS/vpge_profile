@@ -1,8 +1,6 @@
 adding:
   dependencies:
     config:
-      - field.field.node.stanford_person.su_metatags
-      - field.field.node.stanford_person.su_person_pronouns
       - field.field.node.stanford_person.su_vpge_area_of_focus
       - field.field.node.stanford_person.su_vpge_cohort
       - field.field.node.stanford_person.su_vpge_current_degree_dept

@@ -9,4 +9,5 @@ adding:
     - 'configure editable stanford_event node layout overrides'
     - 'configure editable stanford_news node layout overrides'
     - 'configure editable stanford_person node layout overrides'
-removing: { }
+removing:
+  is_admin: null

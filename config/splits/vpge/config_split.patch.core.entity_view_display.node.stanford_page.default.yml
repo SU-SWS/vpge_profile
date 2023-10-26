@@ -19,9 +19,4 @@ adding:
           - 'Stanford SimpleSAML PHP'
           - VPGE
           - 'VPGE '
-removing:
-  third_party_settings:
-    layout_builder_restrictions:
-      allowed_block_categories:
-        - Devel
-        - 'Devel PHP'
+removing: {  }

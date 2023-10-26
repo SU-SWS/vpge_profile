@@ -12,18 +12,6 @@ adding:
       - field.field.node.stanford_event.su_vpge_program
       - field.field.node.stanford_event.su_vpge_resource
       - field.field.node.stanford_event.su_vpge_time_commitment
-  content:
-    su_event_date_time:
-      settings:
-        localize: false
-        parts:
-          - start
-          - end
-        duration:
-          separator: ' | '
-          unit: ''
-          decimals: 2
-          suffix: h
   hidden:
     su_vpge_area_of_focus: true
     su_vpge_featured_event: true
