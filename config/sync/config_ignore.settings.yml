@@ -1,6 +1,5 @@
 _core:
   default_config_hash: v7E8C8wJWeAW2BGohMNY1tZSBc4bexM6O62tGxecTfE
-mode: simple
 ignored_config_entities:
   - 'block.block.*'
   - 'core.extension:theme'
@@ -24,3 +23,4 @@ ignored_config_entities:
   - '~block.block.stanford_profile_admin_*'
   - '~block.block.stanford_profile_admin_*'
   - '~block.block.vpge_*'
+mode: simple

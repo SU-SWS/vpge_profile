@@ -1,12 +1,12 @@
-uuid: 600aaad0-0f2f-4122-bd08-006b5ed707c5
+uuid: ae45826d-7832-4d27-bae0-5d1295f86445
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-id: node.su_vpge_featured_image
-field_name: su_vpge_featured_image
+id: node.su_sul_event__image
+field_name: su_sul_event__image
 entity_type: node
 type: entity_reference
 settings:

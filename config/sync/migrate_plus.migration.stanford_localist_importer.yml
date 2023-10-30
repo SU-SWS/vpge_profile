@@ -495,10 +495,12 @@ process:
           ignore_case: true
           source: name
   image_file:
-    - plugin: skip_on_empty
+    -
+      plugin: skip_on_empty
       method: process
       source: photo_url
-    - plugin: file_import
+    -
+      plugin: file_import
       destination: constants/image_path
       id_only: true
       reuse: true
@@ -511,13 +513,16 @@ process:
     ignore_case: true
     source: constants/image_tag
   sul_event__image/target_id:
-    - plugin: skip_on_empty
+    -
+      plugin: skip_on_empty
       method: process
       source: photo_url
-    - plugin: skip_on_empty
+    -
+      plugin: skip_on_empty
       method: process
       source: '@image_file'
-    - plugin: entity_generate
+    -
+      plugin: entity_generate
       source: '@image_file'
       value_key: field_media_image
       bundle_key: bundle
