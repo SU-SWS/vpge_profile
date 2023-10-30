@@ -494,6 +494,41 @@ process:
           entity_type: taxonomy_term
           ignore_case: true
           source: name
+  image_file:
+    - plugin: skip_on_empty
+      method: process
+      source: photo_url
+    - plugin: file_import
+      destination: constants/image_path
+      id_only: true
+      reuse: true
+  media_tag:
+    plugin: entity_generate
+    value_key: name
+    bundle_key: vid
+    bundle: media_tags
+    entity_type: taxonomy_term
+    ignore_case: true
+    source: constants/image_tag
+  sul_event__image/target_id:
+    - plugin: skip_on_empty
+      method: process
+      source: photo_url
+    - plugin: skip_on_empty
+      method: process
+      source: '@image_file'
+    - plugin: entity_generate
+      source: '@image_file'
+      value_key: field_media_image
+      bundle_key: bundle
+      bundle: image
+      entity_type: media
+      ignore_case: true
+      values:
+        name: title
+        field_media_image/target_id: '@image_file'
+        field_media_image/alt: constants/alt
+        su_media_category/target_id: '@media_tag'
 destination:
   plugin: 'entity:node'
   overwrite_properties:
