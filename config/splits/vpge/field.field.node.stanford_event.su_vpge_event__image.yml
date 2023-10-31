@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.su_vpge_event__image
     - media.type.image
     - node.type.stanford_event
+  content:
+    - 'media:image:77b5efa3-fb2a-43a0-b637-69dd835fa0ea'
 id: node.stanford_event.su_vpge_event__image
 field_name: su_vpge_event__image
 entity_type: node
@@ -14,7 +16,10 @@ label: Image
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 77b5efa3-fb2a-43a0-b637-69dd835fa0ea
+    weight: 0
 default_value_callback: ''
 settings:
   handler: 'default:media'
