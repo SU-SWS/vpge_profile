@@ -512,7 +512,7 @@ process:
     entity_type: taxonomy_term
     ignore_case: true
     source: constants/image_tag
-  sul_event__image/target_id:
+  su_sul_event__image/target_id:
     -
       plugin: skip_on_empty
       method: process
