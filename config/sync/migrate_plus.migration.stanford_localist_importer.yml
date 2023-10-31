@@ -528,8 +528,7 @@ process:
       id_only: true
   media_tag:
     plugin: default_value
-    source: keywords
-    default_value: {  }
+    default_value: ' '
   su_vpge_event__image/target_id:
     -
       plugin: skip_on_empty
