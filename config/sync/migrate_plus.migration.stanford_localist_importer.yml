@@ -494,24 +494,42 @@ process:
           entity_type: taxonomy_term
           ignore_case: true
           source: name
-  image_file:
-    -
-      plugin: skip_on_empty
+  image_ext:
+    - plugin: skip_on_empty
       method: process
       source: photo_url
-    -
-      plugin: file_import
-      destination: constants/image_path
+    - plugin: explode
+      delimiter: .
+    - plugin: array_pop
+  image_destination_part_1:
+    - plugin: skip_on_empty
+      method: process
+      source: '@image_ext'
+    - plugin: concat
+      source:
+        - constants/image_path
+        - urlname
+  image_destination:
+    - plugin: skip_on_empty
+      method: process
+      source: '@image_destination_part_1'
+    - plugin: concat
+      source:
+        - '@image_destination_part_1'
+        - '@image_ext'
+      delimiter: .
+  image_file:
+    - plugin: skip_on_empty
+      method: process
+      source: '@image_destination'
+    - plugin: file_import
+      source: photo_url
+      destination: '@image_destination'
       id_only: true
-      reuse: true
   media_tag:
-    plugin: entity_generate
-    value_key: name
-    bundle_key: vid
-    bundle: media_tags
-    entity_type: taxonomy_term
-    ignore_case: true
-    source: constants/image_tag
+    plugin: default_value
+    source: keywords
+    default_value: {  }
   su_vpge_event__image/target_id:
     -
       plugin: skip_on_empty
