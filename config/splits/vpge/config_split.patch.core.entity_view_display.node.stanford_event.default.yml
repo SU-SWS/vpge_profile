@@ -1,8 +1,8 @@
 adding:
   dependencies:
     config:
-      - field.field.node.stanford_event.su_sul_event__image
       - field.field.node.stanford_event.su_vpge_area_of_focus
+      - field.field.node.stanford_event.su_vpge_event__image
       - field.field.node.stanford_event.su_vpge_featured_event
       - field.field.node.stanford_event.su_vpge_fellowship_audience
       - field.field.node.stanford_event.su_vpge_fellowship_funding
@@ -34,15 +34,6 @@ adding:
           - User
           - 'VPGE views'
   content:
-    su_sul_event__image:
-      type: entity_reference_entity_view
-      label: above
-      settings:
-        view_mode: default
-        link: false
-      third_party_settings: {  }
-      weight: 121
-      region: main
     su_vpge_area_of_focus:
       type: entity_reference_label
       label: above
@@ -50,6 +41,15 @@ adding:
         link: true
       third_party_settings: {  }
       weight: 119
+      region: main
+    su_vpge_event__image:
+      type: entity_reference_entity_view
+      label: above
+      settings:
+        view_mode: default
+        link: false
+      third_party_settings: {  }
+      weight: 121
       region: main
     su_vpge_featured_event:
       type: boolean

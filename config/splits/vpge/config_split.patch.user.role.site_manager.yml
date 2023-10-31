@@ -2,4 +2,7 @@ adding:
   permissions:
     config_split_sequence_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
     config_split_sequence_1_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_2_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_3_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
+    config_split_sequence_4_29i3per77hhj5b7j: 'assign custm_vpge_site_manager role'
 removing: {  }

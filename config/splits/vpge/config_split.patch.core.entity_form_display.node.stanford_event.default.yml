@@ -1,8 +1,8 @@
 adding:
   dependencies:
     config:
-      - field.field.node.stanford_event.su_sul_event__image
       - field.field.node.stanford_event.su_vpge_area_of_focus
+      - field.field.node.stanford_event.su_vpge_event__image
       - field.field.node.stanford_event.su_vpge_featured_event
       - field.field.node.stanford_event.su_vpge_fellowship_audience
       - field.field.node.stanford_event.su_vpge_fellowship_funding
@@ -53,18 +53,18 @@ adding:
       weight: 7
     su_event_type:
       weight: 1
-    su_sul_event__image:
-      type: media_library_widget
-      weight: 53
-      region: content
-      settings:
-        media_types: {  }
-      third_party_settings: {  }
     su_vpge_area_of_focus:
       type: options_buttons
       weight: 32
       region: content
       settings: {  }
+      third_party_settings: {  }
+    su_vpge_event__image:
+      type: media_library_widget
+      weight: 53
+      region: content
+      settings:
+        media_types: {  }
       third_party_settings: {  }
     su_vpge_featured_event:
       type: boolean_checkbox

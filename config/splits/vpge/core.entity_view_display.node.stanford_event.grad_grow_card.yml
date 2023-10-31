@@ -28,8 +28,8 @@ dependencies:
     - field.field.node.stanford_event.su_event_type
     - field.field.node.stanford_event.su_metatags
     - field.field.node.stanford_event.su_shared_tags
-    - field.field.node.stanford_event.su_sul_event__image
     - field.field.node.stanford_event.su_vpge_area_of_focus
+    - field.field.node.stanford_event.su_vpge_event__image
     - field.field.node.stanford_event.su_vpge_featured_event
     - field.field.node.stanford_event.su_vpge_fellowship_audience
     - field.field.node.stanford_event.su_vpge_fellowship_funding
@@ -325,8 +325,8 @@ hidden:
   su_event_telephone: true
   su_metatags: true
   su_shared_tags: true
-  su_sul_event__image: true
   su_vpge_area_of_focus: true
+  su_vpge_event__image: true
   su_vpge_featured_event: true
   su_vpge_fellowship_audience: true
   su_vpge_fellowship_funding: true
