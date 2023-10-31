@@ -13,27 +13,6 @@ adding:
       - field.field.node.stanford_event.su_vpge_resource
       - field.field.node.stanford_event.su_vpge_time_commitment
   third_party_settings:
-    layout_builder:
-      sections:
-        -
-          components:
-            70c87596-710e-43c3-a0b8-af0012535285:
-              uuid: 70c87596-710e-43c3-a0b8-af0012535285
-              region: main
-              configuration:
-                id: 'field_block:node:stanford_event:su_sul_event__image'
-                label_display: '0'
-                context_mapping:
-                  entity: layout_builder.entity
-                formatter:
-                  type: entity_reference_entity_view
-                  label: above
-                  settings:
-                    view_mode: default
-                    link: false
-                  third_party_settings: {  }
-              weight: -4
-              additional: {  }
     layout_builder_restrictions:
       allowed_block_categories:
         - Book
