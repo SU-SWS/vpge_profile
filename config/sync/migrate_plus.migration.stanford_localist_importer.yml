@@ -537,7 +537,6 @@ process:
       bundle: media_tags
       entity_type: taxonomy_term
       ignore_case: true
-      source: constants/image_tag
   su_vpge_featured_image/target_id:
     -
       plugin: skip_on_empty
