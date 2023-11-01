@@ -527,13 +527,17 @@ process:
       destination: '@image_destination'
       id_only: true
   media_tag:
-    plugin: entity_generate
-    value_key: name
-    bundle_key: vid
-    bundle: media_tags
-    entity_type: taxonomy_term
-    ignore_case: true
-    source: constants/image_tag
+    -
+      plugin: default_value
+      default_value: 'Localist Event'
+    -
+      plugin: entity_generate
+      value_key: name
+      bundle_key: vid
+      bundle: media_tags
+      entity_type: taxonomy_term
+      ignore_case: true
+      source: constants/image_tag
   su_vpge_featured_image/target_id:
     -
       plugin: skip_on_empty
