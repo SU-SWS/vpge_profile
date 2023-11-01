@@ -1,25 +1,20 @@
-uuid: f0178bbe-df2e-49e0-8d01-616dd2150e0e
+uuid: 5eaeff98-2e6e-44ea-bfd9-d3e8edf6b336
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.su_vpge_event__image
+    - field.storage.node.su_vpge_featured_image
     - media.type.image
     - node.type.stanford_event
-  content:
-    - 'media:image:77b5efa3-fb2a-43a0-b637-69dd835fa0ea'
-id: node.stanford_event.su_vpge_event__image
-field_name: su_vpge_event__image
+id: node.stanford_event.su_vpge_featured_image
+field_name: su_vpge_featured_image
 entity_type: node
 bundle: stanford_event
-label: Image
+label: 'VPGE Featured Image'
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    target_uuid: 77b5efa3-fb2a-43a0-b637-69dd835fa0ea
-    weight: 0
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'
