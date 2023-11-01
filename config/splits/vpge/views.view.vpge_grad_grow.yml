@@ -628,7 +628,7 @@ display:
           query_tags: {  }
           contextual_filters_or: false
       relationships: {  }
-      css_class: flex-container
+      css_class: ''
       use_ajax: true
       group_by: true
       header: {  }

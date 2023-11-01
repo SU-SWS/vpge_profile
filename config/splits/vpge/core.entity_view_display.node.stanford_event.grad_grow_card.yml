@@ -41,13 +41,13 @@ dependencies:
     - field.field.node.stanford_event.su_vpge_time_commitment
     - node.type.stanford_event
   module:
+    - address
     - ds
     - empty_fields
     - field_formatter_class
-    - layout_builder
-    - layout_builder_restrictions
-    - layout_library
+    - link
     - smart_date
+    - stanford_media
     - user
 third_party_settings:
   ds:
@@ -82,6 +82,8 @@ third_party_settings:
         - su_event_alt_loc
       address:
         - su_event_location
+      edit:
+        - su_vpge_featured_image
     fields:
       'display_field_copy:node-event_date_time_1':
         plugin_id: 'display_field_copy:node-event_date_time_1'
@@ -107,7 +109,7 @@ third_party_settings:
             localize: 0
       'display_field_copy:node-event_date_time_2':
         plugin_id: 'display_field_copy:node-event_date_time_2'
-        weight: 0
+        weight: 1
         label: hidden
         formatter: smartdate_default
         settings:
@@ -129,7 +131,7 @@ third_party_settings:
             localize: 0
       'display_field_copy:node-event_date_time_3':
         plugin_id: 'display_field_copy:node-event_date_time_3'
-        weight: 0
+        weight: 2
         label: hidden
         formatter: smartdate_default
         settings:
@@ -151,7 +153,7 @@ third_party_settings:
             localize: 0
       'display_field_copy:node-event_date_time_4':
         plugin_id: 'display_field_copy:node-event_date_time_4'
-        weight: 0
+        weight: 3
         label: hidden
         formatter: smartdate_default
         settings:
@@ -173,7 +175,7 @@ third_party_settings:
             localize: 0
       node_title:
         plugin_id: node_title
-        weight: 6
+        weight: 5
         label: hidden
         formatter: default
         settings:
@@ -191,7 +193,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 10
+    weight: 9
     region: location
   su_event_date_time:
     type: smartdate_default
@@ -215,14 +217,14 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 9
+    weight: 8
     region: date_time
   su_event_location:
     type: address_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 11
+    weight: 10
     region: address
   su_event_source:
     type: link
@@ -236,7 +238,7 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 8
+    weight: 7
     region: url
   su_event_subheadline:
     type: string
@@ -244,7 +246,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: subheadline
   su_event_type:
     type: entity_reference_label
@@ -256,8 +258,23 @@ content:
         class: ''
       ds:
         ds_limit: '1'
-    weight: 5
+    weight: 4
     region: event_type
+  su_vpge_featured_image:
+    type: media_image_formatter
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+      image_style: large_square
+      remove_alt: true
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+    weight: 11
+    region: edit
 hidden:
   body: true
   feeds_item: true
@@ -280,3 +297,13 @@ hidden:
   su_event_telephone: true
   su_metatags: true
   su_shared_tags: true
+  su_vpge_area_of_focus: true
+  su_vpge_featured_event: true
+  su_vpge_fellowship_audience: true
+  su_vpge_fellowship_funding: true
+  su_vpge_grad_grow_competency: true
+  su_vpge_partner: true
+  su_vpge_person: true
+  su_vpge_program: true
+  su_vpge_resource: true
+  su_vpge_time_commitment: true
