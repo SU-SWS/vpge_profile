@@ -168,7 +168,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Submit
+          submit_button: 'Apply filter'
           reset_button: true
           reset_button_label: 'Clear all filters'
           exposed_sorts_label: 'Sort by'
