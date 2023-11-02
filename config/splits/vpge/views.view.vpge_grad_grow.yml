@@ -179,7 +179,7 @@ display:
           text_input_required_format: stanford_html
           bef:
             general:
-              autosubmit: true
+              autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
               autosubmit_hide: true
@@ -194,10 +194,10 @@ display:
                 advanced:
                   sort_options: false
                   rewrite:
-                    filter_rewrite_values: "- Any -|All\r\nCareer Development|Works"
+                    filter_rewrite_values: '- Any -|All'
                   collapsible: false
                   is_secondary: false
-              type:
+              term_node_tid_depth_1:
                 plugin_id: default
                 advanced:
                   sort_options: false
@@ -205,7 +205,7 @@ display:
                     filter_rewrite_values: '- Any -|All'
                   collapsible: false
                   is_secondary: false
-              term_node_tid_depth_1:
+              type_1:
                 plugin_id: default
                 advanced:
                   sort_options: false
