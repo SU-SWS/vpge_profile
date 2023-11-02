@@ -57,3 +57,34 @@
   }
 
 }
+
+.vpge-grad-grow {
+  // Grad grow event card
+  // &.events {}
+
+  // Grad grow resource card
+  // &.resources {
+    .su-card {
+      .su-vpge-grad-grow-competency {
+        ul {
+          list-style: none;
+          padding-left: 0;
+
+          li {
+            color: $su-color-black-70;
+            border: 0.2rem solid $su-color-black-70;
+            border-radius: 3rem;
+            padding: 0.3rem 1.8rem;
+            margin-bottom: 1.4rem;
+            font-weight: 700;
+            width: fit-content;
+          }
+        }
+      }
+    }
+
+  // }
+}
+
+
+
