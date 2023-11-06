@@ -59,31 +59,82 @@
 }
 
 .vpge-grad-grow {
-  // Grad grow event card
-  // &.events {}
+  @include responsive-spacing('padding-bottom', 3);
+  @include responsive-spacing('padding-top', 3);
 
-  // Grad grow resource card
-  // &.resources {
-    .su-card {
-      .su-vpge-grad-grow-competency {
-        ul {
-          list-style: none;
-          padding-left: 0;
+  .su-card {
+    h3 {
+      margin-bottom: 2rem;
 
-          li {
-            color: $su-color-black-70;
-            border: 0.2rem solid $su-color-black-70;
-            border-radius: 3rem;
-            padding: 0.3rem 1.8rem;
-            margin-bottom: 1.4rem;
-            font-weight: 700;
-            width: fit-content;
-          }
+      a {
+        font-size: 1.8rem;
+        color: $su-color-black;
+  
+        @include grid-media-min('xl') {
+          font-size: 2rem;
         }
       }
     }
 
-  // }
+    .su-wysiwyg-text {
+      margin-bottom: 2rem !important;
+    }
+
+    .su-vpge-grad-grow-competency,
+    .views-field-su-event-location {
+      ul {
+        list-style: none;
+        padding-left: 0;
+        
+        li {
+          color: $su-color-black-70;
+          border: 0.2rem solid $su-color-black-70;
+          border-radius: 3rem;
+          padding: 0.3rem 1.8rem;
+          margin-bottom: 1.4rem;
+          font-weight: 700;
+          width: fit-content;
+        }
+      }
+    }
+  }
+  
+  // Grad grow event card
+  &.events {
+    .su-card {
+      .event-list-item__type {
+        a {
+          color: $su-color-black;
+        }
+      }
+
+      .views-field-su-event-date-time {
+        .date-icon {
+          display: none;
+        }
+      }
+
+      .views-field-su-event-location {
+        .map-icon {
+          display: none;
+        }
+      }
+
+      .views-field-su-event-edit {
+        a {
+          background-color: unset;
+          box-shadow: unset;
+          color: unset;
+          padding: unset;
+          text-align: unset;
+        }
+      }
+    }
+  }
+
+  // Grad grow resource card
+  &.resources {
+  }
 }
 
 
