@@ -180,7 +180,8 @@ third_party_settings:
         formatter: default
         settings:
           link: true
-          wrapper: h2
+          'link class': ''
+          wrapper: h3
           class: ''
 id: node.stanford_event.grad_grow_card
 targetEntityType: node

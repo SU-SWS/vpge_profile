@@ -63,7 +63,7 @@ third_party_settings:
         settings:
           link: true
           'link class': ''
-          wrapper: h2
+          wrapper: h3
           class: ''
 id: node.resource.grad_grow_card
 targetEntityType: node
@@ -82,7 +82,7 @@ content:
     type: entity_reference_list_label_class
     label: hidden
     settings:
-      link: true
+      link: false
       class: ''
       list_type: ul
     third_party_settings:
