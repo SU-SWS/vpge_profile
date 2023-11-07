@@ -62,17 +62,35 @@
   @include responsive-spacing('padding-bottom', 3);
   @include responsive-spacing('padding-top', 3);
 
+  header {
+    margin-bottom: -12rem;
+
+    .su_resource_background,
+    .su_revent_background {
+      padding-left: 8rem;
+      padding-top: 10rem;
+      padding-bottom: 19rem;
+
+      h2 {
+        color: $su-color-white;
+        font-size: 3em;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .su-card {
     h3 {
       margin-bottom: 2rem;
 
       a {
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
+        font-size: unset;
         color: $su-color-black;
   
-        @include grid-media-min('xl') {
-          font-size: 2rem;
-        }
+        // @include grid-media-min('xl') {
+        //   font-size: 2rem;
+        // }
       }
     }
 
@@ -90,8 +108,10 @@
           color: $su-color-black-70;
           border: 0.2rem solid $su-color-black-70;
           border-radius: 3rem;
-          padding: 0.3rem 1.8rem;
+          // padding: 0.3rem 1.8rem;
           margin-bottom: 1.4rem;
+          font-size: 1.8rem;
+          padding: 0.2rem 1.7rem;
           font-weight: 700;
           width: fit-content;
         }
@@ -99,16 +119,39 @@
     }
   }
   
-  // Grad grow event card
+  // Grad grow event section
   &.events {
-    .su-card {
-      .event-list-item__type {
-        a {
-          color: $su-color-black;
-        }
+    .su_revent_background {
+      background: var(--Events, linear-gradient(90deg, #17225E 0%, #59B3A9 100%));
+    }
+
+    .su-event-card {
+      padding: 0;
+
+      .su-event-list-item__date {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
       }
 
+      .su-event-list-item__details {
+        .event-list-item__type {  
+          a {
+            color: $su-color-black;
+            font-weight: 700;
+            font-size: 1.9rem;
+          }
+        }
+        
+        h3 {
+          margin-bottom: 0.5rem;
+        }
+
+      }
+      
+
       .views-field-su-event-date-time {
+        font-size: 1.9rem;
+
         .date-icon {
           display: none;
         }
@@ -117,6 +160,10 @@
       .views-field-su-event-location {
         .map-icon {
           display: none;
+        }
+
+        ul {
+          margin-top: 3rem;
         }
       }
 
@@ -132,10 +179,26 @@
     }
   }
 
-  // Grad grow resource card
+  // Grad grow resources section
   &.resources {
+    .su_resource_background {
+      background: var(--Resources, linear-gradient(90deg, #D31520 18.75%, #7F2D48 87.5%));
+    }
+
+    .su-card {
+      .su-card__contents {
+        .resource__label {
+          font-size: 1.9rem;
+        }
+
+        h2 {
+          font-size: unset;
+        }
+
+        .su-wysiwyg-text {
+          font-size: 1.9rem;
+        }
+      }
+    }
   }
 }
-
-
-
