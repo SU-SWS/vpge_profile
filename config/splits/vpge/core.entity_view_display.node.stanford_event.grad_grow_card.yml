@@ -41,8 +41,8 @@ dependencies:
     - field.field.node.stanford_event.su_vpge_time_commitment
     - node.type.stanford_event
   module:
-    - address
     - ds
+    - element_class_formatter
     - empty_fields
     - field_formatter_class
     - link
@@ -72,16 +72,12 @@ third_party_settings:
         - su_event_type
       headline:
         - node_title
-      subheadline:
-        - su_event_subheadline
       url:
         - su_event_source
       date_time:
         - su_event_date_time
       location:
-        - su_event_alt_loc
-      address:
-        - su_event_location
+        - su_vpge_grad_grow_competency
       edit:
         - su_vpge_featured_image
     fields:
@@ -188,14 +184,6 @@ targetEntityType: node
 bundle: stanford_event
 mode: grad_grow_card
 content:
-  su_event_alt_loc:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 9
-    region: location
   su_event_date_time:
     type: smartdate_default
     label: hidden
@@ -218,15 +206,8 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 8
+    weight: 7
     region: date_time
-  su_event_location:
-    type: address_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: address
   su_event_source:
     type: link
     label: hidden
@@ -239,16 +220,8 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 7
-    region: url
-  su_event_subheadline:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
     weight: 6
-    region: subheadline
+    region: url
   su_event_type:
     type: entity_reference_label
     label: hidden
@@ -274,8 +247,24 @@ content:
         handler: ''
       field_formatter_class:
         class: ''
-    weight: 11
+    weight: 9
     region: edit
+  su_vpge_grad_grow_competency:
+    type: entity_reference_list_label_class
+    label: hidden
+    settings:
+      link: false
+      class: ''
+      list_type: ul
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+      ds:
+        ds_limit: ''
+    weight: 8
+    region: location
 hidden:
   body: true
   feeds_item: true
@@ -283,6 +272,7 @@ hidden:
   links: true
   search_api_excerpt: true
   stanford_intranet__access: true
+  su_event_alt_loc: true
   su_event_audience: true
   su_event_components: true
   su_event_contact_info: true
@@ -291,9 +281,11 @@ hidden:
   su_event_email: true
   su_event_groups: true
   su_event_keywords: true
+  su_event_location: true
   su_event_map_link: true
   su_event_schedule: true
   su_event_sponsor: true
+  su_event_subheadline: true
   su_event_subject: true
   su_event_telephone: true
   su_metatags: true
@@ -302,7 +294,6 @@ hidden:
   su_vpge_featured_event: true
   su_vpge_fellowship_audience: true
   su_vpge_fellowship_funding: true
-  su_vpge_grad_grow_competency: true
   su_vpge_partner: true
   su_vpge_person: true
   su_vpge_program: true

@@ -63,6 +63,7 @@
   @include responsive-spacing('padding-top', 3);
 
   header {
+    margin-top: 12rem;
     margin-bottom: -12rem;
 
     .su_resource_background,
