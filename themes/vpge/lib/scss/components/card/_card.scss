@@ -63,6 +63,7 @@
   @include responsive-spacing('padding-top', 3);
 
   header {
+    border-top: 1px solid $su-color-black-true;
     margin-top: 12rem;
     margin-bottom: -12rem;
 
@@ -80,18 +81,19 @@
     }
   }
 
+  .grad-grow-list {
+    .su-list-unstyled {
+      padding: 0 3.4rem;
+    }
+  }
+
   .su-card {
     h3 {
       margin-bottom: 2rem;
 
       a {
-        // font-size: 1.8rem;
         font-size: unset;
         color: $su-color-black;
-  
-        // @include grid-media-min('xl') {
-        //   font-size: 2rem;
-        // }
       }
     }
 
