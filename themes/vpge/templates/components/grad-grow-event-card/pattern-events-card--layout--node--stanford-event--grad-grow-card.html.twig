@@ -74,7 +74,7 @@
       {%- if url|render_clean is empty -%}
         {{- headline -}}
       {%- else -%}
-        <h2><a {{ link_attributes }} href="{{ url|render_clean }}">{{ headline|render_clean }}</a></h2>
+        <h3><a {{ link_attributes }} href="{{ url|render_clean }}">{{ headline|render_clean }}</a></h3>
       {%- endif -%}
 
       {# Event Subheadline  #}
