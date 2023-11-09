@@ -60,61 +60,85 @@
 
 .vpge-grad-grow {
   .views-exposed-form {
+    @include responsive-spacing('padding-bottom', 8);
+    @include responsive-spacing('margin-bottom', 1);
+    
     border-bottom: 1px solid $su-color-black-true;
-    margin-bottom: 1.5rem;
-    padding-bottom: 7rem;
 
     label {
+      @include responsive-spacing('margin-top', 1);
+
       font-weight: 700;
       color: $su-color-black-80;
+      margin-bottom: .5rem;
     }
 
     select {
       color: $su-color-black-80;
       max-width: none;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .form-item-competency {
       label {
         margin-top: 0;
-
       }
       
       .shs-field-container {
-        .shs-widget-container {
-          min-width: 25%;
+        margin-bottom: 0;
 
-          &:first-child {
-            padding-right: 1.7rem;
+        .shs-widget-container {
+          @include responsive-spacing('margin-bottom', 1);
+
+          min-width: 30%;
+          width: 100%;
+          padding-right: 1.4rem;
+
+          @include grid-media-min('lg') {
+            width: 45%;
           }
         }
+      }
+
+      .shs-addnew-container {
+        margin-top: 0;
       }
     }
 
     .form-item-content-type,
     .form-item-commitment {
-      display: inline-block;
       padding-right: 1.4rem;
       min-width: 25%;
+
+      @include grid-media-min('md') {
+        width: 45%;
+        display: inline-block;
+      }
+
+      @include grid-media-max('md') {
+        width: 100%;
+      }
     }
 
     .form-actions {
-      margin-top: 2rem;
+      @include responsive-spacing('margin-top', 1);
     }
   }
 
   &.events,
   &.resources {
-    @include responsive-spacing('margin-top', 4);
-    // @include responsive-spacing('margin-bottom', 9);
-    // @include responsive-spacing('margin-bottom', 10);
+    @include responsive-spacing('margin-top', 5);
+
     margin-bottom: 4rem;
     padding: 0;
 
     .su_resource_background,
     .su_revent_background {
+      @include responsive-spacing('padding-top', 9);
+
       padding-left: 8rem;
-      padding-top: 10rem;
+      // padding-top: 10rem;
       padding-bottom: 19rem;
   
       h2 {
@@ -129,6 +153,14 @@
   
       .su-list-unstyled {
         padding: 0 3.4rem;
+
+        @include grid-media-min('md') {
+          grid-template-columns: repeat(2,minmax(0,1fr));
+        }
+
+        @include grid-media-min('2xl') {
+          grid-template-columns: repeat(3,minmax(0,1fr));
+        }
   
         .su-card {
           h3 {
@@ -172,7 +204,8 @@
                 border: 0.2rem solid $su-color-black-70;
                 border-radius: 3rem;
                 margin-bottom: 1.4rem;
-                font-size: 1.8rem;
+                // font-size: 1.8rem;
+                font-size: 1.6rem;
                 padding: 0.2rem 1.7rem;
                 font-weight: 700;
                 width: fit-content;
@@ -212,7 +245,6 @@
         }
 
       }
-      
 
       .views-field-su-event-date-time {
         font-size: 1.9rem;
@@ -246,9 +278,6 @@
 
   // Grad grow resources section
   &.resources {
-    // margin-top: -6rem;
-    // margin-top: -13rem;
-
     .su_resource_background {
       background: var(--Resources, linear-gradient(90deg, #D31520 18.75%, #7F2D48 87.5%));
     }

@@ -147,12 +147,12 @@ display:
         type: infinite_scroll
         options:
           offset: 0
-          items_per_page: 6
+          items_per_page: 5
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: 'Next ›'
+            previous: '‹ Previous'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -491,7 +491,7 @@ display:
           exposed: true
           expose:
             operator_id: term_node_tid_depth_1_op
-            label: 'Filter by Time Commitment'
+            label: 'Filter by time commitment'
             description: ''
             use_operator: false
             operator: term_node_tid_depth_1_op
@@ -637,12 +637,12 @@ display:
       style:
         type: html_list
         options:
-          row_class: flex-md-4-of-12
+          row_class: ''
           default_row_class: true
           uses_fields: false
           type: ul
           wrapper_class: grad-grow-list
-          class: 'flex-container su-list-unstyled'
+          class: 'grid-container-3 su-list-unstyled'
       row:
         type: 'entity:node'
         options:
@@ -1184,7 +1184,7 @@ display:
         type: infinite_scroll
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 6
           total_pages: null
           id: 0
           tags:
@@ -1669,7 +1669,7 @@ display:
         type: infinite_scroll
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 6
           total_pages: null
           id: 0
           tags:
@@ -2117,6 +2117,8 @@ display:
         filters_block: filters_block
       attachment_position: after
       inherit_exposed_filters: true
+      inherit_pager: false
+      render_pager: false
     cache_metadata:
       max-age: -1
       contexts:
