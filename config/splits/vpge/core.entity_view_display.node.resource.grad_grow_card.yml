@@ -16,9 +16,14 @@ dependencies:
     - field.field.node.resource.su_vpge_time_commitment
     - node.type.resource
   module:
+    - ds
+    - element_class_formatter
+    - empty_fields
+    - field_formatter_class
     - layout_builder
     - layout_builder_restrictions
     - layout_library
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -33,29 +38,62 @@ third_party_settings:
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
       restricted_categories: {  }
+  ds:
+    layout:
+      id: pattern_card
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          variant: default
+    regions:
+      card_body:
+        - node_title
+        - body
+        - su_vpge_grad_grow_competency
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          wrapper: h3
+          class: ''
 id: node.resource.grad_grow_card
 targetEntityType: node
 bundle: resource
 mode: grad_grow_card
 content:
-  su_vpge_grad_grow_competency:
-    type: entity_reference_label
+  body:
+    type: text_summary_or_trimmed
     label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  su_vpge_time_commitment:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
+      trim_length: 600
     third_party_settings: {  }
     weight: 1
-    region: content
+    region: card_body
+  su_vpge_grad_grow_competency:
+    type: entity_reference_list_label_class
+    label: hidden
+    settings:
+      link: false
+      class: ''
+      list_type: ul
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+      ds:
+        ds_limit: ''
+    weight: 2
+    region: card_body
 hidden:
-  body: true
   layout_builder__layout: true
   links: true
   search_api_excerpt: true
@@ -66,3 +104,4 @@ hidden:
   su_vpge_resource_category: true
   su_vpge_resource_external_link: true
   su_vpge_resource_image: true
+  su_vpge_time_commitment: true

@@ -636,7 +636,7 @@ display:
         type: normal
         title: Resources
         description: ''
-        weight: -44
+        weight: -43
         enabled: false
         expanded: false
         menu_name: main

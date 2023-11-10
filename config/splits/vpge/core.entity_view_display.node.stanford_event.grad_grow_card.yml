@@ -42,134 +42,14 @@ dependencies:
     - node.type.stanford_event
   module:
     - ds
+    - element_class_formatter
     - empty_fields
     - field_formatter_class
-    - layout_builder
-    - layout_builder_restrictions
-    - layout_library
+    - link
     - smart_date
+    - stanford_media
     - user
 third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
-  layout_library:
-    enable: false
-  layout_builder_restrictions:
-    allowed_block_categories:
-      - 'Basic Page Type Lists (Views)'
-      - Book
-      - 'Changelog (Views)'
-      - 'Chaos Tools'
-      - 'Config Pages'
-      - 'Content fields'
-      - 'Custom block types'
-      - 'Custom blocks'
-      - 'Events Lists (Views)'
-      - Forms
-      - Help
-      - 'Inline blocks'
-      - 'Jumpstart UI'
-      - 'Lists (Views)'
-      - Menus
-      - 'News Lists (Views)'
-      - 'PDB React'
-      - 'People Lists (Views)'
-      - 'Policy (Views)'
-      - Printable
-      - 'Publication (Views)'
-      - React
-      - 'Stanford News'
-      - 'Stanford Profile Helper'
-      - 'Stanford SAML Authentication'
-      - System
-      - 'Taxonomy Terms (Views)'
-      - User
-      - 'VPGE views'
-      - Views
-      - core
-    entity_view_mode_restriction:
-      allowed_layouts:
-        - jumpstart_ui_one_column
-        - jumpstart_ui_two_column
-        - jumpstart_ui_three_column
-      denylisted_blocks:
-        'Content fields':
-          - 'field_block:node:stanford_event:uid'
-          - 'field_block:node:stanford_event:created'
-          - 'field_block:node:stanford_event:type'
-          - 'field_block:node:stanford_event:revision_default'
-          - 'field_block:node:stanford_event:default_langcode'
-          - 'field_block:node:stanford_event:nid'
-          - 'field_block:node:stanford_event:langcode'
-          - 'extra_field_block:node:stanford_event:links'
-          - 'field_block:node:stanford_event:menu_link'
-          - 'field_block:node:stanford_event:promote'
-          - 'field_block:node:stanford_event:status'
-          - 'field_block:node:stanford_event:rh_action'
-          - 'field_block:node:stanford_event:rh_redirect_fallback_action'
-          - 'field_block:node:stanford_event:rh_redirect'
-          - 'field_block:node:stanford_event:rh_redirect_response'
-          - 'field_block:node:stanford_event:revision_timestamp'
-          - 'field_block:node:stanford_event:vid'
-          - 'field_block:node:stanford_event:revision_log'
-          - 'field_block:node:stanford_event:revision_translation_affected'
-          - 'field_block:node:stanford_event:revision_uid'
-          - 'extra_field_block:node:stanford_event:search_api_excerpt'
-          - 'field_block:node:stanford_event:sticky'
-          - 'field_block:node:stanford_event:unpublish_on'
-          - 'field_block:user:user:changed'
-          - 'field_block:user:user:created'
-          - 'field_block:user:user:default_langcode'
-          - 'field_block:user:user:su_display_name'
-          - 'field_block:user:user:mail'
-          - 'field_block:user:user:init'
-          - 'field_block:user:user:langcode'
-          - 'field_block:user:user:access'
-          - 'field_block:user:user:login'
-          - 'extra_field_block:user:user:member_for'
-          - 'field_block:user:user:name'
-          - 'field_block:user:user:preferred_admin_langcode'
-          - 'field_block:user:user:preferred_langcode'
-          - 'field_block:user:user:roles'
-          - 'field_block:user:user:role_change'
-          - 'extra_field_block:user:user:search_api_excerpt'
-          - 'field_block:user:user:timezone'
-          - 'field_block:user:user:uid'
-          - 'field_block:user:user:status'
-      allowlisted_blocks:
-        Menus:
-          - 'menu_block:stanford-event-types'
-          - 'system_menu_block:stanford-event-types'
-          - 'menu_block:main'
-          - 'system_menu_block:main'
-          - 'menu_block:stanford-person-type'
-          - 'system_menu_block:stanford-person-type'
-          - 'menu_block:stanford-publication-topics'
-          - 'system_menu_block:stanford-publication-topics'
-          - 'menu_block:news-topics'
-          - 'system_menu_block:news-topics'
-        System:
-          - system_breadcrumb_block
-        core:
-          - page_title_block
-      restricted_categories:
-        - Book
-        - 'Changelog (Views)'
-        - 'Chaos Tools'
-        - 'Config Pages'
-        - Forms
-        - Help
-        - 'Lists (Views)'
-        - 'Policy (Views)'
-        - Printable
-        - React
-        - 'Stanford Profile Helper'
-        - 'Stanford SAML Authentication'
-        - 'Taxonomy Terms (Views)'
-        - User
-        - 'VPGE views'
-        - Views
   ds:
     layout:
       id: pattern_events_card
@@ -177,140 +57,214 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
-        wrappers:
-          start_month: div
-          start_date: div
-          end_month: div
-          end_date: div
-          event_type: div
-          headline: div
-          subheadline: div
-          url: div
-          date_time: div
-          location: div
-          address: div
-          location_organization: div
-          location_address_line1: div
-          location_address_line2: div
-          location_locality: div
-          location_administrative_area: div
-          location_dependent_locality: div
-          location_country_code: div
-          location_postal_code: div
-          location_sorting_code: div
-          edit: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
+        pattern:
+          field_templates: only_content
     regions:
       start_month:
-        - su_vpge_featured_image
-        - body
-        - su_event_alt_loc
-        - su_event_audience
-        - su_event_components
-        - su_event_contact_info
-        - su_event_cta
-        - su_event_dek
-        - su_event_email
-        - su_event_groups
-        - su_event_keywords
-        - su_event_location
-        - su_event_map_link
-        - su_event_schedule
-        - su_event_source
-        - su_event_sponsor
-        - su_event_subheadline
-        - su_event_subject
-        - su_event_telephone
-        - su_metatags
-        - su_shared_tags
-        - su_vpge_area_of_focus
-        - su_vpge_featured_event
-        - su_vpge_fellowship_audience
-        - su_vpge_fellowship_funding
-        - su_vpge_partner
-        - su_vpge_person
-        - su_vpge_program
-        - su_vpge_resource
-        - su_event_date_time
-        - su_vpge_grad_grow_competency
-        - su_vpge_time_commitment
+        - 'display_field_copy:node-event_date_time_1'
+      start_date:
+        - 'display_field_copy:node-event_date_time_2'
+      end_month:
+        - 'display_field_copy:node-event_date_time_3'
+      end_date:
+        - 'display_field_copy:node-event_date_time_4'
+      event_type:
         - su_event_type
+      headline:
+        - node_title
+      url:
+        - su_event_source
+      date_time:
+        - su_event_date_time
+      location:
+        - su_vpge_grad_grow_competency
+      edit:
+        - su_vpge_featured_image
+    fields:
+      'display_field_copy:node-event_date_time_1':
+        plugin_id: 'display_field_copy:node-event_date_time_1'
+        weight: 0
+        label: hidden
+        formatter: smartdate_default
+        settings:
+          formatter:
+            parts:
+              start: start
+              end: 0
+              duration: 0
+            timezone_override: ''
+            format: short_month
+            duration:
+              separator: ' | '
+              unit: ''
+              decimals: '2'
+              suffix: h
+            time_wrapper: '1'
+            force_chronological: 0
+            add_classes: 0
+            localize: 0
+      'display_field_copy:node-event_date_time_2':
+        plugin_id: 'display_field_copy:node-event_date_time_2'
+        weight: 1
+        label: hidden
+        formatter: smartdate_default
+        settings:
+          formatter:
+            parts:
+              start: start
+              end: 0
+              duration: 0
+            timezone_override: ''
+            format: day
+            duration:
+              separator: ' | '
+              unit: ''
+              decimals: '2'
+              suffix: h
+            time_wrapper: '1'
+            force_chronological: 0
+            add_classes: 0
+            localize: 0
+      'display_field_copy:node-event_date_time_3':
+        plugin_id: 'display_field_copy:node-event_date_time_3'
+        weight: 2
+        label: hidden
+        formatter: smartdate_default
+        settings:
+          formatter:
+            parts:
+              end: end
+              start: 0
+              duration: 0
+            timezone_override: ''
+            format: short_month
+            duration:
+              separator: ' | '
+              unit: ''
+              decimals: '2'
+              suffix: h
+            time_wrapper: '1'
+            force_chronological: 0
+            add_classes: 0
+            localize: 0
+      'display_field_copy:node-event_date_time_4':
+        plugin_id: 'display_field_copy:node-event_date_time_4'
+        weight: 3
+        label: hidden
+        formatter: smartdate_default
+        settings:
+          formatter:
+            parts:
+              end: end
+              start: 0
+              duration: 0
+            timezone_override: ''
+            format: day
+            duration:
+              separator: ' | '
+              unit: ''
+              decimals: '2'
+              suffix: h
+            time_wrapper: '1'
+            force_chronological: 0
+            add_classes: 0
+            localize: 0
+      node_title:
+        plugin_id: node_title
+        weight: 5
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          wrapper: h3
+          class: ''
 id: node.stanford_event.grad_grow_card
 targetEntityType: node
 bundle: stanford_event
 mode: grad_grow_card
 content:
   su_event_date_time:
-    type: smartdate_custom
+    type: smartdate_default
     label: hidden
     settings:
-      separator: ' - '
-      join: ', '
-      time_format: 'g:ia'
-      time_hour_format: ga
-      date_format: 'D, M j Y'
-      allday_label: 'All day'
-      date_first: '1'
-      ampm_reduce: '1'
-      site_time_toggle: '1'
-      custom_date_format: ''
-      timezone: ''
-      tooltip:
-        date_format: long
-        custom_date_format: ''
-      time_diff:
-        enabled: false
-        future_format: '@interval hence'
-        past_format: '@interval ago'
-        granularity: 2
-        refresh: 60
+      timezone_override: ''
+      format_type: medium
+      format: stanford_events_long
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      localize: false
+      parts:
+        - start
+        - end
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
     third_party_settings:
-      empty_fields:
-        handler: ''
       field_formatter_class:
         class: ''
-    weight: 1
-    region: content
+    weight: 7
+    region: date_time
+  su_event_source:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    weight: 6
+    region: url
   su_event_type:
     type: entity_reference_label
     label: hidden
     settings:
       link: true
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+      ds:
+        ds_limit: '1'
     weight: 4
-    region: content
+    region: event_type
   su_vpge_featured_image:
-    type: entity_reference_label
+    type: media_image_formatter
     label: hidden
     settings:
+      view_mode: default
       link: true
+      image_style: large_square
+      remove_alt: true
     third_party_settings:
       empty_fields:
         handler: ''
       field_formatter_class:
         class: ''
-    weight: 0
-    region: content
+    weight: 9
+    region: edit
   su_vpge_grad_grow_competency:
-    type: entity_reference_label
+    type: entity_reference_list_label_class
     label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  su_vpge_time_commitment:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
+      link: false
+      class: ''
+      list_type: ul
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+      ds:
+        ds_limit: ''
+    weight: 8
+    region: location
 hidden:
   body: true
   feeds_item: true
@@ -330,7 +284,6 @@ hidden:
   su_event_location: true
   su_event_map_link: true
   su_event_schedule: true
-  su_event_source: true
   su_event_sponsor: true
   su_event_subheadline: true
   su_event_subject: true
@@ -345,3 +298,4 @@ hidden:
   su_vpge_person: true
   su_vpge_program: true
   su_vpge_resource: true
+  su_vpge_time_commitment: true

@@ -56,9 +56,8 @@ function vpge_preprocess_banner(&$variables) {
  */
 function vpge_preprocess_views_view(&$variables) {
   $view = $variables['view'];
-  if ($view->storage->id() == "vpge_grad_grow" && $view->current_display == "filters_block") {
-    // Empty output for the filter block.
-    $variables['rows'] = " ";
+  if ($view->storage->id() == 'vpge_grad_grow') {
+    $variables['#attached']['library'][] = 'views_infinite_scroll/views-infinite-scroll';
   }
 }
 
@@ -66,9 +65,8 @@ function vpge_preprocess_views_view(&$variables) {
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function vpge_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\views\ViewExecutable $view */
   $view = $variables['view'];
-
-  if ($view->id() == 'vpge_grad_grow' && $view->current_display == "filters_block") {
-    $suggestions[] = 'views_view__' . $view->id();
-  }
+  $suggestions[] = 'views_view__' . $view->id();
+  $suggestions[] = 'views_view__' . $view->id() . '__' . $view->current_display;
 }
