@@ -336,8 +336,8 @@ display:
             group_items: {  }
           reduce_duplicates: false
           vid: vpge_grad_grow_competency
-          type: shs
-          hierarchy: false
+          type: select
+          hierarchy: true
           limit: true
           error_message: true
           depth: 0

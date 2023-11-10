@@ -22,14 +22,3 @@ function vpge_profile_helper_help($route_name, RouteMatchInterface $route_match)
     default:
   }
 }
-
-/**
- * implements hook_update_n
- */
-function vpge_profile_helper_update_8201(&$sandbox) {
-  $modules = ['fontawesome'];
-  \Drupal::database()->delete('key_value')
-    ->condition('collection', 'system.schema')
-    ->condition('name', $modules, 'IN')
-    ->execute();
-}
