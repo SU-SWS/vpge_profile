@@ -197,20 +197,20 @@ display:
                     filter_rewrite_values: '- Any -|All'
                   collapsible: false
                   is_secondary: false
-              term_node_tid_depth_1:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: '- Any -|All'
-                  collapsible: false
-                  is_secondary: false
               type_1:
                 plugin_id: default
                 advanced:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              term_node_tid_depth_1:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: '- Any -|All'
                   collapsible: false
                   is_secondary: false
       access:
@@ -660,508 +660,10 @@ display:
       relationships: {  }
       css_class: ''
       use_ajax: true
-      group_by: true
+      group_by: false
       header: {  }
       footer: {  }
       display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_2:
-    id: block_2
-    display_title: Resources
-    display_plugin: block
-    position: 2
-    display_options:
-      arguments:
-        term_node_tid_depth:
-          id: term_node_tid_depth
-          table: node_field_data
-          field: term_node_tid_depth
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: taxonomy_index_tid_depth
-          default_action: ignore
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          depth: 0
-          use_taxonomy_term_path: false
-      filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-        term_node_tid_depth:
-          id: term_node_tid_depth
-          table: node_field_data
-          field: term_node_tid_depth
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: taxonomy_index_tid_depth
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: term_node_tid_depth_op
-            label: 'Filter by competency'
-            description: ''
-            use_operator: false
-            operator: term_node_tid_depth_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: competency
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              administrator: '0'
-              anonymous: '0'
-              stanford_faculty: '0'
-              stanford_staff: '0'
-              stanford_student: '0'
-              contributor: '0'
-              site_manager: '0'
-              site_editor: '0'
-              site_builder: '0'
-              site_developer: '0'
-              layout_builder_user: '0'
-              su_site_embedder: '0'
-              decoupled_site_users: '0'
-              custm_vpge_site_manager: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: vpge_grad_grow_competency
-          type: shs
-          hierarchy: false
-          limit: true
-          error_message: true
-          depth: 0
-        term_node_tid_depth_1:
-          id: term_node_tid_depth_1
-          table: node_field_data
-          field: term_node_tid_depth
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: taxonomy_index_tid_depth
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: term_node_tid_depth_1_op
-            label: 'Filter by Time Commitment'
-            description: ''
-            use_operator: false
-            operator: term_node_tid_depth_1_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: term_node_tid_depth_1
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              administrator: '0'
-              anonymous: '0'
-              stanford_faculty: '0'
-              stanford_staff: '0'
-              stanford_student: '0'
-              contributor: '0'
-              site_manager: '0'
-              site_editor: '0'
-              site_builder: '0'
-              site_developer: '0'
-              layout_builder_user: '0'
-              su_site_embedder: '0'
-              decoupled_site_users: '0'
-              custm_vpge_site_manager: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: vpge_time_commitment
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-          depth: 0
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            stanford_event: stanford_event
-            resource: resource
-          group: 1
-          exposed: true
-          expose:
-            operator_id: type_op
-            label: 'Content type'
-            description: ''
-            use_operator: false
-            operator: type_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              administrator: '0'
-              anonymous: '0'
-              stanford_faculty: '0'
-              stanford_staff: '0'
-              stanford_student: '0'
-              contributor: '0'
-              site_manager: '0'
-              site_editor: '0'
-              site_builder: '0'
-              site_developer: '0'
-              layout_builder_user: '0'
-              su_site_embedder: '0'
-              decoupled_site_users: '0'
-              custm_vpge_site_manager: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      defaults:
-        arguments: false
-        filters: false
-        filter_groups: false
-        header: false
-      display_description: ''
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: '<h2>resources</h2>'
-            format: stanford_html
-          tokenize: false
-      display_extenders: {  }
-      block_description: 'VPGE Grad Grow - Display'
-      block_category: 'VPGE views'
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_3:
-    id: block_3
-    display_title: Events
-    display_plugin: block
-    position: 3
-    display_options:
-      title: Events
-      filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-        term_node_tid_depth:
-          id: term_node_tid_depth
-          table: node_field_data
-          field: term_node_tid_depth
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: taxonomy_index_tid_depth
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: term_node_tid_depth_op
-            label: 'Filter by competency'
-            description: ''
-            use_operator: false
-            operator: term_node_tid_depth_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: competency
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              administrator: '0'
-              anonymous: '0'
-              stanford_faculty: '0'
-              stanford_staff: '0'
-              stanford_student: '0'
-              contributor: '0'
-              site_manager: '0'
-              site_editor: '0'
-              site_builder: '0'
-              site_developer: '0'
-              layout_builder_user: '0'
-              su_site_embedder: '0'
-              decoupled_site_users: '0'
-              custm_vpge_site_manager: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: vpge_grad_grow_competency
-          type: shs
-          hierarchy: false
-          limit: true
-          error_message: true
-          depth: 0
-        term_node_tid_depth_1:
-          id: term_node_tid_depth_1
-          table: node_field_data
-          field: term_node_tid_depth
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: taxonomy_index_tid_depth
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: term_node_tid_depth_1_op
-            label: 'Filter by Time Commitment'
-            description: ''
-            use_operator: false
-            operator: term_node_tid_depth_1_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: term_node_tid_depth_1
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              administrator: '0'
-              anonymous: '0'
-              stanford_faculty: '0'
-              stanford_staff: '0'
-              stanford_student: '0'
-              contributor: '0'
-              site_manager: '0'
-              site_editor: '0'
-              site_builder: '0'
-              site_developer: '0'
-              layout_builder_user: '0'
-              su_site_embedder: '0'
-              decoupled_site_users: '0'
-              custm_vpge_site_manager: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: vpge_time_commitment
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-          depth: 0
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            resource: resource
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      defaults:
-        title: false
-        filters: false
-        filter_groups: false
-        header: false
-      display_description: ''
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: '<h2>Events</h2>'
-            format: stanford_html
-          tokenize: false
-      display_extenders: {  }
-      block_description: 'Grad Grow Events'
-      block_category: 'VPGE views'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1202,6 +704,21 @@ display:
             button_text: 'Load More'
             automatically_load_content: false
             initially_load_all_pages: false
+      sorts:
+        su_event_date_time_value:
+          id: su_event_date_time_value
+          table: node__su_event_date_time
+          field: su_event_date_time_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       filters:
         status:
           id: status
@@ -1571,6 +1088,7 @@ display:
           2: OR
       defaults:
         title: false
+        sorts: false
         filters: false
         filter_groups: false
         header: false
@@ -1592,8 +1110,9 @@ display:
       display_extenders: {  }
       displays:
         filters_block: filters_block
-      attachment_position: after
+      attachment_position: before
       inherit_exposed_filters: true
+      render_pager: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1613,9 +1132,26 @@ display:
     display_options:
       title: Filters
       pager:
-        type: none
+        type: full
         options:
           offset: 0
+          items_per_page: 1
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       style:
         type: default
         options:
@@ -1629,6 +1165,7 @@ display:
           view_mode: grad_grow_card
       defaults:
         title: false
+        use_ajax: true
         pager: false
         style: false
         row: false
@@ -1643,18 +1180,28 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: result
-          empty: false
-          content: '<strong>Results</strong> <span>@total  Events and Resources</span>'
+          empty: true
+          content: '<div aria-live="polite"><strong>Results</strong> <span>@total  Events and Resources</span></div>'
       exposed_block: false
       display_extenders: {  }
       block_description: 'VPGE Grad Grow - Filters'
       block_category: 'VPGE views'
+      allow:
+        items_per_page: false
+        offset: '0'
+        pager: '0'
+        hide_fields: '0'
+        sort_fields: '0'
+        configure_filters: '0'
+        disable_filters: '0'
+        configure_sorts: '0'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -1687,6 +1234,39 @@ display:
             button_text: 'Load More'
             automatically_load_content: false
             initially_load_all_pages: false
+      sorts:
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments:
         term_node_tid_depth:
           id: term_node_tid_depth
@@ -2093,6 +1673,7 @@ display:
           1: AND
           2: OR
       defaults:
+        sorts: false
         arguments: false
         filters: false
         filter_groups: false
@@ -2118,7 +1699,7 @@ display:
       attachment_position: after
       inherit_exposed_filters: true
       inherit_pager: false
-      render_pager: false
+      render_pager: true
     cache_metadata:
       max-age: -1
       contexts:

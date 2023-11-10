@@ -495,34 +495,43 @@ process:
           ignore_case: true
           source: name
   image_ext:
-    - plugin: skip_on_empty
+    -
+      plugin: skip_on_empty
       method: process
       source: photo_url
-    - plugin: explode
+    -
+      plugin: explode
       delimiter: .
-    - plugin: array_pop
+    -
+      plugin: array_pop
   image_destination_part_1:
-    - plugin: skip_on_empty
+    -
+      plugin: skip_on_empty
       method: process
       source: '@image_ext'
-    - plugin: concat
+    -
+      plugin: concat
       source:
         - constants/image_path
         - urlname
   image_destination:
-    - plugin: skip_on_empty
+    -
+      plugin: skip_on_empty
       method: process
       source: '@image_destination_part_1'
-    - plugin: concat
+    -
+      plugin: concat
       source:
         - '@image_destination_part_1'
         - '@image_ext'
       delimiter: .
   image_file:
-    - plugin: skip_on_empty
+    -
+      plugin: skip_on_empty
       method: process
       source: '@image_destination'
-    - plugin: file_import
+    -
+      plugin: file_import
       source: photo_url
       destination: '@image_destination'
       id_only: true

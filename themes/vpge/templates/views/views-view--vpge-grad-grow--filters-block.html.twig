@@ -42,7 +42,6 @@
   {{ title_suffix }}
 
   {{ exposed }}
-  {{ attachment_before }}
 
   {% if header %}
     <header class="flex-md-12-of-12">
@@ -50,13 +49,11 @@
     </header>
   {% endif %}
 
-  {% if rows -%}
-    {{ rows }}
-  {% elseif empty -%}
+  {% if empty -%}
     {{ empty }}
   {% endif %}
-  {{ pager }}
 
+  {{ attachment_before }}
   {{ attachment_after }}
   {{ more }}
 
