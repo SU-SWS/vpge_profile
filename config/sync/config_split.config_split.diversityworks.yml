@@ -7,7 +7,7 @@ label: 'Diversity Works'
 description: ''
 weight: 10
 stackable: false
-no_patching: false
+no_patching: true
 storage: folder
 folder: profiles/custom/vpge_profile/config/splits/diversityworks
 module:

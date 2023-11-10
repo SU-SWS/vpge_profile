@@ -1,7 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.node.stanford_event.feeds_item
-  hidden:
-    feeds_item: true
-removing: {  }

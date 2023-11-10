@@ -7,7 +7,7 @@ label: 'Default VPGE'
 description: ''
 weight: 10
 stackable: false
-no_patching: false
+no_patching: true
 storage: folder
 folder: profiles/custom/vpge_profile/config/splits/vpge
 module:
@@ -44,5 +44,6 @@ partial_list:
   - 'search_api.index.*'
   - 'rabbit_hole.behavior_settings.*'
   - 'user.role.*'
+  - 'system.action.user_*'
   - 'core.entity_form_display.*'
   - 'core.entity_view_display.*'
