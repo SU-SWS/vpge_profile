@@ -1,4 +1,0 @@
-adding:
-  permissions:
-    - 'assign custm_vpge_site_manager role'
-removing: {}
