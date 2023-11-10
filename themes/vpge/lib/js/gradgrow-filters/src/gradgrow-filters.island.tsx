@@ -1,7 +1,22 @@
 import {createIslandWebComponent} from 'preact-island'
 import {useEffect, useState} from "preact/compat";
 import SelectList from "./select-list";
+import styled from "styled-components";
 
+const FilterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  > * {
+    flex: 1 1 0;
+  }
+`
 
 const GradGrowFilters = () => {
 
@@ -24,7 +39,7 @@ const GradGrowFilters = () => {
       const option = options[i];
       const value = option.getAttribute('value')
       const label = option.textContent;
-      if (value === 'All') continue;
+      if (value === 'All' || label.startsWith('--')) continue;
 
       if (label.startsWith('-')) {
         selectOptions[selectOptions.length - 1].below.push({value, label: label.substring(1)})
@@ -78,12 +93,12 @@ const GradGrowFilters = () => {
   }
 
   return (
-    <form style={{display: "flex", flexDirection:"column", gap: "40px"}}>
+    <form style={{display: "flex", flexDirection: "column", gap: "40px"}}>
       <fieldset style={{padding: 0}}>
         <legend>Filter by Competency</legend>
 
-        <div style={{display: "flex", gap: "40px", justifyContent: "space-between"}}>
-          <div style={{flex: "1 1 0px"}}>
+        <FilterContainer>
+          <div>
             <SelectList
               options={competencyOptions}
               label="Competency"
@@ -91,21 +106,20 @@ const GradGrowFilters = () => {
               onChange={(e, value) => setSelectedCompetency(value)}
             />
           </div>
-          <div style={{flex: "1 1 0px"}}>
-            {subCompetencies.length > 0 &&
-              <SelectList
-                options={subCompetencies}
-                label="Sub-Competency"
-                emptyLabel="- Any -"
-                onChange={(e, value) => setSelectedSubCompetency(value)}
-              />
-            }
+          <div>
+            <SelectList
+              options={subCompetencies}
+              disabled={subCompetencies.length === 0}
+              label="Sub-Competency"
+              emptyLabel="- Any -"
+              onChange={(e, value) => setSelectedSubCompetency(value)}
+            />
           </div>
-        </div>
+        </FilterContainer>
       </fieldset>
 
-      <div style={{display: "flex", gap: "40px", justifyContent: "space-between"}}>
-        <div style={{flex: "1 1 0px"}}>
+      <FilterContainer>
+        <div>
           <SelectList
             options={opportunityOptions}
             label="Filter by Learning Opportunity"
@@ -114,7 +128,7 @@ const GradGrowFilters = () => {
           />
         </div>
 
-        <div style={{flex: "1 1 0px"}}>
+        <div>
           <SelectList
             options={timeOptions}
             label="Filter by Time Commitment"
@@ -122,7 +136,7 @@ const GradGrowFilters = () => {
             onChange={(e, value) => setSelectedTime(value)}
           />
         </div>
-      </div>
+      </FilterContainer>
       <div style={{display: "flex", gap: "20px"}}>
         <button onClick={submit}>Apply Filters
         </button>

@@ -135,7 +135,7 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
         {...getButtonProps()}
         aria-labelledby={labeledBy}
         style={{
-          background: "#fff",
+          background: props.disabled ? "#D5D5D4": "#fff",
           color: "#000",
           width: "100%",
           border: "1px solid black",
@@ -159,7 +159,8 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
                 id={labelId}
                 style={{
                   width: "fit-content",
-                  background: "white",
+                  background: props.disabled ? "#D5D5D4": "#fff",
+                  transition: "background-color .25s ease-in-out",
                   padding: "0 7px",
                 }}
               >
@@ -185,6 +186,7 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
           maxHeight: "300px",
           overflowY: "scroll",
           width: "100%",
+          border: "1px solid #D5D5D4",
           boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
           display: listboxVisible ? "block" : "none"
         }}
