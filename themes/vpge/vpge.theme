@@ -57,7 +57,7 @@ function vpge_preprocess_banner(&$variables) {
 function vpge_preprocess_views_view(&$variables) {
   $view = $variables['view'];
   if ($view->storage->id() == 'vpge_grad_grow') {
-    $variables['#attached']['library'][] = 'views_infinite_scroll/views-infinite-scroll';
+    $variables['#attached']['library'][] = 'vpge/gradgrow-filters';
   }
 }
 
