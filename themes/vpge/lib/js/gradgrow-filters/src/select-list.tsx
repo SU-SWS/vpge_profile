@@ -30,12 +30,15 @@ const renderSelectedValue = (value: SelectValue<string, boolean>, options: Selec
 const StyledOption = styled.li<{ selected: boolean, highlighted: boolean }>`
   cursor: pointer;
   overflow: hidden;
+  margin: 0;
+  padding: 5px 10px;
   background: ${props => props.selected ? "#5d4b3c" : props.highlighted ? "#eaeaea" : ""};
   color: ${props => props.selected ? "#fff" : props.highlighted ? "#2e2d29" : ""};
 
   &:hover {
     background: ${props => props.selected || props.highlighted ? "" : "#eaeaea"};
-    text: #2E2D29
+    color: ${props => props.selected ? "" :"#2E2D29"};
+    text-decoration: underline;
   }
 `
 
@@ -151,8 +154,8 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
         }}>
           {label &&
             <div style={{
-              position: "relative",
-              top: optionChosen ? "-15px" : "",
+              position: optionChosen ? "absolute" : "relative",
+              top: optionChosen ? "5px" : "",
               width: optionChosen ? "100%" : "",
             }}>
               <div
@@ -197,6 +200,8 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
           aria-labelledby={labeledBy}
           style={{
             listStyle: "none",
+            margin: 0,
+            padding: 0
           }}
         >
           <SelectProvider value={contextValue}>

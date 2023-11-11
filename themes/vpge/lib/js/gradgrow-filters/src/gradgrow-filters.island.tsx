@@ -93,7 +93,14 @@ const GradGrowFilters = () => {
   }
 
   return (
-    <form style={{display: "flex", flexDirection: "column", gap: "40px"}}>
+    <form style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "40px",
+      borderBottom: "1px solid black",
+      paddingBottom:"13.3rem",
+      marginBottom: "2.7rem"
+    }}>
       <fieldset style={{padding: 0}}>
         <legend>Filter by Competency</legend>
 
