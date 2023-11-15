@@ -37,7 +37,7 @@ const StyledOption = styled.li<{ selected: boolean, highlighted: boolean }>`
 
   &:hover {
     background: ${props => props.selected || props.highlighted ? "" : "#eaeaea"};
-    color: ${props => props.selected ? "" :"#2E2D29"};
+    color: ${props => props.selected ? "" : "#2e2d29"};
     text-decoration: underline;
   }
 `
@@ -134,17 +134,30 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
         width: "100%",
       }}
     >
+      {label &&
+        <div style={{marginBottom: "10px"}}>
+          <div
+            id={labelId}
+            style={{
+              width: "fit-content",
+              padding: "0 7px",
+            }}
+          >
+            {label}
+          </div>
+        </div>
+      }
+
       <button
         {...getButtonProps()}
         aria-labelledby={labeledBy}
         style={{
-          background: props.disabled ? "#D5D5D4": "#fff",
+          background: props.disabled ? "#d5d5d4" : "#fff",
           color: "#000",
           width: "100%",
           border: "1px solid black",
           borderRadius: "5px",
           textAlign: "left",
-          marginTop: "15px"
         }}
       >
         <div style={{
@@ -152,32 +165,13 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
           justifyContent: "space-between",
           flexWrap: "wrap",
         }}>
-          {label &&
-            <div style={{
-              position: optionChosen ? "absolute" : "relative",
-              top: optionChosen ? "5px" : "",
-              width: optionChosen ? "100%" : "",
-            }}>
-              <div
-                id={labelId}
-                style={{
-                  width: "fit-content",
-                  background: props.disabled ? "#D5D5D4": "#fff",
-                  transition: "background-color .25s ease-in-out",
-                  padding: "0 7px",
-                }}
-              >
-                {label}
-              </div>
-            </div>
-          }
           {optionChosen &&
             <div style={{overflow: "hidden", maxWidth: "calc(100% - 30px)"}}>
               {renderSelectedValue(value, options)}
             </div>
           }
 
-          <ChevronDownIcon width={20} style={{flexShrink: "0"}}/>
+          <ChevronDownIcon width={20} style={{flexShrink: "0", marginLeft: "auto"}}/>
         </div>
       </button>
 

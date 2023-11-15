@@ -102,7 +102,7 @@ const GradGrowFilters = () => {
       marginBottom: "2.7rem"
     }}>
       <fieldset style={{padding: 0}}>
-        <legend>Filter by Competency</legend>
+        <legend style={{fontSize: "24px", marginBottom: "15px"}}>Filter by Competency</legend>
 
         <FilterContainer>
           <div>
