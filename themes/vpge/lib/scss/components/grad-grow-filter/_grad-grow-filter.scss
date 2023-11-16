@@ -85,7 +85,7 @@
 
   &.events,
   &.resources {
-    @include responsive-spacing('margin-top', 5);
+    @include responsive-spacing('margin-top', 4);
 
     margin-bottom: 4rem;
     padding: 0;
@@ -199,7 +199,7 @@
     }
 
     .pager {
-      padding-top: 3rem;
+      @include responsive-spacing('padding-top', 5);
 
       .pager__items {
         margin-bottom: 0;
