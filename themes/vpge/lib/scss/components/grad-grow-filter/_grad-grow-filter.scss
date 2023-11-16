@@ -222,6 +222,17 @@
             }
           }
 
+          &.pager__item--ellipsis {
+            position: relative;
+            bottom: 6px;
+            
+            &:hover,
+            &:focus,
+            &:active {
+              border-bottom: none;
+            }
+          }
+
           &:hover,
           &:focus,
           &:active {

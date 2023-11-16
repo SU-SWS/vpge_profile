@@ -702,7 +702,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          quantity: 3
       sorts:
         su_event_date_time_value:
           id: su_event_date_time_value
@@ -1231,7 +1231,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          quantity: 3
       sorts:
         title:
           id: title
