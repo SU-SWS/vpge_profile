@@ -203,12 +203,20 @@
 
       .pager__items {
         margin-bottom: 0;
+        padding-left: 0;
 
         .pager__item {
-          padding: .5rem;
-          margin: 1.5rem;
-          padding-bottom: 0;
-          margin-bottom: 0;
+          // padding: .5rem;
+          // margin: 1.5rem;
+          // padding-bottom: 0;
+          // margin-bottom: 0;
+          margin: 1.5rem 1.5rem 0;
+          padding: 0.5rem 0.5rem 0;
+
+          @include grid-media-max('sm') {
+            margin: 1rem 0;
+            padding: 1.1rem 1.1rem 0;
+          }
 
           &.pager__item--active {
             border-bottom: 2px solid $su-color-black;
@@ -233,6 +241,10 @@
             font-size: 2.3rem;
             font-weight: 700;
             text-decoration: none;
+
+            @include grid-media-max('sm') {
+              font-size: 1.8rem;
+            }
           }
         }
       }
