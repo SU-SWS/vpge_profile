@@ -692,8 +692,8 @@ display:
           tags:
             next: Next
             previous: Previous
-            first: First
-            last: Last
+            first: '<<'
+            last: '>>'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -1221,8 +1221,8 @@ display:
           tags:
             next: Next
             previous: Previous
-            first: First
-            last: Last
+            first: '<<'
+            last: '>>'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
