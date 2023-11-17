@@ -152,10 +152,10 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
         {...getButtonProps()}
         aria-labelledby={labeledBy}
         style={{
-          background: props.disabled ? "#d5d5d4" : "#fff",
+          background: "#fff",
           color: "#000",
           width: "100%",
-          border: "1px solid black",
+          border: props.disabled ? "1px solid #ABABA9" : "1px solid #000",
           borderRadius: "5px",
           textAlign: "left",
         }}
@@ -171,7 +171,7 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
             </div>
           }
 
-          <ChevronDownIcon width={20} style={{flexShrink: "0", marginLeft: "auto"}}/>
+          <ChevronDownIcon width={20} style={{flexShrink: "0", marginLeft: "auto", color: props.disabled ? "#ABABA9" : "#000"}}/>
         </div>
       </button>
 

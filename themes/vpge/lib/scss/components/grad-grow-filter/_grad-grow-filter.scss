@@ -116,7 +116,7 @@
           grid-template-columns: repeat(2,minmax(0,1fr));
         }
 
-        @include grid-media-min('xl') {
+        @include grid-media-min('2xl') {
           grid-template-columns: repeat(3,minmax(0,1fr));
         }
 
@@ -207,11 +207,9 @@
 
         .pager__item {
           margin: 1.5rem 1.5rem 0;
-          padding: 0.5rem 0.5rem 0;
 
           @include grid-media-max('sm') {
-            margin: 1rem 0;
-            padding: 1.1rem 1.1rem 0;
+            margin: 1.1rem 0.5rem 0;
           }
 
           &.pager__item--active {
@@ -225,22 +223,14 @@
           &.pager__item--ellipsis {
             position: relative;
             bottom: 6px;
-            
-            &:hover,
-            &:focus,
-            &:active {
-              border-bottom: none;
-            }
           }
 
-          &:hover,
-          &:focus,
-          &:active {
-            border-bottom: 2px solid $su-color-black;
-            
-            a {
-              color: $su-color-black;
-            }
+          &.pager__item---first {
+            margin-left: 0;
+          }
+
+          &.pager__item--last {
+            margin-right: 0;
           }
 
           a {
@@ -248,9 +238,18 @@
             font-size: 2.3rem;
             font-weight: 700;
             text-decoration: none;
+            padding: 0 .5rem;
 
             @include grid-media-max('sm') {
               font-size: 1.8rem;
+              padding: 0 .3rem;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+              border-bottom: 2px solid $su-color-black;
+              color: $su-color-black;
             }
           }
         }
