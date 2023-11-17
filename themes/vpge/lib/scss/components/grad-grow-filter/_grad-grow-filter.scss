@@ -73,9 +73,19 @@
     }
   }
 
+  header {
+    [aria-live="polite"] {
+      font-size: 2.3rem;
+
+      strong {
+        padding-right: 2.5rem;
+      }
+    }
+  }
+
   &.events,
   &.resources {
-    @include responsive-spacing('margin-top', 5);
+    @include responsive-spacing('margin-top', 4);
 
     margin-bottom: 4rem;
     padding: 0;
@@ -99,7 +109,6 @@
       margin-top: -12rem;
   
       .su-list-unstyled {
-        // padding: 0 3.4rem;
         padding: 0 3rem;
         gap: 4.5rem 3rem;
 
@@ -107,7 +116,7 @@
           grid-template-columns: repeat(2,minmax(0,1fr));
         }
 
-        @include grid-media-min('xl') {
+        @include grid-media-min('2xl') {
           grid-template-columns: repeat(3,minmax(0,1fr));
         }
 
@@ -115,10 +124,16 @@
         .ds-entity--resource {
           container-type: inline-size;
 
+          .su-card {
+            .su-card__contents {
+              padding: 3rem;
+            }
+          }
+
           @container (max-width: 200px) {
             .su-card {
               .su-card__contents {
-                padding: 2rem 2rem;
+                padding: 2rem;
 
                 .su-vpge-grad-grow-competency {
                   li {
@@ -177,6 +192,64 @@
                   width: fit-content;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+
+    .pager {
+      @include responsive-spacing('padding-top', 5);
+
+      .pager__items {
+        margin-bottom: 0;
+        padding-left: 0;
+
+        .pager__item {
+          margin: 1.5rem 1.5rem 0;
+
+          @include grid-media-max('sm') {
+            margin: 1.1rem 0.5rem 0;
+          }
+
+          &.pager__item--active {
+            border-bottom: 2px solid $su-color-black;
+
+            a {
+              color: $su-color-black;
+            }
+          }
+
+          &.pager__item--ellipsis {
+            position: relative;
+            bottom: 6px;
+          }
+
+          &.pager__item---first {
+            margin-left: 0;
+          }
+
+          &.pager__item--last {
+            margin-right: 0;
+          }
+
+          a {
+            color: $su-color-digital-red;
+            font-size: 2.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 0 .5rem;
+
+            @include grid-media-max('sm') {
+              font-size: 1.8rem;
+              padding: 0 .3rem;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+              border-bottom: 2px solid $su-color-black;
+              color: $su-color-black;
             }
           }
         }

@@ -87,10 +87,6 @@ const GradGrowFilters = () => {
     e.preventDefault()
     document.querySelector('[id^="edit-submit-vpge-grad-grow"]').click()
   }
-  const reset = (e) => {
-    e.preventDefault();
-    window.location = window.location.pathname;
-  }
 
   return (
     <form style={{
@@ -144,21 +140,21 @@ const GradGrowFilters = () => {
           />
         </div>
       </FilterContainer>
-      <div style={{display: "flex", gap: "20px"}}>
-        <button onClick={submit}>Apply Filters
-        </button>
+      <button onClick={submit} style={{width: "fit-content"}}>Apply Filters
+      </button>
 
-        {(selectedOpportunity || selectedTime || selectedCompetency) &&
-          <button onClick={reset}>
-            Reset Filters
-          </button>
-        }
-      </div>
+      {(selectedOpportunity || selectedTime || selectedCompetency) &&
+        <a href={window.location.pathname} style={{cursor: "pointer", fontSize: "2rem"}}>
+          Clear all filters
+          <span aria-hidden="true">
+            <i class="fas fa-times" style={{display: "inline-block", paddingLeft: ".6rem", position: "relative", top: "2px"}}></i>
+          </span>
+        </a>
+      }
 
     </form>
   )
 }
-
 
 const island = createIslandWebComponent('gradgrow-filters', GradGrowFilters)
 island.render({
