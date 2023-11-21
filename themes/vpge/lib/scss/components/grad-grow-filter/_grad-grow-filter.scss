@@ -170,27 +170,20 @@
                 }
               }
             }
-        
-            .su-wysiwyg-text {
-              margin-bottom: 3rem;
-            }
-        
+
             .su-vpge-grad-grow-competency,
             .views-field-su-event-location {
-              ul {
-                list-style: none;
-                padding-left: 0;
-                
-                li {
-                  color: $su-color-black-70;
-                  border: 0.2rem solid $su-color-black-70;
-                  border-radius: 3rem;
-                  margin-bottom: 1.4rem;
-                  font-size: 1.6rem;
-                  padding: 0.2rem 1.7rem;
-                  font-weight: 700;
-                  width: fit-content;
-                }
+              margin-top: 3rem;
+
+              .cshs-term-group__title {
+                color: $su-color-black-70;
+                border: 0.2rem solid $su-color-black-70;
+                border-radius: 3rem;
+                margin-bottom: 1.4rem;
+                font-size: 1.6rem;
+                padding: 0.2rem 1.7rem;
+                font-weight: 700;
+                width: fit-content;
               }
             }
           }
@@ -283,7 +276,6 @@
         h3 {
           margin-bottom: 0.5rem;
         }
-
       }
 
       .views-field-su-event-date-time {
@@ -297,10 +289,6 @@
       .views-field-su-event-location {
         .map-icon {
           display: none;
-        }
-
-        ul {
-          margin-top: 3rem;
         }
       }
 
