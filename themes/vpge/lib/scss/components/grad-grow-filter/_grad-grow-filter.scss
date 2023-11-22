@@ -75,10 +75,18 @@
 
   header {
     [aria-live="polite"] {
-      font-size: 2.3rem;
+      font-size: 1.9rem;
+
+      @include grid-media-min('sm') {
+        font-size: 2.3rem;
+      }
 
       strong {
-        padding-right: 2.5rem;
+        padding-right: 1.5rem;
+
+        @include grid-media-min('sm') {
+          padding-right: 2.5rem;
+        }
       }
     }
   }
