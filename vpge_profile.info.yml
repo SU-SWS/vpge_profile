@@ -1,6 +1,6 @@
 name: 'VPGE Profile'
 description: 'Jumpstart Website Profile'
-version: 11.0.6
+version: 11.1.0
 type: profile
 project: Stanford
 core_version_requirement: ^9 || ^10
