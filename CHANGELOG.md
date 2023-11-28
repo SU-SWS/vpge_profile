@@ -1,5 +1,28 @@
 # VPGE Profile
 
+11.1.0
+-------------------------------------------------------------------------------
+- Added outside click handler
+- Update results font-size and padding-right for mobile (#77)
+- Fix card pill styles (#76)
+- Display only root taxonomy for grad grow cards
+- VGGD-26 Update filter view styles and pagination (#75)
+- Adjust filters and view pager for gradgrow
+- Fixed padding and margin on select items
+- Updated editorially settings
+- Replace gradgrow filters with decoupled filters (#74)
+- Grad Grow filters view and styling
+- Updated config split settings
+- VGGD-26 Update displays and styles for grad grow view (#70)
+- VGGD028 - adding patch. (#73)
+- Added cron job config
+- D8CORE-2761: reduced padding on filterby menu (#728)
+- VGGD-27 - enabled "Apply Filter" and other BEF tweaks. (#72)
+- VGGD-25 - importing localist images (#69)
+- Updated config split settings
+- VGGD-16 Update grad grow card link styles (#61)
+- VGGD-14 -- grad grow filters view (#66)
+
 11.0.6
 -------------------------------------------------------------------------------
 - D8CORE-7066 Adjust site contact fields & language (#741)
