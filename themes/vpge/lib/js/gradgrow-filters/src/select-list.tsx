@@ -3,6 +3,7 @@ import {useSelect, SelectOptionDefinition, SelectProvider, SelectValue} from '@m
 import {useOption} from '@mui/base/useOption';
 import {ChevronDownIcon} from "@heroicons/react/20/solid";
 import {useEffect, useState, useId, useRef, useLayoutEffect, RefObject, ReactNode} from "preact/compat";
+import useOutsideClick from "./use-outside-click";
 
 interface OptionProps {
   rootRef: RefObject<HTMLUListElement>
@@ -103,7 +104,7 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
   const inputRef = useRef<HTMLInputElement | null>(null);
   const listboxRef = useRef<HTMLUListElement | null>(null);
   const [listboxVisible, setListboxVisible] = useState<boolean>(false);
-
+  const containerProps = useOutsideClick(() => setListboxVisible(false))
 
   const {getButtonProps, getListboxProps, contextValue, value} = useSelect<string, boolean>({
     listboxRef,
@@ -129,6 +130,7 @@ const SelectList = ({options = [], label, multiple, ariaLabelledby, required, de
 
   return (
     <div
+      {...containerProps}
       style={{
         position: "relative",
         width: "100%",
