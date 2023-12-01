@@ -1,5 +1,9 @@
 # VPGE Profile
 
+11.1.1
+-------------------------------------------------------------------------------
+- Adjust decoupled filters to provide unique urls and default values from the field.
+
 11.1.0
 -------------------------------------------------------------------------------
 - Added outside click handler
