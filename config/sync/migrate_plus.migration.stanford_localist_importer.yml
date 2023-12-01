@@ -593,6 +593,7 @@ destination:
     - su_event_source/uri
     - su_event_subject
     - su_event_type
+    - su_vpge_featured_image/target_id
     - tags
     - tags_chunked
     - title
