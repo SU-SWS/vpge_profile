@@ -44,13 +44,14 @@
 <div class="preview">
   <div id="gradgrow-filters-island"></div>
   <form class="views-exposed-form bef-exposed-form"
+        onsubmit="return event.preventDefault();"
         style="margin-top:20px; border: 4px solid red"
         data-drupal-selector="views-exposed-form-vpge-grad-grow-filters-block" action="/grad-grow-filters" method="get"
         id="views-exposed-form-vpge-grad-grow-filters-block" accept-charset="UTF-8" data-once="exposed-form">
     <div class="js-form-item form-item js-form-type-select form-item-competency js-form-item-competency">
       <label for="edit-competency">Filter by competency</label>
 
-      <select data-drupal-selector="edit-competency" multiple="multiple" name="competency[]" id="edit-competency" size="9" class="form-select" data-once="chosen">
+      <select data-drupal-selector="edit-competency" name="competency" id="edit-competency" size="9" class="form-select" data-once="chosen">
         <option value="1111">Communication</option>
         <option value="1116">-Writing</option>
         <option value="1181">-Speaking &amp; presenting</option>
@@ -85,7 +86,7 @@
       <label for="edit-content-type">Filter by learning opportunity</label>
 
       <select data-drupal-selector="edit-content-type" id="edit-content-type" name="content_type" class="form-select">
-        <option value="All" selected="selected">- Any -</option>
+        <option value="All">- Any -</option>
         <option value="1">Event</option>
         <option value="2">Resource</option>
       </select>
