@@ -20,7 +20,7 @@ isotope:
 gradgrow-filters:
   version: VERSION
   js:
-    lib/js/gradgrow-filters/dist/islands/gradgrow-filters.island.js: {}
+    lib/js/gradgrow-filters/dist/islands/gradgrow-filters.island.js: {minified: true}
   dependencies:
     - views_infinite_scroll/views-infinite-scroll
     - core/once
