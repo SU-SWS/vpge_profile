@@ -68,6 +68,11 @@ class VpgeProfilePermissions implements ContainerInjectionInterface {
       }
     }
 
+    // Custom permissions for this application.
+    $permissions['assign custm_vpge_site_manager role'] = [
+      'title' => $this->t('Can add the custm_vpge_site_manager role'),
+    ];
+
     return $permissions;
   }
 
