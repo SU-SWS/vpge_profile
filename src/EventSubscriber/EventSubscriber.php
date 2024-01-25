@@ -8,6 +8,7 @@ use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Installer\InstallerKernel;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Messenger\MessengerInterface;
+use Drupal\Core\Site\Settings;
 use Drupal\Core\StreamWrapper\StreamWrapperManager;
 use Drupal\Core\Url;
 use Drupal\core_event_dispatcher\EntityHookEvents;
@@ -120,6 +121,7 @@ class EventSubscriber implements EventSubscriberInterface {
 
     if (
       $event->getRequestType() == HttpKernelInterface::MAIN_REQUEST &&
+      (Settings::get('stanford_capture_ownership', FALSE)) &&
       !str_starts_with($current_uri, '/admin/config/system/basic-site-settings') &&
       self::redirectUser()
     ) {
