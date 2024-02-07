@@ -21,38 +21,23 @@ filters:
       allowed_html: '<br> <p id class> <a class aria-label hreflang data-entity-substitution data-entity-type data-entity-uuid title id href> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <cite> <dd> <div id class> <blockquote cite> <strong> <em> <code> <ul> <ol reversed start> <li>'
       filter_html_help: true
       filter_html_nofollow: false
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
+  filter_html_escape:
+    id: filter_html_escape
     provider: filter
-    status: true
-    weight: -10
-    settings: {  }
-  linkit:
-    id: linkit
-    provider: linkit
-    status: true
-    weight: 10
-    settings:
-      title: true
-  filter_responsive_tables_filter:
-    id: filter_responsive_tables_filter
-    provider: responsive_tables_filter
     status: false
     weight: 0
-    settings:
-      tablesaw_type: stack
-      tablesaw_persist: '1'
+    settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
     status: false
     weight: 50
     settings: {  }
-  filter_html_escape:
-    id: filter_html_escape
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
     provider: filter
-    status: false
-    weight: 0
+    status: true
+    weight: -10
     settings: {  }
   filter_mathjax:
     id: filter_mathjax
