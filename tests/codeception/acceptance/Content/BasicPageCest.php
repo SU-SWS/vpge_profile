@@ -383,7 +383,7 @@ class BasicPageCest {
     $I->amOnPage($node->toUrl('edit-form')->toString());
     $I->click('Save');
     $I->canSee($node->label(), 'h1');
-
+    $I->runDrush('search-api-index');
     $I->fillField('Search this site', $node->label());
     $I->click('Submit Search');
     $I->canSee($node->label(), 'h2');
