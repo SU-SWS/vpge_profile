@@ -384,6 +384,7 @@ class BasicPageCest {
     $I->click('Save');
     $I->canSee($node->label(), 'h1');
     $I->runDrush('search-api-index');
+    $I->runDrush('cron');
     $I->fillField('Search this site', $node->label());
     $I->click('Submit Search');
     $I->canSee($node->label(), 'h2');
