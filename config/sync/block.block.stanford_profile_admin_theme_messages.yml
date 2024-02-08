@@ -8,7 +8,7 @@ dependencies:
     - stanford_profile_admin_theme
 _core:
   default_config_hash: DvkoOGCIrHsmERvowtdTqizSlKf7oMBY3L_6QYSwGWY
-id: stanford_profile_admin_messages
+id: stanford_profile_admin_theme_messages
 theme: stanford_profile_admin_theme
 region: highlighted
 weight: 0

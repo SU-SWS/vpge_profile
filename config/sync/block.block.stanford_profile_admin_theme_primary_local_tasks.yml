@@ -6,7 +6,7 @@ dependencies:
     - stanford_profile_admin_theme
 _core:
   default_config_hash: pX1oRCtS3INT9-ula1W3x4JskdD7sJnVkqKcK503bSk
-id: stanford_profile_admin_primary_local_tasks
+id: stanford_profile_admin_theme_primary_local_tasks
 theme: stanford_profile_admin_theme
 region: header
 weight: 0

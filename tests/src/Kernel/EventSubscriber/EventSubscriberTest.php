@@ -140,8 +140,12 @@ class EventSubscriberTest extends KernelTestBase {
     $ci = getenv('CI');
     putenv('CI');
 
-    $config_page_loader = $this->createMock(ConfigPagesLoaderServiceInterface::class);
+    $site_settings = [
+      'stanford_capture_ownership' => TRUE,
+    ];
+    new Settings($site_settings);
 
+    $config_page_loader = $this->createMock(ConfigPagesLoaderServiceInterface::class);
     \Drupal::getContainer()->set('config_pages.loader', $config_page_loader);
 
     $account = $this->createMock(AccountProxyInterface::class);
