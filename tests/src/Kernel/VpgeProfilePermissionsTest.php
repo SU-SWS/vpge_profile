@@ -59,7 +59,7 @@ class VpgeProfilePermissionsTest extends KernelTestBase {
   public function testPermissions() {
     $permission_class = VpgeProfilePermissions::create(\Drupal::getContainer());
     $permissions = $permission_class->permissions();
-    $this->assertCount(1, $permissions);
+    $this->assertCount(2, $permissions);
     $this->assertArrayHasKey('choose layout for node article', $permissions);
   }
 

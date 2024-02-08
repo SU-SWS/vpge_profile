@@ -9,7 +9,7 @@ id: node.fellowship_funding.su_vpge_fellowship_app_period
 field_name: su_vpge_fellowship_app_period
 entity_type: node
 bundle: fellowship_funding
-label: 'Application Period'
+label: 'Nomination Period'
 description: 'Enter in the date(s) for this fellowship/funding opportunity (e.g., Feb/March or Feb 28).'
 required: false
 translatable: false

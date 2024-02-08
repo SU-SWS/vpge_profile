@@ -151,6 +151,12 @@ class EventSubscriberTest extends KernelTestBase {
     $account = $this->createMock(AccountProxyInterface::class);
     $account->method('hasPermission')->willReturn(TRUE);
     $account->method('getRoles')->willReturn([]);
+    //$settings['stanford_capture_ownership'] = TRUE;
+
+    $site_settings = [
+      'stanford_capture_ownership' => true,
+    ];
+    new Settings($site_settings);
 
     \Drupal::currentUser()->setAccount($account);
     $request = Request::create('/foo/bar', 'GET', [], [], [], ['SCRIPT_NAME' => 'index.php']);
