@@ -1,5 +1,18 @@
 # VPGE Profile
 
+11.2.0
+-------------------------------------------------------------------------------
+
+856f23c1 Added external image url for events content from Localist
+776fdb06 D8CORE-7125 Use field_label module to choose which heading element for field labels (#761)
+52f96878 D8CORE-6982 Add validation to publication DOI fields to avoid full urls
+3e3c4de2 D8CORE-7203 Some improvements to metatags on some content types
+5d5cbf2b Add empty alt text to logo in policy print page
+572a4b9f D8CORE-7088 Replace policy print page h2 with h1 tag
+e7b864ef Adjust allowed menus in layout builder restrictions
+c76ca3c3 D8CORE-7132 Add policy content types to teasser paragraph field
+675e5588 D8CORE-7255 exclude lazy load oembed links from external links (#760)
+
 11.1.3
 -------------------------------------------------------------------------------
 - Fix inheritance (#83)
