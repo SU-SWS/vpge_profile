@@ -59,7 +59,7 @@
         "drupal/config_readonly": "^1.0@beta",
         "drupal/config_split": "^2.0",
         "drupal/confirm_leave": "^1.0@beta",
-        "drupal/content_lock": "^2.2",
+        "drupal/content_lock": "2.3",
         "drupal/core": "~10.2.0",
         "drupal/cshs": "^4.0",
         "drupal/default_content": "^2.0@alpha",
@@ -207,9 +207,6 @@
             },
             "drupal/menu_link_weight": {
                 "https://www.drupal.org/project/menu_link_weight/issues/2875984": "https://git.drupalcode.org/project/menu_link_weight/-/merge_requests/2.diff"
-            },
-            "drupal/shs": {
-                "https://www.drupal.org/project/shs/issues/3357151": "https://www.drupal.org/files/issues/2023-04-28/3357151_change_backbone_lib_001.patch"
             }
         }
     }
