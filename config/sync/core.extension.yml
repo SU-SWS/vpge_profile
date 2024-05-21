@@ -8,6 +8,7 @@ module:
   allowed_formats: 0
   auto_entitylabel: 0
   autologout: 0
+  better_exposed_filters: 0
   block: 0
   block_content: 0
   block_content_permissions: 0
@@ -141,6 +142,7 @@ module:
   nobots: 0
   node: 0
   node_revision_delete: 0
+  oembed_lazyload: 0
   oembed_providers: 0
   options: 0
   page_cache: 0
