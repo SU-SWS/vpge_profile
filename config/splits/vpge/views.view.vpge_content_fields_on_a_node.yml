@@ -896,7 +896,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<strong>Nomination Period:</strong>  {{ su_vpge_fellowship_app_period }} '
+            text: '<strong>Period:</strong>  {{ su_vpge_fellowship_app_period }} '
             make_link: false
             path: ''
             absolute: false
