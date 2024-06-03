@@ -669,7 +669,6 @@ display:
           title: ''
           default_argument_type: node
           default_argument_options: {  }
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -897,7 +896,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<strong>Nomination Period:</strong>  {{ su_vpge_fellowship_app_period }} '
+            text: '<strong>Period:</strong>  {{ su_vpge_fellowship_app_period }} '
             make_link: false
             path: ''
             absolute: false
