@@ -22,3 +22,4 @@ name: 'VPGE - Process'
 vid: vpge_process
 description: 'Fellowship application type'
 weight: 0
+new_revision: false

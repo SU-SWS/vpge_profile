@@ -26,7 +26,7 @@ third_party_settings:
 name: 'VPGE Fellowship/Funding'
 type: fellowship_funding
 description: 'Use Fellowship/Funding for fellowships administered by the Office of the VPGE.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 0
 display_submitted: false
