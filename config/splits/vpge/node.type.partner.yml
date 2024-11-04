@@ -26,7 +26,7 @@ third_party_settings:
 name: 'VPGE Partner'
 type: partner
 description: 'Use Partner to display information about related partners including a link to the partner website.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
