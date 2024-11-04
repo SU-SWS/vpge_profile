@@ -152,7 +152,7 @@ jobs:
           name: d10-functional-tests-results
           path: /var/www/html/artifacts
   acceptance_d11:
-    name: Codeception Acceptance Tests Drupal 11
+    name: Codeception Acceptance Tests Drupal 10
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -181,7 +181,7 @@ jobs:
           path: project
       - name: Run tests
         run: |
-          composer global require su-sws/stanford-caravan:11.x-dev
+          composer global require su-sws/stanford-caravan:10.x-dev
           ~/.config/composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=$GITHUB_WORKSPACE/project --suites=acceptance
       - name: Save Test Results
         uses: actions/upload-artifact@v4
@@ -220,7 +220,7 @@ jobs:
           path: project
       - name: Run tests
         run: |
-          composer global require su-sws/stanford-caravan:11.x-dev
+          composer global require su-sws/stanford-caravan:10.x-dev
           ~/.config/composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=$GITHUB_WORKSPACE/project --suites=functional
       - name: Save Test Results
         uses: actions/upload-artifact@v4
