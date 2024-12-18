@@ -22,3 +22,4 @@ name: 'VPGE - Funding Type'
 vid: vpge_funding_type
 description: 'Identifies the type of funding (fellowship, grant, etc.) offered'
 weight: 0
+new_revision: false
