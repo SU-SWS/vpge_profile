@@ -18,3 +18,41 @@
   margin-bottom: 1rem;
 }
 
+/* styling for heads in tables */
+.vpge-table--header-1 {
+  @include type-a;
+}
+
+.vpge-table--header-2 {
+  @include type-b;
+
+  a {
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.vpge-table--header-3 {
+  @include type-c;
+
+  a {
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.vpge-table--header-4 {
+  @include type-d;
+}
+

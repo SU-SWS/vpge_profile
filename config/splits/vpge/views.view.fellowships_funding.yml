@@ -167,7 +167,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3>{{ title }} </h3>\r\n{{ su_vpge_fellowship_tag_line }}  \r\n{{ view_node }}  "
+            text: "<div class=\"vpge-table--header-3\">{{ title }} </div>\r\n{{ su_vpge_fellowship_tag_line }}  \r\n{{ view_node }}  "
             make_link: false
             path: ''
             absolute: false
@@ -664,7 +664,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -766,7 +765,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -868,7 +866,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -970,7 +967,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1072,7 +1068,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -1174,7 +1169,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
