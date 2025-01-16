@@ -20,5 +20,6 @@ third_party_settings:
     unpublish_revision: false
 name: 'VPGE - News Categories'
 vid: vpge_news_categories
-description: ''
+description: null
 weight: 0
+new_revision: false

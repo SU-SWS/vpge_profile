@@ -282,7 +282,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: " \r\n            <h2>\r\n               {{ title }} \r\n            </h2>\r\n         </a>\r\n         <p>{{ su_vpge_teaser }} </p>\r\n "
+            text: " \r\n            <span class=\"vpge-table--header-2\">\r\n               {{ title }} \r\n            </span>\r\n         </a>\r\n         <p>{{ su_vpge_teaser }} </p>\r\n "
             make_link: false
             path: ''
             absolute: false
@@ -562,7 +562,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -715,7 +714,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -815,7 +813,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -915,7 +912,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

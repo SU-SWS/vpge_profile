@@ -25,7 +25,7 @@ third_party_settings:
 name: 'VPGE Events Program'
 type: program
 description: 'A program to which individual events can belong.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 0
 display_submitted: false

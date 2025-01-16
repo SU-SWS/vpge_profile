@@ -12,7 +12,7 @@ use Drupal\node\NodeInterface;
 use Drupal\field\Entity\FieldConfig;
 
 /**
- * Save the system pages from the original config values into state.
+ * Implements hook_update_last_removed().
  */
 function vpge_profile_update_8002() {
   $state = \Drupal::state();
