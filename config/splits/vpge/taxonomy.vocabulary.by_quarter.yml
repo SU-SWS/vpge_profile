@@ -22,3 +22,4 @@ name: 'By Quarter'
 vid: by_quarter
 description: 'Used to identify Programs by Quarters'
 weight: 0
+new_revision: false

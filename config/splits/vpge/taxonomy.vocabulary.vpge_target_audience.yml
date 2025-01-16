@@ -22,3 +22,4 @@ name: 'VPGE - Target Audience'
 vid: vpge_target_audience
 description: 'Target Audience for Resources and Events'
 weight: 0
+new_revision: false

@@ -86,8 +86,7 @@ class EventsCest {
     $I->click('Save');
     $I->canSee('Events Importer has been', '.messages-list');
 
-    $I->amOnPage($event->toUrl('delete-form')->toString());
-    $I->click('Delete');
+    $event->delete();
 
     $I->amOnPage($term->toUrl()->toString());
     $I->canSee($term->label(), 'h1');
@@ -352,7 +351,7 @@ class EventsCest {
     $event = $this->createEventNode($I);
     $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
     $pre_render = $view_builder->view($event, 'stanford_card');
-    $render_output = \Drupal::service('renderer')->renderPlain($pre_render);
+    $render_output = \Drupal::service('renderer')->renderInIsolation($pre_render);
 
     libxml_use_internal_errors(TRUE);
     $dom = new DOMDocument();
@@ -434,7 +433,7 @@ class EventsCest {
         'organization' => 'Asfdasdfa sdfasd fasf',
       ],
       'su_event_map_link' => [
-        'uri' => 'https://stanford.edu/',
+        'uri' => 'https://www.stanford.edu/',
         'title' => 'map link',
       ],
       'su_event_sponsor' => [

@@ -22,3 +22,4 @@ name: 'VPGE - Fellowship Audience'
 vid: vpge_fellowship_audience
 description: 'Used on the Events content type to identify whether an event is for prospective or current fellows'
 weight: 0
+new_revision: false

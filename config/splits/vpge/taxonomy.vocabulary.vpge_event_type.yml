@@ -22,3 +22,4 @@ name: 'VPGE - Event Type'
 vid: vpge_event_type
 description: 'Terms for VPGE Events'
 weight: 0
+new_revision: false

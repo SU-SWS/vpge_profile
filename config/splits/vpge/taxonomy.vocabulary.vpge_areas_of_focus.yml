@@ -20,5 +20,6 @@ third_party_settings:
     unpublish_revision: false
 name: 'VPGE - Areas of Focus'
 vid: vpge_areas_of_focus
-description: 'Used to classify several content types according to VPGE''s overarching areas of focus'
+description: "Used to classify several content types according to VPGE's overarching areas of focus"
 weight: 0
+new_revision: false
