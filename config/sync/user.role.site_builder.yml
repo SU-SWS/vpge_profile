@@ -37,7 +37,6 @@ dependencies:
   module:
     - block
     - block_content
-    - block_content_permissions
     - book
     - config_pages
     - content_lock
@@ -96,6 +95,7 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
+  - 'add any content to books'
   - 'add citation entities'
   - 'add content to books'
   - 'admin classes'
@@ -305,6 +305,7 @@ permissions:
   - 'rabbit hole administer taxonomy_term'
   - 'rabbit hole bypass node'
   - 'rabbit hole bypass taxonomy_term'
+  - 'reorder book pages'
   - 'revert stanford_course revisions'
   - 'revert stanford_event revisions'
   - 'revert stanford_event_series revisions'
@@ -317,7 +318,6 @@ permissions:
   - 'select account cancellation method'
   - 'switch shortcut sets'
   - 'update any media'
-  - 'update any stanford_component_block block content'
   - 'update media'
   - 'use text format stanford_html'
   - 'use text format stanford_minimal_html'
