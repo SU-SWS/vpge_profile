@@ -1,5 +1,192 @@
 # VPGE Profile
 
+11.6.2
+-------------------------------------------------------------------------------
+- VPGE-72 - Added color to Professional Competency pills 
+- Fixed logic error in main menu when home page is a node path.
+
+11.6.1
+-------------------------------------------------------------------------------
+- Improve reliability of acceptance tests.
+
+11.6.0
+-------------------------------------------------------------------------------
+- D8CORE-7292 - Updated the help pages. (#864)
+- Traverse entire main menu to add appropriate unpublished indicators
+- D8CORE-7835 Fix accordion expand/collapse all behavior to not behave like a toggle
+- Update field Validation plugins to new constraints (#879)
+- Modify field validation on social link field to improve error display.
+- D8CORE-7649: Changing the color of headings in wysiwyg for Minimal subtheme. (#872)
+- D8CORE-7723: Allow unpublishing of taxonomy terms (#874)
+- D8CORE-7885: Change Character Limit for Accordion (#875)
+- Added stage file proxy for dev, stage, and local
+- Implement shield on dev and stage (#873)
+- D8CORE-7737 D8CORE-7738 D8CORE-7824 Install state changes (#871)
+- D8CORE-7704: Configure trash module with necessary test changes (#852)
+- D8CORE-7663: reorganized the opportunity node page (#833)
+- D8CORE-7813: fixed the text color in the more publications button (#870)
+
+11.5.3
+-------------------------------------------------------------------------------
+- Added site manager permission to grant site reviewer role.
+
+11.5.2
+-------------------------------------------------------------------------------
+- Removed non-existent permissions
+
+11.5.1
+-------------------------------------------------------------------------------
+- D8CORE 7753 refactor accordion paragraph to use button and div elements (#863)
+- Fix typo in lockup config page settings. (#862)
+- D8CORE-7705: Self-Service Enhanced Search (#861)
+- D8CORE-7780: Content Management pages for person, event and news (#858)
+- D8CORE-7622: Site Reviewer Role (#855)
+- D8CORE-7339: added net to the local footer social link validation (#859)
+- D8CORE-7644: updated user creation mail (#856)
+- D8CORE-7220: h1 on Homepage (#847)
+- D8Core-7339: added help text and additional icons to social links in footer. (#846)
+- Revert "Add and configure trash module for soft deleteing content (#835)" (#851)
+- Update tests to work correctly with trash module (#850)
+- D8CORE-7531: removed max-width on intro text and drop cap text (#843)
+- D8CORE-7703: fixed bad link, updated text (#844)
+- D8CORE-7532: removed wysiwyg p line length (#842)
+- Add and configure trash module for soft deleteing content (#835)
+- D8CORE-7678: removed the medium and small quote (#840)
+- Updated editora11y module config (#841)
+- Fix tests with profile helper module dev (#839)
+- Remove obsolete module block_content_permissions (#838)
+- Drupal 11.4 update
+- D8CORE-7533: Change to the Quote style in the wysiwyg
+- Fixup citation entity config export
+- Updated environment indicator settings after update
+- Update linkit module (#834)
+- D8CORE-7664: add gutters to accordions on full width
+- D8CORE-7668: Adjust skip secondary nav anchor link
+- D8CORE-7670: allow all language options in ckeditor
+- Update ultimate cron config after module update (#832)
+- Updated config from db update
+
+11.5.0
+-------------------------------------------------------------------------------
+- Updated metatag module config
+- Exposed opportunity in graphql
+- D8CORE-7194 Embed codes with captions respect 100% widths on iframes
+- D8CORE-6644 Omit default favicons if one is uploaded in the theme settings
+- D8CORE-5828 If home page starts with a wysiwyg, add some space at the top
+- Added aria label to masthead section
+- D8CORE-6821 Adjust skip to main content location
+- D8CORE-7454: Move back-to-top inside the <main> element
+- D8CORE-7434 D8CORE-7435 D8CORE-7436 | Opportunity full content layout and configure card and list display (#813)
+- D8CORE-7578 Adjust person display for lists and improve resolution (#828)
+- D8CORE-7558: added the global footer to minimal theme in dark with no logo (#820)
+- Added FAQ Accordion List paragraph type based on CAW (#827)
+- Added modal colorbox image display choices in the wysiwyg (#826)
+
+11.4.5
+-------------------------------------------------------------------------------
+- Remove edit links in views (#821)
+- D8CORE-7564: removed decanter link and replaced with identity guide (#822)
+- D8CORE-7517 | update event subtitle heading (#816)
+- D8Core-7515: adding a few additional "Site Type" options
+
+11.4.4
+-------------------------------------------------------------------------------
+- Updated image_effects module for compatibility with imagemagic 4.0.0.
+
+11.4.3
+-------------------------------------------------------------------------------
+- Fixed basic page cards when the page has a "page title banner" image.
+
+11.4.2
+-------------------------------------------------------------------------------
+- Adjusted codeception test for cache issue.
+
+11.4.1
+-------------------------------------------------------------------------------
+- Added "Site Type" field to site information config page.
+
+11.4.0
+-------------------------------------------------------------------------------
+- Enabled internal link force relative option
+- D8CORE-7424 Added various HTML attributes to the WSYIWYG allowed list (#799)
+- D8CORE-5741: Opportunities Content type with small amount of styles (#801)
+- Updated decoupled menu and algolia search components
+- D8CORE-7455 Algolia Search: Decode html entities before stripping the html
+- D8CORE-7422 Write test for basic page list paragraph display sorts (#798)
+- D8CORE-7400 Remove alt attribute on news card images
+- D8CORE-7418 Require course link url field
+- D8CORE-7429 Display event subheadline as normal text instead of h2
+- D8CORE-7425 Display dek and date field on news cards
+- Update to drupal 10.3.0 (#794)
+- Updated permission for config pages and decoupled user role
+- Enable basic auth module and remove permissions for graphql
+- D8CORE-7413 Enabled search api processor to add spaces between html tags (#792)
+- D8CORE-7414: Different sorting option for Basic Page lists (#791)
+
+11.3.8
+-------------------------------------------------------------------------------
+
+- Updated stanford_samlauth.settings timeout.
+
+11.3.7
+-------------------------------------------------------------------------------
+- Improve decoupled menu by using js data on the page instead of json api
+- D8CORE-7362 Add necessary permission for site embedder role (#786)
+- Fixed publication url rabbit hole
+- D8CORE-6981: Fix lockup on very small screen size (#785)
+- Added noscript on algolia search results page
+- D8CORE-7360 Adjust Person  node detail page heading structure for "Links" field
+
+11.3.6
+-------------------------------------------------------------------------------
+- D8CORE-000 Update Past Event List
+
+11.3.5
+-------------------------------------------------------------------------------
+- Disabled link trimming on content type displays and view settings.
+
+11.3.4
+-------------------------------------------------------------------------------
+- Index algolia items only during cron
+- Added event image to algolia index data
+- D8CORE-7295 D8CORE-7301 Enable rabbit hole for publications content type
+
+11.3.3
+-------------------------------------------------------------------------------
+- D8CORE-7341 Add h2 headings to courses quarter term pages
+
+11.3.2
+-------------------------------------------------------------------------------
+- D8CORE-7341 Add h2 headings to past events and courses term pages
+
+11.3.1
+-------------------------------------------------------------------------------
+- Fix images and oembed videos to be lazy loading
+
+11.3.0
+-------------------------------------------------------------------------------
+- Add taxonomy terms to algolia search indexing
+- D8CORE-7333 Change paragraph behaviors for teaser and lists (#774)
+- Add role evaluation choice to saml config page
+- D8CORE-7307 Remove anonymous access to /patterns or /admin/patterns page
+- D8CORE-6983: added test for stacking site_embedder role (#773)
+- D8CORE-7331 Use aria-labelledby on the submenu buttons in the decoupled menu
+- D8CORE-7300 Add Algolia checkbox to allow indexing separate from search results
+- D8CORE-7212 Use h3 header for cards in teasers when appropriate (#765)
+- D8CORE-7207 Add Page Title Banner Paragraph (#754)
+- D8CORE-7211 Header behaviors for card and banners (#763)
+- added pager for events and publication graphql views
+
+11.2.1
+-------------------------------------------------------------------------------
+- Provide items per page for graphql views
+- Expose event image via graphql
+- Added external image url for events content from Localist
+
+11.2.1
+-------------------------------------------------------------------------------
+- Fixed logger syntax during site install.
+
 11.2.0
 -------------------------------------------------------------------------------
 
