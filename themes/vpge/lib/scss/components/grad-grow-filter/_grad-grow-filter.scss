@@ -6,12 +6,10 @@
   .views-exposed-form {
     @include responsive-spacing('padding-bottom', 8);
     @include responsive-spacing('margin-bottom', 1);
-
     border-bottom: 1px solid $su-color-black-true;
 
     label {
       @include responsive-spacing('margin-top', 1);
-
       font-weight: 700;
       color: $su-color-black-80;
       margin-bottom: .5rem;
