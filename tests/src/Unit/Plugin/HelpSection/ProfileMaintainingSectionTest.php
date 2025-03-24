@@ -4,6 +4,7 @@ namespace Drupal\Tests\vpge_profile\Unit\Plugin\HelpSection;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Utility\LinkGeneratorInterface;
+use Drupal\stanford_profile\Plugin\HelpSection\ProfileHelpMaintainingSection;
 use Drupal\vpge_profile\Plugin\HelpSection\ProfileConnectSection;
 use Drupal\Tests\UnitTestCase;
 
