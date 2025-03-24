@@ -27,16 +27,7 @@ class TeaserCest {
   public function testTeaserParagraphHeaders(AcceptanceTester $I) {
     $node_types = \Drupal::entityTypeManager()
       ->getStorage('node_type')
-      ->loadMultiple([
-        'stanford_page',
-        'stanford_course',
-        'stanford_event',
-        'stanford_event_series',
-        'stanford_news',
-        'stanford_person',
-        'stanford_policy',
-        'stanford_publication'
-      ]);
+      ->loadMultiple();
     $teaser_entities = [];
     $teaser_item_field = [];
     foreach ($node_types as $node_type) {
