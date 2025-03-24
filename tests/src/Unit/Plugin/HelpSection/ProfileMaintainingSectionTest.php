@@ -6,6 +6,7 @@ use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Utility\LinkGeneratorInterface;
 use Drupal\vpge_profile\Plugin\HelpSection\ProfileConnectSection;
 use Drupal\Tests\UnitTestCase;
+use Drupal\vpge_profile\Plugin\HelpSection\ProfileHelpMaintainingSection;
 
 /**
  * Class ProfileMaintainingSectionTest
