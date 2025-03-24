@@ -686,7 +686,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage($node->toUrl()->toString());
-    $I->canSee($news->label(), 'h3');
+    $I->canSee($news->label());
   }
 
   /**
@@ -748,7 +748,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage($node->toUrl()->toString());
-    $I->canSee($news->label(), 'h3');
+    $I->canSee($news->label());
   }
 
   /**
