@@ -81,11 +81,11 @@ content:
     type: cshs_group_by_root
     label: hidden
     settings:
+      linked: false
+      reverse: false
       sort: none
-      depth: '1'
-      linked: 0
-      reverse: 0
-      last_child: 0
+      depth: 1
+      last_child: false
     third_party_settings:
       empty_fields:
         handler: ''
