@@ -6,6 +6,7 @@ use Faker\Factory;
  * Test the news functionality.
  *
  * @group content
+ * @group person
  */
 class PersonCest {
 
@@ -42,7 +43,7 @@ class PersonCest {
   public function testVocabularyTermsExists(AcceptanceTester $I) {
     $I->logInWithRole('administrator');
     $I->amOnPage('/admin/structure/taxonomy/manage/stanford_person_types/overview');
-    $I->canSeeNumberOfElements('.term-id', 14);
+    $I->canSeeNumberOfElements('.term-id', 18);
   }
 
   /**
@@ -79,11 +80,12 @@ class PersonCest {
     $I->amOnPage($node->toUrl()->toString());
     $I->see("$first_name $last_name", 'h1');
     $I->amOnPage('/people');
-    $I->see("$first_name $last_name", 'h3');
+    echo "people";
+    $I->see("$first_name $last_name", 'h3 a');
     $I->seeLink("$first_name $last_name");
-
     $I->amOnPage($term->toUrl()->toString());
     $I->canSee($term->label(), 'h1');
+    echo "this";
     $I->see("$first_name $last_name", 'h3 a');
     $I->seeLink("$first_name $last_name");
   }
