@@ -76,6 +76,7 @@ class ViewsBulkEditCest {
 
     foreach ($this->nodes as $node) {
       $I->amOnPage($node->toUrl('edit-form')->toString());
+      $I->waitForElement('.form-actions', 30);
 
       switch ($node->bundle()) {
         case 'stanford_event':

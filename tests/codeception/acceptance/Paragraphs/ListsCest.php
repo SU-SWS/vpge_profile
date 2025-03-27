@@ -105,14 +105,19 @@ class ListsCest {
 
     $I->logInWithRole('contributor');
     $I->amOnPage($basic_page->toUrl('edit-form')->toString());
+    $I->waitForElement('.form-actions', 30);
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($news->toUrl('edit-form')->toString());
+    $I->waitForElement('.form-actions', 30);
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($event->toUrl('edit-form')->toString());
+    $I->waitForElement('.form-actions', 30);
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($person->toUrl('edit-form')->toString());
+    $I->waitForElement('.form-actions', 30);
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($publication->toUrl('edit-form')->toString());
+    $I->waitForElement('.form-actions', 30);
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
 
     $I->amOnPage('/jsonapi/views/stanford_shared_tags/card_grid?page[limit]=50&views-argument[]=' . preg_replace('/[^a-z0-9-]/', '-', strtolower($shared_tag->label())));
@@ -805,6 +810,7 @@ class ListsCest {
       'created' => time() - 100000,
     ]);
     $I->amOnPage($layout_changed_page->toUrl('edit-form')->toString());
+    $I->waitForElement('.form-actions', 30);
     $I->click('Save');
     $I->amOnPage($node->toUrl()->toString());
     $I->canSee($layout_changed_page->label(), 'h3');
