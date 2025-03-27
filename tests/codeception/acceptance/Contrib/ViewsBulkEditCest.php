@@ -30,6 +30,13 @@ class ViewsBulkEditCest {
   }
 
   /**
+   * Delete the trash directory before running the tests.
+   */
+  public function _before(AcceptanceTester $I) {
+    \Drupal::service('file_system')->deleteRecursive('public://php/trash');
+  }
+
+  /**
    * Bulk editing content changes the field values.
    */
   public function testBulkEdits(AcceptanceTester $I) {
