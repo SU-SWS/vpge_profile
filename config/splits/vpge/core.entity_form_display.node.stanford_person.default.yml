@@ -42,7 +42,6 @@ dependencies:
     - field.field.node.stanford_person.su_vpge_program
     - node.type.stanford_person
   module:
-    - allowed_formats
     - change_labels
     - cshs
     - datetime

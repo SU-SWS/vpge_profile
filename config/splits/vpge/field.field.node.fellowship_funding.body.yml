@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.body
     - node.type.fellowship_funding
   module:
-    - allowed_formats
     - text
 id: node.fellowship_funding.body
 field_name: body
