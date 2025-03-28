@@ -112,8 +112,6 @@ jobs:
       - name: Run tests
         run: |
           composer global require su-sws/stanford-caravan:10.x-dev
-          composer show drush/drush
-          composer depends drush/drush
           ~/.config/composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=$GITHUB_WORKSPACE/project --suites=functional
       - name: Save Test Results
         uses: actions/upload-artifact@v4

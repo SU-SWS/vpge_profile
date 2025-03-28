@@ -189,7 +189,7 @@
         "su-sws/stanford_samlauth": "^1.0"
     },
     "conflict": {
-        "drush/drush": ">=13.0"
+        "drush/drush": ">13.5.3"
     },
     "config": {
         "sort-packages": true
