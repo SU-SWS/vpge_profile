@@ -368,35 +368,29 @@ class BasicPageCest {
    * @group search-results
    */
   public function testSearchResult(AcceptanceTester $I) {
-    $text = $this->faker->paragraphs(2, TRUE);
+    $text = 'Two things are infinite: the universe and human stupidity; and I\'m not sure about the universe.';
     $wysiwyg = $I->createEntity([
       'type' => 'stanford_wysiwyg',
       'su_wysiwyg_text' => ['value' => $text, 'format' => 'stanford_html'],
     ], 'paragraph');
-    $row = $I->createEntity([
-      'type' => 'node_stanford_page_row',
-      'su_page_components' => $wysiwyg,
-    ], 'paragraph_row');
     $node = $I->createEntity([
       'title' => $this->faker->words(3, TRUE),
       'type' => 'stanford_page',
-      'su_page_components' => $row,
+      'su_page_components' => $wysiwyg,
     ]);
     $I->logInWithRole('contributor');
     $I->amOnPage($node->toUrl('edit-form')->toString());
     $I->click('Save');
     $I->canSee($node->label(), 'h1');
-    $I->runDrush('search-api-index');
-    $I->runDrush('cron');
-    $I->fillField('Search this site', $node->label());
+
+    $I->fillField('Search this site', 'human stupidity');
     $I->click('Submit Search');
-    // this passes when just the profile is tested, but fails in the stack.
-    // $I->canSee($node->label(), 'h2');
+    $I->canSee($node->label(), 'h2');
 
     $time = \Drupal::time()->getCurrentTime();
     $date_string = \Drupal::service('date.formatter')
       ->format($time, 'custom', 'F j, Y', self::getTimezone());
-    //$I->canSee('Last Updated: ' . $date_string);
+    $I->canSee('Last Updated: ' . $date_string);
   }
 
   protected static function getTimezone() {

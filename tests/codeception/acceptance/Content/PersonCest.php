@@ -6,6 +6,7 @@ use Faker\Factory;
  * Test the news functionality.
  *
  * @group content
+ * @group person
  */
 class PersonCest {
 
@@ -252,7 +253,7 @@ class PersonCest {
       'name' => $this->faker->word,
     ], 'taxonomy_term');
     $I->amOnPage($term->toUrl('edit-form')->toString());
-    $I->cantSee('Published');
+    $I->canSeeCheckboxIsChecked('Published');
   }
 
   /**

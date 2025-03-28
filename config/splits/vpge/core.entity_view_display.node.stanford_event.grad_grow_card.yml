@@ -253,11 +253,11 @@ content:
     type: cshs_group_by_root
     label: hidden
     settings:
+      linked: false
+      reverse: false
       sort: none
-      depth: '1'
-      linked: 0
-      reverse: 0
-      last_child: 0
+      depth: 1
+      last_child: false
     third_party_settings:
       empty_fields:
         handler: ''
@@ -281,6 +281,7 @@ hidden:
   su_event_cta: true
   su_event_dek: true
   su_event_email: true
+  su_event_ext_image: true
   su_event_groups: true
   su_event_keywords: true
   su_event_location: true

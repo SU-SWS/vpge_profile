@@ -1,11 +1,12 @@
 @charset "UTF-8";
+@import "../../colors";
 
 // VPGE Grad Grow filters view
 .vpge-grad-grow {
   .views-exposed-form {
     @include responsive-spacing('padding-bottom', 8);
     @include responsive-spacing('margin-bottom', 1);
-    
+
     border-bottom: 1px solid $su-color-black-true;
 
     label {
@@ -27,7 +28,7 @@
       label {
         margin-top: 0;
       }
-      
+
       .shs-field-container {
         margin-bottom: 0;
 
@@ -104,18 +105,18 @@
 
       padding-left: 8rem;
       padding-bottom: 19rem;
-  
+
       h2 {
         color: $su-color-white;
         font-size: 3em;
         margin-bottom: 0;
       }
     }
-  
+
     .grad-grow-list {
       position: relative;
       margin-top: -12rem;
-  
+
       .su-list-unstyled {
         padding: 0 3rem;
         gap: 4.5rem 3rem;
@@ -151,24 +152,24 @@
               }
             }
           }
-          
+
           .su-card {
             h3 {
               margin-bottom: 2rem;
-        
+
               a {
                 font-size: unset;
                 font-weight: 700;
                 text-decoration: none;
                 color: $su-color-black;
-  
+
                 &:hover,
                 &:focus,
                 &:active {
                   text-decoration: underline;
                   color: $su-color-black;
                 }
-  
+
                 &.su-link--external {
                   &::after {
                     background-color: $su-color-digital-red;
@@ -192,6 +193,37 @@
                 padding: 0.2rem 1.7rem;
                 font-weight: 700;
                 width: fit-content;
+            }
+
+              // Career Development
+              [data-id="1196"] {
+                color: $vpge-compentency-color-purple;
+                border: .2rem solid $vpge-compentency-color-purple;
+              }
+              // Communication
+              [data-id="1111"] {
+                color: $vpge-compentency-color-green;
+                border: .2rem solid $vpge-compentency-color-green;
+              }
+              // Diversity Equity & Inclusion
+              [data-id="1256"] {
+                color: $vpge-compentency-color-red;
+                border: .2rem solid $vpge-compentency-color-red;
+              }
+              // Leadership & Management
+              [data-id="1271"] {
+                color: $vpge-compentency-color-blue;
+                border: .2rem solid $vpge-compentency-color-blue;
+              }
+              // Professionalism
+              [data-id="1081"] {
+                color: $vpge-compentency-color-burgundy;
+                border: .2rem solid $vpge-compentency-color-burgundy;
+              }
+              // Teaching & Mentoring
+              [data-id="1186"] {
+                color: $vpge-compentency-color-grey;
+                border: .2rem solid $vpge-compentency-color-grey;
               }
             }
           }
@@ -257,7 +289,7 @@
       }
     }
   }
-  
+
   // Grad grow filter events section
   &.events {
     .su_revent_background {
@@ -273,14 +305,14 @@
       }
 
       .su-event-list-item__details {
-        .event-list-item__type {  
+        .event-list-item__type {
           a {
             color: $su-color-black;
             font-weight: 700;
             font-size: 1.9rem;
           }
         }
-        
+
         h3 {
           margin-bottom: 0.5rem;
         }

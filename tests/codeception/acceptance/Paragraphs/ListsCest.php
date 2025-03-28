@@ -25,6 +25,29 @@ class ListsCest {
   }
 
   /**
+   *  We need to wait for the JS to load, but we can't do $this->_waitForJS($I, '.form-actions');
+   *  with PhpBrowser because it doesn't support JS.
+   */
+  protected function _waitForJS(AcceptanceTester $I, string $element){
+    $found = false;
+    $attempts = 10;
+
+    for ($i = 0; $i < $attempts; $i++) {
+      try {
+        $I->seeElement($element);
+        $found = true;
+        break;
+      } catch (\Exception $e) {
+        sleep(1); // Wait 1 second between attempts
+      }
+    }
+
+    if (!$found) {
+      $I->fail("Timed out waiting for $element to appear.");
+    }
+  }
+
+  /**
    * Shared tags on each content type are identical.
    *
    * @group jsonapi
@@ -105,14 +128,19 @@ class ListsCest {
 
     $I->logInWithRole('contributor');
     $I->amOnPage($basic_page->toUrl('edit-form')->toString());
+    $this->_waitForJS($I, '.form-actions');
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($news->toUrl('edit-form')->toString());
+    $this->_waitForJS($I, '.form-actions');
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($event->toUrl('edit-form')->toString());
-    $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
+    $this->_waitForJS($I, '.form-actions');
+    $I->canSeeOptionIsSelected('#edit-su-shared-tags-0-target-id', $shared_tag->label());
     $I->amOnPage($person->toUrl('edit-form')->toString());
+    $this->_waitForJS($I, '.form-actions');
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($publication->toUrl('edit-form')->toString());
+    $this->_waitForJS($I, '.form-actions');
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
 
     $I->amOnPage('/jsonapi/views/stanford_shared_tags/card_grid?page[limit]=50&views-argument[]=' . preg_replace('/[^a-z0-9-]/', '-', strtolower($shared_tag->label())));
@@ -138,6 +166,7 @@ class ListsCest {
   public function testListParagraphNews(AcceptanceTester $I) {
     $I->logInWithRole('contributor');
     $I->amOnPage('/node/add/stanford_news');
+    $this->_waitForJS($I, '.form-actions');
     $title = $this->faker->words(3, TRUE);
     $I->fillField('Headline', $title);
     $I->click('Save');
@@ -183,6 +212,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage("/node/{$news->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
 
     $node = $this->getNodeWithList($I, [
@@ -212,6 +242,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage("/node/{$news->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
 
     $node = $this->getNodeWithList($I, [
@@ -244,6 +275,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage("/node/{$news->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
 
     $node = $this->getNodeWithList($I, [
@@ -412,6 +444,7 @@ class ListsCest {
       'su_event_keywords' => $keyword->id(),
     ]);
     $I->amOnPage("/node/{$event->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
 
     $node = $this->getNodeWithList($I, [
@@ -515,6 +548,7 @@ class ListsCest {
       ],
     ]);
     $I->amOnPage("/node/{$event->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
     $I->canSee('has been updated');
 
@@ -549,6 +583,7 @@ class ListsCest {
       ],
     ]);
     $I->amOnPage("/node/{$event->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
     $I->canSee('has been updated');
 
@@ -586,6 +621,7 @@ class ListsCest {
       ],
     ]);
     $I->amOnPage("/node/{$event->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
     $I->canSee('has been updated');
 
@@ -623,6 +659,7 @@ class ListsCest {
       ],
     ]);
     $I->amOnPage("/node/{$event->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
     $I->canSee('has been updated');
 
@@ -643,6 +680,7 @@ class ListsCest {
   public function testListParagraphPeople(AcceptanceTester $I) {
     $I->logInWithRole('contributor');
     $I->amOnPage('/node/add/stanford_person');
+    $this->_waitForJS($I, '.form-actions');
     $I->fillField('First Name', 'Foo');
     $I->fillField('Last Name', 'Bar Person');
     $I->fillField('Short Title', 'Short title field');
@@ -677,6 +715,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage("/node/{$news->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
 
     $node = $this->getNodeWithList($I, [
@@ -706,6 +745,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage("/node/{$news->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
 
     $node = $this->getNodeWithList($I, [
@@ -738,6 +778,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage("/node/{$news->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
 
     $node = $this->getNodeWithList($I, [
@@ -776,6 +817,7 @@ class ListsCest {
     ]);
 
     $I->amOnPage("/node/{$basic_page_entity->id()}/edit");
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
 
     $node = $this->getNodeWithList($I, [
@@ -805,6 +847,7 @@ class ListsCest {
       'created' => time() - 100000,
     ]);
     $I->amOnPage($layout_changed_page->toUrl('edit-form')->toString());
+    $this->_waitForJS($I, '.form-actions');
     $I->click('Save');
     $I->amOnPage($node->toUrl()->toString());
     $I->canSee($layout_changed_page->label(), 'h3');

@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.su_vpge_registration_process
     - node.type.program
   module:
-    - allowed_formats
     - text
 id: node.program.su_vpge_registration_process
 field_name: su_vpge_registration_process
