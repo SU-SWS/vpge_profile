@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.stanford_component_block
     - filter.format.stanford_html
     - filter.format.stanford_minimal_html
     - media.type.embeddable
@@ -29,7 +28,7 @@ dependencies:
     - taxonomy.vocabulary.stanford_publication_topics
     - taxonomy.vocabulary.su_shared_tags
   module:
-    - block_content
+    - block_content_permissions
     - book
     - config_pages
     - content_lock
@@ -39,7 +38,6 @@ dependencies:
     - field_permissions
     - file
     - filter
-    - help
     - media
     - menu_admin_per_menu
     - node
@@ -68,7 +66,6 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
-  - 'access help pages'
   - 'access media overview'
   - 'access patterns page'
   - 'access taxonomy overview'
@@ -88,10 +85,12 @@ permissions:
   - 'administer url aliases'
   - 'administer users'
   - 'assign contributor role'
+  - 'assign custm_vpge_site_manager role'
+  - 'assign custm_vpge_site_manager role'
+  - 'assign custm_vpge_site_manager role'
   - 'assign layout_builder_user role'
   - 'assign site_editor role'
   - 'assign site_manager role'
-  - 'assign site_reviewer role'
   - 'assign stanford_faculty role'
   - 'assign stanford_staff role'
   - 'assign stanford_student role'
@@ -169,6 +168,7 @@ permissions:
   - 'delete terms in basic_page_types'
   - 'delete terms in event_audience'
   - 'delete terms in media_tags'
+  - 'delete terms in media_tags'
   - 'delete terms in stanford_event_types'
   - 'delete terms in stanford_news_topics'
   - 'delete terms in stanford_person_types'
@@ -245,6 +245,7 @@ permissions:
   - 'revert stanford_publication revisions'
   - 'schedule publishing of nodes'
   - 'update any media'
+  - 'update any stanford_component_block block content'
   - 'update media'
   - 'use text format stanford_html'
   - 'use text format stanford_minimal_html'

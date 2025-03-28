@@ -75,8 +75,8 @@
         "drupal/config_readonly": "^1.0@beta",
         "drupal/config_split": "^2.0",
         "drupal/confirm_leave": "^1.0@beta",
-        "drupal/content_lock": "^3.0@alpha",
-        "drupal/core": "~10.4",
+        "drupal/content_lock": "^3.0",
+        "drupal/core": "~10.4.0",
         "drupal/cshs": "^4.0",
         "drupal/default_content": "^2.0@alpha",
         "drupal/diff": "^1.4",
@@ -173,7 +173,7 @@
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/views_taxonomy_term_name_depth": "^7.0",
         "drupal/webp": "^1.0@beta",
-        "drupal/xmlsitemap": "^2.0@beta",
+        "drupal/xmlsitemap": "^2.0",
         "noli42/chosen": "3.0.0",
         "onlyextart/colorbox": "dev-master#e58476becbc89dc671093d1bcd9f99b2167fa8f7",
         "sainsburys/guzzle-oauth2-plugin": "^3.0",
@@ -185,7 +185,7 @@
         "su-sws/stanford_fields": "^8.4",
         "su-sws/stanford_media": "^11.0",
         "su-sws/stanford_migrate": "^8.3",
-        "su-sws/stanford_profile_helper": "^9.6",
+        "su-sws/stanford_profile_helper": "^9.8",
         "su-sws/stanford_samlauth": "^1.0"
     },
     "config": {
