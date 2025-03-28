@@ -112,6 +112,7 @@ jobs:
       - name: Run tests
         run: |
           composer global require su-sws/stanford-caravan:10.x-dev
+          drush php-eval "\$role = \Drupal\user\Entity\Role::load('administrator'); if (\$role) { \$perms = array_keys(\Drupal::service('user.permissions')->getPermissions()); user_role_grant_permissions('administrator', \$perms); }"
           ~/.config/composer/vendor/bin/sws-caravan codeception /var/www/html --extension-dir=$GITHUB_WORKSPACE/project --suites=functional
       - name: Save Test Results
         uses: actions/upload-artifact@v4
@@ -120,4 +121,3 @@ jobs:
           name: d10-functional-tests-results
           path: /var/www/html/artifacts
 
-    
