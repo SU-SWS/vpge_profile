@@ -139,3 +139,15 @@ function vpge_profile_post_update_event_pages() {
     $default_content_creator->createDefaultContent('ddd5aefb-6b7a-4cd7-aa72-e8c106598bb6');
   }
 }
+
+/**
+ * Grant all permissions to the administrator role for testing.
+ */
+function vpge_profile_post_update_grant_all_admin_permissions(&$sandbox = NULL) {
+  $role = \Drupal\user\Entity\Role::load('administrator');
+  if ($role) {
+    $permissions = \Drupal::service('user.permissions')->getPermissions();
+    $all_permissions = array_keys($permissions);
+    user_role_grant_permissions($role->id(), $all_permissions);
+  }
+}
