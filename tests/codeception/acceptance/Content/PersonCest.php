@@ -6,7 +6,6 @@ use Faker\Factory;
  * Test the news functionality.
  *
  * @group content
- * @group person
  */
 class PersonCest {
 
