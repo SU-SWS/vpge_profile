@@ -1,7 +1,7 @@
 _core:
   default_config_hash: 8d0nv-vvXs9MZkqD1mhxm8mPeF4yF9fqLLIcVp4cnLQ
-content_root: '#page-content, .block-config-pages-super-footer, .ds-entity--stanford-local-footer'
-assertiveness: assertive
+content_root: .system-main-block
+assertiveness: smart
 no_load: ''
 ignore_all_if_absent: ''
 ignore_elements: nav
@@ -15,7 +15,5 @@ shadow_components: ''
 disable_sync: false
 preserve_params: ''
 custom_tests: 0
-disable_live: false
-live_h2: 'form[id^="node-"] #edit-body-wrapper .ck-content'
 ignore_containers: .su-secondary-nav
 allow_overflow: ''

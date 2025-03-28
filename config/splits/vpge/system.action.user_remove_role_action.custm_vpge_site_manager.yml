@@ -1,0 +1,14 @@
+uuid: 421f56b1-e4b5-4ac6-a892-b68284702a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.custm_vpge_site_manager
+  module:
+    - user
+id: user_remove_role_action.custm_vpge_site_manager
+label: 'Remove the VPGE Site Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: custm_vpge_site_manager
