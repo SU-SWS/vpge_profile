@@ -143,7 +143,7 @@ function vpge_profile_post_update_event_pages() {
 /**
  * Grant all permissions to the administrator role for testing.
  */
-function vpge_profile_post_update_grant_all_admin_permissions(&$sandbox = NULL) {
+function _vpge_profile_post_update_grant_all_admin_permissions(&$sandbox = NULL) {
   $role = \Drupal\user\Entity\Role::load('administrator');
   if ($role) {
     $permissions = \Drupal::service('user.permissions')->getPermissions();
