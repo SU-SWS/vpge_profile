@@ -14,7 +14,6 @@ drupal_login_roles:
   stanford_faculty: '0'
   stanford_staff: '0'
   stanford_student: '0'
-  site_reviewer: '0'
   contributor: '0'
   site_manager: '0'
   site_editor: '0'
