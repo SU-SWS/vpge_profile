@@ -67,11 +67,10 @@ class ViewsBulkEditCest {
     foreach ($this->nodes as $node) {
       $I->canSee($node->label());
     }
-    $I->checkOption('#edit-node-stanford-news-field-selector-su-news-topics');
+    $I->checkOption('News Types (value 1)');
     $I->selectOption('node[stanford_news][su_news_topics][0][target_id]', $news_foo_bar_baz->id());
-    $I->checkOption('#edit-node-stanford-event-field-selector-su-shared-tags');
-//    $I->canSee('#edit-su-shared-tags-0-target-id--level-0');
-    $I->selectOption('#edit-su-shared-tags-0-target-id--level-0', $event_foo_bar_baz->id());
+    $I->checkOption('Event Types (value 1)');
+    $I->selectOption('node[stanford_event][su_event_type][0][target_id]', $event_foo_bar_baz->id());
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][value][date]', date('Y-m-d'));
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][value][time]', '12:00:00');
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][end_value][date]', date('Y-m-d'));
