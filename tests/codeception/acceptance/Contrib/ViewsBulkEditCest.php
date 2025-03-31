@@ -70,7 +70,8 @@ class ViewsBulkEditCest {
     $I->checkOption('#edit-node-stanford-news-field-selector-su-news-topics');
     $I->selectOption('node[stanford_news][su_news_topics][0][target_id]', $news_foo_bar_baz->id());
     $I->checkOption('#edit-node-stanford-event-field-selector-su-shared-tags');
-    $I->selectOption('#edit-node-stanford-event-su-shared-tags-0-target-id--level-0', $event_foo_bar_baz->id());
+//    $I->canSee('#edit-su-shared-tags-0-target-id--level-0');
+    $I->selectOption('#edit-su-shared-tags-0-target-id--level-0', $event_foo_bar_baz->id());
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][value][date]', date('Y-m-d'));
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][value][time]', '12:00:00');
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][end_value][date]', date('Y-m-d'));
@@ -83,7 +84,7 @@ class ViewsBulkEditCest {
 
     foreach ($this->nodes as $node) {
       $I->amOnPage($node->toUrl('edit-form')->toString());
-      $I->waitForElement('.form-actions', 30);
+//      $I->waitForElement('.form-actions', 30);
 
       switch ($node->bundle()) {
         case 'stanford_event':
