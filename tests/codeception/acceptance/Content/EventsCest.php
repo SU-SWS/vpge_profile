@@ -26,6 +26,13 @@ class EventsCest {
   }
 
   /**
+   * Delete the trash directory before running the tests.
+   */
+  public function _before(AcceptanceTester $I) {
+    \Drupal::service('file_system')->deleteRecursive('public://php/trash');
+  }
+
+  /**
    *  We need to wait for the JS to load, but we can't do $this->_waitForJS($I, '.form-actions');
    *  with PhpBrowser because it doesn't support JS.
    */
