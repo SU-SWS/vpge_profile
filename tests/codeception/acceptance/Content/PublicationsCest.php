@@ -31,6 +31,29 @@ class PublicationsCest {
   }
 
   /**
+   *  We need to wait for the JS to load, but we can't do $this->_waitForJS($I, '.form-actions');
+   *  with PhpBrowser because it doesn't support JS.
+   */
+  protected function _waitForJS(AcceptanceTester $I, string $element){
+    $found = false;
+    $attempts = 10;
+
+    for ($i = 0; $i < $attempts; $i++) {
+      try {
+        $I->seeElement($element);
+        $found = true;
+        break;
+      } catch (\Exception $e) {
+        sleep(1); // Wait 1 second between attempts
+      }
+    }
+
+    if (!$found) {
+      $I->fail("Timed out waiting for $element to appear.");
+    }
+  }
+
+  /**
    * Create a book citation
    */
   public function testBookCitation(AcceptanceTester $I) {
@@ -94,6 +117,7 @@ class PublicationsCest {
       'name' => $this->faker->words(2, TRUE),
     ], 'taxonomy_term');
     $I->amOnPage($term->toUrl('edit-form')->toString());
+    $this->_waitForJS($I, '.form-actions');
     $I->canSeeCheckboxIsChecked('Published');
   }
 

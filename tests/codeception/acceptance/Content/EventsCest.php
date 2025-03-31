@@ -25,6 +25,29 @@ class EventsCest {
     $this->faker = Factory::create();
   }
 
+  /**
+   *  We need to wait for the JS to load, but we can't do $this->_waitForJS($I, '.form-actions');
+   *  with PhpBrowser because it doesn't support JS.
+   */
+  protected function _waitForJS(AcceptanceTester $I, string $element){
+    $found = false;
+    $attempts = 10;
+
+    for ($i = 0; $i < $attempts; $i++) {
+      try {
+        $I->seeElement($element);
+        $found = true;
+        break;
+      } catch (\Exception $e) {
+        sleep(1); // Wait 1 second between attempts
+      }
+    }
+
+    if (!$found) {
+      $I->fail("Timed out waiting for $element to appear.");
+    }
+  }
+
   public function _after(AcceptanceTester $I) {
     if ($config_page = ConfigPages::load('stanford_events_importer')) {
       $config_page->delete();
@@ -295,6 +318,7 @@ class EventsCest {
       'name' => $this->faker->word,
     ], 'taxonomy_term');
     $I->amOnPage($term->toUrl('edit-form')->toString());
+    $this->_waitForJS($I, '.form-actions');
     $I->cantSee('Published');
 
     $term = $I->createEntity([
@@ -302,6 +326,7 @@ class EventsCest {
       'name' => $this->faker->word,
     ], 'taxonomy_term');
     $I->amOnPage($term->toUrl('edit-form')->toString());
+    $this->_waitForJS($I, '.form-actions');
     $I->canSeeCheckboxIsChecked('Published');
   }
 
