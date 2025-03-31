@@ -1,12 +1,12 @@
-uuid: 8a326c7e-7b6d-4d70-9204-85e2d0537179
+uuid: 334e9369-8bb0-4db1-a59d-548911f0513c
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.basic_page_types
-id: taxonomy_term.basic_page_types.default
+    - taxonomy.vocabulary.su_shared_tags
+id: taxonomy_term.su_shared_tags.default
 targetEntityType: taxonomy_term
-bundle: basic_page_types
+bundle: su_shared_tags
 mode: default
 content:
   name:
@@ -17,9 +17,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
   description: true
   path: true
   publish_on: true
-  status: true
   unpublish_on: true

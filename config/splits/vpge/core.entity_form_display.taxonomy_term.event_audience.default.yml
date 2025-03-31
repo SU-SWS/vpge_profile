@@ -1,15 +1,14 @@
-uuid: e67b7e43-8ff9-40fe-970a-2cb3208069df
+uuid: 17560bac-e814-4536-bf2a-a63761d5af1b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.stanford_publication_topics.layout_builder__layout
-    - taxonomy.vocabulary.stanford_publication_topics
+    - taxonomy.vocabulary.event_audience
   module:
     - text
-id: taxonomy_term.stanford_publication_topics.default
+id: taxonomy_term.event_audience.default
 targetEntityType: taxonomy_term
-bundle: stanford_publication_topics
+bundle: event_audience
 mode: default
 content:
   description:
@@ -28,9 +27,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
 hidden:
-  layout_builder__layout: true
   path: true
   publish_on: true
-  status: true
   unpublish_on: true
