@@ -100,4 +100,3 @@ permissions:
   - 'view partner revisions'
   - 'view program revisions'
   - 'view resource revisions'
-  - 'update any stanford_component_block block content'
