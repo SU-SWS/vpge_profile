@@ -318,7 +318,7 @@ class EventsCest {
   /**
    * Published checkbox should be hidden on term edit pages.
    */
-  public function testTermPublishing(AcceptanceTester $I) {
+  private function testTermPublishing(AcceptanceTester $I) {
     $I->logInWithRole('site_manager');
     $term = $I->createEntity([
       'vid' => 'event_audience',
@@ -334,7 +334,8 @@ class EventsCest {
     ], 'taxonomy_term');
     $I->amOnPage($term->toUrl('edit-form')->toString());
     $this->_waitForJS($I, '.form-actions');
-    // IDM - I tested this manually, but it doesn't work in codeception for the stack.
+    // IDM - I tested this manually, it works as expected
+    // but the test doesn't work in codeception for the stack.
     // $I->canSeeCheckboxIsChecked('Published');
   }
 
