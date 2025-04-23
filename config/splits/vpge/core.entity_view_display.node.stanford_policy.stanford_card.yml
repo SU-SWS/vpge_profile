@@ -1,9 +1,9 @@
-uuid: 6ea98c71-cdb1-4896-81cd-5af8f617ca01
+uuid: 8e8058a1-5532-4671-b2ec-99348cf631c9
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.stanford_card
     - field.field.node.stanford_policy.body
     - field.field.node.stanford_policy.field_menulink
     - field.field.node.stanford_policy.layout_builder__layout
@@ -19,7 +19,6 @@ dependencies:
     - field.field.node.stanford_policy.su_policy_updated
     - node.type.stanford_policy
   module:
-    - datetime
     - ds
     - field_formatter_class
     - layout_builder
@@ -53,6 +52,7 @@ third_party_settings:
       - 'News Lists (Views)'
       - 'PDB React'
       - 'People Lists (Views)'
+      - 'Policy (Views)'
       - Printable
       - 'Publication (Views)'
       - React
@@ -125,6 +125,8 @@ third_party_settings:
           - book_navigation
           - 'menu_block:main'
           - 'system_menu_block:main'
+        'Policy (Views)':
+          - 'views_block:policies-child_pages'
         Printable:
           - 'printable_links_block:node'
         System:
@@ -145,19 +147,18 @@ third_party_settings:
         - Views
   ds:
     layout:
-      id: pattern_news-list
+      id: pattern_card
       library: null
       disable_css: false
       entity_classes: all_classes
       settings:
         pattern:
           field_templates: default
+          variant: default
     regions:
-      news_list_headline:
+      card_super_headline:
         - node_title
-      news_list_dek:
-        - su_policy_updated
-      news_list_footer:
+      card_body:
         - body
     fields:
       node_title:
@@ -167,13 +168,14 @@ third_party_settings:
         formatter: default
         settings:
           link: true
-          'link class': ''
-          wrapper: ''
+          'link class': su-link--action
+          link_target: ''
+          wrapper: h2
           class: ''
-id: node.stanford_policy.teaser
+id: node.stanford_policy.stanford_card
 targetEntityType: node
 bundle: stanford_policy
-mode: teaser
+mode: stanford_card
 content:
   body:
     type: smart_trim
@@ -198,21 +200,9 @@ content:
     third_party_settings:
       field_formatter_class:
         class: ''
-    weight: 2
-    region: news_list_footer
-  su_policy_updated:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: stanford_month_date_year
-    third_party_settings:
-      field_formatter_class:
-        class: ''
     weight: 1
-    region: news_list_dek
+    region: card_body
 hidden:
-  book_navigation: true
   field_menulink: true
   layout_builder__layout: true
   links: true
@@ -226,3 +216,4 @@ hidden:
   su_policy_related: true
   su_policy_subchapter: true
   su_policy_title: true
+  su_policy_updated: true

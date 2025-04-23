@@ -37,6 +37,29 @@ class ViewsBulkEditCest {
   }
 
   /**
+   *  We need to wait for the JS to load, but we can't do $this->_waitForJS($I, '.form-actions');
+   *  with PhpBrowser because it doesn't support JS.
+   */
+  protected function _waitForJS(AcceptanceTester $I, string $element){
+    $found = false;
+    $attempts = 10;
+
+    for ($i = 0; $i < $attempts; $i++) {
+      try {
+        $I->seeElement($element);
+        $found = true;
+        break;
+      } catch (\Exception $e) {
+        sleep(1); // Wait 1 second between attempts
+      }
+    }
+
+    if (!$found) {
+      $I->fail("Timed out waiting for $element to appear.");
+    }
+  }
+
+  /**
    * Bulk editing content changes the field values.
    */
   public function testBulkEdits(AcceptanceTester $I) {
@@ -67,10 +90,10 @@ class ViewsBulkEditCest {
     foreach ($this->nodes as $node) {
       $I->canSee($node->label());
     }
-    $I->checkOption('#edit-node-stanford-news-field-selector-su-news-topics');
+    $I->checkOption('News Types (value 1)');
     $I->selectOption('node[stanford_news][su_news_topics][0][target_id]', $news_foo_bar_baz->id());
-    $I->checkOption('#edit-node-stanford-event-field-selector-su-shared-tags');
-    $I->selectOption('#edit-node-stanford-event-su-shared-tags-0-target-id--level-0', $event_foo_bar_baz->id());
+    $I->checkOption('Event Types (value 1)');
+    $I->selectOption('node[stanford_event][su_event_type][0][target_id]', $event_foo_bar_baz->id());
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][value][date]', date('Y-m-d'));
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][value][time]', '12:00:00');
     $I->fillField('node[stanford_event][su_event_date_time][0][time_wrapper][end_value][date]', date('Y-m-d'));
@@ -83,8 +106,7 @@ class ViewsBulkEditCest {
 
     foreach ($this->nodes as $node) {
       $I->amOnPage($node->toUrl('edit-form')->toString());
-      $I->waitForElement('.form-actions', 30);
-
+      $this->_waitForJS($I, '.form-actions');
       switch ($node->bundle()) {
         case 'stanford_event':
           $I->canSeeOptionIsSelected('Event Types (value 1)', $event_foo_bar_baz->label());

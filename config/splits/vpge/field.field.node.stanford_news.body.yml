@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.body
     - node.type.stanford_news
   module:
+    - allowed_formats
     - text
 id: node.stanford_news.body
 field_name: body

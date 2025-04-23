@@ -28,11 +28,10 @@ class CustomBlockCest {
       'info' => $this->faker->word(3, TRUE),
     ], 'block_content');
     $I->logInWithRole('site_manager');
-    $I->runDrush('cache-rebuild');
     $I->amOnPage($block->toUrl()->toString());
-    // $I->fillField('Block description', 'Foo Bar');
-    // $I->click('Save');
-    // $I->canSee('has been updated');
+    $I->fillField('Block description', 'Foo Bar');
+    $I->click('Save');
+    $I->canSee('has been updated');
   }
 
 }

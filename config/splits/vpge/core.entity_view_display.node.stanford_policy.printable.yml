@@ -1,9 +1,9 @@
-uuid: 6ea98c71-cdb1-4896-81cd-5af8f617ca01
+uuid: 024ed14f-7eac-470d-ac31-c1963629bf02
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.printable
     - field.field.node.stanford_policy.body
     - field.field.node.stanford_policy.field_menulink
     - field.field.node.stanford_policy.layout_builder__layout
@@ -21,11 +21,12 @@ dependencies:
   module:
     - datetime
     - ds
+    - empty_fields
     - field_formatter_class
     - layout_builder
     - layout_builder_restrictions
     - layout_library
-    - smart_trim
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -53,6 +54,7 @@ third_party_settings:
       - 'News Lists (Views)'
       - 'PDB React'
       - 'People Lists (Views)'
+      - 'Policy (Views)'
       - Printable
       - 'Publication (Views)'
       - React
@@ -125,6 +127,8 @@ third_party_settings:
           - book_navigation
           - 'menu_block:main'
           - 'system_menu_block:main'
+        'Policy (Views)':
+          - 'views_block:policies-child_pages'
         Printable:
           - 'printable_links_block:node'
         System:
@@ -145,19 +149,26 @@ third_party_settings:
         - Views
   ds:
     layout:
-      id: pattern_news-list
+      id: ds_1col
       library: null
       disable_css: false
       entity_classes: all_classes
       settings:
-        pattern:
-          field_templates: default
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
     regions:
-      news_list_headline:
+      ds_content:
         - node_title
-      news_list_dek:
+        - su_policy_authority
         - su_policy_updated
-      news_list_footer:
+        - su_policy_effective
         - body
     fields:
       node_title:
@@ -166,62 +177,61 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
-          link: true
+          link: false
           'link class': ''
-          wrapper: ''
+          link_target: ''
+          wrapper: h1
           class: ''
-id: node.stanford_policy.teaser
+id: node.stanford_policy.printable
 targetEntityType: node
 bundle: stanford_policy
-mode: teaser
+mode: printable
 content:
   body:
-    type: smart_trim
+    type: text_default
     label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: ds_content
+  su_policy_authority:
+    type: string
+    label: inline
     settings:
-      trim_length: 250
-      trim_type: chars
-      trim_suffix: ''
-      wrap_output: false
-      wrap_class: trimmed
-      more:
-        display_link: false
-        target_blank: false
-        link_trim_only: false
-        class: more-link
-        text: More
-        aria_label: 'Read more about [node:title]'
-      summary_handler: trim
-      trim_options:
-        text: true
-        trim_zero: false
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    weight: 2
-    region: news_list_footer
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  su_policy_effective:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: stanford_month_date_year
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
   su_policy_updated:
     type: datetime_default
-    label: above
+    label: inline
     settings:
       timezone_override: ''
       format_type: stanford_month_date_year
     third_party_settings:
+      empty_fields:
+        handler: ''
       field_formatter_class:
         class: ''
-    weight: 1
-    region: news_list_dek
+    weight: 2
+    region: ds_content
 hidden:
-  book_navigation: true
   field_menulink: true
   layout_builder__layout: true
   links: true
   search_api_excerpt: true
-  su_policy_authority: true
   su_policy_auto_prefix: true
   su_policy_changelog: true
   su_policy_chapter: true
-  su_policy_effective: true
   su_policy_policy_num: true
   su_policy_related: true
   su_policy_subchapter: true

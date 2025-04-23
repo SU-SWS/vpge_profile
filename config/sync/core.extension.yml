@@ -5,6 +5,7 @@ module:
   address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  allowed_formats: 0
   autologout: 0
   basic_auth: 0
   better_exposed_filters: 0
@@ -97,6 +98,7 @@ module:
   inline_entity_form: 0
   inline_form_errors: 0
   jquery_ui: 0
+  jquery_ui_datepicker: 0
   jquery_ui_draggable: 0
   jquery_ui_slider: 0
   jquery_ui_touch_punch: 0

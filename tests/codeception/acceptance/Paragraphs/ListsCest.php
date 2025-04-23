@@ -48,6 +48,13 @@ class ListsCest {
   }
 
   /**
+   * Delete the trash directory before running the tests.
+   */
+  public function _before(AcceptanceTester $I) {
+    \Drupal::service('file_system')->deleteRecursive('public://php/trash');
+  }
+
+  /**
    * Shared tags on each content type are identical.
    *
    * @group jsonapi
@@ -135,7 +142,7 @@ class ListsCest {
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($event->toUrl('edit-form')->toString());
     $this->_waitForJS($I, '.form-actions');
-    $I->canSeeOptionIsSelected('#edit-su-shared-tags-0-target-id', $shared_tag->label());
+    $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());
     $I->amOnPage($person->toUrl('edit-form')->toString());
     $this->_waitForJS($I, '.form-actions');
     $I->canSeeOptionIsSelected('Shared Tags (value 1)', $shared_tag->label());

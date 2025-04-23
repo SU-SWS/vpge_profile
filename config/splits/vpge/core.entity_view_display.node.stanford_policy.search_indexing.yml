@@ -1,9 +1,9 @@
-uuid: 6ea98c71-cdb1-4896-81cd-5af8f617ca01
+uuid: 0523f5e4-224d-411b-8ec3-0eb2bda031e8
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.search_indexing
     - field.field.node.stanford_policy.body
     - field.field.node.stanford_policy.field_menulink
     - field.field.node.stanford_policy.layout_builder__layout
@@ -20,12 +20,10 @@ dependencies:
     - node.type.stanford_policy
   module:
     - datetime
-    - ds
-    - field_formatter_class
     - layout_builder
     - layout_builder_restrictions
     - layout_library
-    - smart_trim
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -37,7 +35,6 @@ third_party_settings:
     allowed_block_categories:
       - 'Basic Page Type Lists (Views)'
       - Book
-      - 'Changelog (Views)'
       - 'Chaos Tools'
       - 'Config Pages'
       - 'Content fields'
@@ -118,9 +115,6 @@ third_party_settings:
       allowlisted_blocks:
         Book:
           - book_forward_back
-        'Changelog (Views)':
-          - 'views_block:change_logs-node_page_changes'
-          - 'views_block:change_logs-policy_changes'
         Menus:
           - book_navigation
           - 'menu_block:main'
@@ -143,85 +137,52 @@ third_party_settings:
         - 'Stanford SimpleSAML PHP'
         - 'Taxonomy Terms (Views)'
         - Views
-  ds:
-    layout:
-      id: pattern_news-list
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        pattern:
-          field_templates: default
-    regions:
-      news_list_headline:
-        - node_title
-      news_list_dek:
-        - su_policy_updated
-      news_list_footer:
-        - body
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: hidden
-        formatter: default
-        settings:
-          link: true
-          'link class': ''
-          wrapper: ''
-          class: ''
-id: node.stanford_policy.teaser
+id: node.stanford_policy.search_indexing
 targetEntityType: node
 bundle: stanford_policy
-mode: teaser
+mode: search_indexing
 content:
   body:
-    type: smart_trim
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  su_policy_authority:
+    type: string
     label: hidden
     settings:
-      trim_length: 250
-      trim_type: chars
-      trim_suffix: ''
-      wrap_output: false
-      wrap_class: trimmed
-      more:
-        display_link: false
-        target_blank: false
-        link_trim_only: false
-        class: more-link
-        text: More
-        aria_label: 'Read more about [node:title]'
-      summary_handler: trim
-      trim_options:
-        text: true
-        trim_zero: false
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    weight: 2
-    region: news_list_footer
-  su_policy_updated:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  su_policy_effective:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
-      format_type: stanford_month_date_year
-    third_party_settings:
-      field_formatter_class:
-        class: ''
+      format_type: medium
+    third_party_settings: {  }
     weight: 1
-    region: news_list_dek
+    region: content
+  su_policy_updated:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
-  book_navigation: true
   field_menulink: true
   layout_builder__layout: true
   links: true
   search_api_excerpt: true
-  su_policy_authority: true
   su_policy_auto_prefix: true
   su_policy_changelog: true
   su_policy_chapter: true
-  su_policy_effective: true
   su_policy_policy_num: true
   su_policy_related: true
   su_policy_subchapter: true

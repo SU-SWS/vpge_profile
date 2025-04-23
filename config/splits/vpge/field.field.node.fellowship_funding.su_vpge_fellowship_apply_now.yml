@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.su_vpge_fellowship_apply_now
     - node.type.fellowship_funding
   module:
+    - allowed_formats
     - text
 id: node.fellowship_funding.su_vpge_fellowship_apply_now
 field_name: su_vpge_fellowship_apply_now

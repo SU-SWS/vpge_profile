@@ -40,7 +40,6 @@ class Users extends InstallTaskBase implements ContainerFactoryPluginInterface {
    * {@inheritDoc}
    */
   public function runTask(array &$install_state) {
-    // Modify the User 1 to match our needs.
     $admin = $this->entityTypeManager->getStorage('user')->load(1);
     if ($admin) {
       $admin->set('name', 'sws-developers');
@@ -49,5 +48,4 @@ class Users extends InstallTaskBase implements ContainerFactoryPluginInterface {
       $admin->save();
     }
   }
-
 }
