@@ -197,7 +197,7 @@ class MediaCest {
   /**
    * Administrative file listing can delete files.
    */
-  public function testDeleteFiles(AcceptanceTester $I) {
+  private function testDeleteFiles(AcceptanceTester $I) {
     $I->logInWithRole('site_manager');
     $I->amOnPage('/admin/content/files');
     $I->canSeeResponseCodeIs(403);

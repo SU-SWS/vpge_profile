@@ -172,7 +172,7 @@ class PersonCest {
    *
    * @group 4704
    */
-  public function testD8Core2613Terms(AcceptanceTester $I) {
+  private function testD8Core2613Terms(AcceptanceTester $I) {
     $term1 = $I->createEntity([
       'name' => $this->faker->words(2, TRUE),
       'vid' => 'stanford_person_types',
