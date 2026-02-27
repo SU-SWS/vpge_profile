@@ -147,7 +147,7 @@
         "drupal/real_aes": "^2.4",
         "drupal/redirect": "^1.0-beta1",
         "drupal/responsive_tables_filter": "^2.0",
-        "drupal/role_delegation": "^1.0@beta",
+        "drupal/role_delegation": "1.0",
         "drupal/scheduler": "^2.0",
         "drupal/search_api": "^1.19",
         "drupal/search_api_algolia": "^3.0@beta",
