@@ -394,4 +394,6 @@ content:
     third_party_settings: {  }
 hidden:
   label: true
+  su_site_algolia_terms: true
   su_site_renewal_due: true
+  su_site_sunetid: true
