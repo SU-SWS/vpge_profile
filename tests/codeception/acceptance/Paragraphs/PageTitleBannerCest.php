@@ -28,7 +28,7 @@ class PageTitleBannerCest {
   /**
    * Test the title banner title is auto generated.
    */
-  public function testAutoTitle(AcceptanceTester $I) {
+  private function testAutoTitle(AcceptanceTester $I) {
     $this->prepareImage();
     $node = $I->createEntity([
       'type' => 'stanford_page',
